@@ -5,11 +5,13 @@ import { createConnection } from 'mysql';
 
 function connectToDatabase() {
   const connection = createConnection({
-    host: "10.0.0.64",
-    user: "cellma4_api_user",
-    password: "C31lm@2023",
+    host: "10.0.0.16",
+    user: "ManojV.cellmaapi",
+    password: "Welcome@123",
     port:3314,
-    database: "cellma4_api",
+    //database: "cellma4_api",
+    database: "cellma4_pre_release",
+    connectionLimit: 10
     //connectionLimit: 10
   });
 

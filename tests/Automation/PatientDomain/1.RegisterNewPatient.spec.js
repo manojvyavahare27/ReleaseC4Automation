@@ -2,7 +2,8 @@
 
 const fs = require("fs");
 const XLSX = require("xlsx");
-const path = "D:/Riomed/Cellma4Automation";
+//const path = "D:/Riomed/Cellma4Automation";
+const path = require('path');
 const mysql = require("mysql");
 const convertExcelToJson = require('../../../config/global-setupOptimized');
 
@@ -464,14 +465,49 @@ test.describe('New Patient', () => {
 
       // Print Id Card               
       //const fileInput = await page.$("input[type=file]");
-      const fileInput = page.getByTestId('PhotoCameraIcon');
-      const filePath = "../Cellma4Automation/UploadPics/Patient.png";
-     /// await fileInput.setInputFiles(filePath, fileInput);
-      const fs = require('fs');
-if (!fs.existsSync(filePath)) {
-  throw new Error(`File not found at path: ${filePath}`);
+    //   const fileInput = page.getByTestId('PhotoCameraIcon');
+    //   // const filePath = "../Cellma4Automation/UploadPics/Patient.png";
+    //   const filePath = "../Manoj Vyavahare/UploadPics/Patient.png";
+    //   console.log("File path is: "+filePath);      
+    //  await fileInput.setInputFiles(filePath, fileInput);
+
+
+    /////////////////////////////
+    /**
+ * Recursively searches for a specific file in a directory tree.
+ * @param {string} dir - Directory to start searching from.
+ * @param {string} targetFile - Name of the file to find.
+ * @returns {string|null} - Absolute path to the file, or null if not found.
+ */
+function findFileRecursive(dir, targetFile) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      const result = findFileRecursive(fullPath, targetFile);
+      if (result) return result;
+    } else if (file === targetFile) {
+      return fullPath;
+    }
+  }
+  return null;
 }
 
+// Get Jenkins workspace root or current directory
+const workspaceRoot = process.env.WORKSPACE || process.cwd();
+const targetFilePath = findFileRecursive(workspaceRoot, 'Patient.png');
+
+if (!targetFilePath) {
+  throw new Error('❌ Patient.png not found anywhere under the workspace!');
+}
+
+console.log('✅ Found Patient.png at:', targetFilePath);
+
+// Upload the file using Playwright
+const fileInput = await page.getByTestId('PhotoCameraIcon');
+await fileInput.setInputFiles(targetFilePath);
 
 
       await page.waitForTimeout(2000);

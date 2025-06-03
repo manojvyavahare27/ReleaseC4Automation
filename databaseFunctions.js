@@ -5,11 +5,13 @@ import { createConnection } from 'mysql';
 let databaseConnection; // Variable to store the database connection instance
 
 const dbConfig = {
-	host: '10.0.0.16',
+	host: "10.0.0.16",
     user: "ManojV.cellmaapi",
     password: "Welcome@123",
-    port:3310,
-    database: "cellma4_api"
+    port:3314,
+    //database: "cellma4_api",
+    database: "cellma4_pre_release",
+    connectionLimit: 10
 };
 
 async function openDatabaseConnection() {
