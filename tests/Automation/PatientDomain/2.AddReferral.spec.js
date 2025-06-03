@@ -77,7 +77,7 @@ test.describe("Login Tests", () => {
       //await patientsearch.ClickOnYesConfirmLegitimateRelationship()  
       await page.waitForTimeout(2000)    
       await confirmexisting.clickOnConfirmExistingDetails()
-      await page.pause()
+      //await page.pause()
       await addreferral.clickOnSaveButton();
       await expect(page.getByText("Received Referral Date required")).toHaveText("Received Referral Date required");
       await expect(page.getByText("Approved Referral Date required")).toHaveText("Approved Referral Date required");
@@ -153,7 +153,7 @@ test.describe("Login Tests", () => {
       await confirmexisting.clickOnSaveChangeDetails();
       await page.waitForTimeout(2000)
       await expect(page.getByText("Patient details changed successfully")).toHaveText("Patient details changed successfully");
-      await page.pause()
+     // await page.pause()
 
 
           ////////// Patient Referral comparison/////////

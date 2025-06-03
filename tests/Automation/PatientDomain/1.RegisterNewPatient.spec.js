@@ -466,7 +466,14 @@ test.describe('New Patient', () => {
       //const fileInput = await page.$("input[type=file]");
       const fileInput = page.getByTestId('PhotoCameraIcon');
       const filePath = "../Cellma4Automation/UploadPics/Patient.png";
-      await fileInput.setInputFiles(filePath, fileInput);
+     /// await fileInput.setInputFiles(filePath, fileInput);
+      const fs = require('fs');
+if (!fs.existsSync(filePath)) {
+  throw new Error(`File not found at path: ${filePath}`);
+}
+
+
+
       await page.waitForTimeout(2000);
       await page.getByTestId("Upload").click();
       await page.waitForTimeout(1000);
