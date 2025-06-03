@@ -161,7 +161,7 @@ test.describe('New Patient', () => {
       }
 
       await patientduplicatecheck.enterMobileNumber(jsonData.patientIdentifier[index].pid_value1.toString());
-      await page.pause
+      //await page.pause
       await patientduplicatecheck.enterEmailId(jsonData.patientIdentifier[index].add_email);
       await patientduplicatecheck.clickOnDuplicateCheckButton();
       //await expect(page.getByText('Duplicate Patients not found')).toHaveText('Duplicate Patients not found')
@@ -256,7 +256,7 @@ test.describe('New Patient', () => {
       //         await addaddress.closeTempAddressNotesPopup();
       //Add Address page
       await addaddress.clickOnSaveButton();
-      await page.pause()
+     /// await page.pause()
       await addaddress.enterNumberAndRoad(jsonData.permanentAddress[index].add_address1);
       await addaddress.enterTownInAddress(jsonData.permanentAddress[index].add_address3);
       await addaddress.enterDestrict(jsonData.permanentAddress[index].add_address2);
@@ -407,7 +407,7 @@ test.describe('New Patient', () => {
       await addpip.checkBeingPhotographed();
       await addpip.checkGeneralPublicity();
       await addpip.ClickOnSavePIP();
-      await page.pause()
+      //await page.pause()
       await page.waitForTimeout(1000);
       //await expect(page.getByText("Patient interested party details added successfully")).toHaveText("Patient interested party details added successfully");
 
