@@ -1,0 +1,28 @@
+
+{
+    "UserName": "Test325.user",
+    "NewUserName":"Test512.user",
+    "Password": "Manoj@2023",
+    "ConfirmPassword": "Manoj@2023",
+    "Email": "manoj.vyavahare512@riomed.com",
+    "InvNewPassword":"Welcome@123",
+    "InvConfirmPassword":"Welcome@123",
+    "ConfirmNewPassword":"Manoj@2024",
+    "ConfirmConfirmPassword":"Manoj@2024",
+    "GivenName":"Auto",
+    "FamilyName":"Riomedtest",
+    "Mobile": "9586471203",
+    "UserExpireDate": "30/06/2035",
+    "Notes": "User added for testing purpose",
+    "MCRN": "2354", 
+    "DoctorSurname": "RiomedDoctor",  
+    "FirstConstValidity": "1 Week",
+    "ConsultantCode": "CC023",
+    "NPINumber":"2021",
+    "DocInitial": "Dr.",
+    "PROMsNumber":"101",
+    "PromesSurName":"Patil",
+    "Specility":"Cardiology",
+    "FirstConsultationValidity":"7",
+    "FollowupConsultationValidity":"10"
+}

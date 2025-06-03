@@ -1,0 +1,21 @@
+{
+  "validationCode": "patient.display",
+  "informationMessages": [],
+  "settings": {
+    "showHpSeenByName": null,
+    "showUnderEighteenAlert": null,
+    "estShowDemographicLinkPage": 0,
+    "estPatientSearchIdentifierMandatory": 0,
+    "largeDatabase": "0",
+    "estShowInServicePatient": 1,
+    "estUseCellmaInterface": 1,
+    "documentManagementQuickAccess": null,
+    "estPatientSearchBarcodeNotFocus": 0,
+    "estDuplicateSearchByPhone": 1,
+    "renamePatIdentifierToPayrollNo": 1,
+    "showUnkownPatient": 1,
+    "showlegitimateRelationshippouup": 1,
+    "estPasPreference": null,
+    "hideExportButton": 1
+  }
+}

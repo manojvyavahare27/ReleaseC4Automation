@@ -1,0 +1,498 @@
+{
+  "loginDetails": [
+    {
+      "username": "manoj.auto",
+      "password": "Manoj@2024"
+    },
+    {
+      "username": "thayne.auto",
+      "password": "Thayne@2024"
+    },
+    {
+      "username": "prerelease.auto",
+      "password": "Manoj@2023"
+    },
+    {
+      "username": "manoj.auto",
+      "password": "Manoj@2023"
+    },
+    {
+      "username": "jadon.auto",
+      "password": "Jadon@2024"
+    }
+  ],
+  "addPatient": [
+    {
+      "pat_hospital_ref": "Pha012",
+      "pat_title": "B/O",
+      "pat_firstname": "Fifteen",
+      "pat_surname": "Pharmacy",
+      "pat_sex": "M",
+      "pat_dob": "22/09/2023",
+      "pat_marital_status": "Single",
+      "pat_ethnicity_text": "Indian",
+      "pat_occupation": "Trainer",
+      "pat_notes": "Added This patient for Testing",
+      "pat_type": "Regular",
+      "pat_maiden_name": "Pune",
+      "pat_blood_group": "B+",
+      "pat_religion": "Hindu",
+      "pat_middlename": "Martin",
+      "pat_registered_disabled_yes": "No",
+      "pat_registered_disabled": 0,
+      "pat_currently_pregnant_yes": "No",
+      "pat_currently_pregnant": 0,
+      "pat_language": "English",
+      "pat_temp_address_start": 45806,
+      "pat_country_of_birth": "India",
+      "pat_gender_at_birth": "M",
+      "pat_nationality": "Indian",
+      "pat_prisoner_yes": "No",
+      "pat_county_of_birth": "Maharashtra",
+      "pat_town_of_birth": "Pune",
+      "pat_sexual_orientation_eli_text": "Heterosexuality",
+      "pat_disability_note": "For Testing"
+    }
+  ],
+  "editPatient": [
+    {
+      "pat_hospital_ref": "AutoHosp109",
+      "pat_title": "B/O",
+      "pat_firstname": "Fifteen",
+      "pat_surname": "Pharmacy",
+      "pat_sex": "M",
+      "pat_dob": "22/09/2023",
+      "pat_marital_status": "Single",
+      "pat_ethnicity_text": "Indian",
+      "pat_occupation": "Trainer",
+      "pat_notes": "Added for Testing",
+      "pat_type": "Regular",
+      "pat_maiden_name": "Pune",
+      "pat_blood_group": "B+",
+      "pat_religion": "Hindu",
+      "pat_middlename": "Martin",
+      "pat_registered_disabled": 0,
+      "pat_currently_pregnant": 0,
+      "pat_currently_pregnant_yes": "Yes",
+      "pat_language": "English",
+      "pat_temp_address_start": "01-04-2023",
+      "pat_country_of_birth": "India",
+      "pat_gender_at_birth": "M",
+      "pat_nationality": "Indian",
+      "pat_prisoner_yes": "No",
+      "pat_prisoner": 0,
+      "pat_county_of_birth": "Maharashtra",
+      "pat_town_of_birth": "Pune",
+      "pat_sexual_orientation_eli_text": "Heterosexuality",
+      "pat_disability_note": "For Testing"
+    }
+  ],
+  "patientIdentifier": [
+    {
+      "pat_firstname": "Fifteen",
+      "pat_lastname": "Pharmacy",
+      "pat_sex": "M",
+      "pat_dob": "22/09/2023",
+      "pid_value1": 8962845424,
+      "pid_value2": "Ind009",
+      "pat_country": "India",
+      "pat_title": "B/O",
+      "pat_middlename": "Martin",
+      "add_email": "Fifteen.Pharmacy@Gmail.com"
+    }
+  ],
+  "tempAddress": [
+    {
+      "add_address1": "Flat no 1101",
+      "add_address2": "Mumbai",
+      "add_address3": "SaiCapital",
+      "add_address4": "Maharashtra",
+      "add_address5": 411011,
+      "add_address6": "India",
+      "add_phone": 8888888800,
+      "add_mobile": 9762713710,
+      "add_email": "Mumbai.SaiCapital@gmail.com",
+      "add_fax": 8181808080,
+      "add_work_phone": 666999,
+      "add_iso_country_code": 91,
+      "add_icao_country_code": 54215,
+      "__EMPTY": 91,
+      "add_notes": "Added temp address for testing"
+    }
+  ],
+  "permanentAddress": [
+    {
+      "add_address1": "Flat no 1101",
+      "add_address2": "Mumbai",
+      "add_address3": "SaiCapital",
+      "add_address4": "Maharashtra",
+      "add_address5": 411011,
+      "add_address6": "India",
+      "add_phone": 7700770077,
+      "add_mobile": 9762713710,
+      "add_email": "Mumbai.SaiCapital@gmail.com",
+      "add_fax": 112233,
+      "add_work_phone": 9890098900,
+      "add_iso_country_code": 91,
+      "add_icao_country_code": 542152,
+      "add_notes": "Added Permanent Address Notes"
+    }
+  ],
+  "pip": [
+    {
+      "pip_title": "Mr",
+      "pip_firstname": "Wednesday",
+      "pip_surname": "Tester",
+      "pip_relationship": "Brother",
+      "pip_next_of_kin": 1,
+      "pip_next_of_kin_Yes": "Yes",
+      "pip_next_of_kin_1": 0,
+      "pip_notes": "Added for testing",
+      "pip_family_aware_illness_yes": "Yes",
+      "pip_family_aware_illness": 1,
+      "pip_family_aware_illness_yes_1": "Yes",
+      "pip_middlename": "Middle",
+      "pip_gender": "M",
+      "pip_dob": "01/01/1995",
+      "pip_identifier_type": "Aadhar Card",
+      "pip_identifier_number": "989798979897",
+      "pip_send_txt_email_yes": "Yes",
+      "pip_send_txt_email": 1,
+      "pip_send_txt_email_yes_1": "Yes",
+      "pip_ethnicity_text": "Indian",
+      "pip_ethnicity_id": 6882,
+      "pip_receive_pat_appt_letter": 0,
+      "pip_receive_pat_appt_letter_no": "No",
+      "pip_receive_patient_letter": 0,
+      "pip_receive_patient_letter_no": "No",
+      "pip_professional_title": "Prof"
+    }
+  ],
+  "pipAddress": [
+    {
+      "add_address1": "Flat no 101",
+      "add_address2": "Pune",
+      "add_address3": "Sai Capital",
+      "add_address4": "India",
+      "add_address5": "4110 28",
+      "add_address6": "India",
+      "add_phone": 9854148754,
+      "add_mobile": 9890098900,
+      "add_email": "PIP@gmail.com",
+      "add_fax": 985421547,
+      "add_work_phone": 22547545
+    }
+  ],
+  "addGP": [
+    {
+      "egp_title": "Mr",
+      "egp_initials": "R",
+      "egp_first_name": "Priya",
+      "egp_surname": "Kolhe",
+      "egp_gp_code": "GP0001",
+      "egp_practise_code": "GPPCT0001",
+      "egp_gmc_code": "GPGMC0001",
+      "egp_fullname": "Kolhe Priya R"
+    }
+  ],
+  "gpAddress": [
+    {
+      "add_address1": "ParkInfinia",
+      "add_address2": "Kharadi",
+      "add_address3": "Pune",
+      "add_address4": "Maharashtra",
+      "add_address5": "4000 28",
+      "add_address6": "India",
+      "add_address6_1": "India",
+      "add_phone": "44244244",
+      "add_fax": 11255255,
+      "add_work_phone": 22547545,
+      "add_mobile": 9890098900,
+      "add_email": "PIP@gmail.com"
+    }
+  ],
+  "AddReferral": [
+    {
+      "rtt_referral_received_date": "04/03/2024",
+      "rtt_referral_approved_date": "05/03/2024",
+      "ref_referral_date": "04/03/2024",
+      "ref_time_set": "12:00:00",
+      "SourceOFReferral": "Self",
+      "ref_referral_type_eli_text": "Clinical",
+      "ReferralReason": "In Patient",
+      "ref_referral_mode": "Email",
+      "cli_name": "General Medicine Automation",
+      "ref_clinic_type": "Cardiology Clinic",
+      "ref_clinic_location": "Cath Lab Location",
+      "ref_region_eli_text": "HP Region1",
+      "ref_preferred_examiner_sex_entry": "Male",
+      "ref_preferred_examiner_sex": "male",
+      "ref_method_of_arrival": "Ambulance",
+      "ref_time_of_arrival": "11:00:00"
+    }
+  ],
+  "ConfirmExistingDetails": [
+    {
+      "pat_name_other_lang": "Cellma",
+      "pat_need_interpreter_at_appointments": "Yes",
+      "add_email": "Pune.India@gmail.com",
+      "add_mobile": 9800652518,
+      "add_phone": 9854148754,
+      "pip_title": "Mr",
+      "pip_firstname": "Givenname",
+      "pip_surname": "Familyname",
+      "pip_relationship": "Brother"
+    }
+  ],
+  "ConfirmExistingDetailsTAdd": [
+    {
+      "add_company_name": "Riomed UK",
+      "add_address1": "Riomed UK, FC Road",
+      "add_address2": "Pune",
+      "add_address3": "Ganga Capital",
+      "add_address4": "India",
+      "add_address5": "4110 02",
+      "add_address6": "India",
+      "add_phone": 9762713710,
+      "add_mobile": 9890098920
+    }
+  ],
+  "SPaddPatient": [
+    {
+      "pat_hospital_ref": "AutoHospSP117",
+      "pat_nhs_ref": "NHS002",
+      "pat_identifier": "IDF007",
+      "pat_title": "B/O",
+      "pat_firstname": "Andrew",
+      "pat_surname": "Jones",
+      "pat_sex": "M",
+      "pat_dob": "24/04/2023",
+      "pat_marital_status": "Single",
+      "pat_ethnicity_text": "Indian",
+      "pat_occupation": "Trainer",
+      "pat_notes": "Added for Testing",
+      "pat_type": "Regular",
+      "pat_maiden_name": "Pune",
+      "pat_blood_group": "B+",
+      "pat_religion": "Hindu",
+      "pat_middlename": "Martin",
+      "pat_registered_disabled_yes": "No",
+      "pat_registered_disabled": 0,
+      "pat_currently_pregnant_yes": "No",
+      "pat_currently_pregnant": 0,
+      "pat_language": "English",
+      "pat_temp_address_start": "01-04-2023",
+      "pat_country_of_birth": "India",
+      "pat_gender_at_birth": "M",
+      "pat_nationality": "Indian",
+      "pat_prisoner_yes": "No",
+      "pat_county_of_birth": "Maharashtra",
+      "pat_town_of_birth": "Pune",
+      "pat_sexual_orientation_eli_text": "Heterosexuality",
+      "pat_disability_note": "For Testing"
+    }
+  ],
+  "SPAddress": [
+    {
+      "add_address1": "15 number",
+      "add_address2": "Pune",
+      "add_address3": "Hadapsar",
+      "add_address4": "Maharashtra",
+      "add_address5": "4110 01",
+      "add_address6": "India"
+    }
+  ],
+  "SPeditPatient": [
+    {
+      "pat_hospital_ref": "AutoHospSP117",
+      "pat_title": "B/O",
+      "pat_firstname": "Andrew",
+      "pat_surname": "Jones",
+      "pat_sex": "M",
+      "pat_dob": "24/04/2023",
+      "pat_marital_status": "Single",
+      "pat_ethnicity_text": "Indian",
+      "pat_occupation": "Trainer",
+      "pat_notes": "Added for Testing",
+      "pat_type": "Regular",
+      "pat_maiden_name": "Pune",
+      "pat_blood_group": "B+",
+      "pat_religion": "Hindu",
+      "pat_middlename": "Martin",
+      "pat_registered_disabled": 0,
+      "pat_currently_pregnant": 0,
+      "pat_language": "English",
+      "pat_temp_address_start": "01-04-2023",
+      "pat_country_of_birth": "India",
+      "pat_gender_at_birth": "M",
+      "pat_nationality": "Indian",
+      "pat_prisoner_yes": "No",
+      "pat_prisoner": 0,
+      "pat_county_of_birth": "Maharashtra",
+      "pat_town_of_birth": "Pune",
+      "pat_sexual_orientation_eli_text": "Heterosexuality",
+      "pat_disability_note": "For Testing"
+    }
+  ],
+  "SPpatientIdentifier": [
+    {
+      "pat_firstname": "Andrew",
+      "pat_lastname": "Jones",
+      "pat_sex": "M",
+      "pat_dob": "24/04/2023",
+      "pid_value1": 7794778477,
+      "pid_value2": "SPInd001",
+      "pat_country": "India",
+      "pat_title": "B/O",
+      "pat_middlename": "Martin",
+      "add_email": "Andrew.Jones@Gmail.com"
+    }
+  ],
+  "SPpermanentAddress": [
+    {
+      "add_address1": "Flat no 2505",
+      "add_address2": "Mumbai",
+      "add_address3": "ForestCounty",
+      "add_address4": "Maharashtra",
+      "add_address5": "4110 14",
+      "add_address6": "India",
+      "add_phone": 2026996541,
+      "add_mobile": 9422101112,
+      "add_email": "Mumbai.ForestCounty@gmail.com",
+      "add_fax": 112233,
+      "add_work_phone": 2026981025,
+      "add_postcode_nospaces": 411004,
+      "add_company_name": "Riomed",
+      "add_iso_country_code": 91,
+      "add_icao_country_code": 542152,
+      "add_notes": "For testing"
+    }
+  ],
+  "SPtempAddress": [
+    {
+      "add_address1": "Flat no 2505",
+      "add_address2": "Mumbai",
+      "add_address3": "ForestCounty",
+      "add_address4": "Maharashtra",
+      "add_address5": "4110 14",
+      "add_address6": "India",
+      "add_phone": 7777777700,
+      "add_mobile": 9762713710,
+      "add_email": "Mumbai.ForestCounty@gmail.com",
+      "add_fax": 8181808080,
+      "add_work_phone": 666999,
+      "add_postcode_nospaces": 411001,
+      "add_company_name": "Riomed",
+      "add_iso_country_code": 91,
+      "add_icao_country_code": 54215,
+      "__EMPTY": 91,
+      "add_notes": "Added for testing"
+    }
+  ],
+  "SPpip": [
+    {
+      "pip_title": "Mr",
+      "pip_firstname": "Wednesday",
+      "pip_surname": "Tester",
+      "pip_relationship": "Brother",
+      "pip_next_of_kin_yes": "No",
+      "pip_next_of_kin": 0,
+      "pip_notes": "Added for testing",
+      "pip_family_aware_illness_yes": "Yes",
+      "pip_family_aware_illness": 1,
+      "pip_middlename": "Middle",
+      "pip_gender": "M",
+      "pip_dob": "01/01/1995",
+      "pip_send_txt_email_yes": "Yes",
+      "pip_send_txt_email": 1,
+      "pip_ethnicity_text": "Indian",
+      "pip_ethnicity_id": 6882,
+      "pip_professional_title": "Prof"
+    }
+  ],
+  "SPaddGP": [
+    {
+      "egp_title": "Mr",
+      "egp_initials": "R",
+      "egp_first_name": "Riya",
+      "egp_surname": "Patil",
+      "egp_gp_code": "GP0001",
+      "egp_pct_code": "GPPCT0001",
+      "egp_gmc_code": "GPGMC0001",
+      "egp_fullname": "ANUMBA"
+    }
+  ],
+  "SPgpAddress": [
+    {
+      "add_address1": "Lane No 1",
+      "add_address2": "Hinjewadi",
+      "add_address3": "Pune",
+      "add_address4": "Maharashtra",
+      "add_address5": "4000 14",
+      "add_address6": "India",
+      "add_phone": "44244244",
+      "add_fax": "11255255",
+      "add_work_phone": "22547545",
+      "add_mobile": "9890098900",
+      "add_email": "PIP@gmail.com"
+    }
+  ],
+  "patDetails": [
+    {
+      "pat_hospital_ref": "Pha012",
+      "pat_dod": "29/10/2023",
+      "pat_tod": "00:11",
+      "pat_dead_confirmation_status": "confirmed",
+      "pat_death_notes": "Added For Testing",
+      "pat_firstname": "Fifteen",
+      "pat_surname": "Pharmacy"
+    }
+  ],
+  "patCauseOfDeath": [
+    {
+      "pod_cause": "Cryptosporidiosis",
+      "pod_cause_code": "A07.2",
+      "pod_cause_code_type": "icd10"
+    }
+  ],
+  "patOtherCauseOfDeath": [
+    {
+      "pod_cause": "Candidal sepsis",
+      "pod_cause_of_death_type_eli_text": "Cancer",
+      "pod_cause_code": "B37.7",
+      "pod_cause_code_type": "icd10"
+    }
+  ],
+  "AddMedication": [
+    {
+      "pacr_category": "Medication",
+      "pacr_que_name": "Paracetamol 500mg / Ibuprofen 200mg tablets",
+      "medi_dose": "2",
+      "medi_frequency": "12 Hours",
+      "medi_method": "Oral",
+      "medi_route": "Oral",
+      "medi_duration": "2",
+      "meded_value": "Left",
+      "medi_start_date": "14/05/2025",
+      "medi_stop_date": "19/05/2025",
+      "pacr_status": "current",
+      "medi_prescribed_by": "GP",
+      "pcl_location_name": "Cardio Location",
+      "medi_notes": "Added notes for testing",
+      "medi_stopped_reason_eli_text": "Dose completed",
+      "mse_text": "Drowsiness",
+      "paprd_endorsement": "Yes",
+      "paprd_cost": "10",
+      "meded_value_Price_check_quantity": "2",
+      "meded_value_Administrator": "Administrator",
+      "meded_value_PGD": "PGD",
+      "meded_value_MaxReffills": "5",
+      "meded_value_Unit": "Tab",
+      "meded_value_Quantity": "3",
+      "meded_value_Adherent": "Adherent"
+    },
+    {
+      "pacr_que_name": "Venlafaxine"
+    }
+  ]
+}

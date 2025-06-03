@@ -1,0 +1,157 @@
+{
+  "loginDetails": [
+    {
+      "username": "manoj.auto",
+      "password": "Manoj@2024"
+    },
+    {
+      "username": "prerelease.auto",
+      "password": "Manoj@2023"
+    }
+  ],
+  "AddNewStock": [
+    {
+      "stock_name": "Naprelan",
+      "stock_category": "Medication",
+      "stock_que_local_code": "9988",
+      "stock_barcode": "123",
+      "stock_item_barcode": "456",
+      "stock_total_count": "250",
+      "stock_description": "TestDescription",
+      "stock_desc_other_lang": "TestName",
+      "stdo_dose": "2",
+      "stdo_route": "Oral",
+      "stdo_duration": "3",
+      "stdo_frequency": "12 hourly",
+      "stdo_duration_1": "12 hourly",
+      "stdo_num_to_dispensed": "2",
+      "stbat_supplier": "Atharva Supplier",
+      "stbat_batch_number": "Batch15",
+      "stbat_quantity": "300",
+      "stbat_serial_number": "112211",
+      "stbat_manufacture_date": "01/01/2024",
+      "stbat_expiry_date": "31/12/2025",
+      "stbat_batch_received_date": "01/05/2025",
+      "stbat_purchase_price": "5.0000",
+      "stbat_unit_cost": "6.0000",
+      "stbat_retail_price": "7.0000"
+    }
+  ],
+  "EditStockItem": [
+    {
+      "stock_name": "Naprelan",
+      "stock_category": "Medication",
+      "stock_que_local_code": "8888",
+      "stock_barcode": "123",
+      "stock_item_barcode": "456",
+      "stock_total_count": "255",
+      "stock_description": "addStockDescription",
+      "stock_desc_other_lang": "NameinOtherLang",
+      "stdo_dose": "2",
+      "stdo_route": "Oral",
+      "stdo_duration": "4",
+      "stdo_frequency": "24 Hours",
+      "stdo_duration_1": "12 hourly",
+      "stdo_num_to_dispensed": "2",
+      "stbat_supplier": "Atharva Supplier",
+      "stbat_batch_number": "Batch15",
+      "stbat_quantity": "300",
+      "stbat_manufacture_date": "01/01/2024",
+      "stbat_expiry_date": "31/01/2026",
+      "stbat_batch_received_date": "01/04/2025",
+      "stbat_purchase_price": "5.0000",
+      "stbat_unit_cost": "6.0000",
+      "stbat_retail_price": "7.0000"
+    }
+  ],
+  "AddBatch": [
+    {
+      "stbat_supplier": "Atharva Supplier",
+      "stbat_batch_number": "ExtraBatch",
+      "stbat_quantity": "120",
+      "stbat_serial_number": "112211",
+      "stbat_manufacture_date": "01/01/2024",
+      "stbat_expiry_date": "31/12/2025",
+      "stbat_batch_received_date": "01/05/2025",
+      "stbat_purchase_price": "5.0000",
+      "stbat_unit_cost": "6.0000",
+      "stbat_retail_price": "7.0000"
+    }
+  ],
+  "EditBatch": [
+    {
+      "stbat_supplier": "Atharva Supplier",
+      "stbat_batch_number": "ExtraBatch",
+      "stbat_quantity": "150",
+      "stbat_serial_number": "112211",
+      "stbat_manufacture_date": "01/01/2024",
+      "stbat_expiry_date": "31/12/2026",
+      "stbat_batch_received_date": "01/05/2025",
+      "stbat_purchase_price": "6.0000",
+      "stbat_unit_cost": "7.0000",
+      "stbat_retail_price": "8.0000"
+    }
+  ],
+  "ReturnItem": [
+    {
+      "sttra_stloc_id_transfer_to": "Default Pharmacy",
+      "sttra_return_reason": "Broken",
+      "sttra_quantity": "2",
+      "sttra_additional_notes": "added notes",
+      "sttra_request_type": "return",
+      "sttra_status": "pendingApproval"
+    },
+    {
+      "sttra_status": "pendingApproval"
+    },
+    {
+      "sttra_status": "pendingApproval"
+    }
+  ],
+  "DeleteBatch": [
+    {
+      "stbat_supplier": "Atharva Supplier",
+      "stbat_batch_number": "ExtraBatch",
+      "stbat_quantity": "0",
+      "stbat_serial_number": "112211",
+      "stbat_manufacture_date": "01/01/2024",
+      "stbat_expiry_date": "31/01/2026",
+      "stbat_batch_received_date": "01/04/2025",
+      "stbat_purchase_price": "5.0000",
+      "stbat_unit_cost": "6.0000",
+      "stbat_retail_price": "7.0000"
+    }
+  ],
+  "StockTransfer": [
+    {
+      "stbat_batch_number": "Batch15",
+      "sttra_quantity": 5,
+      "sttra_request_type": "transfer",
+      "sttra_status": "pendingApproval"
+    },
+    {
+      "sttra_status": "approved"
+    },
+    {
+      "sttra_status": "toPick"
+    },
+    {
+      "sttra_status": "dispatched"
+    },
+    {
+      "sttra_status": "transferred"
+    }
+  ],
+  "BatchIncrement": [
+    {
+      "stbat_batch_number": "Batch15",
+      "stbat_batch_change_type": "increment"
+    }
+  ],
+  "BatchDecrement": [
+    {
+      "stbat_batch_number": "Batch15",
+      "stbat_batch_change_type": "decrement"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "loginDetails": [
+    {
+      "username": "prerelease.auto",
+      "password": "Manoj@2023"
+    },
+    {
+      "username": "letter.auth",
+      "password": "Manoj@2025"
+    },
+    {
+      "username": "prerelease.auto",
+      "password": "Manoj@2023"
+    },
+    {
+      "username": "manoj.auto",
+      "password": "Manoj@2023"
+    }
+  ],
+  "addListItem": [
+    {
+      "eli_text": "EliListCEf",
+      "eli_numeric_value": "1",
+      "eli_text_other_lang": "EliListCEf",
+      "eli_code": "008",
+      "eli_code_type": "local",
+      "eli_code_text": "Rio15"
+    }
+  ],
+  "patDetails": [
+    {
+      "pat_hospital_ref": "hosp0925id006",
+      "pat_title": "Mr",
+      "pat_firstname": "meher",
+      "pat_surname": "Riomedtest",
+      "pat_sex": "F",
+      "pat_dob": "22/09/2023",
+      "pat_marital_status": "Single",
+      "pat_ethnicity_text": "Indian",
+      "pat_occupation": "Trainer",
+      "pat_notes": "Added This patient for Testing",
+      "pat_type": "Regular",
+      "pat_maiden_name": "Pune",
+      "pat_blood_group": "B+",
+      "pat_religion": "Hindu",
+      "pat_middlename": "Martin",
+      "pat_registered_disabled_yes": "No",
+      "pat_registered_disabled": 0,
+      "pat_currently_pregnant_yes": "No",
+      "pat_currently_pregnant": 0,
+      "pat_language": "English",
+      "pat_temp_address_start": "01-04-2023",
+      "pat_country_of_birth": "India",
+      "pat_gender_at_birth": "M",
+      "pat_nationality": "Indian",
+      "pat_prisoner_yes": "No",
+      "pat_county_of_birth": "Maharashtra",
+      "pat_town_of_birth": "Pune",
+      "pat_sexual_orientation_eli_text": "Heterosexuality",
+      "pat_disability_note": "For Testing"
+    }
+  ],
+  "letterSummries": [
+    {
+      "patletd_start_date": "01/01/2025",
+      "patletd_end_date": "24/05/2025",
+      "patlet_name": "Referral Letter",
+      "patlet_status": "Not Sent",
+      "patletd_patient_location": "Cardio Location",
+      "patlet_type": "Referral Letter",
+      "patlet_letter_date": "24/05/2025"
+    }
+  ],
+  "letterSendApproved": [
+    {
+      "patletd_start_date": "01/01/2025",
+      "patletd_end_date": "24/05/2025",
+      "patlet_name": "Referral Letter",
+      "patlet_status": "Authorised",
+      "patletd_patient_location": "Cardio Location",
+      "patlet_type": "Referral Letter",
+      "patlet_letter_date": "24/05/2025"
+    }
+  ],
+  "DeleteRecord": [
+    {
+      "patletd_start_date": "01/01/2025",
+      "patletd_end_date": "24/05/2025",
+      "input_LetterName": "AutomationLetter",
+      "input_Status_": "Not Sent",
+      "patlet_status": "authorised",
+      "patletd_patient_location": "Cardio Location",
+      "patlet_name": "Referral Letter",
+      "patlet_letter_date": "24/05/2025"
+    }
+  ]
+}

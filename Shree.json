@@ -1,0 +1,12 @@
+{
+  "jwt": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyUm9sZXMiOiJTZWxlY3QgU2VydmljZSxBZG1pbmlzdHJhdG9yLFJlZ2lzdHJhdGlvbixBcHBvaW50bWVudCBBZG1pbixTdGFuZGFyZCxIUCBEZWZhdWx0IEFwcHQsRGVmYXVsdCIsInVzZUNsaUlkIjoiODQiLCJ1c2VFc3RJZCI6IjQiLCJzdWIiOiJwcmVyZWxlYXNlLmF1dG8iLCJpYXQiOjE3MDgwMDY0MTUsImV4cCI6MTcwODAxMDAxNX0.Vgu3TsfCMoBPkkcWU8nOUrYoBD1p0--Lmb2MgOLUAFLTGOJA5sir0t2RrSVTZLnZWQzWcerf2-NuJBYx9lh9gA",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDbXFqRHJuNzVXIiwiaWF0IjoxNzA4MDA2NDE1LCJleHAiOjE3MDgwMTM2MTV9.n4D_6hQo-QE-BMjSxUooQCka3uSbUSRxZoKw0uRc0xnIHVXLWb1Oy7xMXdQOxM9f6Ygo3igCB2NzfMv-2eZPxA",
+  "estDisplayAllGenders": "true",
+  "postcodeAnywhereAddress": "BW91-UF21-RD95-PU29",
+  "postcodeAnywhereAccount": "riome11111",
+  "administrationLevel": 3,
+  "estCodePreference": "N",
+  "estPatientPostcodeSearch": 1,
+  "estPostcodeMandatory": 0,
+  "informationMessages": []
+}

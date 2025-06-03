@@ -1,0 +1,33 @@
+[
+  {
+    "eli_id": 7823,
+    "eli_cli_id": 84,
+    "eli_app_id": 111,
+    "eli_est_id": 4,
+    "eli_cod_id": null,
+    "eli_text": "EliListCI",
+    "eli_show": 1,
+    "eli_clinic_type_eli_id": null,
+    "eli_identifier_type": null,
+    "eli_numeric_value": 1,
+    "eli_expression_check": null,
+    "eli_hex_colour": null,
+    "eli_show_for_patientweb": null,
+    "eli_bank_isdefault": null,
+    "eli_text_other_lang": "EliListCI",
+    "eli_created_by": "manoj.auto",
+    "eli_created": "29/05/2025",
+    "eli_deleted_by": null,
+    "eli_deleted": null,
+    "eli_decimal_value": null,
+    "eli_wor_id": null,
+    "eli_display_scope": "Both",
+    "eli_linked": null,
+    "eli_device_subcategory": null,
+    "eli_show_request_device_link": null,
+    "eli_code": "008",
+    "eli_code_type": "local",
+    "eli_code_text": "Rio15",
+    "eli_service_report_type": null
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "stock_name": "Naprelan",
+    "stock_category": "Medication",
+    "stock_barcode": "123",
+    "stock_item_barcode": "456",
+    "stock_description": "TestDescription",
+    "stock_desc_other_lang": "TestName",
+    "stbat_serial_number": "112211",
+    "stbat_quantity": 300,
+    "stbat_manufacture_date": "01/01/2024",
+    "stbat_expiry_date": "31/12/2025",
+    "stbat_batch_number": "Batch15",
+    "stbat_supplier": "Atharva Supplier",
+    "stbat_batch_received_date": "01/05/2025",
+    "stbat_purchase_price": "5.0000",
+    "stbat_unit_cost": "6.0000",
+    "stbat_retail_price": "7.0000"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "stbat_serial_number": "112211",
+    "stbat_quantity": 0,
+    "stbat_manufacture_date": "01/01/2024",
+    "stbat_expiry_date": "31/01/2026",
+    "stbat_batch_number": "Batch15",
+    "stbat_supplier": "Atharva Supplier",
+    "stbat_batch_received_date": "01/04/2025",
+    "stbat_purchase_price": "5.0000",
+    "stbat_unit_cost": "6.0000",
+    "stbat_retail_price": "7.0000"
+  }
+]

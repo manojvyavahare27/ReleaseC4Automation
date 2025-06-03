@@ -1,0 +1,23 @@
+[
+  {
+    "egp_id": 1347,
+    "egp_add_id": 26089,
+    "egp_est_id": 4,
+    "egp_title": "Mr",
+    "egp_initials": "R",
+    "egp_first_name": "Priya",
+    "egp_surname": "Kolhe",
+    "egp_gp_code": "GP0001",
+    "egp_show": 1,
+    "egp_pct_code": null,
+    "egp_pct_name": null,
+    "egp_practise_code": "GPPCT0001",
+    "egp_ccg": null,
+    "egp_imported_method": null,
+    "egp_imported_timestamp": "2024-04-25T22:50:05.000Z",
+    "egp_imported": null,
+    "egp_imported_by": "prerelease.auto",
+    "egp_gmc_code": "GPGMC0001",
+    "egp_fullname": "Kolhe Priya R"
+  }
+]

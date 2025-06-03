@@ -1,0 +1,33 @@
+[
+  {
+    "pacr_id": 1202,
+    "pacr_sgr_id": 26821,
+    "pacr_pat_id": 786691,
+    "pacr_est_id": 4,
+    "pacr_ref_id": 11267,
+    "pacr_cli_id": 84,
+    "pacr_ast_id": null,
+    "pacr_ase_id": null,
+    "pacr_private": 0,
+    "pacr_category": "Examination",
+    "pacr_que_code": "1249004",
+    "pacr_que_code_type": "snomed-ct",
+    "pacr_que_name": "Dry eye",
+    "pacr_status": null,
+    "pacr_risk": "moderate",
+    "pacr_record_status": "wrong",
+    "pacr_clinic_date": "2024-04-29T18:30:00.000Z",
+    "pacr_created": "2024-04-29T20:59:59.000Z",
+    "pacr_created_by": "prerelease.auto",
+    "pacr_updated": "2024-04-29T21:00:37.000Z",
+    "pacr_updated_by": "prerelease.auto",
+    "pacr_delete_reason": "Delete for testing",
+    "pacr_deleted": "2024-04-29T21:00:45.000Z",
+    "pacr_deleted_by": "prerelease.auto",
+    "pacr_migrated": 0,
+    "pacr_imported": null,
+    "pacr_imported_method": null,
+    "pacr_archived": null,
+    "pacr_temporary_notes": null
+  }
+]

@@ -1,0 +1,188 @@
+{
+  "loginDetails": [
+    {
+      "username": "manoj.auto",
+      "password": "Manoj@2024"
+    },
+    {
+      "username": "prerelease.auto",
+      "password": "Manoj@2023"
+    },
+    {
+      "username": "manoj.auto",
+      "password": "Manoj@2023"
+    }
+  ],
+  "addListItem": [
+    {
+      "eli_text": "EliListCI",
+      "eli_numeric_value": "1",
+      "eli_text_other_lang": "EliListCI",
+      "eli_code": "008",
+      "eli_code_type": "local",
+      "eli_code_text": "Rio15"
+    }
+  ],
+  "createUser": [
+    {
+      "use_increment": 101,
+      "use_username": "Test.101User",
+      "use_firstname": "Auto",
+      "use_password": "Manoj@2024",
+      "use_surname": "Riomedtest",
+      "use_email": "thayne.sampson101@riomed.com",
+      "use_expires": "30/06/2035",
+      "use_title": "Mr",
+      "use_profession": "Consultant",
+      "use_mobile": 9586471203,
+      "use_speciality": "Cardiology",
+      "use_mcrn_number": 2354,
+      "use_notes": "User added for testing purpose",
+      "use_username_old": "Test325.user",
+      "use_password_old": "Manoj@2023"
+    }
+  ],
+  "createEstProfessional": [
+    {
+      "esp_title": "Mr",
+      "esp_initials": "Dr.",
+      "esp_surname": "Riomedtest",
+      "esp_profession": "Consultant",
+      "esp_specialty": "Cardiology",
+      "esp_show": 1,
+      "esp_local": 1,
+      "esp_consultant": 1,
+      "esp_commision_level": "Senior",
+      "esp_npi_number": 2021,
+      "esp_not_a_person": 1,
+      "esp_send_appointment_text_email": 1,
+      "esp_allow_external_referral": 1,
+      "esp_firstname": "Auto",
+      "esp_first_consultation_validity": 7,
+      "esp_follow_up_consultation_validity": 10,
+      "esp_consultant_code": "CC023",
+      "esp_region_eli_text": "HP Region1"
+    }
+  ],
+  "setHpDiary": [
+    {
+      "searchStartDate": "01/07/2023",
+      "searchEndDate": "31/07/2023",
+      "hpd_start_date": "01/05/2025",
+      "hpd_end_date": "31/05/2025",
+      "hpd_working_start_time": "00:05",
+      "hpd_working_end_time": "23:55",
+      "hpd_monday": 1,
+      "hpd_tuesday": 1,
+      "hpd_wednesday": 1,
+      "hpd_thursday": 1,
+      "hpd_friday": 1,
+      "hpd_saturday": 1,
+      "hpd_sunday": 1,
+      "hpd_occuring": "month",
+      "hpd_week_of_month": 2
+    }
+  ],
+  "setHpClinicDiary": [
+    {
+      "hcd_start_date": "02/05/2025",
+      "hcd_end_date": "30/05/2025",
+      "hcd_clinic_start_time": "00:15",
+      "hcd_clinic_end_time": "23:45",
+      "hcd_monday": 1,
+      "hcd_tuesday": 1,
+      "hcd_wednesday": 1,
+      "hcd_thursday": 1,
+      "hcd_friday": 1,
+      "hcd_saturday": 1,
+      "hcd_sunday": 1,
+      "hcd_occuring": "month",
+      "hcd_week_of_month": 2
+    }
+  ],
+  "editHpDiary": [
+    {
+      "hpd_start_date": "02/05/2025",
+      "hpd_end_date": "30/05/2025",
+      "hpd_working_start_time": "00:15",
+      "hpd_working_end_time": "23:45",
+      "hpd_monday": 1,
+      "hpd_tuesday": 1,
+      "hpd_wednesday": 1,
+      "hpd_thursday": 1,
+      "hpd_friday": 1,
+      "hpd_saturday": 1,
+      "hpd_sunday": 1,
+      "hpd_occuring": "month",
+      "hpd_week_of_month": 2
+    }
+  ],
+  "setHpLeave": [
+    {
+      "hpd_start_date": "02/05/2025",
+      "hpd_end_date": "25/05/2025",
+      "hpd_working_start_time": "00:15",
+      "hpd_working_end_time": "23:45",
+      "hpd_indicator": 2,
+      "hpd_monday": 1,
+      "hpd_tuesday": 0,
+      "hpd_wednesday": 0,
+      "hpd_thursday": 0,
+      "hpd_friday": 0,
+      "hpd_saturday": 0,
+      "hpd_sunday": 0,
+      "hpd_leave_type_eli_text": "Sick Leave"
+    }
+  ],
+  "setHpClinicLeave": [
+    {
+      "hcd_start_date": "02/05/2025",
+      "hcd_end_date": "25/05/2025",
+      "hcd_clinic_start_time": "00:00:00",
+      "hcd_clinic_end_time": "00:00:00",
+      "hcd_indicator": 2,
+      "hcd_monday": 1,
+      "hcd_tuesday": 1,
+      "hcd_wednesday": 1,
+      "hcd_thursday": 1,
+      "hcd_friday": 1,
+      "hcd_saturday": 1,
+      "hcd_sunday": 1,
+      "hcd_leave_type_eli_text": "Sick Leave"
+    }
+  ],
+  "editHpLeave": [
+    {
+      "hpd_start_date": "10/05/2025",
+      "hpd_end_date": "13/05/2026",
+      "hpd_working_start_time": "01:20",
+      "hpd_working_end_time": "10:20",
+      "hpd_indicator": 2,
+      "hpd_monday": 0,
+      "hpd_tuesday": 1,
+      "hpd_wednesday": 1,
+      "hpd_thursday": 0,
+      "hpd_friday": 0,
+      "hpd_saturday": 0,
+      "hpd_sunday": 0,
+      "hpd_leave_type_eli_text": "Sick Leave"
+    }
+  ],
+  "editHpClinicLeave": [
+    {
+      "hcd_start_date": "10/05/2025",
+      "hcd_end_date": "13/05/2026",
+      "hcd_clinic_start_time": "00:00",
+      "hcd_clinic_end_time": "00:00",
+      "hcd_indicator": 2,
+      "hcd_monday": 0,
+      "hcd_tuesday": 1,
+      "hcd_wednesday": 1,
+      "hcd_thursday": 0,
+      "hcd_friday": 0,
+      "hcd_saturday": 0,
+      "hcd_sunday": 0,
+      "hcd_leave_type_eli_text": "Sick Leave"
+    }
+  ]
+}
