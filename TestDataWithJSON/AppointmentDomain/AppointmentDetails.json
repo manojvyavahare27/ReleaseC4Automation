@@ -20,7 +20,7 @@
     {
       "pat_hospital_ref": "hosp0925id007",
       "pat_title": "Mr",
-      "pat_firstname": "Avinash",
+      "pat_firstname": "Aksha",
       "pat_surname": "Riomed",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -53,7 +53,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "Avinash",
+      "pat_firstname": "Aksha",
       "pat_surname": "Riomed",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -84,7 +84,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "Avinash",
+      "pat_firstname": "Aksha",
       "pat_lastname": "Riomed",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -93,7 +93,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "Avinash.Riomed@Gmail.com"
+      "add_email": "Aksha.Riomed@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -151,6 +151,7 @@
       "pip_dob": "01/01/1995",
       "pip_identifier_type": "Aadhar Card",
       "pip_identifier_number": "989798979897",
+      "pip_chiNumber": "123456",
       "pip_send_txt_email_yes": "Yes",
       "pip_send_txt_email": 1,
       "pip_send_txt_email_yes_1": "Yes",
@@ -253,8 +254,8 @@
   ],
   "addEditAppointments": [
     {
-      "rea_date": "30/05/2025",
-      "rea_edited_date": "30/05/2025",
+      "rea_date": "05/06/2025",
+      "rea_edited_date": "05/06/2025",
       "rea_time": "10:30:00",
       "rea_edited_time": "09:00",
       "convertedTime": "10:30 AM",
@@ -279,7 +280,7 @@
   ],
   "bookNewAppointments": [
     {
-      "rea_date": "30/05/2025",
+      "rea_date": "05/06/2025",
       "rea_time": "10:15:00",
       "convertedTime": "10:15 AM",
       "rea_status": "scheduled",
@@ -303,7 +304,7 @@
   ],
   "CancelBookAppointment": [
     {
-      "rea_date": "30/05/2025",
+      "rea_date": "05/06/2025",
       "rea_time": "10:15:00",
       "convertedTime": "10:15 AM",
       "rea_status": "cancelled",
@@ -327,7 +328,7 @@
   ],
   "nextAvailAppointments": [
     {
-      "rea_date": "30/05/2025",
+      "rea_date": "05/06/2025",
       "rea_edited_date": "02/12/2023",
       "rea_time": "09:00:00",
       "convertedTime": "09:00 AM",
@@ -371,8 +372,8 @@
   ],
   "rescheduleAppointments": [
     {
-      "rea_date": "30/05/2025",
-      "rea_edited_date": "30/05/2025",
+      "rea_date": "05/06/2025",
+      "rea_edited_date": "05/06/2025",
       "rea_time": "10:45:00",
       "rea_edited_time": "15:30:00",
       "convertedTime": "10:45 AM",
@@ -428,7 +429,7 @@
       "rea_clinic_type_eli_id": 6903,
       "rea_region_eli_id": 6910,
       "rea_region_eli_text": "HP Region1",
-      "rea_updated": "30/05/2025",
+      "rea_updated": "05/06/2025",
       "rea_updated_by": "thayne.auto",
       "rea_patient_type": "Regular",
       "rea_end_time": "07:35:00"
@@ -518,7 +519,7 @@
     {
       "ars_record_status": "wrong",
       "aps_record_status": "wrong",
-      "aps_deleted": "30/05/2025",
+      "aps_deleted": "05/06/2025",
       "aps_deleted_by": "thayne.auto",
       "aps_end_date": "30/05/2025"
     }
