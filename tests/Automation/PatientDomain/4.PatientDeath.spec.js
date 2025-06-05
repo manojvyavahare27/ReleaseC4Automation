@@ -82,7 +82,7 @@ const jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/Pa
     await editpatient.clickOnPatientDetails()
     await editpatient.clickOnLinks()
     await editpatient.clickOnDeathLink()
-    await page.pause()
+   // await page.pause()
      await page.waitForTimeout(1000);
     await patientdeath.enterCauseOfDeathReason(jsonData.patCauseOfDeath[index].pod_cause)
     //await page.pause()
