@@ -123,7 +123,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
     //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await page.waitForTimeout(5000);
     await confirmexisting.clickOnConfirmExistingDetails();
-    await page.pause();
+   // await page.pause();
     await page.waitForTimeout(5000);
     const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
     //const addReferralText = await page.locator("xpath=//div/h1[text()='Add a Referral']").isVisible();
@@ -313,7 +313,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
         );
       }
-      await page.pause();
+      //await page.pause();
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(7000);
       // await addeditpatientappointment.selectTypeOfAppointment()
@@ -491,7 +491,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
         );
       }
-      await page.pause();
+     // await page.pause();
       //Edit Patient App.
       await scheduleserviceapp.clickOnDateLink();
       //await addeditpatientappointment.selectTypeOfAppointment()

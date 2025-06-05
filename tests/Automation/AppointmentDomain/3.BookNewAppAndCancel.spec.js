@@ -108,7 +108,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname)
      await patientsearch.selectSex(jsonData.addPatient[index].pat_sex)  
      await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref)
-     await page.pause()
+     //await page.pause()
      //await patientsearch.selectBornDate()
      await patientsearch.clickOnSearchPatButton()
      //await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
@@ -290,7 +290,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           // await waitednotseenpatientappointments.clickOnBackButton()
           
      //change Appoitntment Type
-      await page.pause()
+      //await page.pause()
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.clickOnCloseAppTypePopup()
      await scheduleserviceapp.ClickonAppTypeLink()
@@ -411,11 +411,11 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           //Communication Consent
           await servicebookapp.selectCommConsentNo()
           await servicebookapp.clikcOnRadioAllNo()
-          await page.pause()
+          //await page.pause()
           //await servicebookapp.clickOnRadioAllYes()
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-          await page.pause()
+         // await page.pause()
           var sqlQuery =
           "select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref + "' order by pat_id desc limit 1";
         console.log(sqlQuery);
