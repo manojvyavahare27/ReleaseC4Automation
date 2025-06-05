@@ -112,7 +112,7 @@ test.describe('New Patient', () => {
 
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
-      await page.pause();
+     // await page.pause();
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnAddPatientbutton();
       await patientduplicatecheck.clickOnDuplicateCheckButton();

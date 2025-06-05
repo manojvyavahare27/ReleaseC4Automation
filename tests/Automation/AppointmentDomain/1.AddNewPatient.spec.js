@@ -300,17 +300,15 @@ test.describe("Appointment Domain Db Comparison", () => {
       // await addpip.enterPIPEmailId(pipdetailsdata.Email);
       await addpip.selectPIPRelation(jsonData.pip[index].pip_relationship);
       await addpip.selectPIPNextOfKin(jsonData.pip[index].pip_next_of_kin_Yes);
-      await addpip.SelectPIPFamilyAwareOfIllness(
-        jsonData.pip[index].pip_family_aware_illness_yes
-      );
-      await addpip.selectPIPIdentifierType(
-        jsonData.pip[index].pip_identifier_type
-      );
-      await addpip.enterPIPIdentifier(
-        jsonData.pip[index].pip_identifier_number.toString()
-      );
-      // await addpip.enterExternalProfessional(pipdetailsdata.ExternalProfessional);
-
+      await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);
+      await addpip.selectPIPIdentifierType(jsonData.pip[index].pip_identifier_type);
+      if (await addpip.dropdownPIPIdentifierType.isVisible()) {
+        await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString());
+      } else if (await addpip.chiNumber.isVisible()) {
+        await addpip.enterCHInumber(jsonData.pip[index].pip_chiNumber.toString());
+      } else {
+        throw new Error('Neither PIP Identifier dropdown nor CHI Number field is visible on the screen.');
+      }
       await addpip.enterProfessionalTitle(
         jsonData.pip[index].pip_professional_title
       );
