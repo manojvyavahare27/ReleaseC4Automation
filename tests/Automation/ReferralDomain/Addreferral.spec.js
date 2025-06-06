@@ -24,20 +24,10 @@ import TopBlueBar from "../../../Pages/BaseClasses/TopBlueBar";
 import EditPatient from "../../../Pages/PatientDomain/EditPatient";
 import AddReferral from "../../../Pages/PatientDomain/AddReferral";
 
-const logindata = JSON.parse(
-  JSON.stringify(require("../../../TestData/PatientDomain/Login.json"))
-);
-const patientdetailsdata = JSON.parse(
-  JSON.stringify(
-    require("../../../TestData/ReferralDomain/PatientDetails.json")
-  )
-);
-const pipdetailsdata = JSON.parse(
-  JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json"))
-);
-const gpdata = JSON.parse(
-  JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json"))
-);
+const logindata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")));
+const patientdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/ReferralDomain/PatientDetails.json")));
+const pipdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")));
+const gpdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")));
 
 const consoleLogs = [];
 let jsonData;
