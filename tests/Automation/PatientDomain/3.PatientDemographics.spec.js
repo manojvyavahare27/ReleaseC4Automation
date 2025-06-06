@@ -37,17 +37,14 @@ const logindata= JSON.parse(JSON.stringify(require("../../../TestData/PatientDom
 const patientdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PatientDetails.json")))
 const pipdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")))
 const gpdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")))
-const jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")));
+let jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")));
 
 
 test.describe("Patient Domain Db COmparison", () => {
   test("Extract Patient Details", async ({}) => {
-    const excelFilePath =
-      process.env.EXCEL_FILE_PATH || "./ExcelFiles/PatientDomain.xlsx";
-    const jsonFilePath =
-      "./TestDataWithJSON/PatientDomain/PatientDetails.json";
+    const excelFilePath = process.env.EXCEL_FILE_PATH || "./ExcelFiles/PatientDomain.xlsx";
+    const jsonFilePath = "./TestDataWithJSON/PatientDomain/PatientDetails.json";
     const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
-
     if (conversionSuccess) {
       jsonData = require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json");
       console.log("Excel file has been converted successfully!");
