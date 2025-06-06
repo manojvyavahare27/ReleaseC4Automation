@@ -2,6 +2,7 @@ const fs = require("fs");
 const XLSX = require("xlsx");
 const path = "D:/Riomed/Cellma4Automation";
 const mysql = require("mysql");
+const convertExcelToJson = require('../../../config/global-setupOptimized');
 
 //import { test, expect } from "@playwright/test";
 const connectToDatabase = require("../../../manoj").default;
@@ -38,6 +39,27 @@ const pipdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/Patien
 const gpdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")))
 const jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")));
 
+
+test.describe("Patient Domain Db COmparison", () => {
+  test("Extract Patient Details", async ({}) => {
+    const excelFilePath =
+      process.env.EXCEL_FILE_PATH || "./ExcelFiles/PatientDomain.xlsx";
+    const jsonFilePath =
+      "./TestDataWithJSON/PatientDomain/PatientDetails.json";
+    const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
+
+    if (conversionSuccess) {
+      jsonData = require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json");
+      console.log("Excel file has been converted successfully!");
+      console.log("jsonData:", jsonData); // Log the loaded JSON data
+      console.log("excelFilePath after conversion:", excelFilePath);
+      console.log("jsonFilePath after conversion:", jsonFilePath);
+    } else {
+      throw new Error("Excel to JSON conversion failed.");
+    }
+  });
+  
+  
 test.describe("Login Tests", () => {
     jsonData.addPatient.forEach(async (data, index) => {
       test("Patient ${data.pat_firstname} Demographics Details", async ({ page }) => {
@@ -378,3 +400,4 @@ test.describe("Login Tests", () => {
       })
 });
 });
+})
