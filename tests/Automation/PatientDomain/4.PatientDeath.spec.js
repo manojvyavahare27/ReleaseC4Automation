@@ -2,6 +2,7 @@ const fs = require("fs");
 const XLSX = require("xlsx");
 const path = "C:/Riomed/Cellma4Automation";
 const mysql = require("mysql");
+const convertExcelToJson = require('../../../config/global-setupOptimized');
 
 //import { test, expect } from "@playwright/test";
 const connectToDatabase = require("../../../manoj").default;
@@ -36,9 +37,27 @@ const patientdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/Pa
 const pipdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")))
 const gpdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")))
 const deadpatient=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/DeadPatientDetails.json")))
-const jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")))
+let jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")))
 // // Array to store console logs
- const consoleLogs = [];
+ 
+
+ test.describe("Patient Domain Db COmparison", () => {
+  test("Extract Patient Details", async ({}) => {
+    const excelFilePath = process.env.EXCEL_FILE_PATH || "./ExcelFiles/PatientDomain.xlsx";
+    const jsonFilePath = "./TestDataWithJSON/PatientDomain/PatientDetails.json";
+    const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
+    if (conversionSuccess) {
+      jsonData = require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json");
+      console.log("Excel file has been converted successfully!");
+      console.log("jsonData:", jsonData); // Log the loaded JSON data
+      console.log("excelFilePath after conversion:", excelFilePath);
+      console.log("jsonFilePath after conversion:", jsonFilePath);
+    } else {
+      throw new Error("Excel to JSON conversion failed.");
+    }
+  });
+})
+
 
  test.describe("Login Tests", () => {
   jsonData.addPatient.forEach(async (data, index) => {
@@ -140,13 +159,9 @@ const jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/Pa
      console.log("\n Patient Details stored into the database: \n", results);
      var match = await compareJsons(sqlFilePath, null,jsonData.patOtherCauseOfDeath[index]);
      if (match) {
-         console.log(
-             "\n Patient's Other Cause of Death Comparision: Parameters from both JSON files match!\n"
-         );
+         console.log("\n Patient's Other Cause of Death Comparision: Parameters from both JSON files match!\n");
      } else {
-         console.log(
-             "\n Patient's Other Cause of Death Comparision: Parameters from both JSON files do not match!\n"
-         );
+         console.log("\n Patient's Other Cause of Death Comparision: Parameters from both JSON files do not match!\n");
      }
         
     //await expect(page.getByText('Patient death added successfully')).toHaveText('Patient death added successfully')
@@ -158,5 +173,5 @@ const jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/Pa
    // await page.pause()
 
 });
-});
+  });
 });
