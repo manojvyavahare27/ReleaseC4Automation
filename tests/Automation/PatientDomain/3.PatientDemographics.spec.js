@@ -74,6 +74,7 @@ test.describe("Login Tests", () => {
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton()
     await page.waitForTimeout(1500)
+    await page.pause()
     await patientsearch.clickOnSearchPatientLink()
     await page.waitForTimeout(1500)
     // await patientsearch.ClickOnNoConfirmLegitimateRelationship()
