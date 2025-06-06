@@ -73,19 +73,20 @@ test.describe("Login Tests", () => {
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton()
-    await page.waitForTimeout(1500)
-    await page.pause()
+    await page.waitForTimeout(2500)
+    
     await patientsearch.clickOnSearchPatientLink()
-    await page.waitForTimeout(1500)
+    await page.waitForTimeout(2500)
     // await patientsearch.ClickOnNoConfirmLegitimateRelationship()
     // await patientsearch.clickOnSearchPatientLink()
     // await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await patientsearch.clickOnBackbuttonOnPatientSearch()
-    await page.waitForTimeout(1500)
+    await page.waitForTimeout(3000)
     //await confirmexisting.clickOnConfirmExistingDetails()
     
     await topbluebar.clickOnBannerButtonKeyboardArrow()
-    await page.waitForTimeout(1500)
+    await page.waitForTimeout(2000)
+   
     await topbluebar.ClickOnViewAllContactDetails()
 
     //Click On Links
