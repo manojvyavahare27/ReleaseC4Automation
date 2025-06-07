@@ -14,7 +14,7 @@ class HPDiary{
         //this.DateForLeave=page.getByRole('button', { name: 'Working Hrs : 9 Start Time : 01:20 End Time : 10:20' }).nth(2)
         //getByRole('button', { name: 'Working Hrs : 9 Start Time : 01:20 End Time : 10:20' }).nth(2)
         this.dropdownLeaveType=page.getByRole('button', { name: 'Open' })
-        this.checkboxDays=page.getByLabel('Day(s)')
+        this.checkboxDays=page.getByLabel('Day(s)', { exact: true })
         this.dayleavesStartDate=page.getByTestId('Start Date')
         this.dayleavesEndDate=page.getByTestId('End Date')
         this.btnSaveLeave=page.getByTestId('Save')

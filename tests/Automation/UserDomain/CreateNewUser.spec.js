@@ -125,7 +125,7 @@ test.describe("Database Comparison Add New User", () => {
         await adduserwizard.clickOnBackButton()
         await usersearch.clickOnAddUser()
 
-        //await page.pause()
+        await page.pause()
         //Customisable view
         // await adduserwizard.clickOnCustomSettingbtn()
         // await adduserwizard.clickOnCustomisableView()
@@ -340,7 +340,7 @@ await fileInput.setInputFiles(targetFilePath);
         await hpdiary.selectWeekwiseView()
         await hpdiary.selectmonthwiseView()
         await page.waitForTimeout(2000)
-       // await page.pause() 
+        await page.pause() 
         await hpdiary.changeDate()
         await hpdiary.clickOnDate()
         await hpdiary.selectLeaveType(jsonData.setHpLeave[index].hpd_leave_type_eli_text)
