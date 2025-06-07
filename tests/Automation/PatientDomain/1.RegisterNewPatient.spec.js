@@ -276,27 +276,13 @@ test.describe('New Patient', () => {
       await addaddress.clickOnSaveButtonOnPopup();
 
       //Permanent Address
-      await addaddress.enterPermISOCountryCode(
-        jsonData.permanentAddress[index].add_iso_country_code.toString()
-      );
-      await addaddress.enterPermICAOCode(
-        jsonData.permanentAddress[index].add_icao_country_code.toString()
-      );
-      await addaddress.enterPremPhone(
-        jsonData.permanentAddress[index].add_phone.toString()
-      );
-      await addaddress.enterPermEmail(
-        jsonData.permanentAddress[index].add_email
-      );
-      await addaddress.enterPerMobileNumber(
-        jsonData.permanentAddress[index].add_mobile.toString()
-      );
-      await addaddress.enterPermWorkPhone(
-        jsonData.permanentAddress[index].add_work_phone.toString()
-      );
-      await addaddress.enterPermFax(
-        jsonData.permanentAddress[index].add_fax.toString()
-      );
+      await addaddress.enterPermISOCountryCode(jsonData.permanentAddress[index].add_iso_country_code.toString());
+      await addaddress.enterPermICAOCode(jsonData.permanentAddress[index].add_icao_country_code.toString());
+      await addaddress.enterPremPhone(jsonData.permanentAddress[index].add_phone.toString());
+      await addaddress.enterPermEmail(jsonData.permanentAddress[index].add_email);
+      await addaddress.enterPerMobileNumber(jsonData.permanentAddress[index].add_mobile.toString());
+      await addaddress.enterPermWorkPhone(jsonData.permanentAddress[index].add_work_phone.toString());
+      await addaddress.enterPermFax(jsonData.permanentAddress[index].add_fax.toString());
       await addaddress.selectPermHealthRegion();
       await addaddress.selectPermLocationZone();
 

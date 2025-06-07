@@ -72,7 +72,7 @@ test.describe("Database Comparison Add New User", () => {
         await loginpage.enter_Password(jsonData.loginDetails[0].password); 
         await page.waitForTimeout(1500)
         await loginpage.clickOnLogin()    
-        await page.pause()
+       // await page.pause()
         await homepage.clickonSidebarHomeIcon() 
         await homepage.clickOnUserIcon()   
         
@@ -91,7 +91,7 @@ test.describe("Database Comparison Add New User", () => {
 
         await usersearch.enterUserSearch(jsonData.createUser[index].use_username_old)
         await usersearch.clickOnSearchButton()
-        await page.pause()
+       // await page.pause()
         await usersearch.clickOnViewLink()
         await hpdiary.clickOnBackButton()
         await usersearch.enterUserSearch(jsonData.createUser[index].use_username_old)
@@ -106,7 +106,7 @@ test.describe("Database Comparison Add New User", () => {
         await usersearch.enterConfirmPassword(jsonData.createUser[index].use_password)
         await usersearch.clickOnSavePasswordBtn()
         await expect(page.getByText('Password has been changed successfully')).toHaveText('Password has been changed successfully')
-        await page.pause()
+        //await page.pause()
         //Search User
         await usersearch.enterUserSearch(jsonData.createUser[index].use_username)
         await usersearch.enterGivenName(jsonData.createUser[index].use_firstname)
@@ -121,7 +121,7 @@ test.describe("Database Comparison Add New User", () => {
         await adduserwizard.clickOnBackButton()
         await usersearch.clickOnAddUser()
 
-        await page.pause()
+        //await page.pause()
         //Customisable view
         // await adduserwizard.clickOnCustomSettingbtn()
         // await adduserwizard.clickOnCustomisableView()
@@ -151,12 +151,50 @@ test.describe("Database Comparison Add New User", () => {
         // await page.getByTestId('Upload').click()
 
         //const fileInput = await page.$("input[type=file]");
-        const fileInput = page.getByTestId('PhotoCameraIcon');
-        const filePath = "../Cellma4Automation/UploadPics/User_1.png";        
-        await fileInput.setInputFiles(filePath,fileInput);
-        await page.getByTestId("Upload").click();
-        await page.waitForTimeout(1000);
+        ////////////////////////////////
+        // const fileInput = page.getByTestId('PhotoCameraIcon');
+        // const filePath = "../Cellma4Automation/UploadPics/User_1.png";        
+        // await fileInput.setInputFiles(filePath,fileInput);
+        // await page.getByTestId("Upload").click();
+        // await page.waitForTimeout(1000);
+////////////////////////////
 
+/////////////////////////////
+    /**
+ * Recursively searches for a specific file in a directory tree.
+ * @param {string} dir - Directory to start searching from.
+ * @param {string} targetFile - Name of the file to find.
+ * @returns {string|null} - Absolute path to the file, or null if not found.
+ */
+function findFileRecursive(dir, targetFile) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      const result = findFileRecursive(fullPath, targetFile);
+      if (result) return result;
+    } else if (file === targetFile) {
+      return fullPath;
+    }
+  }
+  return null;
+}
+
+// Get Jenkins workspace root or current directory
+const workspaceRoot = process.env.WORKSPACE || process.cwd();
+const targetFilePath = findFileRecursive(workspaceRoot, 'Patient.png');
+
+if (!targetFilePath) {
+  throw new Error('❌ Patient.png not found anywhere under the workspace!');
+}
+
+console.log('✅ Found Patient.png at:', targetFilePath);
+
+// Upload the file using Playwright
+const fileInput = await page.getByTestId('PhotoCameraIcon');
+await fileInput.setInputFiles(targetFilePath);
 
     // Select the file input element and upload the file
     //  const filePath = 'path/to/your/photo.jpg';
@@ -206,7 +244,7 @@ test.describe("Database Comparison Add New User", () => {
     
         await adduserwizard.clickOnAddLink()
         await page.waitForTimeout(2000)   
-        await page.pause() 
+      //  await page.pause() 
         await adduserwizard.addUserGroup() 
         await adduserwizard.addHpDeaultRole()  
         
@@ -229,7 +267,7 @@ test.describe("Database Comparison Add New User", () => {
         await adduserwizard.enterConstCode(jsonData.createEstProfessional[index].esp_consultant_code)
         await adduserwizard.enterFollowupValidity(jsonData.createEstProfessional[index].esp_follow_up_consultation_validity.toString())    
         await adduserwizard.selectGenericHP()
-        await page.pause()
+       // await page.pause()
         await adduserwizard.selectTeams(jsonData.createEstProfessional[index].esp_region_eli_text)
         await adduserwizard.enterNPINumber(jsonData.createEstProfessional[index].esp_npi_number.toString())   
         await adduserwizard.selectApptEmail()
@@ -244,7 +282,7 @@ test.describe("Database Comparison Add New User", () => {
         //await expect(page.getByText('User and HP created successfully')).toHaveText('User and HP created successfully')
     
         //await this.page.locator('div').filter({ hasText: 'Is User Going On DiaryYesNo' }).getByRole('button', { name: 'Yes' }).click()
-        await page.pause()
+        //await page.pause()
 
         await adduserwizard.clickOnNext()
                
@@ -263,11 +301,11 @@ test.describe("Database Comparison Add New User", () => {
         await sethpdairy.clickOnHpStartDate(jsonData.setHpDiary[index].hpd_start_date)
         await page.waitForTimeout(2000)
         await sethpdairy.clickOnHpEndDate(jsonData.setHpDiary[index].hpd_end_date)
-        await page.pause() 
+       // await page.pause() 
         await sethpdairy.selectWorkingDays()
         await sethpdairy.enterHpWorkingStartTime(jsonData.setHpDiary[index].hpd_working_start_time)
         await sethpdairy.enterHpWorkingEndTime(jsonData.setHpDiary[index].hpd_working_end_time)   
-        await page.pause()
+        //await page.pause()
         //await sethpdairy.selectHpWorkingHrsOccuranceType()
         //await sethpdairy.selectHpworkingHrsOccurance()
         await page.waitForTimeout(2000)
@@ -288,7 +326,7 @@ test.describe("Database Comparison Add New User", () => {
         await page.getByTestId('Next').click()
 
         //HP Diary    
-        await page.pause() 
+       // await page.pause() 
         await hpdiary.clickOnClinicDiarybutton()
         await hpdiary.selectDaywiseView()
         await hpdiary.selectWeekwiseView()
@@ -298,7 +336,7 @@ test.describe("Database Comparison Add New User", () => {
         await hpdiary.selectWeekwiseView()
         await hpdiary.selectmonthwiseView()
         await page.waitForTimeout(2000)
-        await page.pause() 
+       // await page.pause() 
         await hpdiary.changeDate()
         await hpdiary.clickOnDate()
         await hpdiary.selectLeaveType(jsonData.setHpLeave[index].hpd_leave_type_eli_text)
@@ -373,77 +411,44 @@ test.describe("Database Comparison Add New User", () => {
 
 
        ////////////////// Hp Diary //////////////////
-       sqlQuery =
-       "select * from hp_diary where hpd_esp_id = '" +
-       espId +
-       "' order by 1 asc limit 1";
+       sqlQuery ="select * from hp_diary where hpd_esp_id = '" +  espId + "' order by 1 asc limit 1";
      console.log(sqlQuery);
      sqlFilePath = "SQLResults/UserDomain/HpDiary.json";
      results = await executeQuery(sqlQuery, sqlFilePath);
 
-     match = await compareJsons(
-       sqlFilePath,
-       null,
-       jsonData.setHpDiary[index]
-     );
+     match = await compareJsons( sqlFilePath,  null,  jsonData.setHpDiary[index]);
      if (match) {
-       console.log(
-         "\n HP Diary Comparision: Parameters from both JSON files match!\n"
-       );
+       console.log("\n HP Diary Comparision: Parameters from both JSON files match!\n");
      } else {
-       console.log(
-         "\n HP Diary Comparision: Parameters from both JSON files do not match!\n"
-       );
+       console.log("\n HP Diary Comparision: Parameters from both JSON files do not match!\n");
      }
 
      //////////// HP Clinic Diary ///////////////
 
-     sqlQuery =
-     "select * from hp_clinic_diary where hcd_esp_id = '" +
-     espId +
-     "' order by 1 asc limit 1";
+     sqlQuery ="select * from hp_clinic_diary where hcd_esp_id = '" +  espId + "' order by 1 asc limit 1";
    console.log(sqlQuery);
    sqlFilePath = "SQLResults/UserDomain/HpClinicDiary.json";
    results = await executeQuery(sqlQuery, sqlFilePath);
 
-   match = await compareJsons(
-     sqlFilePath,
-     null,
-     jsonData.setHpClinicDiary[index]
-   );
+   match = await compareJsons(sqlFilePath, null,jsonData.setHpClinicDiary[index]);
    if (match) {
-     console.log(
-       "\n HP Clinic Diary Comparision: Parameters from both JSON files match!\n"
-     );
+     console.log("\n HP Clinic Diary Comparision: Parameters from both JSON files match!\n");
    } else {
-     console.log(
-       "\n HP Clinic Diary Comparision: Parameters from both JSON files do not match!\n"
-     );
+     console.log("\n HP Clinic Diary Comparision: Parameters from both JSON files do not match!\n");
    }
 
 
    ////////////////// Hp Diary Leave //////////////////
-        sqlQuery =
-        "select * from hp_diary where hpd_esp_id = '" +
-        espId +
-        "' order by 1 desc limit 1";
+        sqlQuery = "select * from hp_diary where hpd_esp_id = '" +espId +"' order by 1 desc limit 1";
       console.log(sqlQuery);
       sqlFilePath = "SQLResults/UserDomain/HpDiaryLeave.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
 
-      match = await compareJsons(
-        sqlFilePath,
-        null,
-        jsonData.setHpLeave[index]
-      );
+      match = await compareJsons(sqlFilePath,null,jsonData.setHpLeave[index]);
       if (match) {
-        console.log(
-          "\n HP Diary Leave Comparision: Parameters from both JSON files match!\n"
-        );
+        console.log( "\n HP Diary Leave Comparision: Parameters from both JSON files match!\n");
       } else {
-        console.log(
-          "\n HP Diary Leave Comparision: Parameters from both JSON files do not match!\n"
-        );
+        console.log("\n HP Diary Leave Comparision: Parameters from both JSON files do not match!\n");
       }
 
 
