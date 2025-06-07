@@ -37,31 +37,52 @@ const patientdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/Pa
 const pipdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")))
 const gpdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")))
 const deadpatient=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/DeadPatientDetails.json")))
-let jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")))
+//let jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")))
 // // Array to store console logs
  
+let jsonData;
+//  test.describe("Patient Domain Db COmparison", () => {
+//   test("Extract Patient Details", async ({}) => {
+//     const excelFilePath = process.env.EXCEL_FILE_PATH || "./ExcelFiles/PatientDomain.xlsx";
+//     const jsonFilePath = "./TestDataWithJSON/PatientDomain/PatientDetails.json";
+//     const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
+//     if (conversionSuccess) {
+//       jsonData = require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json");
+//       console.log("Excel file has been converted successfully!");
+//       console.log("jsonData:", jsonData); // Log the loaded JSON data
+//       console.log("excelFilePath after conversion:", excelFilePath);
+//       console.log("jsonFilePath after conversion:", jsonFilePath);
+//     } else {
+//       throw new Error("Excel to JSON conversion failed.");
+//     }
+//   });
+// })
+test.describe("Patient Domain Db Comparison", () => {
 
- test.describe("Patient Domain Db COmparison", () => {
-  test("Extract Patient Details", async ({}) => {
+  test.beforeAll(async () => {
     const excelFilePath = process.env.EXCEL_FILE_PATH || "./ExcelFiles/PatientDomain.xlsx";
     const jsonFilePath = "./TestDataWithJSON/PatientDomain/PatientDetails.json";
-    const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
-    if (conversionSuccess) {
-      jsonData = require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json");
-      console.log("Excel file has been converted successfully!");
-      console.log("jsonData:", jsonData); // Log the loaded JSON data
-      console.log("excelFilePath after conversion:", excelFilePath);
-      console.log("jsonFilePath after conversion:", jsonFilePath);
-    } else {
+    const conversionSuccess = await convertExcelToJson(excelFilePath, jsonFilePath);
+
+    if (!conversionSuccess) {
       throw new Error("Excel to JSON conversion failed.");
     }
+
+    jsonData = require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json");
+    console.log("Excel converted and JSON loaded successfully.");
   });
 })
 
-
- test.describe("Login Tests", () => {
-  jsonData.addPatient.forEach(async (data, index) => {
-    test("Patient ${data.pat_firstname} is Dead", async ({ page }) => {
+//  test.describe("Login Tests", () => {
+//   jsonData.addPatient.forEach(async (data, index) => {
+//     test("Patient ${data.pat_firstname} is Dead", async ({ page }) => {
+  test.describe("Login Tests", () => {
+      test.beforeEach(async ({ page }) => {
+        // optional: login logic or environment setup
+      });
+  
+      jsonData?.addPatient?.forEach((data, index) => {
+        test(`Patient ${data.pat_firstname} Demographics Details`, async ({ page }) => {
     const loginpage=new LoginPage(page)
     const homepage=new Homepage(page)
     const environment=new Environment(page) 
