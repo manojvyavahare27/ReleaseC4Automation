@@ -56,7 +56,7 @@ class HPDiary{
         await this.page.waitForTimeout(3000)
         //await this.page.getByRole('button', { name: '2023' }).click()
         await this.page.getByRole('radio', { name: '2025' }).click()
-        await this.page.getByLabel('May', { exact: true }).click();
+        await this.page.getByLabel('June', { exact: true }).click();
         await this.page.waitForTimeout(3000)
         //await this.page.getByRole('button', { name: 'Jul' }).click()
         //await this.page.getByLabel('May').click()
