@@ -1,9 +1,9 @@
 [
   {
-    "patlet_id": 120,
+    "patlet_id": 137,
     "patletd_patient_location": "Cardio Location",
     "patlet_name": "Referral Letter",
     "patlet_type": "Referral Letter",
-    "patlet_status": "draft"
+    "patlet_status": "authorised"
   }
 ]

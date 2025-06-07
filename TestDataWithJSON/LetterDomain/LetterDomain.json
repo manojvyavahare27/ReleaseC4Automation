@@ -62,36 +62,36 @@
   ],
   "letterSummries": [
     {
-      "patletd_start_date": "01/01/2025",
-      "patletd_end_date": "24/05/2025",
+      "patletd_start_date": "07/06/2025",
+      "patletd_end_date": "07/06/2025",
       "patlet_name": "Referral Letter",
       "patlet_status": "Not Sent",
       "patletd_patient_location": "Cardio Location",
       "patlet_type": "Referral Letter",
-      "patlet_letter_date": "24/05/2025"
+      "patlet_letter_date": "07/06/2025"
     }
   ],
   "letterSendApproved": [
     {
-      "patletd_start_date": "01/01/2025",
-      "patletd_end_date": "24/05/2025",
+      "patletd_start_date": "07/06/2025",
+      "patletd_end_date": "07/06/2025",
       "patlet_name": "Referral Letter",
       "patlet_status": "Authorised",
       "patletd_patient_location": "Cardio Location",
       "patlet_type": "Referral Letter",
-      "patlet_letter_date": "24/05/2025"
+      "patlet_letter_date": "07/06/2025"
     }
   ],
   "DeleteRecord": [
     {
       "patletd_start_date": "01/01/2025",
-      "patletd_end_date": "24/05/2025",
+      "patletd_end_date": "07/06/2025",
       "input_LetterName": "AutomationLetter",
       "input_Status_": "Not Sent",
-      "patlet_status": "authorised",
+      "patlet_status": "Authorised",
       "patletd_patient_location": "Cardio Location",
       "patlet_name": "Referral Letter",
-      "patlet_letter_date": "24/05/2025"
+      "patlet_letter_date": "07/06/2025"
     }
   ]
 }

@@ -126,11 +126,12 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 
 
 
-   // await page.pause()
+    await page.pause()
      await letterorSummeries.clickSearchButton()
      await letterorSummeries.enterStartDate(jsonData.letterSendApproved[index].patletd_start_date)
      await letterorSummeries.enterEndDate(jsonData.letterSendApproved[index].patletd_end_date)
-     await letterorSummeries.enterStatus(jsonData.letterSendApproved[index].patlet_status)
+     await letterorSummeries.clearStatus()
+     //await letterorSummeries.enterStatus(jsonData.letterSendApproved[index].patlet_status)
     // await page.pause()
      await letterorSummeries.clickSearchButton()
 

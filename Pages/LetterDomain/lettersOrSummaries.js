@@ -134,6 +134,10 @@ class lettersOrSummaries {
     async enterLetterName(name) {
         await this.page.fill(this.input_LetterName, name);
     }
+    async clearStatus()
+    {
+         await this.input_Status.fill('')
+    }
 
     async enterStatus(status) {
          await this.input_Status.click()
