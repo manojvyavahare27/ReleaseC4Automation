@@ -289,7 +289,7 @@ await fileInput.setInputFiles(targetFilePath);
         //await expect(page.getByText('User and HP created successfully')).toHaveText('User and HP created successfully')
     
         //await this.page.locator('div').filter({ hasText: 'Is User Going On DiaryYesNo' }).getByRole('button', { name: 'Yes' }).click()
-        await page.pause()
+        //await page.pause()
 
         await adduserwizard.clickOnNext()
                

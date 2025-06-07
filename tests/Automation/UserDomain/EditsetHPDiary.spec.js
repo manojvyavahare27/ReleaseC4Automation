@@ -113,7 +113,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         await sethpdairy.clickOnClinicSchedule()
         await sethpdairy.clickOnCombinedSchedule()
         await sethpdairy.clickOnHpSchedlue()
-        await page.pause()
+        //await page.pause()
         //await sethpdairy.clickOndeleteHPSchedule()
         //await sethpdairy.clickOnYesToDeleteHpSchedule()   
         //await expect(page.getByText('Record deleted successfully')).toHaveText('Record deleted successfully')
@@ -133,7 +133,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         await page.waitForTimeout(2000)
         await sethpdairy.clickOnNextButton()
         
-        await page.pause()
+       // await page.pause()
         //HP Diary
         //await page.pause()
         //await page.getByTestId('Next').click()
