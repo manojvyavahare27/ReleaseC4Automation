@@ -95,7 +95,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.clickSearchButton()
     await page.waitForTimeout(1000)
     await addStockItems.clickOnExpandsDefaultPharmacy()
-    await page.pause()
+   // await page.pause()
     await stockallLoc.clickOnTransferLink()
     //await addStockItems.clickOnStockBatchLink(page,jsonData.AddNewStock[0].stbat_batch_number)
     await stockTransferPopUp.selectLocationToTransferTo()
@@ -105,7 +105,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await expect(page.getByText('Stock transfer requested')).toHaveText('Stock transfer requested')
 
            
-   await page.pause()
+   //await page.pause()
 
 
     //DB for Select Transfer quantity
@@ -140,7 +140,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(200)
     await expect(page.getByText('Item approved successfully')).toHaveText('Item approved successfully')
   
-    await page.pause()
+   // await page.pause()
 
     //Check Approved status after click on save checklist
 
@@ -165,7 +165,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     //Check Picklist Status.
 
-    await page.pause()
+   // await page.pause()
     
     //Check Approved status after click on save checklist
 
@@ -190,18 +190,18 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(2000)
     //await expect(page.getByText('Only items with transferred status will be dispatched.')).toHaveText('Only items with transferred status will be dispatched.')
     await stockTransferPage.clickOnSaveButton()
-    await page.pause()
+    //await page.pause()
     //await stockTransferPage.clickOnOkbutton()
     await stockTransferPage.clickOnDispatchOrderButton()
     await processDispatchOrderPopup.clickOnCreateDispatchOrderButtonFromPopUp()
 
     await expect(page.getByText('Item successfully received')).toHaveText('Item successfully received')
     await processDispatchOrderPopup.clickOncloseIcon()
-    await page.pause()
+    //await page.pause()
 
     //check Dispatch Status
 
-    await page.pause()
+   // await page.pause()
     
     //Check Dispatch status after click on Create dispatch order
 
@@ -231,7 +231,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await homepage.clickOnSideIconStock()
 
     await stockallLoc.clickOnShowHiddenLocationButton()
-    await page.pause()
+    //await page.pause()
     await stockallLoc.clickOnCardioLocation()
     //await stockTransferPage.enterRequestLocation('Cardio Location')
 
@@ -251,7 +251,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     //check approved Status
 
-    await page.pause()
+   // await page.pause()
     
     //Check approved status after click receive item into another location
 
@@ -280,7 +280,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await addStockItems.clickOnHistoryIcon()
     await page.waitForTimeout(1000)
     await stockItemHistoryPopup.clickOnclosePopup()
-    await page.pause()
+    //await page.pause()
     await page.waitForTimeout(500)
     await addStockItems.clickOnLogout(page)
   });
