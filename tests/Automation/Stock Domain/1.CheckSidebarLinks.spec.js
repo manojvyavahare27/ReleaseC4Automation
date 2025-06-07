@@ -58,7 +58,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockallLoc.clickOnDefaultStockLocation()
     await page.waitForTimeout(2000);
 
-    await page.pause()
+    //await page.pause()
     // Stock Location Tab
     await stocksidebar.clickOnStockLocationsTab();
     await page.waitForTimeout(1000);
