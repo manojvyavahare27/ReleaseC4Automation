@@ -21,29 +21,13 @@ import SetHPDairy from "../../../Pages/UserDomain/SetHPDiary";
 import HPDiary from "../../../Pages/UserDomain/HpDiary";
 import AddToListItem from "../../../Pages/UserDomain/AddToListItem";
 
-const logindata = JSON.parse(
-  JSON.stringify(require("../../../TestData/PatientDomain/Login.json"))
-);
-const patientdetailsdata = JSON.parse(
-  JSON.stringify(require("../../../TestData/PatientDomain/PatientDetails.json"))
-);
-const pipdetailsdata = JSON.parse(
-  JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json"))
-);
-const gpdata = JSON.parse(
-  JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json"))
-);
-const deadpatient = JSON.parse(
-  JSON.stringify(
-    require("../../../TestData/PatientDomain/DeadPatientDetails.json")
-  )
-);
-const createuserdata = JSON.parse(
-  JSON.stringify(require("../../../TestData/UserDomain/CreateUserData.json"))
-);
-const addlistitem = JSON.parse(
-  JSON.stringify(require("../../../TestData/UserDomain/AddListItem.json"))
-);
+const logindata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")));
+const patientdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PatientDetails.json")));
+const pipdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")));
+const gpdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")));
+const deadpatient = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/DeadPatientDetails.json")));
+const createuserdata = JSON.parse(JSON.stringify(require("../../../TestData/UserDomain/CreateUserData.json")));
+const addlistitem = JSON.parse(JSON.stringify(require("../../../TestData/UserDomain/AddListItem.json")));
 
 const consoleLogs = [];
 let jsonData;
@@ -53,10 +37,7 @@ test.describe("Database Comparison Add List Item", () => {
     const excelFilePath =
       process.env.EXCEL_FILE_PATH || "./ExcelFiles/UserDomain.xlsx";
     const jsonFilePath = "./TestDataWithJSON/UserDomain/UserDetails.json";
-    const conversionSuccess = await convertExcelToJson(
-      excelFilePath,
-      jsonFilePath
-    );
+    const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
 
     if (conversionSuccess) {
       jsonData = require("../../../TestDataWithJSON/UserDomain/UserDetails.json");
@@ -124,23 +105,13 @@ test.describe("Database Comparison Add List Item", () => {
     await addtolistitem.selectDropdownFromService();
     //await page.pause()
     await addtolistitem.selectDropDownApplicationList();
-    await addtolistitem.enterTextInTextBox(
-      jsonData.addListItem[index].eli_text
-    );
-    await addtolistitem.enterTextInOtherLang(
-      jsonData.addListItem[index].eli_text_other_lang
-    );
-    await addtolistitem.enterNumericValue(
-      jsonData.addListItem[index].eli_numeric_value
-    );
-    await addtolistitem.selectDropDownCodeType(
-      jsonData.addListItem[index].eli_code_type
-    );
+    await addtolistitem.enterTextInTextBox(jsonData.addListItem[index].eli_text);
+    await addtolistitem.enterTextInOtherLang(jsonData.addListItem[index].eli_text_other_lang);
+    await addtolistitem.enterNumericValue(jsonData.addListItem[index].eli_numeric_value);
+    await addtolistitem.selectDropDownCodeType(jsonData.addListItem[index].eli_code_type);
     await addtolistitem.enterCode(jsonData.addListItem[index].eli_code);
-    await page.pause()
-    await addtolistitem.enterCodeText(
-      jsonData.addListItem[index].eli_code_text
-    );
+    
+    await addtolistitem.enterCodeText(jsonData.addListItem[index].eli_code_text);
     //await addtolistitem.enterHextColor(addlistitem.HexColor)
 
     await addtolistitem.clickOnSavelistItemButton();
@@ -148,10 +119,8 @@ test.describe("Database Comparison Add List Item", () => {
       "List item added successfully"
     );
 
-    var sqlQuery =
-      "select * from establishment_list_items where eli_text = '" +
-      jsonData.addListItem[index].eli_text +
-      "' and eli_app_id = 111 order by eli_id desc limit 1";
+    var sqlQuery ="select * from establishment_list_items where eli_text = '" +
+      jsonData.addListItem[index].eli_text +"' and eli_app_id = 111 order by eli_id desc limit 1";
     console.log(sqlQuery);
     var sqlFilePath = "SQLResults/UserDomain/listItemData.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -159,19 +128,11 @@ test.describe("Database Comparison Add List Item", () => {
     const eliId = results[0].eli_id;
     console.log("Establishment List Item ID is:" + eliId);
 
-    var match = await compareJsons(
-      sqlFilePath,
-      null,
-      jsonData.addListItem[index]
-    );
-    if (match) {
-      console.log(
-        "\n Add List Item Comparision: Parameters from both JSON files match!\n"
-      );
+    var match = await compareJsons(sqlFilePath, null, jsonData.addListItem[index])
+       if (match) {
+      console.log("\n Add List Item Comparision: Parameters from both JSON files match!\n");
     } else {
-      console.log(
-        "\n Add List Item Comparision: Parameters from both JSON files do not match!\n"
-      );
+      console.log("\n Add List Item Comparision: Parameters from both JSON files do not match!\n");
     }
 
     // await page.pause()
