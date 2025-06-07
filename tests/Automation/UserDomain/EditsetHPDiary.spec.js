@@ -93,12 +93,12 @@ test.describe("Database Comparison Edit HP Diary", () => {
         await usersearch.enterGivenName(jsonData.createUser[index].use_firstname)
         await usersearch.enterFamilyName(jsonData.createUser[index].use_surname)
         await usersearch.selectUserStatus()    
-await page.pause()
+
         
         await usersearch.clickOnSearchButton()
         
         await usersearch.clickOnEditUser()    
-        
+        await page.waitForTimeout(3000)
         //await adduserwizard.toggleUserIsHP()    
         await adduserwizard.clickOnNext()
         
@@ -113,7 +113,7 @@ await page.pause()
         await sethpdairy.clickOnClinicSchedule()
         await sethpdairy.clickOnCombinedSchedule()
         await sethpdairy.clickOnHpSchedlue()
-        //await page.pause()
+        await page.pause()
         //await sethpdairy.clickOndeleteHPSchedule()
         //await sethpdairy.clickOnYesToDeleteHpSchedule()   
         //await expect(page.getByText('Record deleted successfully')).toHaveText('Record deleted successfully')
@@ -130,9 +130,10 @@ await page.pause()
         // await sethpdairy.clickOnHpEndDate()
         // await sethpdairy.selectWorkingDays()
         // await sethpdairy.enterHpWorkingStartTime()
+        await page.waitForTimeout(2000)
         await sethpdairy.clickOnNextButton()
         
-
+        await page.pause()
         //HP Diary
         //await page.pause()
         //await page.getByTestId('Next').click()
@@ -161,6 +162,9 @@ await page.pause()
         //Sidebar Functionality
         //await sethpdairy.clickOnOpenSidebar()
         //await sethpdairy.clickOnOpenSidebar()
+        await page.waitForTimeout(2000)
+        await page.getByRole('button', { name: 'cancelIcon' }).click()
+        await page.waitForTimeout(2000)
         await usersearch.clickOnSearchUserLink()
         await usersearch.clickOnUserGroupLink()
         await usersearch.clickOnCancelPopup()
