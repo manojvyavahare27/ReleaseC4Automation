@@ -1,10 +1,13 @@
 // Create By: Supriya B
-// Date:30/05/2023
-const fs = require('fs');
+const fs = require("fs");
+const XLSX = require("xlsx");
+//const path = "D:/Riomed/Cellma4Automation";
 const path = require('path');
+const mysql = require("mysql");
+const convertExcelToJson = require('../../../config/global-setupOptimized');
 import { test, expect, Page, chromium } from '@playwright/test';
 
-const convertExcelToJson = require("../../../config/global-setupOptimized");
+//const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
