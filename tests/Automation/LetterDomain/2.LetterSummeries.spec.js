@@ -86,7 +86,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await confirmexisting.clickOnConfirmExistingDetails()
      await page.waitForTimeout(1000);
      await patientsidebar.clickOnLettersCategory()
-     await page.pause()
+     //await page.pause()
      await letterorSummeries.selectLetterLocation(jsonData.letterSummries[index].patletd_patient_location)
       await page.waitForTimeout(1000);
      await letterorSummeries.selectLetterName(jsonData.letterSummries[index].patlet_name)
@@ -126,7 +126,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await letterorSummeries.enterEndDate(jsonData.letterSummries[index].patletd_end_date)
       await page.waitForTimeout(1000);
      await letterorSummeries.enterStatus(jsonData.letterSummries[index].patlet_status)
-     await page.pause()
+    // await page.pause()
      await letterorSummeries.clickSearchButton()
       await page.waitForTimeout(1000);
 
@@ -145,7 +145,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       await letterorSummeries.clickOnSendEmailButton()
 
 
-    await page.pause()
+    //await page.pause()
           
      });
 });
