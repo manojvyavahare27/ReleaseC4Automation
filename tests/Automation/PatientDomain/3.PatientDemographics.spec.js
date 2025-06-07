@@ -37,8 +37,10 @@ const logindata= JSON.parse(JSON.stringify(require("../../../TestData/PatientDom
 const patientdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PatientDetails.json")))
 const pipdetailsdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")))
 const gpdata=JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")))
-let jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")));
+//let jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/PatientDomain/PatientDetails.json")));
 
+const consoleLogs = [];
+let jsonData;
 
 test.describe("Patient Domain Db COmparison", () => {
   test("Extract Patient Details", async ({}) => {
