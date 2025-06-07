@@ -66,7 +66,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     await stocksidebar.clickOnManageStockTab()
     await stocksidebar.clickOnTransferLink()
-    await page.pause()
+    //await page.pause()
     await stockTrans.clickOnDeleteItemFromStockTransfer(jsonData.EditStockItem[0].stock_name, page)  
     await expect(page.getByText('Stock transfer deleted successfully')).toHaveText('Stock transfer deleted successfully')   
     await addStockItems.clickOnLogout(page)
