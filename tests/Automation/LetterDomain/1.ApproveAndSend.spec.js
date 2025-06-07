@@ -81,7 +81,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await confirmexisting.clickOnConfirmExistingDetails()
      await page.waitForTimeout(1000);
      await patientsidebar.clickOnLettersCategory()
-     await page.pause()
+   //  await page.pause()
      await letterorSummeries.selectLetterLocation(jsonData.letterSendApproved[index].patletd_patient_location)
      await page.waitForTimeout(1000);
      await letterorSummeries.selectLetterName(jsonData.letterSendApproved[index].patlet_name)
@@ -91,7 +91,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await letterorSummeries.enterinputEndDate(jsonData.letterSendApproved[index].patletd_end_date)
      await page.waitForTimeout(1000);
      await letterorSummeries.clickOnDraftbutton()    
-    await page.pause()
+    //await page.pause()
 
     
 
@@ -126,7 +126,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 
 
 
-    await page.pause()
+   // await page.pause()
      await letterorSummeries.clickSearchButton()
      await letterorSummeries.enterStartDate(jsonData.letterSendApproved[index].patletd_start_date)
      await letterorSummeries.enterEndDate(jsonData.letterSendApproved[index].patletd_end_date)
@@ -150,7 +150,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       await letterorSummeries.clickOnclosePopup()
       await letterorSummeries.clickOnApproveRecordLink()
       await expect(page.getByText("Letter approve successfully")).toHaveText("Letter approve successfully");      
-await page.pause()
+     //await page.pause()
       await letterorSummeries.clickOnDeleteRecordLink()
       await letterorSummeries.clickOnOkButton()      
       await expect(page.getByText("Letter deleted successfully")).toHaveText("Letter deleted successfully");
@@ -172,7 +172,7 @@ await page.pause()
          console.log("\n Letters deleted Comparision: Parameters from both JSON files do not match!\n");
      }
 
-      await page.pause()
+     // await page.pause()
           
      });
 });
