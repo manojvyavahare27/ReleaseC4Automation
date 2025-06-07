@@ -73,7 +73,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await stockItemsFliters.selectFormulary('Automation formulary')
    await stockItemsFliters.enterItemName('Allopurinol 100mg tablets')
    await stockItemsFliters.clickSearchButton()
-   await page.pause()
+   //await page.pause()
     await stockItemsFliters.selectFormulary('Testing formulary')
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
@@ -82,7 +82,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await stockItemsFliters.clickSearchButton()
    await page.waitForTimeout(1000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
-   await page.pause()
+  // await page.pause()
 
    await stockallLoc.clickOnAddFormularyLink()
    await page.waitForTimeout(500)
@@ -96,15 +96,6 @@ test.describe("Database Comparison Add New Referral", () => {
 
    await addStockItems.clickOnLogout(page)
    //await addStockItems.enterPurchaseRate('5.00')
-
-   
-
-
-
-
-
-
-
 
   });
 });
