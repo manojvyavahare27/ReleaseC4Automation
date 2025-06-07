@@ -58,7 +58,7 @@
     "use_gender": null,
     "use_jwt_token": null,
     "use_show_hp_diary": 1,
-    "use_cellma4_password": "$2a$10$SDpKNCIpU5yuS2VANbhqFu9yR027kJwsqUPRIPHbrOmwSdU3BaRUK",
+    "use_cellma4_password": "$2a$10$LPHsMYfvHhNI7/cH2.Yhkepyurh8BX4MbJt61mLCQ5F5N9OmWe7YC",
     "use_logon_unique_key_created": null,
     "use_cellma_portal_session": null,
     "use_license_key": null
