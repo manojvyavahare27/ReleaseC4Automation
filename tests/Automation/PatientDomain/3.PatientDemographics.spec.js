@@ -3,7 +3,7 @@ const XLSX = require("xlsx");
 const path = "D:/Riomed/Cellma4Automation";
 const mysql = require("mysql2");
 const convertExcelToJson = require('../../../config/global-setupOptimized');
-import { test, expect } from '@playwright/test';
+//import { test, expect } from '@playwright/test';
 //import { test, expect } from "@playwright/test";
 const connectToDatabase = require("../../../manoj").default;
 const { executeQuery } = require("../../../databaseWriteFile"); // Update the path accordingly
