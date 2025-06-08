@@ -1,8 +1,8 @@
 const fs = require("fs");
 const XLSX = require("xlsx");
 const path = "C:/Riomed/Cellma4Automation";
-const mysql = require("mysql");
-const convertExcelToJson = require('../../../config/global-setupOptimized');
+const mysql = require("mysql2");
+const convertExcelToJson = require("../../../config/global-setupOptimized");
 
 //import { test, expect } from "@playwright/test";
 const connectToDatabase = require("../../../manoj").default;
