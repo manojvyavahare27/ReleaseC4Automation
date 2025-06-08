@@ -86,8 +86,11 @@ test.describe("Patient Domain Db Comparison", () => {
         await page.goto(environment.Test);
         await page.waitForTimeout(1000);
         await loginpage.enterUsername(jsonData.loginDetails[0].username);
+        await page.waitForTimeout(1000);
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
+        await page.waitForTimeout(1000);
         await loginpage.clickOnLogin();
+        await page.waitForTimeout(1000);
 
         await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnPatientIcon();
