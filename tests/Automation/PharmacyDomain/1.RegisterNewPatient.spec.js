@@ -337,5 +337,6 @@ test.describe('Excel Conversion', () => {
         //await menu.clickOnLogout();
         //await page.pause();     
       index++
-      }})
+      }
+    })
     })
