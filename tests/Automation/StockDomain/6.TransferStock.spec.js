@@ -19,7 +19,6 @@ import ProcessDispatchOrderPopup from "../../../Pages/StockDomain/ProcessDispatc
 import StockRecevingquantity from "../../../Pages/StockDomain/StockReceving"
 import StockItemHistoryPopup from "../../../Pages/StockDomain/StockItemHistoryPopup"
 
-
 const logindata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")));
 
 
@@ -183,7 +182,7 @@ test.describe("Database Comparison Add New Referral", () => {
     }
 
     await stockTransferPage.clickOncheckBox()
-
+await page.pause()
     await stockTransferPage.clickOnDispatchOrderButton()
     await page.waitForTimeout(1000)
     await stockTransferPage.clickOnOkbutton()

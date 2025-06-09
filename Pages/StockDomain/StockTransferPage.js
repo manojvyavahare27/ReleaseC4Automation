@@ -63,12 +63,12 @@ class StockTransferPage {
     async enterApprovedQuantity()
     {
         await this.approvedQuantity.clear()
-        await this.approvedQuantity.type('1')
+        await this.approvedQuantity.type('5')
     }
     async enterPickedQuantity()
     {
         await this.pickedquantity.clear()
-        await this.pickedquantity.type('1')
+        await this.pickedquantity.type('5')
     }
     async clickOncheckBox()
     {
