@@ -182,7 +182,7 @@ test.describe("Database Comparison Add New Referral", () => {
     }
 
     await stockTransferPage.clickOncheckBox()
-await page.pause()
+//await page.pause()
     await stockTransferPage.clickOnDispatchOrderButton()
     await page.waitForTimeout(1000)
     await stockTransferPage.clickOnOkbutton()
@@ -191,7 +191,9 @@ await page.pause()
     await stockTransferPage.clickOnSaveButton()
     //await page.pause()
     //await stockTransferPage.clickOnOkbutton()
+    await page.waitForTimeout(2000)
     await stockTransferPage.clickOnDispatchOrderButton()
+    await page.waitForTimeout(2000)
     await processDispatchOrderPopup.clickOnCreateDispatchOrderButtonFromPopUp()
 
     await expect(page.getByText('Item successfully received')).toHaveText('Item successfully received')
