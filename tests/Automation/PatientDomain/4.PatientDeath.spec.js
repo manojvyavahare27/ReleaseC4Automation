@@ -104,7 +104,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await editpatient.clickOnPatientDetails();
         await editpatient.clickOnLinks();
         await editpatient.clickOnDeathLink();
-
+        await page.waitForTimeout(2000)
         await patientdeath.enterCauseOfDeathReason(jsonData.patCauseOfDeath[index].pod_cause);
         await patientdeath.selectCheckBoxDeathCauseReason();
         await patientdeath.enterCauseOfDeathType();
