@@ -469,9 +469,13 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addpip.selectPIPIdentifierType(
         jsonData.pip[index].pip_identifier_type
       );
-      await addpip.enterPIPIdentifier(
-        jsonData.pip[index].pip_identifier_number.toString()
-      );
+      if (await addpip.dropdownPIPIdentifierType.isVisible()) {
+        await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString());
+      } else if (await addpip.chiNumber.isVisible()) {
+        await addpip.enterCHInumber(jsonData.pip[index].pip_chiNumber.toString());
+      } else {
+        throw new Error('Neither PIP Identifier dropdown nor CHI Number field is visible on the screen.');
+      }
       // await addpip.enterExternalProfessional(pipdetailsdata.ExternalProfessional);
 
       await addpip.enterProfessionalTitle(
