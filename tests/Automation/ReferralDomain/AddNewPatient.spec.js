@@ -1,6 +1,13 @@
+const fs = require("fs");
+const XLSX = require("xlsx");
+//const path = "D:/Riomed/Cellma4Automation";
+const path = require('path');
+const mysql = require("mysql2");
+const convertExcelToJson = require('../../../config/global-setupOptimized');
+
 import { test, expect, Page, chromium } from '@playwright/test';
 
-const convertExcelToJson = require("../../../config/global-setupOptimized");
+//const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
@@ -448,7 +455,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await expect(
         page.getByText("Patient address added successfully")
       ).toHaveText("Patient address added successfully");
-      await page.pause()
+     /// await page.pause()
       //Add PIP
       //await page.pause()
       await addpip.selectPIPTitle(jsonData.pip[index].pip_title);
@@ -500,7 +507,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addpip.ClickOnSavePIP();
       await page.waitForTimeout(1000);
       
-      await page.pause()
+     // await page.pause()
       //View PIP
       //await page.pause()
       await viewpip.clickOnViewPIPLink();
@@ -524,7 +531,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addgp.enterGPGMCCode(jsonData.addGP[index].egp_gmc_code);
       await addgp.clickOnShowbnt();
       await addgp.selectUnknownPostCode();
-      await page.pause()
+      //await page.pause()
       //Gp Address Details
       await addgp.enterLocalGPPostcode();
       await page.waitForTimeout(1000);
@@ -604,7 +611,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
             await fileInput.setInputFiles(targetFilePath);
             
             await page.getByTestId("Upload").click();
-            
+
       await page.waitForTimeout(1000);
       //await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
       await printidcard.clickOnSavebtn();
