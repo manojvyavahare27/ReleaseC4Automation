@@ -1,9 +1,18 @@
-import { test, expect, Page, chromium } from "@playwright/test";
+//Added by Manoj Vyavahare
 
-const convertExcelToJson = require("../../../config/global-setupOptimized");
-const { executeQuery } = require("../../../databaseWriteFile");
-import compareJsons from "../../../compareFileOrJson";
+const fs = require("fs");
+const XLSX = require("xlsx");
+//const path = "D:/Riomed/Cellma4Automation";
+const path = require('path');
+const mysql = require("mysql2");
+const convertExcelToJson = require('../../../config/global-setupOptimized');
 
+const { test, expect, chromium } = require("@playwright/test");
+const connectToDatabase = require("../../../manoj");
+const { executeQuery } = require("../../../databaseWriteFile"); // Update the path accordingly
+import compareJsons from "../../../compareFileOrJson"; // Update the path accordingly
+
+import logger from "../../../Pages/BaseClasses/logger";
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../Pages/BaseClasses/Homepage";
 import PatientSearch from "../../../Pages/PatientDomain/PatientSearch";
@@ -12,27 +21,28 @@ import Environment from "../../../Pages/BaseClasses/Environment";
 import Menu from "../../../Pages/BaseClasses/Menu";
 import PatientWizard from "../../../Pages/PatientDomain/PatientWizard";
 import PatientDuplicateCheck from "../../../Pages/PatientDomain/PatientDuplicateCheck";
-//import PatientWizard from '../../Pages/PatientWizard';
-//import PatientWizard from '../../Pages/PatientWizard';
 import AddPatient from "../../../Pages/PatientDomain/AddPatient";
 import AddAddress from "../../../Pages/PatientDomain/AddAddress";
 import AddPIP from "../../../Pages/PatientDomain/AddPIP";
 import ViewPIP from "../../../Pages/PatientDomain/ViewPIP";
 import AddGP from "../../../Pages/PatientDomain/AddGP";
 import PrintIDCard from "../../../Pages/PatientDomain/PrintIDCard";
-//import Pool from 'mysql/lib/Pool';
+import { TIMEOUT } from "dns";
+import { error, log } from "console";
+import { before } from "node:test";
 
 const logindata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")));
-const patientdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/AppointmentDomain/PatientDetails.json"))
-);
+const patientdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PatientDetails.json")));
 const pipdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")));
 const gpdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")));
+//const jsonData = JSON.parse(JSON.stringify(require("../../../TestDataWithJSON/ExcelToJSON.json")))
 
+// // Array to store console logs
 const consoleLogs = [];
 let jsonData;
 
-test.describe("Appointment Domain Db Comparison", () => {
-  test("Extract Patient Details", async ({}) => {
+test.describe('Excel Conversion', () => {
+  test('Extract Patient Details', async ({ }) => {
     const excelFilePath =
       process.env.EXCEL_FILE_PATH || "./ExcelFiles/AppointmentDomain.xlsx";
     const jsonFilePath =
@@ -41,21 +51,25 @@ test.describe("Appointment Domain Db Comparison", () => {
 
     if (conversionSuccess) {
       jsonData = require("../../../TestDataWithJSON/AppointmentDomain/AppointmentDetails.json");
-      console.log("Excel file has been converted successfully!");
-      console.log("jsonData:", jsonData); // Log the loaded JSON data
-      console.log("excelFilePath after conversion:", excelFilePath);
-      console.log("jsonFilePath after conversion:", jsonFilePath);
+      console.log('Excel file has been converted successfully!');
+      console.log('jsonData:', jsonData); // Log the loaded JSON data
+      console.log('excelFilePath after conversion:', excelFilePath);
+      console.log('jsonFilePath after conversion:', jsonFilePath);
     } else {
-      throw new Error("Excel to JSON conversion failed.");
+      throw new Error('Excel to JSON conversion failed.');
     }
   });
+})
 
-  test("Register New Patient @Appt", async ({ page }) => {
+// Proceed with the test loop after Excel to JSON conversion
+test.describe('New Patient', () => {
+  test('Register New Patient', async ({ page }) => {
     if (!jsonData || !jsonData.addPatient) {
-      throw new Error("JSON data is missing or invalid.");
+      throw new Error('JSON data is missing or invalid.');
     }
-    let index = 0;
+    let index = 0
     for (const data of jsonData.addPatient) {
+      //	try {
       const loginpage = new LoginPage(page);
       const homepage = new Homepage(page);
       const environment = new Environment(page);
@@ -69,6 +83,7 @@ test.describe("Appointment Domain Db Comparison", () => {
       const printidcard = new PrintIDCard(page);
       //const patientwizard=new PatientWizard(page)
       const menu = new Menu(page);
+
       
 
       await page.goto(environment.Test);
