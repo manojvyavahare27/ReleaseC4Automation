@@ -289,7 +289,7 @@ await fileInput.setInputFiles(targetFilePath);
         //await expect(page.getByText('User and HP created successfully')).toHaveText('User and HP created successfully')
     
         //await this.page.locator('div').filter({ hasText: 'Is User Going On DiaryYesNo' }).getByRole('button', { name: 'Yes' }).click()
-        //await page.pause()
+        
 
         await adduserwizard.clickOnNext()
                
@@ -302,7 +302,9 @@ await fileInput.setInputFiles(targetFilePath);
         await expect(page.getByText('Please select End Time')).toHaveText('Please select End Time')
 
         await sethpdairy.enterStartdate(jsonData.setHpDiary[index].searchStartDate)
+        await page.waitForTimeout(2000)
         await sethpdairy.enterEndDate(jsonData.setHpDiary[index].searchEndDate)
+        await page.waitForTimeout(2000)
         await sethpdairy.clickOnSearchbutton()
         await page.waitForTimeout(2000)
         await sethpdairy.clickOnHpStartDate(jsonData.setHpDiary[index].hpd_start_date)
@@ -311,7 +313,9 @@ await fileInput.setInputFiles(targetFilePath);
        // await page.pause() 
        await page.waitForTimeout(1000)
         await sethpdairy.selectWorkingDays()
+        await page.waitForTimeout(2000)
         await sethpdairy.enterHpWorkingStartTime(jsonData.setHpDiary[index].hpd_working_start_time)
+        await page.waitForTimeout(2000)
         await sethpdairy.enterHpWorkingEndTime(jsonData.setHpDiary[index].hpd_working_end_time)   
         //await page.pause()
         //await sethpdairy.selectHpWorkingHrsOccuranceType()
@@ -328,12 +332,13 @@ await fileInput.setInputFiles(targetFilePath);
         await sethpdairy.enterClinicScheduleWorkingHrsEndTime(jsonData.setHpClinicDiary[index].hcd_clinic_end_time)
         // await sethpdairy.selectClinicScheduleOccuranceType()
         // await sethpdairy.selectClinicScheduleOccurance()
-        await page.waitForTimeout(5000)  
+        await page.pause()
+        await page.waitForTimeout(4000)  
         await sethpdairy.clickOnSavebnt()
-        await page.waitForTimeout(5000)
+        await page.waitForTimeout(4000)
         //await expect(page.getByText('HP work schedule set successfully')).toHaveText('HP work schedule set successfully')
         await sethpdairy.clickOnNextbtn()
-        await page.waitForTimeout(3000)
+        await page.waitForTimeout(2000)
         await page.getByTestId('Next').click()
         
         //HP Diary    
