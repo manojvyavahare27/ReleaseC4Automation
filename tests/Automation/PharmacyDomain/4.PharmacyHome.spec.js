@@ -123,7 +123,7 @@ test.describe("Medications Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
-      
+      await page.pause()
       await pharmacyHomePage.fillPrescriptionType('General');
       await pharmacyHomePage.fillPrescriptionCode('123');
       await pharmacyHomePage.fillNotes('add for testing');
@@ -141,7 +141,7 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.selectCheckBoxforPrescription()
       await pharmacyHomePage.clickOncreatePrescription()
       await page.waitForTimeout(1000);
-
+      
       await pharmacyHomePage.clickOnitemWithPrescriptionLink()
       await pharmacyHomePage.clickOnitemsOnlyLink()
       await pharmacyHomePage.clickOncancelledPrescriptionLink()

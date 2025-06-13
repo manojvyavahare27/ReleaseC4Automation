@@ -258,7 +258,15 @@ test.describe('Excel Conversion', () => {
         await addpip.selectPIPNextOfKin(jsonData.pip[index].pip_next_of_kin_Yes);
         await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);       
         await addpip.selectPIPIdentifierType(jsonData.pip[index].pip_identifier_type)
-        await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString())       
+
+
+        if (await addpip.dropdownPIPIdentifierType.isVisible()) {
+        await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString());
+      } else if (await addpip.chiNumber.isVisible()) {
+        await addpip.enterCHInumber(jsonData.pip[index].pip_chiNumber.toString());
+      } else {
+        throw new Error('Neither PIP Identifier dropdown nor CHI Number field is visible on the screen.');
+      }      
         await addpip.enterProfessionalTitle(jsonData.pip[index].pip_professional_title);
         await addpip.selectPIPReceivePatientLetter(jsonData.pip[index].pip_receive_patient_letter_no);
         await addpip.selectPIPReceiveAppointmentLetter(jsonData.pip[index].pip_receive_pat_appt_letter_no);        

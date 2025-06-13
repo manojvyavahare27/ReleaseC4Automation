@@ -147,34 +147,9 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await page.pause()
         await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString())
         await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString())
-
         await addreferral.clickOnSaveButton()
         await expect(page.getByText('Referral added successfully')).toHaveText('Referral added successfully')
         await addreferral.clickOnBackButton()
-        //*********************************************************** */
-        //links
-        //await page.pause()
-        // await servicebookapp.clickOnLinks()
-        // await servicebookapp.clickOnReferralLinkAddGP()
-        // await servicebookapp.clickOnClosepopup()
-
-        // await servicebookapp.clickOnLinks()
-        // await servicebookapp.clickOnReferralLinkPathway()
-        // await servicebookapp.clickOnClosepopup()
-
-        // await servicebookapp.clickOnLinks()
-        // await servicebookapp.clickOnReferralLinkPIP()
-        // await servicebookapp.clickOnClosepopup()
-
-        // await servicebookapp.clickOnLinks()
-        // await servicebookapp.clickOnReferralLinkVideo()
-        // await servicebookapp.clickOnClosepopup()
-
-        // await servicebookapp.clickOnLinks()
-        // await servicebookapp.clickOnReferralLinkWorkList()
-        // await servicebookapp.clickOnClosepopup()     
-        //*********************************************************** */
-        // await page.getByRole('button', { name: 'Add Appointments' }).click()
         await servicebookapp.SelectDate(jsonData.rescheduleAppointments[index].rea_date)
         await servicebookapp.selectDropdownSpecility(jsonData.rescheduleAppointments[index].rea_special)
         await servicebookapp.selectDropdownClinicType(jsonData.rescheduleAppointments[index].rea_clinic_type)
@@ -185,20 +160,11 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.clickOnHPnameLink(jsonData.rescheduleAppointments[index].rea_hp_name_link)  
         await servicebookapp.clickOnShowCalendarbtn()
         
-        //await page.pause()
+        
         //Select Morning Slots
         await servicebookapp.clickOnMorningSlots(jsonData.rescheduleAppointments[index].convertedTime)
         // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
 
-        //  await servicebookapp.clickOnNextButton()     
-        //  await servicebookapp.clickOnCancelButtonforDaySlot()
-        //  await servicebookapp.selectWeekSlot()
-        //  await servicebookapp.clickOnNextButton()     
-        //  await servicebookapp.clickOnCancelButtonforDaySlot()
-        //  await servicebookapp.selectMonthSlot()    
-        //  await servicebookapp.selectAvailableSlots()     
-        //  await servicebookapp.clickOnNextButton()    
-        
         
         await servicebookapp.clickOnNextButton()
         //await page.pause()

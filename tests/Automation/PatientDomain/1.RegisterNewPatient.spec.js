@@ -102,13 +102,6 @@ test.describe('New Patient', () => {
       logger.info("Family Name entered successfully");
       await patientsearch.selectSex(data.pat_sex);
 
-      // const patient_dob = jsonData.addPatient[index].pat_dob;  
-      // console.log(patient_dob);    
-      // const date = new Date(patient_dob);      
-      // const day = date.getUTCDate();
-      // const month = date.getUTCMonth() + 1; // Months are 0-based, so add 1
-      // const year = date.getUTCFullYear();      
-      // const formattedDate = `${day}/${month}/${year}`;
 
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
@@ -160,9 +153,7 @@ test.describe('New Patient', () => {
       } else {
         console.log("Date is not less than 5 days from current date");
       }
-
-      await patientduplicatecheck.enterMobileNumber(jsonData.patientIdentifier[index].pid_value1.toString());
-      //await page.pause
+      await patientduplicatecheck.enterMobileNumber(jsonData.patientIdentifier[index].pid_value1.toString());      
       await patientduplicatecheck.enterEmailId(jsonData.patientIdentifier[index].add_email);
       await patientduplicatecheck.clickOnDuplicateCheckButton();
       //await expect(page.getByText('Duplicate Patients not found')).toHaveText('Duplicate Patients not found')
@@ -179,19 +170,11 @@ test.describe('New Patient', () => {
       await addpatient.selectCountryOfBirth(jsonData.addPatient[index].pat_country_of_birth);
       await addpatient.selectNationality(jsonData.addPatient[index].pat_nationality);
       await addpatient.selectRegDisable(jsonData.addPatient[index].pat_registered_disabled_yes);
-      //
-      //await addpatient.selectPrimaryDisablity()
-      //await addpatient.enterAssestanceNeeded(patientdetailsdata.AssistanceNeeded)
+     
       await addpatient.enterDisablityNotes(jsonData.addPatient[index].pat_disability_note);
-      await addpatient.selectLanguage(jsonData.addPatient[index].pat_language);
-      //await addpatient.selectInterpreterNeeded()
-      //await addpatient.selectInterpreterType()
-      //await addpatient.enterNHSNo(patientdetailsdata.NHSNo)
-      //await addpatient.enterHospitalRef(patientdetailsdata.HospitalRef)
+      await addpatient.selectLanguage(jsonData.addPatient[index].pat_language);      
       await addpatient.enterHospitalRef(data.pat_hospital_ref);
-      //await addpatient.enterHospitalRef("hosp0524Id146");
-      // await addpatient.enterIdentifier(patientdetailsdata.Identifier)
-      //await addpatient.enterPASId(patientdetailsdata.PASId)
+      
 
       await addpatient.selectPatientType(jsonData.addPatient[index].pat_type);
       await addpatient.selectPrisoner(jsonData.addPatient[index].pat_prisoner_yes);
@@ -201,80 +184,18 @@ test.describe('New Patient', () => {
       await addpatient.enterNotes(jsonData.addPatient[index].pat_notes);
       await addpatient.clickOnNextButton();
 
-      // //Add Address page  
-      //         await page.pause()      
-      //         await addaddress.clickOnSaveButton();
-      //         await addaddress.enterNumberAndRoad(jsonData.permanentAddress[index].add_address1);
-      //         await addaddress.enterTownInAddress(jsonData.permanentAddress[index].add_address3);
-      //         await addaddress.enterDestrict(jsonData.permanentAddress[index].add_address2);
-      //         await addaddress.enterCounty(jsonData.permanentAddress[index].add_address4);
-      //         await addaddress.enterPostCode(jsonData.permanentAddress[index].add_address5.toString());
-      //         //await addaddress.clickOnFindPostCode();
-      //         await addaddress.selectCountry()
-      //         // await addaddress.enterCountryonPopup(jsonData.permanentAddress[index].add_address6.toString());
-      //         // await addaddress.clickOnSaveButtonOnPopup();
-
-      //         //Permanent Address        
-      //         await addaddress.enterPermISOCountryCode(jsonData.permanentAddress[index].add_iso_country_code.toString());
-      //         await addaddress.enterPermICAOCode(jsonData.permanentAddress[index].add_icao_country_code.toString());
-      //         await addaddress.enterPremPhone(jsonData.permanentAddress[index].add_phone.toString());
-      //         await addaddress.enterPermEmail(jsonData.permanentAddress[index].add_email);
-      //         await addaddress.enterPerMobileNumber(jsonData.permanentAddress[index].add_mobile.toString())
-      //         await addaddress.enterPermWorkPhone(jsonData.permanentAddress[index].add_work_phone.toString());
-      //         await addaddress.enterPermFax(jsonData.permanentAddress[index].add_fax.toString());
-      //         await addaddress.selectPermHealthRegion();
-      //         await addaddress.selectPermLocationZone();
-      //         await addaddress.clickOnPermAddressAddViewBnt();
-      //         await addaddress.enterPermAddresNotes(jsonData.permanentAddress[index].add_notes);
-
-      //         //Temporary Address
-      //         //await page.pause()
-      //         await addaddress.enterTempNumberandRoad(jsonData.tempAddress[index].add_address1);
-      //         await addaddress.enterTempTown(jsonData.tempAddress[index].add_address3);
-      //         await addaddress.enterTempDistrict(jsonData.tempAddress[index].add_address2);
-      //         await addaddress.enterTempCounty(jsonData.tempAddress[index].add_address4);
-      //         await addaddress.enterTempPostcode(jsonData.tempAddress[index].add_address5.toString());
-      //         //await addaddress.clickOnFindPostCode2();
-      //       //  await addaddress.enterCountryonPopup(jsonData.permanentAddress[index].add_address6.toString());
-      //       await addaddress.selectCountry()
-      //         await addaddress.clickOnSaveButtonOnPopup();
-
-      //         await addaddress.enterTempISOCountryCode(jsonData.tempAddress[index].add_iso_country_code.toString());
-      //         await addaddress.enterTempICAOCountryCode(jsonData.tempAddress[index].add_icao_country_code.toString());
-      //       // await page.pause()
-
-      //         await addaddress.enterTempPhone(jsonData.tempAddress[index].add_phone.toString());
-      //         await addaddress.enterTempEmail(jsonData.tempAddress[index].add_email);
-      //         await addaddress.enterTempMobileNumber(jsonData.tempAddress[index].add_mobile.toString());
-
-      //         await addaddress.enterTempWorkPhone(jsonData.tempAddress[index].add_work_phone.toString());
-      //         await addaddress.enterTempFax(jsonData.tempAddress[index].add_fax.toString());
-      //         await addaddress.selectTempHealthRegion();
-      //         await addaddress.selectTempLocationZone();
-      //         await addaddress.clickOnTempAddressAddViewBnt();
-      //         await addaddress.enterTempAddresNotes(jsonData.tempAddress[index].add_notes);
-      //         await addaddress.clickOnTempAddressAddViewBnt();
-      //         await addaddress.closeTempAddressNotesPopup();
+      
       //Add Address page
-      await addaddress.clickOnSaveButton();
-     /// await page.pause()
+      await addaddress.clickOnSaveButton();    
       await addaddress.enterNumberAndRoad(jsonData.permanentAddress[index].add_address1);
       await addaddress.enterTownInAddress(jsonData.permanentAddress[index].add_address3);
       await addaddress.enterDestrict(jsonData.permanentAddress[index].add_address2);
       await addaddress.enterCounty(jsonData.permanentAddress[index].add_address4);
-      await addaddress.enterPostCode(jsonData.permanentAddress[index].add_address5.toString());
-      //await addaddress.clickOnFindPostCode();
-      // await addaddress.enterCountryonPopup(
-      //   jsonData.permanentAddress[index].add_address6.toString()
-      // );
+      await addaddress.enterPostCode(jsonData.permanentAddress[index].add_address5.toString());     
       await page.locator('#mui-component-select-country').click();
       await page.getByRole('option', { name: 'Algeria' }).click();
-
       await page.getByTestId('Add/View Notes').first().click();
-
-      //await addaddress.clickOnPermAddressAddViewBnt.click()
       await addaddress.clickOnSaveButtonOnPopup();
-
       //Permanent Address
       await addaddress.enterPermISOCountryCode(jsonData.permanentAddress[index].add_iso_country_code.toString());
       await addaddress.enterPermICAOCode(jsonData.permanentAddress[index].add_icao_country_code.toString());

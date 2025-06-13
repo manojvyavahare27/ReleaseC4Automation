@@ -177,11 +177,11 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)
 
       await MedicationsExtraDetails.enterDuration(jsonData.AddMedication[index].medi_duration)
-      await MedicationsExtraDetails.enterUnits(jsonData.AddMedication[index].medi_route)
+      //await MedicationsExtraDetails.enterUnits(jsonData.AddMedication[index].medi_route)
 
 
 
-      await MedicationsExtraDetails.enterDays(jsonData.AddMedication[index].medi_duration)
+      //await MedicationsExtraDetails.enterDays(jsonData.AddMedication[index].medi_duration)
       await MedicationsExtraDetails.selectSite(jsonData.AddMedication[index].meded_value)
       await MedicationsExtraDetails.selectPrescribeBy(jsonData.AddMedication[index].medi_prescribed_by)
       await MedicationsExtraDetails.enterStartDate(jsonData.AddMedication[index].medi_start_date)

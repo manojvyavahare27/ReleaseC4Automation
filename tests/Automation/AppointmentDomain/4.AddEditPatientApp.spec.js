@@ -96,14 +96,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickOnsettingbutton();
     await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment();
-    await patientsearch.clickOnResetToDefaultViewButton();
-    //await patientsearch.ClickOnSaveButtonForUnknownPatient()
-
-    //await expect(page.getByText('Customize view added successfully')).toHaveText('Customize view added successfully')
-
-    await page.getByRole("img", { name: "Cellma Image Avatar" }).click();
-
-    //await homepage.clickOnPatientIcon()
+    await patientsearch.clickOnResetToDefaultViewButton();   
+    await page.getByRole("img", { name: "Cellma Image Avatar" }).click();   
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickOnSearchPatButton();
@@ -116,22 +110,14 @@ test.describe("Database Comparison Add Edit Patient", () => {
       jsonData.addPatient[index].pat_hospital_ref
     );
 
-    //await patientsearch.selectBornDate()
-    await patientsearch.clickOnSearchPatButton();
-    //await expect(page.getByText('Patient list found')).toHaveText('Patient list found')
-    await patientsearch.clickOnSearchPatientLink();
-    //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
+    await patientsearch.clickOnSearchPatButton();    
+    await patientsearch.clickOnSearchPatientLink();    
     await page.waitForTimeout(5000);
-    await confirmexisting.clickOnConfirmExistingDetails();
-   // await page.pause();
+    await confirmexisting.clickOnConfirmExistingDetails();  
     await page.waitForTimeout(5000);
     const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
-    //const addReferralText = await page.locator("xpath=//div/h1[text()='Add a Referral']").isVisible();
-    //console.log(addReferralText)
-    //await page.pause()
-    if (addReferralText) {
-      // await menu.clickOnMenubtn()
-      // await menu.clickOnAddReferrallink()
+    
+    if (addReferralText) {     
       //Add New Referral to Patient.
       await page.waitForTimeout(2500);
       await addreferral.enterReceiveReferrldate(
@@ -185,31 +171,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await expect(page.getByText("Referral added successfully")).toHaveText(
         "Referral added successfully"
       );
-      //await addreferral.clickOnBackButton();
-      //*********************************************************** */
-      //links
-
-      //  await servicebookapp.clickOnLinks()
-      //  await servicebookapp.clickOnReferralLinkAddGP()
-      //  await servicebookapp.clickOnClosepopup()
-
-      //  await servicebookapp.clickOnLinks()
-      //  await servicebookapp.clickOnReferralLinkPathway()
-      //  await servicebookapp.clickOnClosepopup()
-
-      //  await servicebookapp.clickOnLinks()
-      //  await servicebookapp.clickOnReferralLinkPIP()
-      //  await servicebookapp.clickOnClosepopup()
-
-      //  await servicebookapp.clickOnLinks()
-      //  await servicebookapp.clickOnReferralLinkVideo()
-      //  await servicebookapp.clickOnClosepopup()
-
-      // await servicebookapp.clickOnLinks()
-      // await servicebookapp.clickOnReferralLinkWorkList()
-      // await servicebookapp.clickOnClosepopup()
-      //*********************************************************** */
-      // await page.getByRole('button', { name: 'Add Appointments' }).click()
+      
       await servicebookapp.SelectDate(
         jsonData.addEditAppointments[index].rea_date.toString()
       );
@@ -237,16 +199,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.clickOnMorningSlotstoAddApp(
         jsonData.addEditAppointments[index].convertedTime
       );
-      // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')
-
-      //  await servicebookapp.clickOnNextButton()
-      //  await servicebookapp.clickOnCancelButtonforDaySlot()
-      //  await servicebookapp.selectWeekSlot()
-      //  await servicebookapp.clickOnNextButton()
-      //  await servicebookapp.clickOnCancelButtonforDaySlot()
-      //  await servicebookapp.selectMonthSlot()
-      //  await servicebookapp.selectAvailableSlots()
-      //  await servicebookapp.clickOnNextButton()
+      
 
       await servicebookapp.clickOnNextButton();
       //await page.pause()
@@ -315,9 +268,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       }
       //await page.pause();
       await scheduleserviceapp.clickOnDateLink();
-      await page.waitForTimeout(7000);
-      // await addeditpatientappointment.selectTypeOfAppointment()
-      //await addeditpatientappointment.selectHealtProfessional()
+      await page.waitForTimeout(7000);      
       await addeditpatientappointment.selectConsultant();
       await addeditpatientappointment.selectAppointmentDuration(
         jsonData.addEditAppointments[index].rea_duration
@@ -330,19 +281,14 @@ test.describe("Database Comparison Add Edit Patient", () => {
       );
       await addeditpatientappointment.selectResonforReviewAppointment(
         jsonData.addEditAppointments[index].rea_review_reason
-      );
-      //await addeditpatientappointment.enterNotes()
+      );      
       await addeditpatientappointment.clickOnSaveButton();
 
       await expect(
         page.getByText("Appointment updated successfully")
       ).toHaveText("Appointment updated successfully");
 
-      //Communication Consent
-      //  await servicebookapp.selectCommConsentNo()
-      //  await servicebookapp.clikcOnRadioAllNo()
-      //  await servicebookapp.clickOnRadioAllYes()
-      //  await servicebookapp.clickOnCommuConsentSaveButton()
+      //Communication Consent      
       //  await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')
       await scheduleserviceapp.clickOnAppScheduleStatus();
       await scheduleserviceapp.clickOnCancelButton();
@@ -402,21 +348,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.clickOnMorningSlotstoAddApp(
         jsonData.addEditAppointments[index].convertedTime
       );
-      //await servicebookapp.clickOnShowCalendarbtn()
-
-      //await page.pause()
-      //Select Morning Slots
-      // await servicebookapp.clickOnMorningSlots(serviceappdetails.AddEditPatientSlot)
-      // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')
-
-      //  await servicebookapp.clickOnNextButton()
-      //  await servicebookapp.clickOnCancelButtonforDaySlot()
-      //  await servicebookapp.selectWeekSlot()
-      //  await servicebookapp.clickOnNextButton()
-      //  await servicebookapp.clickOnCancelButtonforDaySlot()
-      //  await servicebookapp.selectMonthSlot()
-      //  await servicebookapp.selectAvailableSlots()
-      //  await servicebookapp.clickOnNextButton()
+      
 
       await servicebookapp.clickOnNextButton();
       //await page.pause()
@@ -444,9 +376,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
       );
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
 
-      //  await page.pause()
-      //Communication Consent
-      //await servicebookapp.selectCommConsentNo()
+     
+      //Communication Consent     
       await servicebookapp.clikcOnRadioAllNo();
       await servicebookapp.clickOnRadioAllYes();
       await page.waitForTimeout(2000);
@@ -487,35 +418,19 @@ test.describe("Database Comparison Add Edit Patient", () => {
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n"
         );
       } else {
-        console.log(
-          "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
-        );
-      }
-     // await page.pause();
+        console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
+      }     
       //Edit Patient App.
-      await scheduleserviceapp.clickOnDateLink();
-      //await addeditpatientappointment.selectTypeOfAppointment()
-      //await addeditpatientappointment.selectHealtProfessional()
-      //await addeditpatientappointment.selectConsultant()
+      await scheduleserviceapp.clickOnDateLink();      
       await page.waitForTimeout(8000);
       await addeditpatientappointment.selectAppointmentDuration(
         jsonData.addEditAppointments[index].rea_duration
-      );
-      // await addeditpatientappointment.clickOnRescheduleDate(
-      //   jsonData.addEditAppointments[index].rea_edited_date
-      // );
-      // await addeditpatientappointment.enterRescheduleTime(
-      //   jsonData.addEditAppointments[index].rea_edited_time
-      // );
+      );      
       await addeditpatientappointment.selectResonforReviewAppointment(
         jsonData.addEditAppointments[index].rea_review_reason
-      );
-      //await addeditpatientappointment.enterNotes()
+      );      
       await addeditpatientappointment.clickOnSaveButton();
-
-      await expect(
-        page.getByText("Appointment updated successfully")
-      ).toHaveText("Appointment updated successfully");
+      await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
 
       //Cancel Appointment
       await scheduleserviceapp.clickOnAppScheduleStatus();
@@ -545,122 +460,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         console.log(
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
         );
-      }
-
-      //      //SchedulePatientAppointment Page. Links
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnAddAppointmentLink()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnAddProvisionalApp()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnAddAssessment()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnAddAttended()
-      //      await attendedpatientappointments.clickOnBackButton()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnCancel()
-      //      await cancelledaatientappointments.clickOnBackButton()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnConsent()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnDidNotAttenede()
-      //      await  didnotattendedpatientappointments.clickOnBackButton()
-      // //
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnHistory()
-      //      await scheduleserviceapp.closePopUpWindow()
-      // //
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnLetter()
-      //      await scheduleserviceapp.closePopUpWindow()
-      // //
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnPatientRTT()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnPIPLabel()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickOnReferral()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      //      await scheduleserviceapp.clickOnLinksMenu()
-      //      await scheduleserviceapp.clickonRefresh()
-      //      await scheduleserviceapp.closePopUpWindow()
-
-      // await scheduleserviceapp.clickOnLinksMenu()
-      // await scheduleserviceapp.clickonServiceApp()
-      // await scheduleserviceapp.closePopUpWindow()
-
-      // await scheduleserviceapp.clickOnLinksMenu()
-      // await scheduleserviceapp.clickOnWaitNotSeen()
-      // await waitednotseenpatientappointments.clickOnBackButton()
-
-      //Click On Date Link
-      // await scheduleserviceapp.clickOnDateLink()
-      // await addeditpatientappointment.clickOnBackButton()
-      // await scheduleserviceapp.clickOnDateLink()
-      // await addeditpatientappointment.selectTypeOfAppointment()
-      // await addeditpatientappointment.selectHealtProfessional()
-      // await addeditpatientappointment.selectConsultant()
-      // await addeditpatientappointment.selectAppointmentDuration()
-      // await addeditpatientappointment.ClickOnLinkCheckAppdate()
-      // await addeditpatientappointment.clickOnCancelPopupIcon()
-      // await addeditpatientappointment.clickOnRescheduleDate()
-      // await addeditpatientappointment.enterRescheduleTime()
-      // await addeditpatientappointment.clickOnSaveButton()
-
-      //Cancel Appointment
-      // await scheduleserviceapp.clickOnAppScheduleStatus()
-      // await scheduleserviceapp.clickOnCancelButton()
-      // await scheduleserviceapp.selectAppCancellationReason()
-      // await scheduleserviceapp.clickOnSaveCancelledAppButton()
-      // await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')
-    }
-
-    //Edit Patient App.
-    //     await page.pause()
-    //     await scheduleserviceapp.Datelink()
-    //     await addeditpatientappointment.selectTypeOfAppointment()
-    //     await addeditpatientappointment.dropdownwithHealthPrefessional()
-    //     await addeditpatientappointment.selectConsultant()
-    //     await addeditpatientappointment.selectAppointmentDuration()
-    //     await addeditpatientappointment.SelectDate()
-    //     await addeditpatientappointment.enterRescheduleTime()
-    //     await addeditpatientappointment.selectResonforReviewAppointment()
-    //     await addeditpatientappointment.enterNotes()
-    //     await addeditpatientappointment.clickOnSaveButton()
-
-    //     await expect(page.getByText('Appointment updated successfully')).toHaveText('Appointment updated successfully')
-
-    //     //Change Status to waiting
-    //     await scheduleserviceapp.clickOnAppScheduleStatus()
-    //     await scheduleserviceapp.clickOnWaitingButton()
-    //     //await scheduleserviceapp.selectAppCancellationReason()
-    //     await scheduleserviceapp.clickOnSaveCancelledAppButton()
-    //     await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')
-
-    //     await page.pause()
-
-    //     //Change Status to waiting
-    //     await scheduleserviceapp.clickOnAppScheduleStatus()
-    //     await scheduleserviceapp.clickOnWaitingNotSeenButton()
-    //     //await scheduleserviceapp.selectAppCancellationReason()
-    //     await scheduleserviceapp.clickOnSaveCancelledAppButton()
-    //     await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')
-    // await menu.clickOnMenubtn()
-    // await menu.clickOnLogout()
+      }      
+    }   
   });
 });

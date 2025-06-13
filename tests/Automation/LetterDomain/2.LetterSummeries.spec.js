@@ -28,14 +28,9 @@ let jsonData;
 
 test.describe("Database Comparison Book New App and Cancel", () => {
      test("Extract Patient Details", async ({}) => {
-     const excelFilePath =
-          process.env.EXCEL_FILE_PATH || "./ExcelFiles/LettersDomain.xlsx";
-     const jsonFilePath =
-          "./TestDataWithJSON/LetterDomain/LetterDomain.json";
-     const conversionSuccess = await convertExcelToJson(
-          excelFilePath,
-          jsonFilePath
-     );
+     const excelFilePath = process.env.EXCEL_FILE_PATH || "./ExcelFiles/LettersDomain.xlsx";
+     const jsonFilePath ="./TestDataWithJSON/LetterDomain/LetterDomain.json";
+     const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
 
      if (conversionSuccess) {
           jsonData = require("../../../TestDataWithJSON/LetterDomain/LetterDomain.json");
@@ -91,7 +86,6 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       await page.waitForTimeout(1000);
      await letterorSummeries.selectLetterName(jsonData.letterSummries[index].patlet_name)
       await page.waitForTimeout(1000);
-
      await letterorSummeries.enterinputStartDate(jsonData.letterSummries[index].patletd_start_date)
       await page.waitForTimeout(1000);
      await letterorSummeries.enterinputEndDate(jsonData.letterSummries[index].patletd_end_date)
@@ -138,11 +132,15 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      // await letterorSummeries.clickOnclosePopup()
      await letterorSummeries.clickOnHtmlIcon()
      //await letterorSummeries.clickOnclosePopup()
-
-
      await letterorSummeries.clickOnEditHistoryIcon()
+     await page.waitForTimeout(1000)
       await letterorSummeries.clickOnclosePopup()
+      await page.waitForTimeout(1000)
       await letterorSummeries.clickOnSendEmailButton()
+
+      await letterorSummeries.clickOnDeleteRecordLink()
+      await letterorSummeries.clickOnOkButton()      
+      await expect(page.getByText("Letter deleted successfully")).toHaveText("Letter deleted successfully");
 
 
     //await page.pause()

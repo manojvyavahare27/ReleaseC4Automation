@@ -86,7 +86,6 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await expect(page.getByText("Login success")).toHaveText("Login success");
      await page.waitForTimeout(1000);
      await homepage.clickonSidebarHomeIcon()
-
      await homepage.clickOnAppointmentIcon()     
      await patientsearch.clickonBackButton()
      await homepage.clickOnAppointmentIcon()   
@@ -95,8 +94,6 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await patientsearch.clickOnResetToDefaultViewButton()
      //await patientsearch.ClickOnSaveButtonForUnknownPatient()
      await page.waitForTimeout(1000);
-     
-
      await page.getByRole('img', { name: 'Cellma Image Avatar' }).click()   
      //await homepage.clickOnPatientIcon()
      await homepage.clickonSidebarHomeIcon()
@@ -150,30 +147,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString())
      await addreferral.clickOnSaveButton()
      //await expect(page.getByText('Referral added successfully')).toHaveText('Referral added successfully')
-     await addreferral.clickOnBackButton()
-     //*********************************************************** */
-     //links
-          
-          // await servicebookapp.clickOnLinks()
-          // await servicebookapp.clickOnReferralLinkAddGP()
-          // await servicebookapp.clickOnClosepopup()
-
-          // await servicebookapp.clickOnLinks()
-          // await servicebookapp.clickOnReferralLinkPathway()
-          // await servicebookapp.clickOnClosepopup()
-
-          // await servicebookapp.clickOnLinks()
-          // await servicebookapp.clickOnReferralLinkPIP()
-          // await servicebookapp.clickOnClosepopup()
-
-          // await servicebookapp.clickOnLinks()
-          // await servicebookapp.clickOnReferralLinkVideo()
-          // await servicebookapp.clickOnClosepopup()
-
-          // await servicebookapp.clickOnLinks()
-          // await servicebookapp.clickOnReferralLinkWorkList()
-          // await servicebookapp.clickOnClosepopup()     
-          //*********************************************************** */
+     await addreferral.clickOnBackButton()     
           await page.waitForTimeout(2000);
           // await page.getByRole('button', { name: 'Add Appointments' }).click()
           await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date)
@@ -190,27 +164,12 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           
           //Select Morning Slots
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
-     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
-
-     //  await servicebookapp.clickOnNextButton()     
-     //  await servicebookapp.clickOnCancelButtonforDaySlot()
-     //  await servicebookapp.selectWeekSlot()
-     //  await servicebookapp.clickOnNextButton()     
-     //  await servicebookapp.clickOnCancelButtonforDaySlot()
-     //  await servicebookapp.selectMonthSlot()    
-     //  await servicebookapp.selectAvailableSlots()     
-     //  await servicebookapp.clickOnNextButton()    
-          
-          
           await servicebookapp.clickOnNextButton()
-          
           await servicebookapp.selectAppDetailsAppointmentType(jsonData.bookNewAppointments[index].reaType)
-     // await servicebookapp.selectAppDetailsZone()
-
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
           await servicebookapp.selectSendAppTextEmail()
           await servicebookapp.selectPatientType(jsonData.bookNewAppointments[index].rea_patient_type)
-          //await servicebookapp.selectFreeAppointment()
+         
           await servicebookapp.selectReasonForAppdelay(jsonData.bookNewAppointments[index].rea_reason_for_delay)
           await servicebookapp.enterTriage(jsonData.bookNewAppointments[index].rea_triage.toString())
           await servicebookapp.enterNotes(jsonData.bookNewAppointments[index].rea_notes)
@@ -279,18 +238,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await scheduleserviceapp.clickOnLinksMenu()
           await scheduleserviceapp.clickonRefresh()
           await scheduleserviceapp.closePopUpWindow()     
-          // await scheduleserviceapp.clickOnLinksMenu()
-          // await scheduleserviceapp.clickonServiceApp()
-          // await serviceappointment.clicOnBackButton()
-     // await scheduleserviceapp.closePopUpWindow()
-
-
-          // await scheduleserviceapp.clickOnLinksMenu()
-          // await scheduleserviceapp.clickOnWaitNotSeen()
-          // await waitednotseenpatientappointments.clickOnBackButton()
-          
-     //change Appoitntment Type
-      //await page.pause()
+         
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.clickOnCloseAppTypePopup()
      await scheduleserviceapp.ClickonAppTypeLink()
@@ -298,41 +246,27 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await scheduleserviceapp.clickOnChangeButton()
      await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')     
      
-     var sqlQuery =
-     "select * from patients where pat_hospital_ref= '" +
-     jsonData.addPatient[index].pat_hospital_ref +
-     "' order by pat_id desc limit 1";
+     var sqlQuery ="select * from patients where pat_hospital_ref= '" +
+     jsonData.addPatient[index].pat_hospital_ref +"' order by pat_id desc limit 1";
    console.log(sqlQuery);
    var sqlFilePath = "SQLResults/AppointmentDomain/patientData.json";
    var results = await executeQuery(sqlQuery, sqlFilePath);
    const patId = results[0].pat_id;
    console.log("Patient id is:" + patId);
 
-   sqlQuery =
-     "select * from referral_appointments where rea_pat_id = '" +
-     patId +
-     "' and rea_time = '" +
-     jsonData.bookNewAppointments[index].rea_time +
-     "' and rea_record_status = 'approved'";
+   sqlQuery ="select * from referral_appointments where rea_pat_id = '" + patId + "' and rea_time = '" +
+     jsonData.bookNewAppointments[index].rea_time + "' and rea_record_status = 'approved'";
    console.log(sqlQuery);
    sqlFilePath = "SQLResults/AppointmentDomain/bookNewApp.json";
    results = await executeQuery(sqlQuery, sqlFilePath);
    const reaId = results[0].rea_id;
    console.log("Referral Appointment id is:" + reaId);
 
-   var match = await compareJsons(
-     sqlFilePath,
-     null,
-     jsonData.bookNewAppointments[index]
-   );
+   var match = await compareJsons(sqlFilePath,null,jsonData.bookNewAppointments[index]);
    if (match) {
-     console.log(
-       "\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n"
-     );
+     console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n");
    } else {
-     console.log(
-       "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
-     );
+     console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
    }
      
      const AppType= await page.getByTestId('Appointment Type').isVisible()             
@@ -350,19 +284,11 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      console.log(sqlQuery);
      results = await executeQuery(sqlQuery, sqlFilePath);
 
-     match = await compareJsons(
-       sqlFilePath,
-       null,
-       jsonData.bookNewAppointments[index]
-     );
+     match = await compareJsons(sqlFilePath,null,jsonData.bookNewAppointments[index]);
      if (match) {
-       console.log(
-         "\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n"
-       );
+       console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n");
      } else {
-       console.log(
-         "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
-       );
+       console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
      }
 
      }
@@ -381,28 +307,11 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           
           //Select Morning Slots
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
-     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
-
-
-     //  await servicebookapp.clickOnNextButton()     
-     //  await servicebookapp.clickOnCancelButtonforDaySlot()
-     //  await servicebookapp.selectWeekSlot()
-     //  await servicebookapp.clickOnNextButton()     
-     //  await servicebookapp.clickOnCancelButtonforDaySlot()
-     //  await servicebookapp.selectMonthSlot()    
-     //  await servicebookapp.selectAvailableSlots()     
-     //  await servicebookapp.clickOnNextButton()    
-          
-          
           await servicebookapp.clickOnNextButton()
-          
-          await servicebookapp.selectAppDetailsAppointmentType(jsonData.bookNewAppointments[index].reaType)
-     // await servicebookapp.selectAppDetailsZone()
-
+          await servicebookapp.selectAppDetailsAppointmentType(jsonData.bookNewAppointments[index].reaType)    
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
           await servicebookapp.selectSendAppTextEmail()
           await servicebookapp.selectPatientType(jsonData.bookNewAppointments[index].rea_patient_type)
-          //await servicebookapp.selectFreeAppointment()
           await servicebookapp.selectReasonForAppdelay(jsonData.bookNewAppointments[index].rea_reason_for_delay)
           await servicebookapp.enterTriage(jsonData.bookNewAppointments[index].rea_triage.toString())
           await servicebookapp.enterNotes(jsonData.bookNewAppointments[index].rea_notes)    
@@ -411,11 +320,9 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           //Communication Consent
           await servicebookapp.selectCommConsentNo()
           await servicebookapp.clikcOnRadioAllNo()
-          //await page.pause()
-          //await servicebookapp.clickOnRadioAllYes()
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-         // await page.pause()
+         
           var sqlQuery =
           "select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref + "' order by pat_id desc limit 1";
         console.log(sqlQuery);
@@ -424,10 +331,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
         const patId = results[0].pat_id;
         console.log("Patient id is:" + patId);
      
-        sqlQuery ="select * from referral_appointments  where rea_pat_id = '" +
-          patId +
-          "' and rea_time = '" +
-          jsonData.bookNewAppointments[index].rea_time +
+        sqlQuery ="select * from referral_appointments  where rea_pat_id = '" + patId +"' and rea_time = '" +jsonData.bookNewAppointments[index].rea_time +
           "' and rea_record_status = 'approved'";
          // await page.pause()
         console.log(sqlQuery);
@@ -436,86 +340,13 @@ test.describe("Database Comparison Book New App and Cancel", () => {
         const reaId = results[0].rea_id;
         console.log("Referral Appointment id is:" + reaId);
      
-        var match = await compareJsons(
-          sqlFilePath,
-          null,
-          jsonData.bookNewAppointments[index]
-        );
+        var match = await compareJsons(sqlFilePath,null,jsonData.bookNewAppointments[index]);
         if (match) {
-          console.log(
-            "\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n"
-          );
+          console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n" );
         } else {
-          console.log(
-            "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
-          );
+          console.log( "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n" );
         }
-
-               //SchedulePatientAppointment Page. Links
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnAddAppointmentLink()
-     //      await patientsearch.clickonBackButton()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnAddProvisionalApp()
-     //      await scheduleserviceapp.closePopUpWindow()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnAddAssessment()
-     //      await scheduleserviceapp.closePopUpWindow()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnAddAttended()
-     //      await attendedpatientappointments.clickOnBackButton()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnCancel()
-     //      await cancelledaatientappointments.clickOnBackButton()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnConsent()
-     //      await scheduleserviceapp.closePopUpWindow()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnDidNotAttenede()
-     //      await  didnotattendedpatientappointments.clickOnBackButton()
-     // //
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnHistory()
-     //      await scheduleserviceapp.closePopUpWindow()
-     // //
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnLetter()
-     //      await scheduleserviceapp.closePopUpWindow()
-     // //
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnPatientRTT()
-     //      await scheduleserviceapp.closePopUpWindow()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnPIPLabel()
-     //      await scheduleserviceapp.closePopUpWindow()
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickOnReferral()
-     //      await patientsearch.clickonBackButton()
-
-
-     //      await scheduleserviceapp.clickOnLinksMenu()
-     //      await scheduleserviceapp.clickonRefresh()
-     //      await scheduleserviceapp.closePopUpWindow()     
-          // await scheduleserviceapp.clickOnLinksMenu()
-          // await scheduleserviceapp.clickonServiceApp()
-          // await serviceappointment.clicOnBackButton()
-     // await scheduleserviceapp.closePopUpWindow()
-
-
-          // await scheduleserviceapp.clickOnLinksMenu()
-          // await scheduleserviceapp.clickOnWaitNotSeen()
-          // await waitednotseenpatientappointments.clickOnBackButton()
-          
-     //change Appoitntment Type
-     //await page.pause()
+       
      await page.waitForTimeout(1000)
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.clickOnCloseAppTypePopup()
@@ -524,11 +355,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await scheduleserviceapp.clickOnChangeButton()
      await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')
 
-
-
-     //const AppType= await page.getByTestId('Appointment Type').isVisible()             
-
-     //Click On Date Link
+         //Click On Date Link
      await scheduleserviceapp.clickOnDateLink()
      await adeditpatientappointment.clickOnBackButton()   
      //Cancel Appointment

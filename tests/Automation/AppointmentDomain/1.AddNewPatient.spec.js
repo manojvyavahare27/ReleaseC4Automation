@@ -96,18 +96,11 @@ test.describe('New Patient', () => {
 
      
      await homepage.clickonSidebarHomeIcon()
-     await homepage.clickOnPatientIcon();
-      
+     await homepage.clickOnPatientIcon();      
       await patientsearch.clickOnSearchButton();
       await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname);
       await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
-      await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
-      //await patientsearch.enterPatientIdentificationId()
-
-      // await patientsearch.selectFutureDate()
-      
-      // await expect(page.getByText('Date selected is future date')).toHaveText('Date selected is future date')
-      // await patientsearch.clearBornDate()
+      await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);     
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnAddPatientbutton();
@@ -131,7 +124,8 @@ test.describe('New Patient', () => {
       console.log(differenceInDays);
     
       // Check if the difference is less than 5 days
-      if (differenceInDays < 5) {
+      if (differenceInDays < 5) 
+        {
         await expect(page.getByText("Baby born in this hospital required")).toHaveText("Baby born in this hospital required");
       } else {
         console.log("Date is not less than 5 days from current date");
@@ -166,19 +160,9 @@ test.describe('New Patient', () => {
       await addpatient.selectCountryOfBirth(jsonData.addPatient[index].pat_country_of_birth);
       await addpatient.selectNationality(jsonData.addPatient[index].pat_nationality);
       await addpatient.selectRegDisable(jsonData.addPatient[index].pat_registered_disabled_yes);
-
-      //await addpatient.selectPrimaryDisablity()
-      //await addpatient.enterAssestanceNeeded(patientdetailsdata.AssistanceNeeded)
       await addpatient.enterDisablityNotes(jsonData.addPatient[index].pat_disability_note);
-      await addpatient.selectLanguage(jsonData.addPatient[index].pat_language);
-      //await addpatient.selectInterpreterNeeded()
-      //await addpatient.selectInterpreterType()
-      //await addpatient.enterNHSNo(patientdetailsdata.NHSNo)
-      //await addpatient.enterHospitalRef(patientdetailsdata.HospitalRef)
-      await addpatient.enterHospitalRef(data.pat_hospital_ref);
-      //await addpatient.enterHospitalRef("hosp0524Id146");
-      // await addpatient.enterIdentifier(patientdetailsdata.Identifier)      
-
+      await addpatient.selectLanguage(jsonData.addPatient[index].pat_language);      
+      await addpatient.enterHospitalRef(data.pat_hospital_ref);        
       await addpatient.selectPatientType(jsonData.addPatient[index].pat_type);
       await addpatient.selectPrisoner(jsonData.addPatient[index].pat_prisoner_yes);
       await addpatient.selectBloodType(jsonData.addPatient[index].pat_blood_group);
@@ -186,7 +170,6 @@ test.describe('New Patient', () => {
       await addpatient.selectPatientWebRegistration();
       await addpatient.enterNotes(jsonData.addPatient[index].pat_notes);
       await addpatient.clickOnNextButton();
-
     
       //Add Address page
       await addaddress.clickOnSaveButton();
@@ -195,10 +178,7 @@ test.describe('New Patient', () => {
       await addaddress.enterDestrict(jsonData.permanentAddress[index].add_address2);
       await addaddress.enterCounty(jsonData.permanentAddress[index].add_address4);
       await addaddress.enterPostCode(jsonData.permanentAddress[index].add_address5.toString());
-      //await addaddress.clickOnFindPostCode();
-      // await addaddress.enterCountryonPopup(
-      //   jsonData.permanentAddress[index].add_address6.toString()
-      // );
+      
       await page.locator('#mui-component-select-country').click();
        await page.getByRole('option', { name: 'Algeria' }).click();
        
@@ -308,11 +288,8 @@ test.describe('New Patient', () => {
       await addpip.enterPIPGivenName(jsonData.pip[index].pip_firstname);
       await addpip.enterPIPMiddleName(jsonData.pip[index].pip_middlename);
       await addpip.selectPIPBornDate(jsonData.pip[index].pip_dob);
-
       await addpip.selecrPIPEthnicity(jsonData.pip[index].pip_ethnicity_text);
-      await addpip.selectPIPOccupation();
-      // await addpip.enterPIPMobileNumber(pipdetailsdata.MobileNo);
-      // await addpip.enterPIPEmailId(pipdetailsdata.Email);
+      await addpip.selectPIPOccupation();      
       await addpip.selectPIPRelation(jsonData.pip[index].pip_relationship);
       await addpip.selectPIPNextOfKin(jsonData.pip[index].pip_next_of_kin_Yes);
       await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);

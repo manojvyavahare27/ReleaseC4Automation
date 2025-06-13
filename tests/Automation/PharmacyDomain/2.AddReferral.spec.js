@@ -128,7 +128,7 @@ test.describe("Patient Domain Db COmparison", () => {
     await addreferral.selectClinicType(
       jsonData.AddReferral[index].ref_clinic_type.toString()
     );
-    await page.pause()
+    //await page.pause()
     await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location);
     await addreferral.selectTeam(
       jsonData.AddReferral[index].ref_region_eli_text.toString()

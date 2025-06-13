@@ -35,14 +35,9 @@ let jsonData;
 
 test.describe("Database Comparison Add Edit Patient", () => {
      test("Extract Patient Details", async ({}) => {
-     const excelFilePath =
-          process.env.EXCEL_FILE_PATH || "./ExcelFiles/AppointmentDomain.xlsx";
-     const jsonFilePath =
-          "./TestDataWithJSON/AppointmentDomain/AppointmentDetails.json";
-     const conversionSuccess = await convertExcelToJson(
-          excelFilePath,
-          jsonFilePath
-     );
+     const excelFilePath =process.env.EXCEL_FILE_PATH || "./ExcelFiles/AppointmentDomain.xlsx";
+     const jsonFilePath ="./TestDataWithJSON/AppointmentDomain/AppointmentDetails.json";
+     const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
 
      if (conversionSuccess) {
           jsonData = require("../../../TestDataWithJSON/AppointmentDomain/AppointmentDetails.json");

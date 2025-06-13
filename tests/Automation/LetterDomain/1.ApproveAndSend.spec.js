@@ -28,14 +28,9 @@ let jsonData;
 
 test.describe("Database Comparison Book New App and Cancel", () => {
      test("Extract Patient Details", async ({}) => {
-     const excelFilePath =
-          process.env.EXCEL_FILE_PATH || "./ExcelFiles/LettersDomain.xlsx";
-     const jsonFilePath =
-          "./TestDataWithJSON/LetterDomain/LetterDomain.json";
-     const conversionSuccess = await convertExcelToJson(
-          excelFilePath,
-          jsonFilePath
-     );
+     const excelFilePath = process.env.EXCEL_FILE_PATH || "./ExcelFiles/LettersDomain.xlsx";
+     const jsonFilePath ="./TestDataWithJSON/LetterDomain/LetterDomain.json";
+     const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
 
      if (conversionSuccess) {
           jsonData = require("../../../TestDataWithJSON/LetterDomain/LetterDomain.json");
@@ -49,65 +44,57 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      });
 
      test('Service Appointment @Appt',async ({page})=>{
-
      const loginpage=new LoginPage(page)
      const homepage=new Homepage(page)
      const environment=new Environment(page)
      const patientsearch=new PatientSearch(page)
      const confirmexisting=new ConfirmExisting(page)
      const patientsidebar=new PatientSideBar(page)
-     const letterorSummeries=new lettersOrSummaries(page)
-    
-
+     const letterorSummeries=new lettersOrSummaries(page)   
      const index = 0;
-
      await page.goto(environment.Test);
      await page.waitForTimeout(1500);
      await loginpage.enterUsername(jsonData.loginDetails[1].username);
      await page.waitForTimeout(1500);
      await loginpage.enter_Password(jsonData.loginDetails[1].password);
      await page.waitForTimeout(1500);
-     await loginpage.clickOnLogin();
-         
+     await loginpage.clickOnLogin();         
      await homepage.clickOnSideIconPatient()
      await patientsearch.enterGivenName(jsonData.patDetails[index].pat_firstname)
-     await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname)
-     
+     await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname)     
      await patientsearch.clickOnSearchPatButton()
      //await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
-     await patientsearch.clickOnSearchPatientLink()   
-    
+     await patientsearch.clickOnSearchPatientLink()       
      await page.waitForTimeout(1000);    
      await confirmexisting.clickOnConfirmExistingDetails()
      await page.waitForTimeout(1000);
-     await patientsidebar.clickOnLettersCategory()
-   //  await page.pause()
-     await letterorSummeries.selectLetterLocation(jsonData.letterSendApproved[index].patletd_patient_location)
-     await page.waitForTimeout(1000);
-     await letterorSummeries.selectLetterName(jsonData.letterSendApproved[index].patlet_name)
-     await page.waitForTimeout(1000);
-     await letterorSummeries.enterinputStartDate(jsonData.letterSendApproved[index].patletd_start_date)
-     await page.waitForTimeout(1000);
-     await letterorSummeries.enterinputEndDate(jsonData.letterSendApproved[index].patletd_end_date)
-     await page.waitForTimeout(1000);
-     await letterorSummeries.clickOnDraftbutton()    
-    //await page.pause()
-
-    
-
-
-
-
+     await patientsidebar.clickOnLettersCategory()   
+     // await letterorSummeries.selectLetterLocation(jsonData.letterSendApproved[index].patletd_patient_location)
+     // await page.waitForTimeout(1000);
+     // await letterorSummeries.selectLetterName(jsonData.letterSendApproved[index].patlet_name)
+     // await page.waitForTimeout(1000);
+     // await letterorSummeries.enterinputStartDate(jsonData.letterSendApproved[index].patletd_start_date)
+     // await page.waitForTimeout(1000);
+     // await letterorSummeries.enterinputEndDate(jsonData.letterSendApproved[index].patletd_end_date)
+     // await page.waitForTimeout(1000);
+     // await letterorSummeries.clickOnDraftbutton()       
+     await letterorSummeries.selectLetterLocation(jsonData.letterSummries[index].patletd_patient_location)
+      await page.waitForTimeout(1000);
+     await letterorSummeries.selectLetterName(jsonData.letterSummries[index].patlet_name)
+      await page.waitForTimeout(1000);
+     await letterorSummeries.enterinputStartDate(jsonData.letterSummries[index].patletd_start_date)
+      await page.waitForTimeout(1000);
+     await letterorSummeries.enterinputEndDate(jsonData.letterSummries[index].patletd_end_date)
+      await page.waitForTimeout(1000);
+     await letterorSummeries.clickOnDraftbutton() 
      await page.waitForTimeout(1000);
      await letterorSummeries.selectSendforApproval()
      await page.waitForTimeout(1000);
-     await letterorSummeries.clickOnSendforApprovalButton()
-    
-     await page.waitForTimeout(1000);
-     //await page.pause()
+     await letterorSummeries.clickOnSendforApprovalButton()    
+     await page.waitForTimeout(1000);     
      await letterorSummeries.clickOnOkButton()
      await page.waitForTimeout(200)
-    // await expect(page.getByText("Letter added to patient successfully")).toHaveText("Letter added to patient successfully");
+     await expect(page.getByText("Letter added to patient successfully")).toHaveText("Letter added to patient successfully");
 
 
     //check DB
@@ -126,7 +113,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 
 
 
-   // await page.pause()
+    await page.pause()
      await letterorSummeries.clickSearchButton()
      await letterorSummeries.enterStartDate(jsonData.letterSendApproved[index].patletd_start_date)
      await letterorSummeries.enterEndDate(jsonData.letterSendApproved[index].patletd_end_date)
