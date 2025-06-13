@@ -67,8 +67,8 @@ class PatientDeath
 
     async enterOtherCauseeOfDeath()
     {   
-        await this.page.getByTestId('searchCauseOfDeath').getByLabel('Search Cancer cause of Death').fill('Candidal sepsis')
-        await this.page.getByRole('option', { name: 'Candidal sepsis', exact: true }).getByRole('checkbox').click()
+        await this.page.getByTestId('searchCauseOfDeath').getByLabel('Search Cancer cause of Death').fill('Pulmonary candidosis')
+        await this.page.getByRole('option', { name: 'Pulmonary candidosis', exact: true }).getByRole('checkbox').click()
         // await this.page.enterOtherCauseeOfDeath.click()
         // await this.page.getByRole('option', { name: 'Candidal sepsis', exact: true }).getByRole('checkbox').click()
         // await this.txtbox_OtherCauseOfDeath.click()
