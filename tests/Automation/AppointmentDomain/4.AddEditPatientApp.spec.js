@@ -101,20 +101,17 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickOnSearchPatButton();
-    await patientsearch.enterGivenName(
-      jsonData.addPatient[index].pat_firstname
-    );
+    await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname);
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
     await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
-    await patientsearch.enterHospitalRef(
-      jsonData.addPatient[index].pat_hospital_ref
-    );
+    await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref);
 
     await patientsearch.clickOnSearchPatButton();    
     await patientsearch.clickOnSearchPatientLink();    
     await page.waitForTimeout(5000);
     await confirmexisting.clickOnConfirmExistingDetails();  
     await page.waitForTimeout(5000);
+    ///await page.pause()
     const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
     
     if (addReferralText) {     
