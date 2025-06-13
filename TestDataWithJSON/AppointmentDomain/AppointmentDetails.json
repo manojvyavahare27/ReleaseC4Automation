@@ -256,9 +256,9 @@
     {
       "rea_date": "13/06/2025",
       "rea_edited_date": "13/06/2025",
-      "rea_time": "10:30:00",
+      "rea_time": "10:45:00",
       "rea_edited_time": "09:45 AM",
-      "convertedTime": "10:30 AM",
+      "convertedTime": "10:45 AM",
       "rea_status": "scheduled",
       "rea_notes": "AddTesting Notes",
       "rea_duration": 15,
@@ -273,7 +273,7 @@
       "rea_reason_for_delay": "Appointment offered within 48 hours - declined by patient",
       "rea_region_eli_text": "HP Region1",
       "rea_patient_type": "Regular",
-      "rea_end_time": "10:45:00",
+      "rea_end_time": "11:00:00",
       "rea_special": "All Specialties",
       "rea_hp_name_link": "Mr Saurabh Riomed"
     }
