@@ -2,7 +2,8 @@
 
 const fs = require("fs");
 const XLSX = require("xlsx");
-const path = "D:/Riomed/Cellma4Automation";
+//const path = "D:/Riomed/Cellma4Automation";
+const path = require('path');
 const mysql = require("mysql2");
 const convertExcelToJson = require('../../../config/global-setupOptimized');
 
