@@ -328,13 +328,53 @@ test.describe('Excel Conversion', () => {
         
 
         // Print Id Card        
-        const fileInput = page.getByTestId('PhotoCameraIcon');
-        const filePath = "../Cellma4Automation/UploadPics/Patient.png";        
-        await fileInput.setInputFiles(filePath,fileInput);
-        await page.waitForTimeout(2000);
-        await page.getByTestId("Upload").click();
-        await page.waitForTimeout(1000);
-       // await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
+        // const fileInput = page.getByTestId('PhotoCameraIcon');
+        // const filePath = "../Cellma4Automation/UploadPics/Patient.png";        
+        // await fileInput.setInputFiles(filePath,fileInput);
+        // await page.waitForTimeout(2000);
+        // await page.getByTestId("Upload").click();
+
+         /**
+               * Recursively searches for a specific file in a directory tree.
+               * @param {string} dir - Directory to start searching from.
+               * @param {string} targetFile - Name of the file to find.
+               * @returns {string|null} - Absolute path to the file, or null if not found.
+               */
+              function findFileRecursive(dir, targetFile) {
+                const files = fs.readdirSync(dir);
+                for (const file of files) {
+                  const fullPath = path.join(dir, file);
+                  const stat = fs.statSync(fullPath);
+              
+                  if (stat.isDirectory()) {
+                    const result = findFileRecursive(fullPath, targetFile);
+                    if (result) return result;
+                  } else if (file === targetFile) {
+                    return fullPath;
+                  }
+                }
+                return null;
+              }
+              
+              // Get Jenkins workspace root or current directory
+              const workspaceRoot = process.env.WORKSPACE || process.cwd();
+              const targetFilePath = findFileRecursive(workspaceRoot, 'Patient.png');
+              
+              if (!targetFilePath) {
+                throw new Error('❌ Patient.png not found anywhere under the workspace!');
+              }
+              
+              console.log('✅ Found Patient.png at:', targetFilePath);
+              
+              // Upload the file using Playwright
+              const fileInput = await page.getByTestId('PhotoCameraIcon');
+              await fileInput.setInputFiles(targetFilePath);
+              
+              await page.getByTestId("Upload").click();
+              await page.waitForTimeout(1000);
+
+        //await page.waitForTimeout(1000);
+        await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
         await printidcard.clickOnSavebtn();
         await page.waitForTimeout(2000);
        // await page.pause();
