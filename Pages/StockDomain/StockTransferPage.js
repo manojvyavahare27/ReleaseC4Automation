@@ -3,6 +3,7 @@ class StockTransferPage {
     constructor(page) {
         this.page = page;
         this.requestLocationInput = page.locator('xpath=//input[@id="requestLocation"]');
+        this.defaultPharmacyLink=page.locator("xpath=//a[@aria-label='Default Pharmacy']")
         this.formularyInput = page.locator('xpath=//input[@id="formulary"]');
         this.transferStatusInput = page.locator('xpath=//input[@id="transferStatus"]');
         this.requestIdInput = page.locator('xpath=//input[@id="Request Id"]');
@@ -26,6 +27,10 @@ class StockTransferPage {
 
         await this.requestLocationInput.fill(location);
         
+    }
+    async clickOnDefaultPharmacyLink()
+    {
+        await this.defaultPharmacyLink.click()
     }
 
     async enterFormulary(formulary) {
