@@ -163,7 +163,10 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           
           
           //Select Morning Slots
+          await page.pause()
+          await page.waitForTimeout(2000)
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
+           await page.waitForTimeout(2000)
           await servicebookapp.clickOnNextButton()
           await servicebookapp.selectAppDetailsAppointmentType(jsonData.bookNewAppointments[index].reaType)
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
@@ -177,10 +180,13 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
 
+           await page.waitForTimeout(2000)
           //Communication Consent
           await servicebookapp.selectCommConsentNo()
+           await page.waitForTimeout(1000)
           //await servicebookapp.clikcOnRadioAllNo()
           await servicebookapp.clickOnRadioAllYes()
+           await page.waitForTimeout(1000)
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
           
