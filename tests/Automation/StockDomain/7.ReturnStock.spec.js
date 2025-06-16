@@ -77,7 +77,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await homepage.clickOnSideIconStock()
 
         await stockallLoc.clickOnShowHiddenLocationButton()
-        await page.pause()
+       // await page.pause()
         await stockallLoc.clickOnCardioLocation()
         await page.waitForTimeout(1000)
         await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
@@ -137,7 +137,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await loginpage.clickOnLogin();
         await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnSideIconStock()
-        await page.pause()
+        //await page.pause()
         await stockallLoc.clickOnShowHiddenLocationButton()
         await stockTransferPage.clickOnDefaultPharmacyLink()
         
