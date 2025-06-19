@@ -432,13 +432,37 @@ async clickOnHistoryIcon()
 
 
 
-async  clickOnLogout(page) {
-  if (!page) throw new Error('Page is undefined');
+// async  clickOnLogout(page) {
+//   if (!page) throw new Error('Page is undefined');
 
-  await page.waitForSelector("//button[@aria-label='profileIcon']", { state: 'visible' });
-  await page.hover("//button[@aria-label='profileIcon']");
-  await page.click('//div[@aria-label="Logout"]'); // Update this if your logout button has a different selector
+//   await page.waitForSelector("//button[@aria-label='profileIcon']", { state: 'visible' });
+  
+//   await page.hover("//button[@aria-label='profileIcon']");
+
+//   await page.click('//div[@aria-label="Logout"]'); // Update this if your logout button has a different selector
+// }
+
+async  clickOnLogout(page) {
+  if (!page) throw new Error('❌ Page is undefined');
+
+  const profileIcon = page.locator('//button[@aria-label="profileIcon"]');
+  const logoutOption = page.locator('//div[@aria-label="Logout"]');
+
+  // Wait for and hover on profile icon
+  await profileIcon.waitFor({ state: 'visible' });
+  await profileIcon.hover();
+  console.log('✅ Hovered on profile icon');
+
+  // Click on profile icon after hover
+  await profileIcon.click();
+  console.log('✅ Clicked on profile icon');
+
+  // Wait for and click the logout option
+  await logoutOption.waitFor({ state: 'visible' });
+  await logoutOption.click();
+  console.log('✅ Clicked on logout');
 }
+
 
 
 

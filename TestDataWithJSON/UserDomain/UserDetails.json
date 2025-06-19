@@ -15,22 +15,22 @@
   ],
   "addListItem": [
     {
-      "eli_text": "UserELIH",
+      "eli_text": "UserELIm",
       "eli_numeric_value": "1",
-      "eli_text_other_lang": "UserELIH",
-      "eli_code": "008",
+      "eli_text_other_lang": "UserELIm",
+      "eli_code": "ADLILC.8844",
       "eli_code_type": "local",
       "eli_code_text": "Rio15"
     }
   ],
   "createUser": [
     {
-      "use_increment": 135,
-      "use_username": "Test.135User",
+      "use_increment": 142,
+      "use_username": "Test.142User",
       "use_firstname": "Auto",
       "use_password": "Manoj@2024",
       "use_surname": "Riomedtest",
-      "use_email": "thayne.sampson135@riomed.com",
+      "use_email": "thayne.sampson142@riomed.com",
       "use_expires": "30/06/2035",
       "use_title": "Mr",
       "use_profession": "Consultant",
@@ -69,7 +69,7 @@
       "searchStartDate": "01/07/2023",
       "searchEndDate": "31/07/2023",
       "hpd_start_date": "01/06/2025",
-      "hpd_end_date": "30/06/2025",
+      "hpd_end_date": "30/08/2025",
       "hpd_working_start_time": "00:05",
       "hpd_working_end_time": "23:55",
       "hpd_monday": 1,
@@ -86,7 +86,7 @@
   "setHpClinicDiary": [
     {
       "hcd_start_date": "02/06/2025",
-      "hcd_end_date": "29/06/2025",
+      "hcd_end_date": "15/08/2025",
       "hcd_clinic_start_time": "00:15",
       "hcd_clinic_end_time": "23:45",
       "hcd_monday": 1,
@@ -103,7 +103,7 @@
   "editHpDiary": [
     {
       "hpd_start_date": "02/06/2025",
-      "hpd_end_date": "29/06/2025",
+      "hpd_end_date": "15/08/2025",
       "hpd_working_start_time": "00:15",
       "hpd_working_end_time": "23:45",
       "hpd_monday": 1,
@@ -119,7 +119,7 @@
   ],
   "setHpLeave": [
     {
-      "hpd_start_date": "02/06/2025",
+      "hpd_start_date": "15/06/2025",
       "hpd_end_date": "25/06/2025",
       "hpd_working_start_time": "00:15",
       "hpd_working_end_time": "23:45",
@@ -136,7 +136,7 @@
   ],
   "setHpClinicLeave": [
     {
-      "hcd_start_date": "02/06/2025",
+      "hcd_start_date": "15/06/2025",
       "hcd_end_date": "25/06/2025",
       "hcd_clinic_start_time": "00:00:00",
       "hcd_clinic_end_time": "00:00:00",

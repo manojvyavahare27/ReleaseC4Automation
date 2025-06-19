@@ -9,7 +9,7 @@ class StockReceving
     }
     async enterRecevingQuantity()
     {
-        await this.recevingquantity.type('1')
+        await this.recevingquantity.type('40')
     }
     async selectCheckBox()
     {

@@ -60,7 +60,8 @@ class ServiceBookApp {
     this.slotWeek = page.getByTestId("week");
     this.slowMonth = page.getByTestId("month");
     this.slotAvailableSlot = page.getByTestId("availableSlots");
-    this.bntNext = page.getByTestId("Next");
+    //this.bntNext = page.getByTestId("Next");
+    this.bntNext=page.locator("xpath=//button[@data-testid='Next']")
 
     this.btncancel = page.getByTestId("Cancel");
     this.btnslot830 = page.getByTestId("08:15 AM");
@@ -119,14 +120,26 @@ class ServiceBookApp {
     // this.radioNotiandResultViaPortal=page.locator('input[name="notificationAndResult"]').nth(1)
 
 
-    this.radioContactGP=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactGp']")
-    //this.radioContactGP=page.locator('div').filter({ hasText: /^GP address Number & RoadGP address Number & RoadContact GPYesNo$/ }).getByLabel('No')
-    this.radioContactByMobile=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactByMobile']")
-    this.radioContactBysmsAppliInfo=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactBySms']")
-    this.radioContactBysmsClinicalInfo=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactBySmsClinical']")
-    this.radioContactByEmail=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactByEmail']")
-    this.radioContactByLetter=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactByLetter']")
-    this.radioNotiandResultViaPortal=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='notificationAndResult']")
+    // this.radioContactGP=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactGp']")
+    // //this.radioContactGP=page.locator('div').filter({ hasText: /^GP address Number & RoadGP address Number & RoadContact GPYesNo$/ }).getByLabel('No')
+    // this.radioContactByMobile=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactByMobile']")
+    // this.radioContactBysmsAppliInfo=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactBySms']")
+    // this.radioContactBysmsClinicalInfo=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactBySmsClinical']")
+    // this.radioContactByEmail=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactByEmail']")
+    // this.radioContactByLetter=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='contactByLetter']")
+    // this.radioNotiandResultViaPortal=page.locator("xpath=//span[@class='MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-clez3k']//input[@name='notificationAndResult']")
+
+
+    this.radioContactGP=page.locator("xpath=//h1[@aria-label='Contact GP']/following::span[contains(@class, 'MuiRadio-root')][1]")    
+
+    this.radioContactByMobile=page.locator("xpath=//h1[@aria-label='Contact By Mobile']/following::span[contains(@class, 'MuiRadio-root')][1]")
+    this.radioContactBysmsAppliInfo=page.locator("xpath=//h1[@aria-label='Contact By SMS - Appointment Information']/following::span[contains(@class, 'MuiRadio-root')][1]")
+    this.radioContactBysmsClinicalInfo=page.locator("xpath=//h1[@aria-label='Contact By SMS - Clinical Information']/following::span[contains(@class, 'MuiRadio-root')][1]")
+    this.radioContactByEmail=page.locator("xpath=//h1[@aria-label='Contact By Email']/following::span[contains(@class, 'MuiRadio-root')][1]")
+    this.radioContactByLetter=page.locator("xpath=//h1[@aria-label='Contact By Letter']/following::span[contains(@class, 'MuiRadio-root')][1]")
+    this.radioNotiandResultViaPortal=page.locator("xpath=//h1[@aria-label='Notification and Result via Patient Portal']/following::span[contains(@class, 'MuiRadio-root')][1]")
+
+
 
     this.radioAllNo=page.getByLabel('All No')
     this.radioAllYes=page.getByLabel('All Yes')

@@ -25,7 +25,7 @@
     {
       "pat_hospital_ref": "hosp2513",
       "pat_title": "B/O",
-      "pat_firstname": "DelhiA",
+      "pat_firstname": "DelhiD",
       "pat_surname": "India",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -43,7 +43,7 @@
       "pat_currently_pregnant_yes": "No",
       "pat_currently_pregnant": 0,
       "pat_language": "English",
-      "pat_temp_address_start": 45821,
+      "pat_temp_address_start": 45827,
       "pat_country_of_birth": "India",
       "pat_gender_at_birth": "M",
       "pat_nationality": "Indian",
@@ -58,7 +58,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "DelhiA",
+      "pat_firstname": "DelhiD",
       "pat_surname": "India",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -89,7 +89,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "DelhiA",
+      "pat_firstname": "DelhiD",
       "pat_lastname": "India",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -98,7 +98,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "DelhiA.India@Gmail.com"
+      "add_email": "DelhiD.India@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -445,7 +445,7 @@
       "pat_tod": "00:11",
       "pat_dead_confirmation_status": "confirmed",
       "pat_death_notes": "Added For Testing",
-      "pat_firstname": "DelhiA",
+      "pat_firstname": "DelhiD",
       "pat_surname": "India"
     }
   ],
@@ -460,8 +460,7 @@
     {
       "pod_cause": "Pulmonary candidosis",
       "pod_cause_of_death_type_eli_text": "Cancer",
-      "pod_cause_code": "B37.7",
-      "pod_cause_code_type": "icd10"
+      "pod_cause_code": "1F23.31"
     }
   ]
 }

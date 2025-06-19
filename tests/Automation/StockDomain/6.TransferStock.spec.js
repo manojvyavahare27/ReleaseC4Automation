@@ -98,7 +98,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockallLoc.clickOnTransferLink()
     //await addStockItems.clickOnStockBatchLink(page,jsonData.AddNewStock[0].stbat_batch_number)
     await stockTransferPopUp.selectLocationToTransferTo()
-    await stockTransferPopUp.enterQuantityToTransfer('5')
+    await stockTransferPopUp.enterQuantityToTransfer('45')
     await stockTransferPopUp.clickOnTransferButton()
     await page.waitForTimeout(200)
     await expect(page.getByText('Stock transfer requested')).toHaveText('Stock transfer requested')

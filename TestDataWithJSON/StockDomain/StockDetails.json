@@ -11,7 +11,7 @@
   ],
   "AddNewStock": [
     {
-      "stock_name": "MitraF",
+      "stock_name": "Ascoril LS Drops",
       "stock_category": "Medication",
       "stock_que_local_code": "9988",
       "stock_barcode": "123",
@@ -39,7 +39,7 @@
   ],
   "EditStockItem": [
     {
-      "stock_name": "MitraF",
+      "stock_name": "Ascoril LS Drops",
       "stock_category": "Medication",
       "stock_que_local_code": "8888",
       "stock_barcode": "123",
@@ -96,7 +96,7 @@
     {
       "sttra_stloc_id_transfer_to": "Default Pharmacy",
       "sttra_return_reason": "Broken",
-      "sttra_quantity": "2",
+      "sttra_quantity": "40",
       "sttra_additional_notes": "added notes",
       "sttra_request_type": "return",
       "sttra_status": "pendingApproval"
