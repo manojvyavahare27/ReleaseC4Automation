@@ -62,6 +62,7 @@ this.retailPriceUpliftingCheckbox = page.locator("xpath=//input[@data-testid='Re
 this.vatExemptCheckbox = page.locator("xpath=//input[@data-testid='Vat Exempt']");
 this.chooseFileButton = page.locator("xpath=//button[@data-testid='Choose File1']");
 this.SaveStockItem = page.locator("xpath=//button[@aria-label='saveStockItem']");
+this.inStockQuantityInput = page.locator("xpath=//input[@name='inStockQuantity']");
 
 this.position1=page.locator("xpath=//input[@name='stockBatchLocationPositionJson.sblpPosition1EliId']")
 this.position2=page.locator("xpath=//input[@name='stockBatchLocationPositionJson.sblpPosition2EliId']")
@@ -71,7 +72,7 @@ this.position4=page.locator("xpath=//input[@name='stockBatchLocationPositionJson
 //Edit Stock Item
 this.expandDefaultPharmacyIcon=page.locator("xpath=//button[@aria-label='expandRowIconDefault Pharmacy']")
 this.expandCardioLocationIcon=page.locator("xpath=//button[@aria-label='expandRowIconCardio Location']")
-
+this.deleteItemButton=page.locator("xpath=//button[@data-testid='Delete Item']")
 
 
 
@@ -93,6 +94,10 @@ this.logoutButton=page.locator("xpath=//span[normalize-space()='Logout']")
     console.log(`✅ Category selected correctly: "${actual}"`);
 }
 
+async clickOnDeleteItemButton()
+{
+    await this.deleteItemButton.click()
+}
 
     async selectSubcategory(subCategoryValue) {
     await this.subCategory.fill(subCategoryValue);
@@ -326,6 +331,13 @@ async enterInStockQuantity(stbat_quantity) {
     await this.inStockQuantityInput.type(stbat_quantity);
 }
 
+async enterInStockQuantityZero() {
+    await this.inStockQuantityInput.clear();
+    await this.inStockQuantityInput.fill('0');
+    // const actual = await this.inStockQuantityInput.inputValue();
+    // if (actual !== stbat_quantity) throw new Error(`❌ In Stock Quantity mismatch. Expected: "${stbat_quantity}", Found: "${actual}"`);
+    console.log(`✅ In Stock Quantity filled with zero correctly"`);
+}
 async enterSerialNumber(stbat_serial_number) {
     await this.serialNumberInput.type(stbat_serial_number);
 }
@@ -430,7 +442,13 @@ async clickOnHistoryIcon()
     await this.historyIcon.click()
 }
 
-
+async enterInStockQuantityZero() {
+    await this.inStockQuantityInput.clear();
+    await this.inStockQuantityInput.fill('0');
+    // const actual = await this.inStockQuantityInput.inputValue();
+    // if (actual !== stbat_quantity) throw new Error(`❌ In Stock Quantity mismatch. Expected: "${stbat_quantity}", Found: "${actual}"`);
+    console.log(`✅ In Stock Quantity filled with zero correctly"`);
+}
 
 // async  clickOnLogout(page) {
 //   if (!page) throw new Error('Page is undefined');

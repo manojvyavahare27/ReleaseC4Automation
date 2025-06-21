@@ -67,7 +67,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(2000);   
 
    // Stock items filters
-   //await page.pause()
+   
    await stockItemsFliters.selectLocation('Default Pharmacy')
    await stockItemsFliters.selectCategory(jsonData.EditStockItem[0].stock_category)
    await stockItemsFliters.selectFilter('All Stock')
@@ -99,7 +99,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await addBatch.enterReceivedDate(jsonData.AddBatch[0].stbat_batch_received_date)
    await addBatch.enterExpiryDate(jsonData.AddBatch[0].stbat_expiry_date)
    await addBatch.enterRetailPrice(jsonData.AddBatch[0].stbat_retail_price)
-   // await page.pause()
+   
     await page.waitForTimeout(500) 
    await addBatch.clickSave()
    await page.waitForTimeout(500) 
@@ -132,7 +132,7 @@ test.describe("Database Comparison Add New Referral", () => {
         }
 
    //Delete Batch
-   //await page.pause()
+   
    await addStockItems.clickOnExpandsDefaultPharmacy()
    await addBatch.clickOnExtraBatchLink()
    await page.waitForTimeout(3000)
@@ -145,7 +145,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
 
    await page.waitForTimeout(500) 
-    //await page.pause()
+    
     await page.getByLabel('saveStockItem').click()
    //await addBatch.clickSave()
    await page.waitForTimeout(200) 

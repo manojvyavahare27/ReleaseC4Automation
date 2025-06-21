@@ -76,8 +76,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnSideIconStock()
 
-        await stockallLoc.clickOnShowHiddenLocationButton()
-       // await page.pause()
+        await stockallLoc.clickOnShowHiddenLocationButton()     
         await stockallLoc.clickOnCardioLocation()
         await page.waitForTimeout(1000)
         await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
@@ -92,8 +91,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await returnItemsPopup.enterAmountToReturn(jsonData.ReturnItem[0].sttra_quantity)
          await page.waitForTimeout(1000)
         await returnItemsPopup.enterAdditionalNotes(jsonData.ReturnItem[0].sttra_additional_notes)
-        await returnItemsPopup.clickReturnButton()
-        //await page.pause()
+        await returnItemsPopup.clickReturnButton()   
         // const [printPopup] = await Promise.all([
         //     page.context().waitForEvent('page'),
         //     returnItemsPopup.clickReturnButton(),
@@ -103,13 +101,10 @@ test.describe("Database Comparison Add New Referral", () => {
         // await printPopup.close();
 
 
-       //await page.pause()
         await page.waitForTimeout(500)
         await addStockItems.clickOnLogout(page)
 
-        //check Pending Return Status
-
-    //await page.pause()    
+        //check Pending Return Status     
     //Check approved status after click receive item into another location
 
      var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
@@ -137,8 +132,9 @@ test.describe("Database Comparison Add New Referral", () => {
         await loginpage.clickOnLogin();
         await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnSideIconStock()
-        //await page.pause()
+        await page.waitForTimeout(3000)
         await stockallLoc.clickOnShowHiddenLocationButton()
+        await page.waitForTimeout(2000)
         await stockTransferPage.clickOnDefaultPharmacyLink()
         
        /// await stockTransferPage.enterRequestLocation('Default Pharmacy')
@@ -155,8 +151,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
 
         //check Return Status
-
-    //await page.pause()    
+  
     //Check approved status after click receive item into another location
 
      var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
@@ -181,8 +176,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
 
          //check Transfered Status
-
-   // await page.pause()    
+ 
     //Check approved status after click receive item into another location
 
      var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
@@ -198,13 +192,9 @@ test.describe("Database Comparison Add New Referral", () => {
       console.log("\n Transfered Status Comparision: Parameters from both JSON files do not match!\n");
     }
 
-
-
         await stockReturnPage.clickOnLastTransferLink()
         await page.waitForTimeout(1000)
-        await processStockReturnPopup.clickOnClosePopup()
-
-       // await page.pause()
+        await processStockReturnPopup.clickOnClosePopup()       
         await page.waitForTimeout(500)
         await addStockItems.clickOnLogout(page)
     });

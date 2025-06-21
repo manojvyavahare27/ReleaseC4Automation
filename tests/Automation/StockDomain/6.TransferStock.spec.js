@@ -73,8 +73,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockallLoc.clickOnDefaultStockLocation()
     await page.waitForTimeout(2000);
 
-    // Stock items filters
-    //await page.pause()
+    // Stock items filters   
     await stockItemsFliters.selectLocation('Default Pharmacy')
     await stockItemsFliters.selectCategory(jsonData.EditStockItem[0].stock_category)
     await stockItemsFliters.selectFilter('All Stock')
@@ -93,8 +92,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
     await stockItemsFliters.clickSearchButton()
     await page.waitForTimeout(1000)
-    await addStockItems.clickOnExpandsDefaultPharmacy()
-   // await page.pause()
+    await addStockItems.clickOnExpandsDefaultPharmacy()   
     await stockallLoc.clickOnTransferLink()
     //await addStockItems.clickOnStockBatchLink(page,jsonData.AddNewStock[0].stbat_batch_number)
     await stockTransferPopUp.selectLocationToTransferTo()
@@ -104,7 +102,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await expect(page.getByText('Stock transfer requested')).toHaveText('Stock transfer requested')
 
            
-   //await page.pause()
+   
 
 
     //DB for Select Transfer quantity
@@ -139,7 +137,6 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(200)
     await expect(page.getByText('Item approved successfully')).toHaveText('Item approved successfully')
   
-   // await page.pause()
 
     //Check Approved status after click on save checklist
 
@@ -163,8 +160,6 @@ test.describe("Database Comparison Add New Referral", () => {
     await processPickListPopup.clickOncloseIcon()
 
     //Check Picklist Status.
-
-   // await page.pause()
     
     //Check Approved status after click on save checklist
 
@@ -182,14 +177,12 @@ test.describe("Database Comparison Add New Referral", () => {
     }
 
     await stockTransferPage.clickOncheckBox()
-//await page.pause()
     await stockTransferPage.clickOnDispatchOrderButton()
     await page.waitForTimeout(1000)
     await stockTransferPage.clickOnOkbutton()
     await page.waitForTimeout(2000)
     //await expect(page.getByText('Only items with transferred status will be dispatched.')).toHaveText('Only items with transferred status will be dispatched.')
-    await stockTransferPage.clickOnSaveButton()
-    //await page.pause()
+    await stockTransferPage.clickOnSaveButton()   
     //await stockTransferPage.clickOnOkbutton()
     await page.waitForTimeout(2000)
     await stockTransferPage.clickOnDispatchOrderButton()
@@ -198,12 +191,8 @@ test.describe("Database Comparison Add New Referral", () => {
 
     await expect(page.getByText('Item successfully received')).toHaveText('Item successfully received')
     await processDispatchOrderPopup.clickOncloseIcon()
-    //await page.pause()
-
-    //check Dispatch Status
-
-   // await page.pause()
     
+    //check Dispatch Status    
     //Check Dispatch status after click on Create dispatch order
 
      var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
@@ -232,7 +221,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await homepage.clickOnSideIconStock()
 
     await stockallLoc.clickOnShowHiddenLocationButton()
-    //await page.pause()
+    
     await stockallLoc.clickOnCardioLocation()
     //await stockTransferPage.enterRequestLocation('Cardio Location')
 
@@ -251,9 +240,7 @@ test.describe("Database Comparison Add New Referral", () => {
     //await stocksidebar.clickOnManageStockTab()
 
     //check approved Status
-
-   // await page.pause()
-    
+      
     //Check approved status after click receive item into another location
 
      var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
@@ -280,8 +267,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(1000)
     await addStockItems.clickOnHistoryIcon()
     await page.waitForTimeout(1000)
-    await stockItemHistoryPopup.clickOnclosePopup()
-    //await page.pause()
+    await stockItemHistoryPopup.clickOnclosePopup()    
     await page.waitForTimeout(500)
     await addStockItems.clickOnLogout(page)
   });

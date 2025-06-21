@@ -67,7 +67,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(2000);   
 
    // Stock items filters
-  // await page.pause()
+  
    await stockItemsFliters.selectLocation('Default Pharmacy')
    await stockItemsFliters.selectCategory(jsonData.EditStockItem[0].stock_category)
    await stockItemsFliters.selectFilter('All Stock')
@@ -79,7 +79,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.selectFormulary('Testing formulary')
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
-  // await page.pause()
+  
    await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
    await stockItemsFliters.clickSearchButton()
    await page.waitForTimeout(1000)
@@ -96,7 +96,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await expect(page.getByText('Quantity Change Type required')).toHaveText('Quantity Change Type required')
    await expect(page.getByText('Batch Quantity Change required')).toHaveText('Batch Quantity Change required')
    
-   //await page.pause()
+   
    //Increment
     await addBatch.selectQuantityChangeType('Increment')
     await addBatch.enterBatchQuantityChange()
@@ -137,7 +137,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
 
     //Decrement
-   //await page.pause()
+   
     await stockallLoc.clickOnAddStockQuantityLink()
     await page.waitForTimeout(2000)
     await addBatch.selectQuantityChangeType('Decrement')
@@ -146,7 +146,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await addBatch.ClickOnAddIncreDecresaveButton()
     await addBatch.selectAddBatchReason('Stock expired')
     await addBatch.ClickOnSaveReason()
-    // await page.pause()
+   
     await expect(page.getByText('Batch updated successfully')).toHaveText('Batch updated successfully')
     await page.waitForTimeout(2000)
 

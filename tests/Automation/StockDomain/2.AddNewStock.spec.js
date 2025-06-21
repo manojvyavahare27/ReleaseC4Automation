@@ -65,7 +65,7 @@ test.describe("Database Comparison Add New Referral", () => {
    
 
    // Stock items filters
-   //await page.pause()
+   
    await stockItemsFliters.selectLocation('Default Pharmacy')
    await stockItemsFliters.selectCategory(jsonData.AddNewStock[0].stock_category)
    await stockItemsFliters.selectFilter('All Stock')
@@ -78,7 +78,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.selectFormulary('Testing formulary')
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
-   //await page.pause()
+   
 
    //Add New Medication
    await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
@@ -99,7 +99,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await addStockItems.enterUnitOfMeasure()
    await addStockItems.enterUnitOfDispensing()
    await addStockItems.enterForm()
-   //await page.pause()
+   
    await addStockItems.enterDose(jsonData.AddNewStock[0].stdo_dose)
    //await addStockItems.enterFrequency(jsonData.AddNewStock[0].stdo_frequency)
    await addStockItems.enterFrequency()
@@ -135,7 +135,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await addStockItems.enterPurchaseRate(jsonData.AddNewStock[0].stbat_purchase_price)
    await addStockItems.enterUnitCost(jsonData.AddNewStock[0].stbat_unit_cost)
    await addStockItems.enterRetailPrice(jsonData.AddNewStock[0].stbat_retail_price)
-   //await page.pause()
+   
    await addStockItems.FillPositions1()
    await addStockItems.FillPositions2()
    await addStockItems.FillPositions3()
@@ -146,7 +146,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await expect(page.getByText('Stock item added successfully')).toHaveText('Stock item added successfully')  
 
 
-   //await page.pause()
+  
 
    //check DB
     var sqlQuery =  "select si.stock_name,si.stock_category,si.stock_barcode,si.stock_item_barcode,si.stock_description,si.stock_desc_other_lang, sb.stbat_serial_number,sb.stbat_quantity,sb.stbat_manufacture_date,sb.stbat_expiry_date,sb.stbat_batch_number,sb.stbat_supplier,sb.stbat_batch_received_date,sb.stbat_purchase_price,sb.stbat_unit_cost,sb.stbat_retail_price from c4_stock_items si JOIN stock_batches sb ON si.stock_id = sb.stbat_stock_id ORDER BY stock_id DESC limit 1";

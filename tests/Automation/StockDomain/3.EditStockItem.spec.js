@@ -65,7 +65,7 @@ test.describe("Database Comparison Add New Referral", () => {
    
 
    // Stock items filters
-   //await page.pause()
+   
    await stockItemsFliters.selectLocation('Default Pharmacy')
    await stockItemsFliters.selectCategory(jsonData.EditStockItem[0].stock_category)
    await stockItemsFliters.selectFilter('All Stock')
@@ -78,7 +78,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.selectFormulary('Testing formulary')
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
-   //await page.pause()
+ 
 
    //Add New Medication
    await stockItemsFliters.enterItemName(jsonData.EditStockItem[0].stock_name)
@@ -86,7 +86,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await page.waitForTimeout(1000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
    await addStockItems.clickOnStockBatchLink(page,jsonData.EditStockItem[0].stbat_batch_number)
-//await page.pause()
+
 //    await addStockItems.selectCategory(jsonData.EditStockItem[0].stock_category)
 //    await addStockItems.enterItemName(jsonData.EditStockItem[0].stock_name)
 //    await addStockItems.clickOnFreeTextButton()
@@ -96,13 +96,13 @@ test.describe("Database Comparison Add New Referral", () => {
    //await addStockItems.enteritemShortBarcode(jsonData.EditStockItem[0].stock_item_barcode)
 
   // await addStockItems.selectletterDisplayGroup()
-  //await page.pause()
+  
    await addStockItems.enterDescription(jsonData.EditStockItem[0].stock_description)
    await addStockItems.enterNameAndDescriptionInOtherLanguage(jsonData.EditStockItem[0].stock_desc_other_lang)
 //    await addStockItems.enterUnitOfMeasure()
 //    await addStockItems.enterUnitOfDispensing()
 //    await addStockItems.enterForm()
-//    await page.pause()
+
     await addStockItems.enterDose(jsonData.EditStockItem[0].stdo_dose)
    //await addStockItems.enterFrequency(jsonData.EditStockItem[0].stdo_frequency)
  //  await addStockItems.enterFrequency()
@@ -122,7 +122,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await page.getByTestId('batch').click();
 
    //Add Batch Details
-   //await page.pause()
+   
    await addStockItems.enterSupplier(jsonData.EditStockItem[0].stbat_supplier)
    //await addStockItems.enterManufacturer(jsonData.EditStockItem[0].stbat_supplier)
    //await addStockItems.enterBatchNumber(jsonData.EditStockItem[0].stbat_batch_number)
@@ -140,7 +140,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await addStockItems.enterPurchaseRate(jsonData.EditStockItem[0].stbat_purchase_price)
    await addStockItems.enterUnitCost(jsonData.EditStockItem[0].stbat_unit_cost)
    await addStockItems.enterRetailPrice(jsonData.EditStockItem[0].stbat_retail_price)
-   ///await page.pause()
+  
    await addStockItems.FillPositions1()
    await addStockItems.FillPositions2()
    await addStockItems.FillPositions3()
@@ -164,7 +164,7 @@ test.describe("Database Comparison Add New Referral", () => {
           console.log("\n Add New Stock Comparision: Parameters from both JSON files do not match!\n");
         }
 
-   //await page.pause()
+   
    await addStockItems.clickOnLogout(page)
    //await addStockItems.enterPurchaseRate('5.00')
 
