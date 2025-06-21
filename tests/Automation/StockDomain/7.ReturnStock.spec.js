@@ -92,15 +92,7 @@ test.describe("Database Comparison Add New Referral", () => {
          await page.waitForTimeout(1000)
         await returnItemsPopup.enterAdditionalNotes(jsonData.ReturnItem[0].sttra_additional_notes)
         await returnItemsPopup.clickReturnButton()   
-        // const [printPopup] = await Promise.all([
-        //     page.context().waitForEvent('page'),
-        //     returnItemsPopup.clickReturnButton(),
-        // ]);
-
-        // await printPopup.waitForLoadState();
-        // await printPopup.close();
-
-
+        
         await page.waitForTimeout(500)
         await addStockItems.clickOnLogout(page)
 
@@ -120,10 +112,7 @@ test.describe("Database Comparison Add New Referral", () => {
       console.log("\n Pending Return Status Comparision: Parameters from both JSON files do not match!\n");
     }
 
-
-
         //Login with Another user(manoj.auto)
-
 
         await loginpage.enterUsername(jsonData.loginDetails[0].username);
         await page.waitForTimeout(2000);

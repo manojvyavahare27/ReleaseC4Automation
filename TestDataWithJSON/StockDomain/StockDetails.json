@@ -11,7 +11,7 @@
   ],
   "AddNewStock": [
     {
-      "stock_name": "asedc",
+      "stock_name": "MedOne",
       "stock_category": "Medication",
       "stock_que_local_code": "9988",
       "stock_barcode": "123",
@@ -39,7 +39,7 @@
   ],
   "EditStockItem": [
     {
-      "stock_name": "asedc",
+      "stock_name": "MedOne",
       "stock_category": "Medication",
       "stock_que_local_code": "8888",
       "stock_barcode": "123",
