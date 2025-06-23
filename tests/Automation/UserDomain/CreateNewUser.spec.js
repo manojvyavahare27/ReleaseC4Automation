@@ -290,7 +290,7 @@ await fileInput.setInputFiles(targetFilePath);
     
         //await this.page.locator('div').filter({ hasText: 'Is User Going On DiaryYesNo' }).getByRole('button', { name: 'Yes' }).click()
         
-
+          await page.pause() 
         await adduserwizard.clickOnNext()
                
         await page.waitForTimeout(2000)
@@ -332,11 +332,11 @@ await fileInput.setInputFiles(targetFilePath);
         await sethpdairy.enterClinicScheduleWorkingHrsEndTime(jsonData.setHpClinicDiary[index].hcd_clinic_end_time)
         // await sethpdairy.selectClinicScheduleOccuranceType()
         // await sethpdairy.selectClinicScheduleOccurance()
-        //await page.pause()
-        await page.waitForTimeout(4000)  
+        await page.pause()
+        await page.waitForTimeout(1000)  
         await sethpdairy.clickOnSavebnt()
-        await page.waitForTimeout(4000)
-        //await expect(page.getByText('HP work schedule set successfully')).toHaveText('HP work schedule set successfully')
+        await page.waitForTimeout(500)
+        await expect(page.getByText('HP work schedule set successfully')).toHaveText('HP work schedule set successfully')
         await sethpdairy.clickOnNextbtn()
         await page.waitForTimeout(4000)
         await page.getByTestId('Next').click()

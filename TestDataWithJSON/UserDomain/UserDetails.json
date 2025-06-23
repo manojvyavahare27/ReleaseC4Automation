@@ -15,22 +15,22 @@
   ],
   "addListItem": [
     {
-      "eli_text": "UserELIn",
+      "eli_text": "UserELIO",
       "eli_numeric_value": "1",
-      "eli_text_other_lang": "UserELIn",
-      "eli_code": "ADLILC.8845",
+      "eli_text_other_lang": "UserELIO",
+      "eli_code": "ADLILC.8846",
       "eli_code_type": "local",
       "eli_code_text": "Rio15"
     }
   ],
   "createUser": [
     {
-      "use_increment": 143,
-      "use_username": "Test.143User",
+      "use_increment": 149,
+      "use_username": "Test.149User",
       "use_firstname": "Auto",
       "use_password": "Manoj@2024",
       "use_surname": "Riomedtest",
-      "use_email": "thayne.sampson143@riomed.com",
+      "use_email": "thayne.sampson149@riomed.com",
       "use_expires": "30/06/2035",
       "use_title": "Mr",
       "use_profession": "Consultant",

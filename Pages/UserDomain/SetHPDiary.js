@@ -2,7 +2,7 @@ class SetHPDairy{
     constructor(page)
     {
         this.page=page
-        this.btnSaveHp=page.locator("xpath=//button[@data-testid='Save']")
+        this.btnSaveHp=page.locator("xpath=//div[contains(text(),'Save')]")
         this.btnNextHP=page.getByTestId('Next')
         this.startDate=page.locator('input[name="startDate"]')
         this.endDate=page.locator('input[name="endDate"]')
