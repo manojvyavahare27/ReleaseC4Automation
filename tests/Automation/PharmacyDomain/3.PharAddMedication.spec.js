@@ -114,7 +114,7 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(2000);
       //await confirmexisting.clickOnConfirmExistingDetails();
       await homepage.clickOnMedicationSidebar()
-      await page.pause()
+     // await page.pause()
       await page.waitForTimeout(2000);
       await homepage.clickOnAddMedicationlink()
       //await page.pause()
@@ -135,7 +135,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
       await page.waitForTimeout(2000)
-      await page.pause()
+     // await page.pause()
        ////////REVIEW EXISTING ITEM AND DELETE/////
 
        
