@@ -82,29 +82,16 @@ test.describe("Patient Domain Db COmparison", () => {
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnPatientIcon();
     await patientsearch.clickOnSearchButton();
-    await patientsearch.enterGivenName(
-      jsonData.addPatient[index].pat_firstname.toString()
-    );
-    await patientsearch.enterFamilyName(
-      jsonData.addPatient[index].pat_surname.toString()
-    );
+    await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
+    await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
-    await patientsearch.clickOnSearchPatientLink();
-    //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
-    //await page.pause()
-    //await menu.clickOnMenubtn()
-
+    await patientsearch.clickOnSearchPatientLink();  
     await page.waitForTimeout(1500);
-    await confirmexisting.selectRelationship(
-      jsonData.pip[index].pip_relationship
-    );
-    await page.waitForTimeout(1500);
-    //await confirmexisting.clickOnSaveChangeDetails();
+    await confirmexisting.selectRelationship(jsonData.pip[index].pip_relationship);
+    await page.waitForTimeout(1500);   
     await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(1500);
-    await addreferral.enterReceiveReferrldate(
-      jsonData.AddReferral[index].rtt_referral_received_date.toString()
-    );
+    await addreferral.enterReceiveReferrldate(jsonData.AddReferral[index].rtt_referral_received_date.toString());
     await addreferral.enterApproveReferralDate(
       jsonData.AddReferral[index].rtt_referral_approved_date.toString()
     );
@@ -130,20 +117,12 @@ test.describe("Patient Domain Db COmparison", () => {
     );
    // await page.pause()
     await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location);
-    await addreferral.selectTeam(
-      jsonData.AddReferral[index].ref_region_eli_text.toString()
-    );
+    await addreferral.selectTeam(jsonData.AddReferral[index].ref_region_eli_text.toString());
     await addreferral.selectPatientcare();
-    await addreferral.selectPreferredSexForAssessment(
-      jsonData.AddReferral[index].ref_preferred_examiner_sex_entry.toString()
-    );
+    await addreferral.selectPreferredSexForAssessment(jsonData.AddReferral[index].ref_preferred_examiner_sex_entry.toString());
     await addreferral.selectConsultant();
-    await addreferral.selectMethodOfArrival(
-      jsonData.AddReferral[index].ref_method_of_arrival.toString()
-    );
-    await addreferral.enterTimeOfArrival(
-      jsonData.AddReferral[index].ref_time_of_arrival.toString()
-    );
+    await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString());
+    await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString());
     await addreferral.clickOnAwaitReferralAcceptance();
     await addreferral.clickOnSaveButton();
     await page.waitForTimeout(200);
@@ -159,53 +138,27 @@ test.describe("Patient Domain Db COmparison", () => {
     await homepage.clickOnHomePageIcon();
     await homepage.clickOnPatientIcon();
     //await patientsearch.clickOnSearchButton()
-    await patientsearch.enterGivenName(
-      jsonData.addPatient[index].pat_firstname.toString()
-    );
-    await patientsearch.enterFamilyName(
-      jsonData.addPatient[index].pat_surname.toString()
-    );
+    await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
+    await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
     await patientsearch.clickOnSearchPatientLink();
     //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
-    await confirmexisting.entertxtboxAlsoKnow(
-      jsonData.ConfirmExistingDetails[index].pat_name_other_lang.toString()
-    );
+    await confirmexisting.entertxtboxAlsoKnow(jsonData.ConfirmExistingDetails[index].pat_name_other_lang.toString());
     //await confirmexisting.selectInterpreterReq()
-    await confirmexisting.enterEmailId(
-      jsonData.ConfirmExistingDetails[index].add_email.toString()
-    );
-    await confirmexisting.enterMobile(
-      jsonData.ConfirmExistingDetails[index].add_mobile.toString()
-    );
-    await confirmexisting.enterPhoneNo(
-      jsonData.ConfirmExistingDetails[index].add_phone.toString()
-    );
+    await confirmexisting.enterEmailId(jsonData.ConfirmExistingDetails[index].add_email.toString());
+    await confirmexisting.enterMobile(jsonData.ConfirmExistingDetails[index].add_mobile.toString());
+    await confirmexisting.enterPhoneNo(jsonData.ConfirmExistingDetails[index].add_phone.toString());
 
-    await confirmexisting.selectTitleForNextofKin(
-      jsonData.pip[index].pip_title
-    );
-    await confirmexisting.enterGivenNameOfNextOfKin(
-      jsonData.pip[index].pip_firstname
-    );
-    await confirmexisting.enterFamilyNameforNextofKin(
-      jsonData.pip[index].pip_surname
-    );
-    await confirmexisting.selectRelationship(
-      jsonData.pip[index].pip_relationship
-    );
-    await confirmexisting.enterEmailIsForNextofKin(
-      jsonData.pip[index].pip_relationship
-    );
+    await confirmexisting.selectTitleForNextofKin(jsonData.pip[index].pip_title);
+    await confirmexisting.enterGivenNameOfNextOfKin(jsonData.pip[index].pip_firstname);
+    await confirmexisting.enterFamilyNameforNextofKin(jsonData.pip[index].pip_surname);
+    await confirmexisting.selectRelationship(jsonData.pip[index].pip_relationship);
+    await confirmexisting.enterEmailIsForNextofKin(jsonData.pip[index].pip_relationship);
     //await confirmexisting.enterMobileforNextOfKin();
     //await confirmexisting.enterPhoneNoofNextOfKin();
     //await confirmexisting.enterCompanyName();
-    await confirmexisting.enterRoadNumber(
-      jsonData.tempAddress[index].add_address1.toString()
-    );
-    await confirmexisting.enterPostCode(
-      jsonData.tempAddress[index].add_address5.toString()
-    );
+    await confirmexisting.enterRoadNumber(jsonData.tempAddress[index].add_address1.toString());
+    await confirmexisting.enterPostCode(jsonData.tempAddress[index].add_address5.toString());
     //await confirmexisting.enterTempContactDetails();
     //await confirmexisting.enterTempAddressDetails();
     //await page.pause()
