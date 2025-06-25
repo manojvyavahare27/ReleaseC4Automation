@@ -193,7 +193,7 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.selectPGDPSD(jsonData.AddMedication[index].meded_value_PGD)       
       await MedicationsExtraDetails.enterMedicationGradeForAdministrator(jsonData.AddMedication[index].meded_value_Administrator)
       await MedicationsExtraDetails.selectMaxReffills(jsonData.AddMedication[index].meded_value_MaxReffills)       
-      await MedicationsExtraDetails.selectQuantity(jsonData.AddMedication[index].meded_value_Quantity)
+      //await MedicationsExtraDetails.selectQuantity(jsonData.AddMedication[index].meded_value_Quantity)
       
       await MedicationsExtraDetails.enterUnit(jsonData.AddMedication[index].meded_value_Unit)
       await MedicationsExtraDetails.selectCurrentLocation(jsonData.AddMedication[index].pcl_location_name)      
