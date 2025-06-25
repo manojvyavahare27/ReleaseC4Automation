@@ -198,6 +198,7 @@ class ClinicalExtraDetails {
 
     //Medication
     this.dose = page.locator("xpath=//input[@id='Dose']");
+    this.form=page.locator("xpath=//input[@data-testid='Form']")
     this.Route = page.locator("xpath=//input[@name='route']");
     this.duration=page.locator("xpath=//input[@name='duration']")
     this.units=page.locator("xpath=//input[@name='units']")
@@ -644,6 +645,10 @@ async selectMachineName(mname)
     await selectFromDropdown(this.page, this.Route, Route);
   }
 
+  async enterForm()
+  {
+    await this.form.fill('tablet')
+  }
   async enterDuration(duration)
   {
     await typeText(this.page, this.duration, duration);

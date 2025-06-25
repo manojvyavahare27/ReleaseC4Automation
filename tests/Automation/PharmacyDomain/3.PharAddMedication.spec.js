@@ -173,6 +173,7 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(2000);            
       //await page.pause()      
       await MedicationsExtraDetails.EnterOnDose(page,jsonData.AddMedication[index].medi_dose,jsonData.AddMedication[index].pacr_que_name)
+      await MedicationsExtraDetails.enterForm()
       await MedicationsExtraDetails.selectFrequency(jsonData.AddMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)
 
