@@ -386,6 +386,8 @@ test.describe('New Patient', () => {
  * @param {string} targetFile - Name of the file to find.
  * @returns {string|null} - Absolute path to the file, or null if not found.
  */
+
+
 function findFileRecursive(dir, targetFile) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -416,11 +418,10 @@ console.log('✅ Found Patient.png at:', targetFilePath);
 const fileInput = await page.getByTestId('PhotoCameraIcon');
 await fileInput.setInputFiles(targetFilePath);
 
+await page.waitForTimeout(200)
+  await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
 
       await page.waitForTimeout(2000);
-      await page.getByTestId("Upload").click();
-      await page.waitForTimeout(1000);
-      await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
 
