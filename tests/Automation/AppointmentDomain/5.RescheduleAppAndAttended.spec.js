@@ -233,6 +233,8 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         
     }
     else{         
+
+        await page.pause()
         await servicebookapp.SelectDate(jsonData.rescheduleAppointments[index].rea_date)
         await servicebookapp.selectDropdownSpecility(jsonData.rescheduleAppointments[index].rea_special)
         await servicebookapp.selectDropdownClinicType(jsonData.rescheduleAppointments[index].rea_clinic_type)
