@@ -145,7 +145,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await page.waitForTimeout(200)
    await expect(page.getByText('Stock item added successfully')).toHaveText('Stock item added successfully')  
 
-   await page.pause()
+   //await page.pause()
 
   
 
@@ -167,16 +167,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
  await page.waitForTimeout(2000)
    await addStockItems.clickOnLogout(page)
-   //await addStockItems.enterPurchaseRate('5.00')
-
    
-
-
-
-
-
-
-
 
   });
 });
