@@ -13,8 +13,6 @@ import ConfirmExisting from "../../../Pages/PatientDomain/ConfirmExisting";
 import PatientSideBar from "../../../Pages/PatientDomain/PatientSideBar";
 import lettersOrSummaries from "../../../Pages/LetterDomain/lettersOrSummaries"
 
-
-
 //import Pool from 'mysql/lib/Pool';
 
 const logindata= JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")))
