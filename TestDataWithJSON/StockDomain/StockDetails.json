@@ -1,6 +1,10 @@
 {
   "loginDetails": [
     {
+      "username": "release",
+      "password": "Manoj@124"
+    },
+    {
       "username": "manoj.auto",
       "password": "Manoj@2024"
     },
