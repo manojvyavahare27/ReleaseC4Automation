@@ -75,7 +75,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         await loginpage.clickOnLogin()  
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnUserIcon()   
-        
+        await page.pause()
         //Check Links  
         await usersearch.clickOnLinkLinks()
         await usersearch.clickOnAddMPIUserLink()

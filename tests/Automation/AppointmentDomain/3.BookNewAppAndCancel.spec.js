@@ -98,7 +98,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      //await homepage.clickOnPatientIcon()
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnAppointmentIcon()    
-     await page.pause() 
+     await page.pause()
      await patientsearch.clickOnSearchPatButton()
      await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
      await page.waitForTimeout(1000);
@@ -118,7 +118,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(5000);
      const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
      console.log(addReferralText)
-     await page.pause()
+    
      if(addReferralText)
      {       
      // await page.pause()
@@ -164,7 +164,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           
           
           //Select Morning Slots
-          await page.pause()
+         
           await page.waitForTimeout(2000)
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
            await page.waitForTimeout(2000)
