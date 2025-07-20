@@ -1,21 +1,17 @@
 {
   "loginDetails": [
     {
-      "username": "release",
-      "password": "Manoj@124"
+      "username": "release.stocka",
+      "password": "Manoj@2025"
     },
     {
-      "username": "manoj.auto",
-      "password": "Manoj@2024"
-    },
-    {
-      "username": "prerelease.auto",
-      "password": "Manoj@2023"
+      "username": "release.stockb",
+      "password": "Manoj@2025"
     }
   ],
   "AddNewStock": [
     {
-      "stock_name": "GlycerinA",
+      "stock_name": "GlycerinAS",
       "stock_category": "Medication",
       "stock_que_local_code": "9988",
       "stock_barcode": "123",
@@ -29,7 +25,7 @@
       "stdo_frequency": "12 hourly",
       "stdo_duration_1": "12 hourly",
       "stdo_num_to_dispensed": "2",
-      "stbat_supplier": "Atharva Supplier",
+      "stbat_supplier": "Atharava Supplier",
       "stbat_batch_number": "Batch15",
       "stbat_quantity": "300",
       "stbat_serial_number": "112211",
@@ -43,7 +39,7 @@
   ],
   "EditStockItem": [
     {
-      "stock_name": "GlycerinA",
+      "stock_name": "GlycerinAS",
       "stock_category": "Medication",
       "stock_que_local_code": "8888",
       "stock_barcode": "123",
@@ -57,7 +53,7 @@
       "stdo_frequency": "24 Hours",
       "stdo_duration_1": "12 hourly",
       "stdo_num_to_dispensed": "2",
-      "stbat_supplier": "Atharva Supplier",
+      "stbat_supplier": "Atharava Supplier",
       "stbat_batch_number": "Batch15",
       "stbat_quantity": "300",
       "stbat_manufacture_date": "01/01/2024",
@@ -70,7 +66,7 @@
   ],
   "AddBatch": [
     {
-      "stbat_supplier": "Atharva Supplier",
+      "stbat_supplier": "Atharava Supplier",
       "stbat_batch_number": "ExtraBatch",
       "stbat_quantity": "120",
       "stbat_serial_number": "112211",
@@ -84,7 +80,7 @@
   ],
   "EditBatch": [
     {
-      "stbat_supplier": "Atharva Supplier",
+      "stbat_supplier": "Atharava Supplier",
       "stbat_batch_number": "ExtraBatch",
       "stbat_quantity": "150",
       "stbat_serial_number": "112211",
@@ -114,7 +110,7 @@
   ],
   "DeleteBatch": [
     {
-      "stbat_supplier": "Atharva Supplier",
+      "stbat_supplier": "Atharava Supplier",
       "stbat_batch_number": "ExtraBatch",
       "stbat_quantity": "0",
       "stbat_serial_number": "112211",

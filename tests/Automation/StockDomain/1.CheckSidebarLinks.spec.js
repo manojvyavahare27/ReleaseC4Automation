@@ -51,14 +51,14 @@ test.describe("Database Comparison Add New Referral", () => {
     await loginpage.enter_Password(jsonData.loginDetails[0].password);
     await page.waitForTimeout(2000);
     await loginpage.clickOnLogin();
-    await homepage.clickonSidebarHomeIcon();
+    //await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnSideIconStock()
 
     await stockallLoc.clickOnShowHiddenLocationButton()
     await stockallLoc.clickOnDefaultStockLocation()
     await page.waitForTimeout(2000);
 
-    //await page.pause()
+    await page.waitForLoadState('networkidle');
     // Stock Location Tab
     await stocksidebar.clickOnStockLocationsTab();
     await page.waitForTimeout(1000);

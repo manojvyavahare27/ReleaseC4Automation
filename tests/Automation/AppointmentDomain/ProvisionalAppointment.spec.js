@@ -69,11 +69,9 @@ test.describe("Database Comparison Add Edit Patient", () => {
         const index = 0;        
 
         await page.goto(environment.Test)
-        await page.waitForTimeout(1500);
-        await loginpage.enterUsername(jsonData.loginDetails[0].username);
-        await page.waitForTimeout(1500);
-        await loginpage.enter_Password(jsonData.loginDetails[0].password);
-        await page.waitForTimeout(1500);
+        await page.waitForLoadState('networkidle');
+        await loginpage.enterUsername(jsonData.loginDetails[0].username);       
+        await loginpage.enter_Password(jsonData.loginDetails[0].password);       
         await loginpage.clickOnLogin()
         await expect(page.getByText('Login success')).toHaveText('Login success')
         await homepage.clickonSidebarHomeIcon()
@@ -81,7 +79,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await patientsearch.clickonBackButton()
         await homepage.clickOnSidebarAppointmentIcon()
         await serviceapp.clickOnProvisionalAppLink()
-        await page.pause()
+        await page.waitForLoadState('networkidle');
         await provisionalapp.clickOnSearchBtn()
         await provisionalapp.clickOnAllLinks()
         await provisionalapp.clickOnProvisionalApp()
@@ -94,6 +92,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await patientsearch.clickOnSearchbtnOnPopup()   
         await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
         await patientsearch.clickOnSearchPatientLink()
+        await patientsearch.ClickOnYesConfirmLegitimateRelationship()
         await page.waitForTimeout(4000) 
         await confirmexisting.clickOnConfirmExistingDetails() 
         await page.waitForTimeout(2000) 
@@ -177,7 +176,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await provisionalapp.selectSpeciality(jsonData.prvAppointments[index].prv_speciality_eli_text)
         await provisionalapp.selectClinicType(jsonData.prvAppointments[index].prv_clinic_type_eli_text)
         await provisionalapp.selectClinicLocation(jsonData.prvAppointments[index].prv_clinic_location_eli_text)   
-        await page.waitForTimeout(2000) 
+        //await page.waitForTimeout(2000) 
+        await page.waitForLoadState('networkidle');
         await provisionalapp.selectTeams(jsonData.prvAppointments[index].prv_region_eli_text)
         await provisionalapp.enterAppDate(jsonData.prvAppointments[index].prv_date)
         await provisionalapp.enterConfirmStartDate(jsonData.prvAppointments[index].prv_confirmation_start_date)
@@ -186,7 +186,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await provisionalapp.selectReasonforApp(jsonData.prvAppointments[index].prv_reason)
         await provisionalapp.enterNotes(jsonData.prvAppointments[index].prv_notes)
         await provisionalapp.clickOnSaveProvisionalApp()   
-        await page.waitForTimeout(2000) 
+       // await page.waitForTimeout(2000) 
+       await page.waitForLoadState('networkidle');
         //await expect(page.getByText('Provisional appointment booked successfully')).toHaveText('Provisional appointment booked successfully')
         //await page.pause()
         

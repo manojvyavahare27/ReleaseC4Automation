@@ -1,11 +1,11 @@
 [
   {
-    "eli_id": 7844,
-    "eli_cli_id": 84,
+    "eli_id": 13151,
+    "eli_cli_id": 85,
     "eli_app_id": 111,
     "eli_est_id": 4,
     "eli_cod_id": null,
-    "eli_text": "UserELIm",
+    "eli_text": "ListItemA",
     "eli_show": 1,
     "eli_clinic_type_eli_id": null,
     "eli_identifier_type": null,
@@ -14,9 +14,9 @@
     "eli_hex_colour": null,
     "eli_show_for_patientweb": null,
     "eli_bank_isdefault": null,
-    "eli_text_other_lang": "UserELIm",
-    "eli_created_by": "manoj.auto",
-    "eli_created": "19/06/2025",
+    "eli_text_other_lang": "ListItemA",
+    "eli_created_by": "release.manoj",
+    "eli_created": "13/07/2025",
     "eli_deleted_by": null,
     "eli_deleted": null,
     "eli_decimal_value": null,
@@ -25,9 +25,8 @@
     "eli_linked": null,
     "eli_device_subcategory": null,
     "eli_show_request_device_link": null,
-    "eli_code": "ADLILC.8844",
+    "eli_code": "ADLILC.14151",
     "eli_code_type": "local",
-    "eli_code_text": "Rio15",
-    "eli_service_report_type": null
+    "eli_code_text": "Rio15"
   }
 ]

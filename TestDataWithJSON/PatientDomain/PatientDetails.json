@@ -1,8 +1,8 @@
 {
   "loginDetails": [
     {
-      "username": "release",
-      "password": "Manoj@124"
+      "username": "release.manoj",
+      "password": "Manoj@2025"
     },
     {
       "username": "manoj.auto",
@@ -27,12 +27,12 @@
   ],
   "addPatient": [
     {
-      "pat_hospital_ref": "hosp2514",
+      "pat_hospital_ref": "hosp0725",
       "pat_title": "B/O",
-      "pat_firstname": "ThinkPadC",
+      "pat_firstname": "PatBK",
       "pat_surname": "India",
       "pat_sex": "M",
-      "pat_dob": "22/09/2023",
+      "pat_dob": "22-09-2023",
       "pat_marital_status": "Single",
       "pat_ethnicity_text": "Indian",
       "pat_occupation": "Trainer",
@@ -47,7 +47,7 @@
       "pat_currently_pregnant_yes": "No",
       "pat_currently_pregnant": 0,
       "pat_language": "English",
-      "pat_temp_address_start": 45842,
+      "pat_temp_address_start": 45858,
       "pat_country_of_birth": "India",
       "pat_gender_at_birth": "M",
       "pat_nationality": "Indian",
@@ -62,10 +62,10 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "ThinkPadC",
+      "pat_firstname": "PatBK",
       "pat_surname": "India",
       "pat_sex": "M",
-      "pat_dob": "22/09/2023",
+      "pat_dob": "22-09-2023",
       "pat_marital_status": "Single",
       "pat_ethnicity_text": "Indian",
       "pat_occupation": "Trainer",
@@ -93,16 +93,16 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "ThinkPadC",
+      "pat_firstname": "PatBK",
       "pat_lastname": "India",
       "pat_sex": "M",
-      "pat_dob": "22/09/2023",
+      "pat_dob": "22-09-2023",
       "pid_value1": 8962845424,
       "pid_value2": "Ind009",
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "ThinkPadC.India@Gmail.com"
+      "add_email": "PatBK.India@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -227,13 +227,14 @@
       "ReferralReason": "In Patient",
       "ref_referral_mode": "Email",
       "cli_name": "General Medicine Automation",
-      "ref_clinic_type": "Cardiology Clinic",
+      "ref_clinic_type": "Cardiology",
       "ref_clinic_location": "Cath Lab Location",
       "ref_region_eli_text": "HP Region1",
       "ref_preferred_examiner_sex_entry": "Male",
       "ref_preferred_examiner_sex": "male",
       "ref_method_of_arrival": "Ambulance",
-      "ref_time_of_arrival": "11:00:00"
+      "ref_time_of_arrival": "11:00:00",
+      "ref_cli_priority": "High"
     }
   ],
   "ConfirmExistingDetails": [
@@ -424,7 +425,7 @@
       "egp_gp_code": "GP0001",
       "egp_pct_code": "GPPCT0001",
       "egp_gmc_code": "GPGMC0001",
-      "egp_fullname": "ANUMBA"
+      "egp_fullname": "Manoj"
     }
   ],
   "SPgpAddress": [
@@ -444,12 +445,12 @@
   ],
   "patDetails": [
     {
-      "pat_hospital_ref": "hosp2514",
+      "pat_hospital_ref": "hosp0725",
       "pat_dod": "29/10/2023",
       "pat_tod": "00:11",
       "pat_dead_confirmation_status": "confirmed",
       "pat_death_notes": "Added For Testing",
-      "pat_firstname": "ThinkPadC",
+      "pat_firstname": "PatBK",
       "pat_surname": "India"
     }
   ],

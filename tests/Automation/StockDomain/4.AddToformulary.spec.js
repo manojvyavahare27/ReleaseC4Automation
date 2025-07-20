@@ -57,7 +57,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await loginpage.enter_Password(jsonData.loginDetails[0].password);
     await page.waitForTimeout(2000);
     await loginpage.clickOnLogin();
-    await homepage.clickonSidebarHomeIcon();
+    //await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnSideIconStock()
 
     await stockallLoc.clickOnShowHiddenLocationButton()
@@ -73,7 +73,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await stockItemsFliters.selectFormulary('Automation formulary')
    await stockItemsFliters.enterItemName('Allopurinol 100mg tablets')
    await stockItemsFliters.clickSearchButton()
-   //await page.pause()
+   await page.pause()
     await stockItemsFliters.selectFormulary('Testing formulary')
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()

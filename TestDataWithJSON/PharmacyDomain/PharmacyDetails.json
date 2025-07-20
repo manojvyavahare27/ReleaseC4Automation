@@ -1,6 +1,14 @@
 {
   "loginDetails": [
     {
+      "username": "release.pharma",
+      "password": "Manoj@2025"
+    },
+    {
+      "username": "release.manoj",
+      "password": "Manoj@2025"
+    },
+    {
       "username": "manoj.auto",
       "password": "Manoj@2024"
     },
@@ -25,7 +33,7 @@
     {
       "pat_hospital_ref": "Pha020",
       "pat_title": "B/O",
-      "pat_firstname": "fortynine",
+      "pat_firstname": "POneH",
       "pat_surname": "Pharmacy",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -43,7 +51,7 @@
       "pat_currently_pregnant_yes": "No",
       "pat_currently_pregnant": 0,
       "pat_language": "English",
-      "pat_temp_address_start": 45839,
+      "pat_temp_address_start": 45851,
       "pat_country_of_birth": "India",
       "pat_gender_at_birth": "M",
       "pat_nationality": "Indian",
@@ -58,7 +66,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "fortynine",
+      "pat_firstname": "POneH",
       "pat_surname": "Pharmacy",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -89,7 +97,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "fortynine",
+      "pat_firstname": "POneH",
       "pat_lastname": "Pharmacy",
       "pat_sex": "M",
       "pat_dob": "22/09/2023",
@@ -98,7 +106,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "fortynine.Pharmacy@Gmail.com"
+      "add_email": "POneH.Pharmacy@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -223,13 +231,14 @@
       "ReferralReason": "In Patient",
       "ref_referral_mode": "Email",
       "cli_name": "General Medicine Automation",
-      "ref_clinic_type": "Cardiology Clinic",
+      "ref_clinic_type": "Cardiology",
       "ref_clinic_location": "Cath Lab Location",
       "ref_region_eli_text": "HP Region1",
       "ref_preferred_examiner_sex_entry": "Male",
       "ref_preferred_examiner_sex": "male",
       "ref_method_of_arrival": "Ambulance",
-      "ref_time_of_arrival": "11:00:00"
+      "ref_time_of_arrival": "11:00:00",
+      "ref_cli_priority": "High"
     }
   ],
   "ConfirmExistingDetails": [
@@ -420,7 +429,7 @@
       "egp_gp_code": "GP0001",
       "egp_pct_code": "GPPCT0001",
       "egp_gmc_code": "GPGMC0001",
-      "egp_fullname": "ANUMBA"
+      "egp_fullname": "Manoj"
     }
   ],
   "SPgpAddress": [
@@ -445,7 +454,7 @@
       "pat_tod": "00:11",
       "pat_dead_confirmation_status": "confirmed",
       "pat_death_notes": "Added For Testing",
-      "pat_firstname": "fortynine",
+      "pat_firstname": "POneH",
       "pat_surname": "Pharmacy"
     }
   ],
@@ -467,7 +476,7 @@
   "AddMedication": [
     {
       "pacr_category": "Medication",
-      "pacr_que_name": "Abacavir 300mg tablets",
+      "pacr_que_name": "Paracetamol 125mg suppositories",
       "medi_dose": "2",
       "medi_frequency": "12 Hours",
       "medi_method": "Oral",

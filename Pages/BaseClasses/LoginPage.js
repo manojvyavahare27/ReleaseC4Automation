@@ -12,7 +12,7 @@ constructor(page)
     this.message=page.getByText('Your username/password combination has not been recognised. Please try again.')
     
     //Forgot Password Page
-    this.forgotpasswordlink=page.locator("//body/div[@id='root']/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[5]/a[1]")
+    this.forgotpasswordlink=page.locator("xpath=//a[@aria-label='Forgot Password']")
     this.forgotpasswordlink=page.getByText('Forgot Password')
     this.closeforgotpasswordpopup=page.getByTestId('CancelIcon')
     this.txtEmailAddress=page.locator("xpath=//input[@id='Email Address']")

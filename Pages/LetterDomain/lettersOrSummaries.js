@@ -2,11 +2,11 @@
 class lettersOrSummaries {
     constructor(page) {
         this.page = page;
-        this.input_StartDate = page.locator('xpath=//div[@class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-spacing-xs-2 css-1h7lr4v"]//input[@name="startDate"]');
-        this.input_EndDate = page.locator('xpath=//div[@class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-spacing-xs-2 css-1h7lr4v"]//input[@name="endDate"]');
+        this.input_StartDate = page.locator('xpath=//div[@class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-spacing-xs-2 mui-1h7lr4v"]//input[@name="startDate"]');
+        this.input_EndDate = page.locator('xpath=//div[@class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-spacing-xs-2 mui-1h7lr4v"]//input[@name="endDate"]');
         this.input_LetterName = page.locator('xpath=//input[@name="letterType"]');
         this.letter_Location=page.locator("xpath=//input[@id='letterLocation']")
-        this.letter_Name=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-spacing-xs-2 css-1h7lr4v']//input[@name='letterName']")
+        this.letter_Name=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-spacing-xs-2 mui-1h7lr4v']//input[@name='letterName']")
         this.Draft_button=page.locator("xpath=//div[contains(text(),'Draft')]")
 
         this.closePopupIcon=page.locator("xpath=//button[@aria-label='cancelIcon']")

@@ -16,7 +16,7 @@ class StockTransferPage {
         ///////////////////
         this.approvedQuantity=page.locator("xpath=//input[@id='Approved Quantity']")
         this.pickedquantity=page.locator("xpath=//input[@id='Picked Quantity']")
-        this.CheckBox=page.locator("xpath=//input[@class='PrivateSwitchBase-input css-j8yymo']")
+        this.CheckBox=page.locator("xpath=//input[@class='PrivateSwitchBase-input mui-j8yymo']")
         this.savebutton=page.locator("xpath=//button[@data-testid='Save']")
         this.createPickListButton=page.locator("xpath=//button[@data-testid='Create Pick List']")
         this.createDispatchOrderButton=page.locator("xpath=//button[@data-testid='Create Dispatch Order']")

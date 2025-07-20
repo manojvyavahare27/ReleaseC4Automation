@@ -62,8 +62,8 @@ test.describe("Patient Domain Db Comparison", () => {
 
 
   
-  test.describe('Pharmacy New Patient', () => {
-    test('Pharmacy Register New Patient', async ({ page }) => {
+  test.describe('New Patient', () => {
+    test('Register New Patient', async ({ page }) => {
       if (!jsonData || !jsonData.addPatient) {
         throw new Error('JSON data is missing or invalid.');
       }
@@ -103,9 +103,10 @@ test.describe("Patient Domain Db Comparison", () => {
         await patientsearch.clickOnSearchButton()
         await page.waitForTimeout(2500)
 
+        await page.pause()
         await patientsearch.clickOnSearchPatientLink()
         await page.waitForTimeout(2500)
-        // await patientsearch.ClickOnNoConfirmLegitimateRelationship()
+         await patientsearch.ClickOnYesConfirmLegitimateRelationship()
         // await patientsearch.clickOnSearchPatientLink()
         // await patientsearch.ClickOnYesConfirmLegitimateRelationship()
         await patientsearch.clickOnBackbuttonOnPatientSearch()
@@ -220,9 +221,7 @@ test.describe("Patient Domain Db Comparison", () => {
 
         //////// Patient Detail comparison/////////
         var sqlQuery =
-          "select * from patients where pat_hospital_ref= '" +
-          data.pat_hospital_ref +
-          "' order by pat_id desc limit 1";
+          "select * from patients where pat_hospital_ref= '" + data.pat_hospital_ref + "' order by pat_id desc limit 1";
         var sqlFilePath = "SQLResults/PatientDomain/patientData.json";
         var results = await executeQuery(sqlQuery, sqlFilePath);
         console.log("\n Patient Details stored into the database: \n", results);
@@ -231,13 +230,9 @@ test.describe("Patient Domain Db Comparison", () => {
         const patEgpId = results[0].pat_egp_Id
         var match = await compareJsons(sqlFilePath, null, data);
         if (match) {
-          console.log(
-            "\n Patient Details Comparision: Parameters from both JSON files match!\n"
-          );
+          console.log("\n Patient Details Comparision: Parameters from both JSON files match!\n");
         } else {
-          console.log(
-            "\n Patient Details Comparision: Parameters from both JSON files do not match!\n"
-          );
+          console.log("\n Patient Details Comparision: Parameters from both JSON files do not match!\n");
         }
 
         //////// Patient UNique Identifier comparison/////////

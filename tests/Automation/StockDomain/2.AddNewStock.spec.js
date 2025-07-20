@@ -55,7 +55,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await loginpage.enter_Password(jsonData.loginDetails[0].password);
     await page.waitForTimeout(2000);
     await loginpage.clickOnLogin();
-    await homepage.clickonSidebarHomeIcon();
+    // await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnSideIconStock()
 
     await stockallLoc.clickOnShowHiddenLocationButton()
@@ -63,7 +63,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(2000);
 
    
-
+    await page.waitForLoadState('networkidle');
    // Stock items filters
    
    await stockItemsFliters.selectLocation('Default Pharmacy')
@@ -103,7 +103,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await addStockItems.enterDose(jsonData.AddNewStock[0].stdo_dose)
    //await addStockItems.enterFrequency(jsonData.AddNewStock[0].stdo_frequency)
    await addStockItems.enterFrequency()
-   await addStockItems.enterRoute(jsonData.AddNewStock[0].stdo_route)
+   //await addStockItems.enterRoute(jsonData.AddNewStock[0].stdo_route)
    await addStockItems.enterDuration(jsonData.AddNewStock[0].stdo_duration)
    await addStockItems.enterDilutant('Yes')
    await addStockItems.enterDoseMultiplier()

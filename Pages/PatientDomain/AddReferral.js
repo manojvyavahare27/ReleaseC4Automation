@@ -27,6 +27,7 @@ class AddReferral{
         this.dropdownpatientcare=page.locator("xpath=//input[@id='patientCareReferTo']")
         this.dropdownpreferrersexforassessment=page.locator("xpath=//div[@aria-labelledby='mui-component-select-preferredSexForAssessment']")
         this.dropdownconsultant=page.locator("xpath=//div[@aria-labelledby='mui-component-select-consultantReferTo']")
+        this.dropdownclinicPriority=page.locator("xpath=//input[@id='clinicalPriority']")
         this.dropdownmethodofarrival=page.locator("xpath=//input[@id='methodOfArrivalOtherDetails']")
         this.dropdowntimeofarrival=page.locator("xpath=//input[@name='timeOfArrival']")
         this.radiobuttonAwaitReferralAcceptance=page.locator("xpath=//input[@value='acceptReferral']")
@@ -62,6 +63,11 @@ class AddReferral{
         await this.dropdownconsultant.click()
         await this.page.getByRole('option', { name: 'Mr Prerelease AutoEst' }).click()
        //await this.page.getByRole('option', { name: 'Dhanashree BATrainer' }).click()
+    }
+    async selectclinicPriority(ref_cli_priority)
+    {
+        await this.dropdownclinicPriority.click()
+        await this.page.getByRole('option', { name: ref_cli_priority }).click()
     }
 
     async selectPreferredSexForAssessment(ref_preferred_examiner_sex)

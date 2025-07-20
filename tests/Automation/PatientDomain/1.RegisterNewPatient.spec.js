@@ -89,6 +89,7 @@ test.describe('New Patient', () => {
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       await page.waitForTimeout(2000);
       await loginpage.clickOnLogin();
+      await page.pause()
       logger.info("Clicked on Login button successfully");
       await homepage.clickonSidebarHomeIcon()
       await homepage.clickOnPatientIcon();
@@ -103,7 +104,7 @@ test.describe('New Patient', () => {
       await patientsearch.selectSex(data.pat_sex);
 
 
-      await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
+      await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob).toString();
       //await patientsearch.selectBornDate(formattedDate);
      // await page.pause();
       await patientsearch.clickOnSearchButton();
@@ -182,9 +183,10 @@ test.describe('New Patient', () => {
       await addpatient.selectRestrictedRegistration();
       await addpatient.selectPatientWebRegistration();
       await addpatient.enterNotes(jsonData.addPatient[index].pat_notes);
+      await page.waitForTimeout(1000)
       await addpatient.clickOnNextButton();
 
-      
+      await page.waitForTimeout(2000)
       //Add Address page
       await addaddress.clickOnSaveButton();    
       await addaddress.enterNumberAndRoad(jsonData.permanentAddress[index].add_address1);
@@ -210,19 +212,13 @@ test.describe('New Patient', () => {
       await page.getByTestId('Add/View Notes').first().click();
       // await addaddress.clickOnPermAddressAddViewBnt();
 
-      await addaddress.enterPermAddresNotes(
-        jsonData.permanentAddress[index].add_notes
-      );
+      await addaddress.enterPermAddresNotes(jsonData.permanentAddress[index].add_notes);
 
       //Temporary Address
       await page.waitForTimeout(1000)
-      await addaddress.enterTempNumberandRoad(
-        jsonData.tempAddress[index].add_address1
-      );
+      await addaddress.enterTempNumberandRoad(jsonData.tempAddress[index].add_address1);
       await addaddress.enterTempTown(jsonData.tempAddress[index].add_address3);
-      await addaddress.enterTempDistrict(
-        jsonData.tempAddress[index].add_address2
-      );
+      await addaddress.enterTempDistrict(jsonData.tempAddress[index].add_address2);
       await addaddress.enterTempCounty(
         jsonData.tempAddress[index].add_address4
       );
@@ -273,7 +269,7 @@ test.describe('New Patient', () => {
       await addaddress.SelectStartEndDate();
 
       await addaddress.clickOnSaveAddress();
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(3000);
       await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
 
       //Add PIP

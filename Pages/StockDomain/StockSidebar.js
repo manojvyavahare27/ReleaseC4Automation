@@ -11,7 +11,7 @@ class StockSidebar
         this.kitchensLink=page.locator("xpath=//div[@data-testid='kitchens']")
         this.labLinks=page.locator("xpath=//div[@data-testid='labs']")
         this.pharmaciesLink=page.locator("xpath=//div[@data-testid='pharmacies']")
-        this.stockLocationsLink=page.locator("xpath=//h1[@class='MuiTypography-root MuiTypography-h5 css-pep38l'][normalize-space()='Stock Locations']")
+        this.stockLocationsLink=page.locator("xpath=//div[@data-testid='stockLocations']")
 
         //Manage Stock Tab
         this.manageStockTab = page.locator("xpath=//span[normalize-space()='Manage Stock']");

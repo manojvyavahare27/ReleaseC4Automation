@@ -88,12 +88,13 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(1000);
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
       logger.info("Password enter successfully");
-      await loginpage.clickOnLogin();      
+      await loginpage.clickOnLogin();  
+      
       logger.info("Clicked on Login button successfully");
-     // await page.pause()
+      await page.pause()
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()
-      await pharmacyLoc.clickOnCardioLocation()
+      //await pharmacyLoc.clickOnCardioLocation()
       await homepage.clickOnMenuFindPatientLink()
       
       
@@ -108,17 +109,21 @@ test.describe("Medications Category", () => {
       await patientsearch.selectSex(data.pat_sex);
 
     await patientsearch.selectBornDate(data.pat_dob);
+    await page.pause()
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
+
+      await patientsearch.ClickOnYesConfirmLegitimateRelationship()
       await page.waitForTimeout(2000);
       //await confirmexisting.clickOnConfirmExistingDetails();
       await homepage.clickOnMedicationSidebar()
-     // await page.pause()
+      await page.pause()
       await page.waitForTimeout(2000);
       await homepage.clickOnAddMedicationlink()
       //await page.pause()
       await page.waitForTimeout(1000);
+      await page.getByRole('button', { name: 'cancelIcon' }).click()
       await homepage.clickOnContactHistoryCategory()
 
 
@@ -129,7 +134,7 @@ test.describe("Medications Category", () => {
       await contacthistory.enterContactDate("26/04/2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
-      await contacthistory.enterContactWith("Dr Sathya");
+      //await contacthistory.enterContactWith("Dr Sathya");
       await contacthistory.clickOnAddContact();
       await Medications.clickOnViewContactItemsMenu();
       await Medications.clickOnPinContactItemsMenu();

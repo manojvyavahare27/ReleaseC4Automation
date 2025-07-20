@@ -85,43 +85,35 @@ test.describe("Patient Domain Db COmparison", () => {
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
+    await page.pause()
     await patientsearch.clickOnSearchPatientLink();  
+    await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await page.waitForTimeout(1500);
+    //await page.pause()
     await confirmexisting.selectRelationship(jsonData.pip[index].pip_relationship);
     await page.waitForTimeout(1500);   
     await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(1500);
-    await addreferral.enterReceiveReferrldate(jsonData.AddReferral[index].rtt_referral_received_date.toString());
-    await addreferral.enterApproveReferralDate(
-      jsonData.AddReferral[index].rtt_referral_approved_date.toString()
-    );
-    await addreferral.enterDateOfReferral(
-      jsonData.AddReferral[index].ref_referral_date.toString()
-    );
-    await addreferral.enterTimeOfReferral(
-      jsonData.AddReferral[index].ref_time_set.toString()
-    );
+    // await addreferral.enterReceiveReferrldate(jsonData.AddReferral[index].rtt_referral_received_date.toString());
+    // await addreferral.enterApproveReferralDate(jsonData.AddReferral[index].rtt_referral_approved_date.toString());
+    await addreferral.enterDateOfReferral(jsonData.AddReferral[index].ref_referral_date.toString());
+    await addreferral.enterTimeOfReferral(jsonData.AddReferral[index].ref_time_set.toString());
     await addreferral.selectSourceOfReferrals();
    // await addreferral.selectReferralType(jsonData.AddReferral[index].ref_referral_type_eli_text.toString());
     await addreferral.selectReferralReason();
     //await addreferral.selectReferrerName()
     await addreferral.enterReferringProfessional();
-    await addreferral.selectModeOfreferral(
-      jsonData.AddReferral[index].ref_referral_mode.toString()
-    );
-    await addreferral.selectService(
-      jsonData.AddReferral[index].cli_name.toString()
-    );
-    await addreferral.selectClinicType(
-      jsonData.AddReferral[index].ref_clinic_type.toString()
-    );
-   // await page.pause()
+    await addreferral.selectModeOfreferral(jsonData.AddReferral[index].ref_referral_mode.toString());
+    await addreferral.selectService(jsonData.AddReferral[index].cli_name.toString());
+   await addreferral.selectClinicType(jsonData.AddReferral[index].ref_clinic_type.toString());
+    
     await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location);
     await addreferral.selectTeam(jsonData.AddReferral[index].ref_region_eli_text.toString());
     await addreferral.selectPatientcare();
     await addreferral.selectPreferredSexForAssessment(jsonData.AddReferral[index].ref_preferred_examiner_sex_entry.toString());
+    await addreferral.selectclinicPriority(jsonData.AddReferral[index].ref_cli_priority)
     await addreferral.selectConsultant();
-    await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString());
+   // await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString());
     await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString());
     await addreferral.clickOnAwaitReferralAcceptance();
     await addreferral.clickOnSaveButton();
@@ -129,7 +121,7 @@ test.describe("Patient Domain Db COmparison", () => {
 
     await expect(page.getByText("Referral added successfully")).toHaveText("Referral added successfully");
     
-
+await page.pause()
     
     // await page.pause()
     //Again select same patient.
@@ -142,7 +134,7 @@ test.describe("Patient Domain Db COmparison", () => {
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
     await patientsearch.clickOnSearchPatientLink();
-    //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
+    await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await confirmexisting.entertxtboxAlsoKnow(jsonData.ConfirmExistingDetails[index].pat_name_other_lang.toString());
     //await confirmexisting.selectInterpreterReq()
     await confirmexisting.enterEmailId(jsonData.ConfirmExistingDetails[index].add_email.toString());
@@ -161,10 +153,10 @@ test.describe("Patient Domain Db COmparison", () => {
     await confirmexisting.enterPostCode(jsonData.tempAddress[index].add_address5.toString());
     //await confirmexisting.enterTempContactDetails();
     //await confirmexisting.enterTempAddressDetails();
-    //await page.pause()
+    
     await confirmexisting.clickOnSaveChangeDetails();
     await expect(page.getByText("Patient details changed successfully")).toHaveText("Patient details changed successfully");
-
+await page.pause()
     ////////// Patient Referral comparison/////////
     var sqlQuery =
       "select * from patients where pat_hospital_ref= '" +
@@ -184,11 +176,7 @@ test.describe("Patient Domain Db COmparison", () => {
     console.log(sqlQuery);
     results = await executeQuery(sqlQuery, sqlFilePath);
 
-    var match = await compareJsons(
-      sqlFilePath,
-      null,
-      jsonData.AddReferral[index]
-    );
+    var match = await compareJsons(sqlFilePath, null, jsonData.AddReferral[index]);
     if (match) {
       console.log(
         "\n Referral Details Comparision: Parameters from both JSON files match!\n"

@@ -1,12 +1,16 @@
 {
   "loginDetails": [
     {
-      "username": "prerelease.auto",
-      "password": "Manoj@2023"
+      "username": "release.manoj",
+      "password": "Manoj@2025"
     },
     {
       "username": "letter.auth",
       "password": "Manoj@2025"
+    },
+    {
+      "username": "prerelease.auto",
+      "password": "Manoj@2023"
     },
     {
       "username": "prerelease.auto",
@@ -31,10 +35,10 @@
     {
       "pat_hospital_ref": "hosp0925id006",
       "pat_title": "Mr",
-      "pat_firstname": "meher",
-      "pat_surname": "Riomedtest",
-      "pat_sex": "F",
-      "pat_dob": "22/09/2023",
+      "pat_firstname": "letter",
+      "pat_surname": "riomed",
+      "pat_sex": "Male",
+      "pat_dob": 45132,
       "pat_marital_status": "Single",
       "pat_ethnicity_text": "Indian",
       "pat_occupation": "Trainer",
@@ -62,36 +66,36 @@
   ],
   "letterSummries": [
     {
-      "patletd_start_date": "20/06/2025",
-      "patletd_end_date": "21/06/2025",
-      "patlet_name": "Referral Letter",
+      "patletd_start_date": "12/07/2025",
+      "patletd_end_date": "13/07/2025",
+      "patlet_name": "AutomationLetter",
       "patlet_status": "Not Sent",
-      "patletd_patient_location": "Cardio Location",
+      "patletd_patient_location": "Critical Care Medicine\t",
       "patlet_type": "Referral Letter",
-      "patlet_letter_date": "21/06/2025"
+      "patlet_letter_date": "13/07/2025"
     }
   ],
   "letterSendApproved": [
     {
-      "patletd_start_date": "21/06/2025",
-      "patletd_end_date": "21/06/2025",
-      "patlet_name": "Referral Letter",
+      "patletd_start_date": "13/07/2025",
+      "patletd_end_date": "13/07/2025",
+      "patlet_name": "AutomationLetter",
       "patlet_status": "Authorised",
-      "patletd_patient_location": "Cardio Location",
+      "patletd_patient_location": "Critical Care Medicine\t",
       "patlet_type": "Referral Letter",
-      "patlet_letter_date": "21/06/2025"
+      "patlet_letter_date": "13/07/2025"
     }
   ],
   "DeleteRecord": [
     {
       "patletd_start_date": "01/01/2025",
-      "patletd_end_date": "21/06/2025",
+      "patletd_end_date": "13/07/2025",
       "input_LetterName": "AutomationLetter",
       "input_Status_": "Not Sent",
       "patlet_status": "Authorised",
-      "patletd_patient_location": "Cardio Location",
-      "patlet_name": "Referral Letter",
-      "patlet_letter_date": "21/06/2025"
+      "patletd_patient_location": "Critical Care Medicine\t",
+      "patlet_name": "AutomationLetter",
+      "patlet_letter_date": "13/07/2025"
     }
   ]
 }

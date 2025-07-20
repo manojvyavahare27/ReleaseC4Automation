@@ -85,9 +85,9 @@ test.describe("Database Comparison Service Referrals", () => {
     if (records) {
       //No action, proceed with script
     } else {
-      await servicereferrals.clickOnAddLink();
-      await servicereferrals.SelectAssessment();
-      await servicereferrals.clickOnShowButton();
+      //await servicereferrals.clickOnAddLink();
+      // await servicereferrals.SelectAssessment();
+      // await servicereferrals.clickOnShowButton();
       await servicereferrals.clickOnAcceptLink();
       await expect(page.getByText("Referral accepted successfully")).toHaveText(
         "Referral accepted successfully"
@@ -133,9 +133,9 @@ test.describe("Database Comparison Service Referrals", () => {
 
 
     await page.waitForTimeout(2000)
-    await servicereferrals.clickOnAddLink();
-    await servicereferrals.SelectAssessment();
-    await servicereferrals.clickOnShowButton();
+    // await servicereferrals.clickOnAddLink();
+    // await servicereferrals.SelectAssessment();
+    // await servicereferrals.clickOnShowButton();
 
     await page.waitForTimeout(2000)
     await servicereferrals.selectStatusTypeAcceptedRequiresAppointment();

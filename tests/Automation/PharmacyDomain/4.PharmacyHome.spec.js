@@ -83,6 +83,7 @@ test.describe("Medications Category", () => {
       const pharmacyHomePage=new PharmacyHome(page)
       const pharmacySidebar=new PharmacySidebar(page)
       
+      
 
       const menu = new Menu(page);
       await page.goto(environment.Test);
@@ -93,10 +94,10 @@ test.describe("Medications Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
-     // await page.pause()
+      await page.pause()
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()
-      await pharmacyLoc.clickOnCardioLocation()
+      //await pharmacyLoc.clickOnCardioLocation()
       
       // Prescription Tab
       await pharmacyHomePage.clickPrescriptionTab();
@@ -123,6 +124,8 @@ test.describe("Medications Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
+        await patientsearch.ClickOnYesConfirmLegitimateRelationship()
+      await page.waitForTimeout(2000);
       await page.pause()
       await pharmacyHomePage.fillPrescriptionType('General');
       await pharmacyHomePage.fillPrescriptionCode('123');
@@ -178,21 +181,26 @@ test.describe("Medications Category", () => {
       //await pharmacyHomePage.clickOnSaveButton()
 
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-      
+      await pharmacyHomePage.clickProduced()
+      await page.getByRole('button', { name: 'Save' }).click()
       await pharmacyHomePage.clickOnProducedLink()
-
+      await page.waitForTimeout(1000)
       await pharmacyHomePage.clickCollected()
       await page.getByRole('button', { name: 'Save' }).click()
       //await pharmacyHomePage.clickOnSaveButton()
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-
-      // await pharmacyHomePage.enterPatientGivenName('try')
-      // await pharmacyHomePage.enterPatientFamilyName('pharma')
-      // await pharmacyHomePage.enterPrescriptionStatus()
-      // await pharmacyHomePage.clickOnPayLink()
-      // await pharmacyHomePage.closePopup()
-
-      // await pharmacyHomePage.clickOnChangeStatus()
+      await page.waitForTimeout(1000)      
+      // await page.pause()
+      //  await pharmacyHomePage.clickExpandIcon()
+      //  await page.waitForTimeout(1000)
+      //  await pharmacyHomePage.clickOnBackToStockButton()
+      //  await page.waitForTimeout(1000)
+      //  await backtoStock.enterBatchQty()
+      //  await backtoStock.enterReasonforReturn()
+      //  await backtoStock.clickOnSavebutton()       
+      //  await expect(page.getByText("Items returned successfully")).toHaveText("Items returned successfully");
+      //  await page.waitForTimeout(2000)
+      //await addStockItems.clickOnLogout(page)   
 
 
 

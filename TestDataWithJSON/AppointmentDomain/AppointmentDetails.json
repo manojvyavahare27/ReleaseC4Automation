@@ -1,8 +1,8 @@
 {
   "loginDetails": [
     {
-      "username": "manoj.auto",
-      "password": "Manoj@2024"
+      "username": "release.manoj",
+      "password": "Manoj@2025"
     },
     {
       "username": "prerelease.auto",
@@ -20,10 +20,10 @@
     {
       "pat_hospital_ref": "hosp0925id009",
       "pat_title": "Mr",
-      "pat_firstname": "RTI",
+      "pat_firstname": "AppD",
       "pat_surname": "Riomed",
       "pat_sex": "M",
-      "pat_dob": "22/09/2023",
+      "pat_dob": "01/01/2000",
       "pat_marital_status": "Single",
       "pat_ethnicity_text": "Indian",
       "pat_occupation": "Trainer",
@@ -53,10 +53,10 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "RTI",
+      "pat_firstname": "AppD",
       "pat_surname": "Riomed",
       "pat_sex": "M",
-      "pat_dob": "22/09/2023",
+      "pat_dob": "01/01/2000",
       "pat_marital_status": "Single",
       "pat_ethnicity_text": "Indian",
       "pat_occupation": "Trainer",
@@ -84,16 +84,16 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "RTI",
+      "pat_firstname": "AppD",
       "pat_lastname": "Riomed",
       "pat_sex": "M",
-      "pat_dob": "22/09/2023",
+      "pat_dob": "01/01/2000",
       "pid_value1": 8962845424,
       "pid_value2": "Ind009",
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "RTI.Riomed@Gmail.com"
+      "add_email": "AppD.Riomed@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -218,13 +218,14 @@
       "ReferralReason": "In Patient",
       "ref_referral_mode": "Email",
       "cli_name": "General Medicine Automation",
-      "ref_clinic_type": "Cardiology Clinic",
+      "ref_clinic_type": "Cardiology",
       "ref_clinic_location": "Cath Lab Location",
       "ref_region_eli_text": "HP Region1",
       "ref_preferred_examiner_sex_entry": "Male",
       "ref_preferred_examiner_sex": "male",
       "ref_method_of_arrival": "Ambulance",
-      "ref_time_of_arrival": "11:00:00"
+      "ref_time_of_arrival": "11:00:00",
+      "ref_cli_priority": "High"
     }
   ],
   "ConfirmExistingDetails": [
@@ -249,13 +250,13 @@
       "egp_gp_code": "GP0001",
       "egp_pct_code": "GPPCT0001",
       "egp_gmc_code": "GPGMC0001",
-      "egp_fullname": "ANUMBA"
+      "egp_fullname": "Manoj"
     }
   ],
   "addEditAppointments": [
     {
-      "rea_date": "01/07/2025",
-      "rea_edited_date": "01/07/2025",
+      "rea_date": "13/07/2025",
+      "rea_edited_date": "13/07/2025",
       "rea_time": "10:45:00",
       "rea_edited_time": "09:15 AM",
       "convertedTime": "10:45 AM",
@@ -265,31 +266,7 @@
       "rea_type": "new",
       "reaType": "New",
       "rea_review_reason": "Appointment Reason for Testing",
-      "rea_location": "Cardio Location",
-      "rea_triage": 1,
-      "rea_clinic_type": "Cardiology Clinic",
-      "rea_cancelled_reason": "App Cancel for Testing Reason",
-      "rea_slot_duration": 15,
-      "rea_reason_for_delay": "Appointment offered within 48 hours - declined by patient",
-      "rea_region_eli_text": "HP Region1",
-      "rea_patient_type": "Regular",
-      "rea_end_time": "11:00:00",
-      "rea_special": "All Specialties",
-      "rea_hp_name_link": "Mr Saurabh Riomed"
-    }
-  ],
-  "bookNewAppointments": [
-    {
-      "rea_date": "01/07/2025",
-      "rea_time": "10:30:00",
-      "convertedTime": "10:30 AM",
-      "rea_status": "scheduled",
-      "rea_notes": "AddTesting Notes",
-      "rea_duration": 15,
-      "rea_type": "new",
-      "reaType": "New",
-      "rea_review_reason": "Appointment Reason for Testing",
-      "rea_location": "Cardio Location",
+      "rea_location": "Critical Care Medicine",
       "rea_triage": 1,
       "rea_clinic_type": "Cardiology",
       "rea_cancelled_reason": "App Cancel for Testing Reason",
@@ -297,14 +274,38 @@
       "rea_reason_for_delay": "Appointment offered within 48 hours - declined by patient",
       "rea_region_eli_text": "HP Region1",
       "rea_patient_type": "Regular",
-      "rea_end_time": "10:45:00",
+      "rea_end_time": "11:00:00",
       "rea_special": "All Specialties",
-      "rea_hp_name_link": "Mr Saurabh Riomed"
+      "rea_hp_name_link": "Mr Manoj Release"
+    }
+  ],
+  "bookNewAppointments": [
+    {
+      "rea_date": "13/07/2025",
+      "rea_time": "06:30:00",
+      "convertedTime": "06:30 AM",
+      "rea_status": "scheduled",
+      "rea_notes": "AddTesting Notes",
+      "rea_duration": 15,
+      "rea_type": "new",
+      "reaType": "New",
+      "rea_review_reason": "Appointment Reason for Testing",
+      "rea_location": "Critical Care Medicine",
+      "rea_triage": "1",
+      "rea_clinic_type": "Cardiology",
+      "rea_cancelled_reason": "App Cancel for Testing Reason",
+      "rea_slot_duration": 15,
+      "rea_reason_for_delay": "Appointment offered within 48 hours - declined by patient",
+      "rea_region_eli_text": "HP Region1",
+      "rea_patient_type": "Regular",
+      "rea_end_time": "06:45:00",
+      "rea_special": "All Specialties",
+      "rea_hp_name_link": "Mr Manoj Release"
     }
   ],
   "CancelBookAppointment": [
     {
-      "rea_date": "01/07/2025",
+      "rea_date": "13/07/2025",
       "rea_time": "10:15:00",
       "convertedTime": "10:15 AM",
       "rea_status": "cancelled",
@@ -313,9 +314,9 @@
       "rea_type": "emergency",
       "reaType": "emergency",
       "rea_review_reason": "Appointment Reason for Testing",
-      "rea_location": "Cardio Location",
+      "rea_location": "Critical Care Medicine",
       "rea_triage": 1,
-      "rea_clinic_type": "Cardiology Clinic",
+      "rea_clinic_type": "Cardiology",
       "rea_cancelled_reason": "App Cancel for Testing Reason",
       "rea_slot_duration": 15,
       "rea_reason_for_delay": "Appointment offered within 48 hours - declined by patient",
@@ -323,12 +324,12 @@
       "rea_patient_type": "Regular",
       "rea_end_time": "10:30:00",
       "rea_special": "All Specialties",
-      "rea_hp_name_link": "Mr Saurabh Riomed"
+      "rea_hp_name_link": "Mr Manoj Release"
     }
   ],
   "nextAvailAppointments": [
     {
-      "rea_date": "01/07/2025",
+      "rea_date": "13/07/2025",
       "rea_edited_date": "02/12/2023",
       "rea_time": "09:00:00",
       "convertedTime": "09:00 AM",
@@ -339,9 +340,9 @@
       "rea_type": "new",
       "reaType": "New",
       "rea_review_reason": "Appointment Reason for Testing",
-      "rea_location": "Cardio Location",
+      "rea_location": "Critical Care Medicine",
       "rea_triage": 1,
-      "rea_clinic_type": "Cardiology Clinic",
+      "rea_clinic_type": "Cardiology",
       "rea_cancelled_reason": "App Cancel for Testing Reason",
       "rea_slot_duration": 15,
       "rea_reason_for_delay": "Appointment offered within 48 hours - declined by patient",
@@ -349,13 +350,13 @@
       "rea_patient_type": "Regular",
       "rea_end_time": "09:15:00",
       "rea_special": "All Specialties",
-      "rea_hp_name_link": "Mr Saurabh Riomed"
+      "rea_hp_name_link": "Mr Manoj Release"
     }
   ],
   "prvAppointments": [
     {
-      "prv_clinic_type_eli_text": "Cardiology Clinic",
-      "prv_clinic_location_eli_text": "Cardio Location",
+      "prv_clinic_type_eli_text": "Cardiology",
+      "prv_clinic_location_eli_text": "Critical Care Medicine\t",
       "prv_type": "provisionalappointment",
       "prv_type_entry": "Provisional Appointment",
       "prv_date": "31/12/2025",
@@ -365,15 +366,15 @@
       "prv_reason": "Appointment Reason for Testing",
       "prv_notes": "AddTesting Notes",
       "prv_record_status": "approved",
-      "prv_created_by": "thayne.auto",
+      "prv_created_by": "release.Manoj",
       "prv_region_eli_text": "All Teams",
-      "prv_speciality_eli_text": "Cardiology"
+      "prv_speciality_eli_text": "All Specialties"
     }
   ],
   "rescheduleAppointments": [
     {
-      "rea_date": "01/07/2025",
-      "rea_edited_date": "01/07/2025",
+      "rea_date": "13/07/2025",
+      "rea_edited_date": "13/07/2025",
       "rea_time": "11:15:00",
       "rea_edited_time": "15:30:00",
       "convertedTime": "11:15 AM",
@@ -384,7 +385,7 @@
       "rea_type": "new",
       "reaType": "New",
       "rea_review_reason": "Appointment Reason for Testing",
-      "rea_location": "Cardio Location",
+      "rea_location": "Critical Care Medicine",
       "rea_triage": 1,
       "rea_clinic_type": "Cardiology",
       "rea_cancelled_reason": "App Cancel for Testing Reason",
@@ -394,7 +395,7 @@
       "rea_patient_type": "Regular",
       "rea_end_time": "11:30:00",
       "rea_special": "All Specialties",
-      "rea_hp_name_link": "Mr Saurabh Riomed"
+      "rea_hp_name_link": "Mr Manoj Release"
     }
   ],
   "serviceAppointments": [
@@ -429,7 +430,7 @@
       "rea_clinic_type_eli_id": 6903,
       "rea_region_eli_id": 6910,
       "rea_region_eli_text": "HP Region1",
-      "rea_updated": "01/07/2025",
+      "rea_updated": "13/07/2025",
       "rea_updated_by": "thayne.auto",
       "rea_patient_type": "Regular",
       "rea_end_time": "07:35:00"
@@ -519,7 +520,7 @@
     {
       "ars_record_status": "wrong",
       "aps_record_status": "wrong",
-      "aps_deleted": "01/07/2025",
+      "aps_deleted": "13/07/2025",
       "aps_deleted_by": "thayne.auto",
       "aps_end_date": "30/05/2025"
     }

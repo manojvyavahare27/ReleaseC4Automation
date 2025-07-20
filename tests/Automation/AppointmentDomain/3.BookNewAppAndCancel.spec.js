@@ -112,7 +112,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      //await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
      await patientsearch.clickOnSearchPatientLink()   
      //await page.pause()
-     //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
+     await patientsearch.ClickOnYesConfirmLegitimateRelationship()
      await page.waitForTimeout(5000);    
      await confirmexisting.clickOnConfirmExistingDetails()
      await page.waitForTimeout(5000);
@@ -241,7 +241,6 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await scheduleserviceapp.clickOnReferral()
           await patientsearch.clickonBackButton()
 
-
           await scheduleserviceapp.clickOnLinksMenu()
           await scheduleserviceapp.clickonRefresh()
           await scheduleserviceapp.closePopUpWindow()     
@@ -253,16 +252,15 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await scheduleserviceapp.clickOnChangeButton()
      await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')     
      
-     var sqlQuery ="select * from patients where pat_hospital_ref= '" +
-     jsonData.addPatient[index].pat_hospital_ref +"' order by pat_id desc limit 1";
+     await page.pause()
+  var sqlQuery ="select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref +"' order by pat_id desc limit 1";
    console.log(sqlQuery);
    var sqlFilePath = "SQLResults/AppointmentDomain/patientData.json";
    var results = await executeQuery(sqlQuery, sqlFilePath);
    const patId = results[0].pat_id;
    console.log("Patient id is:" + patId);
-
    sqlQuery ="select * from referral_appointments where rea_pat_id = '" + patId + "' and rea_time = '" +
-     jsonData.bookNewAppointments[index].rea_time + "' and rea_record_status = 'approved'";
+  jsonData.bookNewAppointments[index].rea_time + "' and rea_record_status = 'approved'";
    console.log(sqlQuery);
    sqlFilePath = "SQLResults/AppointmentDomain/bookNewApp.json";
    results = await executeQuery(sqlQuery, sqlFilePath);
@@ -290,7 +288,6 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      sqlQuery = "select * from referral_appointments where rea_id = " + reaId;
      console.log(sqlQuery);
      results = await executeQuery(sqlQuery, sqlFilePath);
-
      match = await compareJsons(sqlFilePath,null,jsonData.bookNewAppointments[index]);
      if (match) {
        console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n");
@@ -302,10 +299,15 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      else{         
       await page.waitForTimeout(2000);
           await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date.toString())
+          await page.waitForTimeout(2000);
           await servicebookapp.selectDropdownSpecility(jsonData.bookNewAppointments[index].rea_special)
+          await page.waitForTimeout(2000);
           await servicebookapp.selectDropdownClinicType(jsonData.bookNewAppointments[index].rea_clinic_type)
+          await page.waitForTimeout(2000);
           await servicebookapp.selectDropdownClinicLocation(jsonData.bookNewAppointments[index].rea_location)
+          await page.waitForTimeout(2000);
           await servicebookapp.selectTeam(jsonData.bookNewAppointments[index].rea_region_eli_text)
+          await page.waitForTimeout(2000);
           await servicebookapp.ClickonSearchHPButton()
           //
           await servicebookapp.clickOnHPnameLink(jsonData.bookNewAppointments[index].rea_hp_name_link)       
@@ -331,6 +333,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
          
+          await page.pause()
           var sqlQuery =
           "select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref + "' order by pat_id desc limit 1";
         console.log(sqlQuery);
@@ -341,7 +344,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      
         sqlQuery ="select * from referral_appointments  where rea_pat_id = '" + patId +"' and rea_time = '" +jsonData.bookNewAppointments[index].rea_time +
           "' and rea_record_status = 'approved'";
-         // await page.pause()
+         
         console.log(sqlQuery);
         sqlFilePath = "SQLResults/AppointmentDomain/bookNewApp.json";
         results = await executeQuery(sqlQuery, sqlFilePath);
@@ -371,6 +374,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await scheduleserviceapp.clickOnCancelButton()
      await scheduleserviceapp.selectAppCancellationReason(jsonData.bookNewAppointments[index].rea_cancelled_reason)
      await scheduleserviceapp.clickOnSaveCancelledAppButton()
+     await page.waitForTimeout(2000)
      await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')
 
      sqlQuery = "select * from referral_appointments where rea_id = " + reaId;

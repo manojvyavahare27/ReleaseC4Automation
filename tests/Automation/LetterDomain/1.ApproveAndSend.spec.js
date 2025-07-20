@@ -56,14 +56,15 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1500);
      await loginpage.enter_Password(jsonData.loginDetails[1].password);
      await page.waitForTimeout(1500);
-     await loginpage.clickOnLogin();         
+     await loginpage.clickOnLogin();        
+     await page.pause() 
      await homepage.clickOnSideIconPatient()
      await patientsearch.enterGivenName(jsonData.patDetails[index].pat_firstname)
      await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname)     
      await patientsearch.clickOnSearchPatButton()
-     //await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
-     await patientsearch.clickOnSearchPatientLink()       
-     await page.waitForTimeout(1000);    
+     await patientsearch.clickOnSearchPatientLink() 
+     await patientsearch.ClickOnYesConfirmLegitimateRelationship()  
+      await page.waitForTimeout(1000); 
      await confirmexisting.clickOnConfirmExistingDetails()
      await page.waitForTimeout(1000);
      await patientsidebar.clickOnLettersCategory()   
@@ -90,8 +91,9 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1000);
      await letterorSummeries.clickOnSendforApprovalButton()    
      await page.waitForTimeout(1000);     
+     await page.pause()
      await letterorSummeries.clickOnOkButton()
-     await page.waitForTimeout(200)
+     await page.waitForTimeout(2000)
      await expect(page.getByText("Letter added to patient successfully")).toHaveText("Letter added to patient successfully");
 
 

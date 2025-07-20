@@ -89,6 +89,7 @@ test.describe("Database Comparison Add New Referral", () => {
  await page.waitForTimeout(1000)
    await page.getByTestId('batch').click();
    //Add Batch Details   
+   await page.pause()
     await page.waitForTimeout(1000)
    await addStockItems.enterInStockQuantityZero() 
    await page.waitForTimeout(1500)
@@ -104,6 +105,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stocksidebar.clickOnAllLocationsLink();
     await page.waitForTimeout(1000);
 
+    await page.pause()
     await stockallLoc.clickOnShowHiddenLocationButton()
     await page.waitForTimeout(2000);
 

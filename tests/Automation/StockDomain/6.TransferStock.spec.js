@@ -66,13 +66,14 @@ test.describe("Database Comparison Add New Referral", () => {
     await loginpage.enter_Password(jsonData.loginDetails[0].password);
     await page.waitForTimeout(2000);
     await loginpage.clickOnLogin();
-    await homepage.clickonSidebarHomeIcon();
+    //await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnSideIconStock()
 
     await stockallLoc.clickOnShowHiddenLocationButton()
     await stockallLoc.clickOnDefaultStockLocation()
     await page.waitForTimeout(2000);
 
+    await page.pause()
     // Stock items filters   
     await stockItemsFliters.selectLocation('Default Pharmacy')
     await stockItemsFliters.selectCategory(jsonData.EditStockItem[0].stock_category)
@@ -188,7 +189,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockTransferPage.clickOnDispatchOrderButton()
     await page.waitForTimeout(2000)
     await processDispatchOrderPopup.clickOnCreateDispatchOrderButtonFromPopUp()
-
+    
     await expect(page.getByText('Item successfully received')).toHaveText('Item successfully received')
     await processDispatchOrderPopup.clickOncloseIcon()
     
@@ -217,7 +218,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await loginpage.enter_Password(jsonData.loginDetails[1].password);
     await page.waitForTimeout(2000);
     await loginpage.clickOnLogin();
-    await homepage.clickonSidebarHomeIcon();
+    //await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnSideIconStock()
 
     await stockallLoc.clickOnShowHiddenLocationButton()

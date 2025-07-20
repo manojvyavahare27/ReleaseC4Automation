@@ -86,120 +86,71 @@ test.describe("Database Comparison Add Edit Patient", () => {
       //logger.info("Clicked on Login button successfully");
       await homepage.clickonSidebarHomeIcon()
       await homepage.clickOnPatientIcon();
+      //await page.pause()
      // logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
       await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname);
-      await patientsearch.enterFamilyName(
-        jsonData.addPatient[index].pat_surname
-      );
-      await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
-
-      //await patientsearch.enterPatientIdentificationId()
-
-      // await patientsearch.selectFutureDate()
-      // //await page.pause()
-      // await expect(page.getByText('Date selected is future date')).toHaveText('Date selected is future date')
-      // await patientsearch.clearBornDate()
+      await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
+        await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);     
+      await page.waitForTimeout(2000)
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
+      //await patientsearch.selectBornDate(formattedDate);
+     // await page.pause();
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnAddPatientbutton();
       //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientDuplicateCheck")
       await patientduplicatecheck.clickOnDuplicateCheckButton();
-      await expect(page.getByText("Photo Identification required")).toHaveText(
-        "Photo Identification required"
-      );
-      await expect(
-        page.getByText("Photo Identification ID required")
-      ).toHaveText("Photo Identification ID required");
-      await expect(page.getByText("Middle name(s) is required")).toHaveText(
-        "Middle name(s) is required"
-      );
+      await expect(page.getByText("Photo Identification required")).toHaveText("Photo Identification required");
+      await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
+      await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
 
       //Is baby born in hospital
       const dateValue = await page.$eval("#Born", (textbox) => textbox.value);
       const selectedDate = new Date(dateValue);
-      const selectedDateOnly = new Date(
-        selectedDate.getFullYear(),
-        selectedDate.getMonth(),
-        selectedDate.getDate()
-      );
+      const selectedDateOnly = new Date(selectedDate.getFullYear(),selectedDate.getMonth(),selectedDate.getDate());
       const currentDate = new Date();
       // Format the date into DD/MM/YYYY
       //const currentDate = `${currentDate.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
 
-      const currentDateOnly = new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate()
-      );
+      const currentDateOnly = new Date(currentDate.getFullYear(),currentDate.getMonth(),currentDate.getDate());
       const differenceInMs = currentDateOnly - selectedDateOnly;
       const differenceInDays = differenceInMs / (1000 * 60 * 60 * 24);
       console.log(differenceInDays);
       // await page.pause()
       // Check if the difference is less than 5 days
       if (differenceInDays < 5) {
-        await expect(
-          page.getByText("Baby born in this hospital required")
-        ).toHaveText("Baby born in this hospital required");
+        await expect(page.getByText("Baby born in this hospital required")).toHaveText("Baby born in this hospital required");
       } else {
         console.log("Date is not less than 5 days from current date");
       }
       await patientduplicatecheck.selectUniqueIdentification();
-      await patientduplicatecheck.enterUniqueIdentificationId(
-        patientdetailsdata.UniqueIdentificationId
-      );
+      await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId);
       await patientduplicatecheck.selectPhotoIdentification();
-      await patientduplicatecheck.enterPhotoIdentification(
-        patientdetailsdata.PhotoIdentificationId
-      );
+      await patientduplicatecheck.enterPhotoIdentification(patientdetailsdata.PhotoIdentificationId);
       //await page.pause();
-      await patientduplicatecheck.selectIssuingCountry(
-        jsonData.addPatient[index].pat_country_of_birth
-      );
-      await patientduplicatecheck.selectTitle(
-        jsonData.addPatient[index].pat_title
-      );
-      await patientduplicatecheck.enterMiddleName(
-        jsonData.addPatient[index].pat_middlename
-      );
-      await patientduplicatecheck.enterMaidenName(
-        jsonData.addPatient[index].pat_maiden_name
-      );
+      await patientduplicatecheck.selectIssuingCountry(jsonData.addPatient[index].pat_country_of_birth);
+      await patientduplicatecheck.selectTitle(jsonData.addPatient[index].pat_title);
+      await patientduplicatecheck.enterMiddleName(jsonData.addPatient[index].pat_middlename);
+      await patientduplicatecheck.enterMaidenName(jsonData.addPatient[index].pat_maiden_name);
       //await page.pause()
       //Is baby born in hospital
       if (differenceInDays < 5) {
         await patientduplicatecheck.selectIsBabyBornInHospital();
       }
-      await patientduplicatecheck.enterMobileNumber(
-        jsonData.patientIdentifier[index].pid_value1.toString()
-      );
-      await patientduplicatecheck.enterEmailId(
-        jsonData.patientIdentifier[index].add_email
-      );
+      await patientduplicatecheck.enterMobileNumber(jsonData.patientIdentifier[index].pid_value1.toString());
+      await patientduplicatecheck.enterEmailId(jsonData.patientIdentifier[index].add_email);
       await patientduplicatecheck.clickOnDuplicateCheckButton();
       //await expect(page.getByText('Duplicate Patients not found')).toHaveText('Duplicate Patients not found')
       await patientduplicatecheck.clickOnCreatePatientButton();
 
       //Patient Wizard- Add Patient
-      await addpatient.selectMaritalStatusDropdown(
-        jsonData.addPatient[index].pat_marital_status
-      );
-      await addpatient.selectSexualOrientation(
-        jsonData.addPatient[index].pat_sexual_orientation_eli_text
-      );
-      await addpatient.selectEthnicity(
-        jsonData.addPatient[index].pat_ethnicity_text
-      );
-      await addpatient.selectOccupation(
-        jsonData.addPatient[index].pat_occupation
-      );
+      await addpatient.selectMaritalStatusDropdown(jsonData.addPatient[index].pat_marital_status);
+      await addpatient.selectSexualOrientation(jsonData.addPatient[index].pat_sexual_orientation_eli_text);
+      await addpatient.selectEthnicity(jsonData.addPatient[index].pat_ethnicity_text);
+      await addpatient.selectOccupation(jsonData.addPatient[index].pat_occupation);
       await addpatient.SelectReligion(jsonData.addPatient[index].pat_religion);
-      await addpatient.enterTownOfBirth(
-        jsonData.addPatient[index].pat_town_of_birth
-      );
-      await addpatient.enterCountyOfBirth(
-        jsonData.addPatient[index].pat_county_of_birth
-      );
+      await addpatient.enterTownOfBirth(jsonData.addPatient[index].pat_town_of_birth);
+      await addpatient.enterCountyOfBirth(jsonData.addPatient[index].pat_county_of_birth);
       await addpatient.selectCountryOfBirth(
         jsonData.addPatient[index].pat_country_of_birth
       );

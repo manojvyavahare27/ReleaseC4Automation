@@ -93,30 +93,33 @@ test.describe("Medications Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
-     // await page.pause()
+      await page.waitForTimeout(2000)
       await homepage.clickOnHomeDashboardIcon()
-      await homepage.clickOnPharmacyIcon()
-      await pharmacyLoc.clickOnCardioLocation()
-      
-    //   // Prescription Tab
-    //   await pharmacyHomePage.clickPrescriptionTab();
-    //   await pharmacyHomePage.clickPrescriptionTab();
-    //   await pharmacyHomePage.clickSearchButton();
-    //   await pharmacyHomePage.enterRxBarcode('');
-    //   await pharmacyHomePage.enterPatientGivenName(jsonData.addPatient[index].pat_firstname.toString());
-    //   await pharmacyHomePage.enterPatientFamilyName(jsonData.addPatient[index].pat_surname.toString());
-     
-      await page.pause()
+      await homepage.clickOnPharmacyIcon()          
+     await page.waitForTimeout(2000)
+     await page.pause()
       await pharmacyHomePage.enterPatientGivenName(jsonData.addPatient[index].pat_firstname.toString())
       await pharmacyHomePage.enterPatientFamilyName(jsonData.addPatient[index].pat_surname.toString())
+
+//       // Enter and validate Patient Given Name
+// await pharmacyHomePage.enterPatientGivenName(jsonData.addPatient[index].pat_firstname.toString());
+// const actualGivenName = await pharmacyHomePage.patientGivenNameInput.inputValue();
+// expect(actualGivenName.trim()).toBe(jsonData.addPatient[index].pat_firstname.toString().trim());
+// logger.info("Patient Given Name entered and validated successfully");
+
+// // Enter and validate Patient Family Name
+// await pharmacyHomePage.enterPatientFamilyName(jsonData.addPatient[index].pat_surname.toString());
+// const actualFamilyName = await pharmacyHomePage.patientFamilyNameInput.inputValue();
+// expect(actualFamilyName.trim()).toBe(jsonData.addPatient[index].pat_surname.toString().trim());
+// logger.info("Patient Family Name entered and validated successfully");
+
+
       await pharmacyHomePage.enterPrescriptionStatus('Collected')
       await pharmacyHomePage.ClickOnSearchButton()
       await pharmacyHomePage.clickOnPayLink()
       await pharmacyHomePage.clickOnClosePopup()
-
       await pharmacyHomePage.clickOnChangeStatus()
-      await page.pause()
-
+      await page.waitForTimeout(2000)
       await pharmacyHomePage.clickOnExpandIconForDispense()
       await pharmacyHomePage.clickOnBackToStockButton()
       await pharmacyHomePage.enterBackToStockQty()

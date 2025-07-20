@@ -108,8 +108,8 @@ test.describe("Database Comparison Add List Item", () => {
     await addtolistitem.enterTextInTextBox(jsonData.addListItem[index].eli_text);
     await addtolistitem.enterTextInOtherLang(jsonData.addListItem[index].eli_text_other_lang);
     await addtolistitem.enterNumericValue(jsonData.addListItem[index].eli_numeric_value);
-    await addtolistitem.selectDropDownCodeType(jsonData.addListItem[index].eli_code_type);
-    await addtolistitem.enterCode(jsonData.addListItem[index].eli_code);
+    // await addtolistitem.selectDropDownCodeType(jsonData.addListItem[index].eli_code_type);
+    // await addtolistitem.enterCode(jsonData.addListItem[index].eli_code);
     
     await addtolistitem.enterCodeText(jsonData.addListItem[index].eli_code_text);
     //await addtolistitem.enterHextColor(addlistitem.HexColor)

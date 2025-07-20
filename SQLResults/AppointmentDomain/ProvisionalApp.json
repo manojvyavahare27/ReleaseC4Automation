@@ -1,14 +1,14 @@
 [
   {
-    "prv_id": 113,
+    "prv_id": 88,
     "prv_est_id": 4,
-    "prv_cli_id": 84,
-    "prv_pat_id": 789841,
+    "prv_cli_id": 85,
+    "prv_pat_id": 88278,
     "prv_rea_id": null,
-    "prv_clinic_type_eli_id": 6903,
-    "prv_clinic_type_eli_text": "Cardiology Clinic",
-    "prv_clinic_location_eli_id": 6856,
-    "prv_clinic_location_eli_text": "Cardio Location",
+    "prv_clinic_type_eli_id": 12764,
+    "prv_clinic_type_eli_text": "Cardiology",
+    "prv_clinic_location_eli_id": 12765,
+    "prv_clinic_location_eli_text": "Critical Care Medicine\t",
     "prv_type": "provisionalappointment",
     "prv_date": "31/12/2025",
     "prv_status": "awaitingconfirmation",
@@ -17,8 +17,8 @@
     "prv_reason": "Appointment Reason for Testing",
     "prv_notes": "AddTesting Notes",
     "prv_record_status": "approved",
-    "prv_created": "01/07/2025",
-    "prv_created_by": "manoj.auto",
+    "prv_created": "13/07/2025",
+    "prv_created_by": "release.manoj",
     "prv_updated": null,
     "prv_updated_by": null,
     "prv_deleted": null,
@@ -29,7 +29,7 @@
     "prv_imported_by": null,
     "prv_region_eli_id": 0,
     "prv_region_eli_text": "All Teams",
-    "prv_speciality_eli_id": 6860,
-    "prv_speciality_eli_text": "Cardiology"
+    "prv_speciality_eli_id": 0,
+    "prv_speciality_eli_text": "All Specialties"
   }
 ]

@@ -1,8 +1,8 @@
 {
   "loginDetails": [
     {
-      "username": "manoj.auto",
-      "password": "Manoj@2024"
+      "username": "release.manoj",
+      "password": "Manoj@2025"
     },
     {
       "username": "prerelease.auto",
@@ -15,27 +15,27 @@
   ],
   "addListItem": [
     {
-      "eli_text": "UserELIO",
+      "eli_text": "ListItemA",
       "eli_numeric_value": "1",
-      "eli_text_other_lang": "UserELIO",
-      "eli_code": "ADLILC.8846",
+      "eli_text_other_lang": "ListItemA",
+      "eli_code": "ADLILC.8847",
       "eli_code_type": "local",
       "eli_code_text": "Rio15"
     }
   ],
   "createUser": [
     {
-      "use_increment": 149,
-      "use_username": "Test.149User",
+      "use_increment": 1,
+      "use_username": "Test.1User",
       "use_firstname": "Auto",
       "use_password": "Manoj@2024",
       "use_surname": "Riomedtest",
-      "use_email": "thayne.sampson149@riomed.com",
+      "use_email": "thayne.sampson1@riomed.com",
       "use_expires": "30/06/2035",
       "use_title": "Mr",
-      "use_profession": "Consultant",
+      "use_profession": "Doctor",
       "use_mobile": 9586471203,
-      "use_speciality": "Cardiology",
+      "use_speciality": "General Medicine",
       "use_mcrn_number": 2354,
       "use_notes": "User added for testing purpose",
       "use_username_old": "Test325.user",
@@ -48,7 +48,7 @@
       "esp_initials": "Dr.",
       "esp_surname": "Riomedtest",
       "esp_profession": "Consultant",
-      "esp_specialty": "Cardiology",
+      "esp_specialty": "General Medicine",
       "esp_show": 1,
       "esp_local": 1,
       "esp_consultant": 1,
@@ -69,7 +69,7 @@
       "searchStartDate": "01/07/2023",
       "searchEndDate": "31/07/2023",
       "hpd_start_date": "01/06/2025",
-      "hpd_end_date": "30/08/2025",
+      "hpd_end_date": "30/10/2025",
       "hpd_working_start_time": "00:05",
       "hpd_working_end_time": "23:55",
       "hpd_monday": 1,
@@ -86,7 +86,7 @@
   "setHpClinicDiary": [
     {
       "hcd_start_date": "02/06/2025",
-      "hcd_end_date": "15/08/2025",
+      "hcd_end_date": "15/10/2025",
       "hcd_clinic_start_time": "00:15",
       "hcd_clinic_end_time": "23:45",
       "hcd_monday": 1,
@@ -103,7 +103,7 @@
   "editHpDiary": [
     {
       "hpd_start_date": "02/06/2025",
-      "hpd_end_date": "15/08/2025",
+      "hpd_end_date": "15/10/2025",
       "hpd_working_start_time": "00:15",
       "hpd_working_end_time": "23:45",
       "hpd_monday": 1,

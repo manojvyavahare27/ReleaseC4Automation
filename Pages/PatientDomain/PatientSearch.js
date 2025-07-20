@@ -35,7 +35,7 @@ class PatientSearch
         //this.txtbox_SearchPatient=page.getByRole('textbox', { name: 'Search' })
         //this.btn_AddPatient=page.locator("xpath=//button[contains(text(),'Add Patient')]")
         this.btn_AddPatient=page.locator("xpath=//div[contains(text(),'Add Patient')]")//17Feb2025
-        this.dropdown_sex=page.locator("xpath=//input[@name='sex']")
+        this.dropdown_sex=page.locator("xpath=//input[@id='sex']")
         this.dropdown_sex_male=page.getByRole('option', { name: 'Male', exact: true })  
         this.txtbox_Identifier=page.getByTestId('Identifier')
         this.txtbox_IdentificationId=page.getByTestId('Identification Id')
@@ -328,9 +328,17 @@ class PatientSearch
         await this.txtbox_BornDate.fill('')
     }
     //Born Date
+    // async selectBornDate(pat_dob)
+    // {   //await this.txtbox_BornDate.fill('')
+    //     await this.txtbox_BornDate.fill(pat_dob)
+    // }
     async selectBornDate(pat_dob)
     {   //await this.txtbox_BornDate.fill('')
-        await this.txtbox_BornDate.fill(pat_dob)
+        //await this.txtbox_BornDate.fill(pat_dob)
+        //await this.page.getByPlaceholder('dd/mm/yyyy').fill("22/09/2024")
+        await this.page.locator('[data-testid="Born"]').fill("22/09/2023");
+        await this.page.keyboard.press("Tab");
+
     }
     async clickOnSearchbtnOnPopup()
     {

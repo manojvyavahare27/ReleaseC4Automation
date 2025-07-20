@@ -168,7 +168,7 @@ class AddAddress
     async selectTempHealthRegion()
     {
         await this.dropdown_tempHealthRegion.click()
-        await this.page.getByRole('option', { name: 'London' }).click()
+        await this.page.getByRole('option', { name: 'Health Region' }).click()
     }
     async selectTempLocationZone()
     {
@@ -228,7 +228,7 @@ class AddAddress
     async selectPermHealthRegion()
     {
         await this.dropdown_permHealthRegion.click()
-        await this.page.getByRole('option', { name: 'London' }).click()
+        await this.page.getByRole('option', { name: 'Health Region' }).click()
     }
     async selectPermLocationZone()
     {
@@ -258,9 +258,9 @@ class AddAddress
     async SelectStartEndDate()
     {
         await this.calender_StartDate.click()
-        await this.calender_StartDate.type("01/01/2025")
+        await this.calender_StartDate.type("01/06/2025")
         await this.calender_EndDate.click()
-        await this.calender_EndDate.type("01/01/2025")
+        await this.calender_EndDate.type("01/08/2025")
     }
 
     //Save Address

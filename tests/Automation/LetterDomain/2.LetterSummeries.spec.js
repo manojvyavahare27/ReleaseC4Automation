@@ -62,17 +62,15 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1500);
      await loginpage.clickOnLogin();
      //await expect(page.getByText("Login success")).toHaveText("Login success");
-    
+    await page.pause()
      await homepage.clickOnSideIconPatient()
      await patientsearch.enterGivenName(jsonData.patDetails[index].pat_firstname)
-     await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname)
-     //await patientsearch.selectSex(jsonData.patDetails[index].pat_sex)  
-     //await patientsearch.enterHospitalRef(jsonData.patDetails[index].pat_hospital_ref)
-     
-     //await patientsearch.selectBornDate()
+     await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname)    
      await patientsearch.clickOnSearchPatButton()
-     //await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
-     await patientsearch.clickOnSearchPatientLink()   
+     await page.pause()
+     await patientsearch.clickOnSearchPatientLink() 
+     await patientsearch.ClickOnYesConfirmLegitimateRelationship()    
+     
     
      //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
      await page.waitForTimeout(1000);    
@@ -135,7 +133,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       await letterorSummeries.clickOnclosePopup()
       await page.waitForTimeout(1000)
       await letterorSummeries.clickOnSendEmailButton()
-
+        await page.getByRole('button', { name: 'cancelIcon' }).click()
       await letterorSummeries.clickOnDeleteRecordLink()
       await letterorSummeries.clickOnOkButton()      
       await expect(page.getByText("Letter deleted successfully")).toHaveText("Letter deleted successfully");

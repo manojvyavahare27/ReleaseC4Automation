@@ -401,23 +401,23 @@ async ClickOnSaveStockItemButton() {
 async FillPositions1()
 {
     await this.position1.click()   
-    await this.page.getByRole('option', { name: 'Zone Position' }).click() 
+    await this.page.getByRole('option', { name: 'Zone A1' }).click() 
 }
 
 async FillPositions2()
 {
     await this.position2.click()    
-    await this.page.getByRole('option', { name: 'Zone Position' }).click()
+    await this.page.getByRole('option', { name: 'Zone B1' }).click()
 }
 async FillPositions3()
 {
     await this.position3.click()    
-    await this.page.getByRole('option', { name: 'Zone Position' }).click()
+    await this.page.getByRole('option', { name: 'Zone C1' }).click()
 }
 async FillPositions4()
 {
     await this.position4.click()    
-    await this.page.getByRole('option', { name: 'Zone Position' }).click()
+    await this.page.getByRole('option', { name: 'Zone D1' }).click()
 }
 
 async clickOnExpandsDefaultPharmacy()
