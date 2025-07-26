@@ -91,7 +91,7 @@ test.describe("Medications Category", () => {
       await loginpage.clickOnLogin();  
       
       logger.info("Clicked on Login button successfully");
-      await page.pause()
+     
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()
       //await pharmacyLoc.clickOnCardioLocation()
@@ -109,7 +109,7 @@ test.describe("Medications Category", () => {
       await patientsearch.selectSex(data.pat_sex);
 
     await patientsearch.selectBornDate(data.pat_dob);
-    await page.pause()
+    
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
@@ -118,7 +118,7 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(2000);
       //await confirmexisting.clickOnConfirmExistingDetails();
       await homepage.clickOnMedicationSidebar()
-      await page.pause()
+      
       await page.waitForTimeout(2000);
       await homepage.clickOnAddMedicationlink()
       //await page.pause()
