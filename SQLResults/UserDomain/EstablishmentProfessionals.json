@@ -1,16 +1,16 @@
 [
   {
-    "esp_id": 2236,
-    "esp_eli_id": 6905,
+    "esp_id": 6524,
+    "esp_eli_id": 13087,
     "esp_use_username": null,
-    "esp_cli_id": 84,
+    "esp_cli_id": 85,
     "esp_est_id": 4,
     "esp_add_id": null,
     "esp_title": "Mr",
     "esp_initials": "Dr.",
     "esp_surname": "Riomedtest",
-    "esp_profession": "Consultant",
-    "esp_specialty": "Cardiology",
+    "esp_profession": "Doctor",
+    "esp_specialty": "General Medicine",
     "esp_show": 1,
     "esp_local": 1,
     "esp_ext_clinicname": null,
@@ -18,7 +18,7 @@
     "esp_commision_level": "Senior",
     "esp_upin_number": null,
     "esp_npi_number": "2021",
-    "esp_hp_proms_code": "84AR2236",
+    "esp_hp_proms_code": "85AR6524",
     "esp_not_a_person": 1,
     "esp_send_appointment_text_email": 1,
     "esp_proms_preferred_name": null,
@@ -29,8 +29,9 @@
     "esp_follow_up_consultation_validity": 10,
     "esp_consultant_code": "CC023",
     "esp_full_name": null,
-    "esp_region_eli_id": 6910,
+    "esp_region_eli_id": 12768,
     "esp_region_eli_text": "HP Region1",
+    "esp_allow_patient_to_book_appointment": null,
     "esp_number_of_patients_allowed": null
   }
 ]

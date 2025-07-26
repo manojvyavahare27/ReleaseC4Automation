@@ -5,8 +5,8 @@ class Homepage{
         this.iconPatient=page.locator("xpath=//div[@data-testid='Patients']")
         this.sidebarPatientIcon=page.locator("xpath=//img[@alt='Patients Image Avatar']")
         this.iconHomePage=page.locator("xpath=//img[@alt='homeDashboard']")
-        this.iconAppointment=page.getByTestId('Appointments').nth(1)
-        this.pharmacyIcon=page.locator("xpath=//div[@class='MuiBox-root mui-1s8bum5']//div[@data-testid='Pharmacy']")
+        this.iconAppointment=page.locator("xpath=//div[@data-testid='Appointments']")
+        this.pharmacyIcon=page.locator("xpath=//div[@data-testid='moduleDrawerPharmacy']")
 
         
         this.iconReferral=page.getByRole('heading', { name: 'Referrals' })

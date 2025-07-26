@@ -27,7 +27,7 @@ class PatientDuplicateCheck
     {
         //await this.dropdown_unique_Identification.selectOption(page.getByRole('option', { name: 'Passport ID' }).click())
         await this.dropdown_unique_Identification.click()
-        await this.page.getByRole('option', { name: 'Passport ID' }).click()        
+        await this.page.getByRole('option', { name: 'Aadhar Card' }).click()        
     }
 
     async enterUniqueIdentificationId(pid_value1)
@@ -38,7 +38,7 @@ class PatientDuplicateCheck
     async selectPhotoIdentification()
     {
         await this.dropdown_photo_Identification.click()
-        await this.page.getByRole('option', { name: 'Adhar Card' }).click()
+        await this.page.getByRole('option', { name: 'Aadhar Card' }).click()
     }
 
     async enterPhotoIdentification(pid_value2)

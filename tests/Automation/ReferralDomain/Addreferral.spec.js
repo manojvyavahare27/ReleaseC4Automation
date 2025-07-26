@@ -93,7 +93,7 @@ test.describe("Database Comparison Add New Referral", () => {
        await patientsearch.clickOnSearchPatientLink();  
        await patientsearch.ClickOnYesConfirmLegitimateRelationship()
        await page.waitForTimeout(1500);
-       await page.pause()
+      // await page.pause()
        await confirmexisting.selectRelationship(jsonData.pip[index].pip_relationship);
        await page.waitForTimeout(1500);   
        await confirmexisting.clickOnConfirmExistingDetails();
@@ -110,7 +110,7 @@ test.describe("Database Comparison Add New Referral", () => {
        await addreferral.selectModeOfreferral(jsonData.AddReferral[index].ref_referral_mode.toString());
        await addreferral.selectService(jsonData.AddReferral[index].cli_name.toString());
       await addreferral.selectClinicType(jsonData.AddReferral[index].ref_clinic_type.toString());
-       await page.pause()
+       //await page.pause()
        await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location);
       await addreferral.selectTeam(jsonData.AddReferral[index].ref_region_eli_text.toString());
        await addreferral.selectPatientcare();
@@ -123,6 +123,6 @@ test.describe("Database Comparison Add New Referral", () => {
       // await addreferral.clickOnAwaitReferralAcceptance();
        await addreferral.clickOnSaveButton();
        await page.waitForTimeout(200);   
-       await expect(page.getByText("Referral added successfully")).toHaveText("Referral added successfully");     
+       await expect(page.getByText("Awaiting referral added successfully")).toHaveText("Awaiting referral added successfully");     
   });
 });

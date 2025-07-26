@@ -1,6 +1,10 @@
 {
   "loginDetails": [
     {
+      "username": "release.manoj",
+      "password": "Manoj@2025"
+    },
+    {
       "username": "manoj.c4",
       "password": "Manoj@2023"
     },
@@ -25,7 +29,7 @@
     {
       "pat_hospital_ref": "refPat00h",
       "pat_title": "Dr",
-      "pat_firstname": "Refh",
+      "pat_firstname": "RefJ",
       "pat_surname": "Riomed",
       "pat_sex": "M",
       "pat_dob": "01/01/2000",
@@ -58,7 +62,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "Refh",
+      "pat_firstname": "RefJ",
       "pat_surname": "Riomed",
       "pat_sex": "M",
       "pat_dob": "01/01/2000",
@@ -89,7 +93,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "Refh",
+      "pat_firstname": "RefJ",
       "pat_lastname": "Riomed",
       "pat_sex": "M",
       "pat_dob": "01/01/2000",
@@ -98,7 +102,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "Refh.Riomed@Gmail.com"
+      "add_email": "RefJ.Riomed@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -226,9 +230,9 @@
   ],
   "AddReferral": [
     {
-      "rtt_referral_received_date": "14/07/2025",
-      "rtt_referral_approved_date": "14/07/2025",
-      "ref_referral_date": "13/07/2025",
+      "rtt_referral_received_date": "21/07/2025",
+      "rtt_referral_approved_date": "21/07/2025",
+      "ref_referral_date": "20/07/2025",
       "ref_time_set": "12:00:00",
       "SourceOFReferral": "Self",
       "ref_referral_type_eli_text": "Clinical",
@@ -260,22 +264,22 @@
   ],
   "serviceReferral": [
     {
-      "ref_start_date": "14/07/2025",
-      "ref_end_date": "14/07/2025"
+      "ref_start_date": "21/07/2025",
+      "ref_end_date": "21/07/2025"
     }
   ],
   "acceptedReferral": [
     {
       "ref_referral_outcome": "invited to clinic",
-      "ref_acceptance_date": "14/07/2025"
+      "ref_acceptance_date": "21/07/2025"
     }
   ],
   "rejectedReferral": [
     {
       "ref_referral_outcome": "acceptedthenrejected",
-      "ref_discharge_date": "14/07/2025",
+      "ref_discharge_date": "21/07/2025",
       "ref_discharge_reason": "The Referral was accepted then rejected for the following reason Rejected For testing",
-      "ref_stopped_date": "14/07/2025",
+      "ref_stopped_date": "21/07/2025",
       "ref_stopped_reason": "Rejected For testing"
     }
   ]

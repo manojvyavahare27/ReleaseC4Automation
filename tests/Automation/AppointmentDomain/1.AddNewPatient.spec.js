@@ -116,7 +116,7 @@ test.describe('New Patient', () => {
       await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
       await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
 
-      // await page.pause()
+      await page.pause()
       await patientduplicatecheck.selectUniqueIdentification();
       //await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId)
       //await patientduplicatecheck.enterUniqueIdentificationId(jsonData.patientIdentifier[index].pid_value1.toString());

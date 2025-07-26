@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "pod_id": 7106,
+    "pod_est_id": 4,
+    "pod_pat_id": 88348,
+    "pod_cause_of_death_type_eli_id": null,
+    "pod_cause_of_death_type_eli_text": null,
+    "pod_cause": "Cryptosporidiosis",
+    "pod_cause_code": "1A32",
+    "pod_cause_code_type": null,
+    "pod_created_by": "release.manoj",
+    "pod_created": "21/07/2025",
+    "pod_deleted_by": null,
+    "pod_deleted": null,
+    "pod_record_status": "approved"
+  }
+]

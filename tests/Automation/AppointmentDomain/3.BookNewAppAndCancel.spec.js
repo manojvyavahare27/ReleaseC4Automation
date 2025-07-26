@@ -82,6 +82,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1500);
      await loginpage.enter_Password(jsonData.loginDetails[0].password);
      await page.waitForTimeout(1500);
+      await page.pause()
      await loginpage.clickOnLogin();
      await expect(page.getByText("Login success")).toHaveText("Login success");
      await page.waitForTimeout(1000);

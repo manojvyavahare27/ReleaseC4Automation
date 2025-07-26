@@ -123,15 +123,25 @@ test.describe("Database Comparison Add Edit Patient", () => {
       } else {
         console.log("Date is not less than 5 days from current date");
       }
+      // await patientduplicatecheck.selectUniqueIdentification();
+      // await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId);
+      // await patientduplicatecheck.selectPhotoIdentification();
+      // await patientduplicatecheck.enterPhotoIdentification(patientdetailsdata.PhotoIdentificationId);
+      // //await page.pause();
+      // await patientduplicatecheck.selectIssuingCountry(jsonData.addPatient[index].pat_country_of_birth);
+      // await patientduplicatecheck.selectTitle(jsonData.addPatient[index].pat_title);
+      // await patientduplicatecheck.enterMiddleName(jsonData.addPatient[index].pat_middlename);
+      // await patientduplicatecheck.enterMaidenName(jsonData.addPatient[index].pat_maiden_name);
+      //await page.pause()
       await patientduplicatecheck.selectUniqueIdentification();
-      await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId);
+      //await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId)
+      //await patientduplicatecheck.enterUniqueIdentificationId(jsonData.patientIdentifier[index].pid_value1.toString());
       await patientduplicatecheck.selectPhotoIdentification();
-      await patientduplicatecheck.enterPhotoIdentification(patientdetailsdata.PhotoIdentificationId);
-      //await page.pause();
-      await patientduplicatecheck.selectIssuingCountry(jsonData.addPatient[index].pat_country_of_birth);
-      await patientduplicatecheck.selectTitle(jsonData.addPatient[index].pat_title);
-      await patientduplicatecheck.enterMiddleName(jsonData.addPatient[index].pat_middlename);
-      await patientduplicatecheck.enterMaidenName(jsonData.addPatient[index].pat_maiden_name);
+      await patientduplicatecheck.enterPhotoIdentification(jsonData.patientIdentifier[index].pid_value2.toString());
+      await patientduplicatecheck.selectIssuingCountry(jsonData.patientIdentifier[index].pat_country);
+      await patientduplicatecheck.selectTitle(jsonData.patientIdentifier[index].pat_title);
+      await patientduplicatecheck.enterMiddleName(jsonData.patientIdentifier[index].pat_middlename);
+      await patientduplicatecheck.enterMaidenName(patientdetailsdata.MaidenName);
       //await page.pause()
       //Is baby born in hospital
       if (differenceInDays < 5) {
