@@ -85,7 +85,7 @@ test.describe("Patient Domain Db COmparison", () => {
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
-    await page.pause()
+    //await page.pause()
     await patientsearch.clickOnSearchPatientLink();  
     await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await page.waitForTimeout(1500);
@@ -121,7 +121,7 @@ test.describe("Patient Domain Db COmparison", () => {
 
     await expect(page.getByText("Referral added successfully")).toHaveText("Referral added successfully");
     
-await page.pause()
+//await page.pause()
     
     // await page.pause()
     //Again select same patient.
@@ -156,7 +156,7 @@ await page.pause()
     
     await confirmexisting.clickOnSaveChangeDetails();
     await expect(page.getByText("Patient details changed successfully")).toHaveText("Patient details changed successfully");
-await page.pause()
+//await page.pause()
     ////////// Patient Referral comparison/////////
     var sqlQuery =
       "select * from patients where pat_hospital_ref= '" +
