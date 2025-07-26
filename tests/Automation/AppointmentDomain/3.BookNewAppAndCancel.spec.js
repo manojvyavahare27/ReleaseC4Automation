@@ -82,7 +82,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1500);
      await loginpage.enter_Password(jsonData.loginDetails[0].password);
      await page.waitForTimeout(1500);
-      await page.pause()
+     
      await loginpage.clickOnLogin();
      await expect(page.getByText("Login success")).toHaveText("Login success");
      await page.waitForTimeout(1000);
@@ -99,7 +99,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      //await homepage.clickOnPatientIcon()
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnAppointmentIcon()    
-     await page.pause()
+    
      await patientsearch.clickOnSearchPatButton()
      await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
      await page.waitForTimeout(1000);

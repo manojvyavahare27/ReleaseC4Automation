@@ -102,7 +102,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickOnSearchPatButton();
-    await page.pause()
+   
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname);
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
     await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
@@ -137,7 +137,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addreferral.selectPatientcare();
       await addreferral.selectPreferredSexForAssessment(jsonData.AddReferral[index].ref_preferred_examiner_sex_entry);
       await addreferral.selectConsultant();
-      // await page.pause()
+    
       await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString());
       await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString());
 
@@ -158,7 +158,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.clickOnNextButton();
       await servicebookapp.selectAppDetailsAppointmentType(jsonData.addEditAppointments[index].reaType);
       // await servicebookapp.selectAppDetailsZone()
-       await page.pause()
+      
       await servicebookapp.selectAppDetailsAppReason(jsonData.addEditAppointments[index].rea_review_reason);
       await servicebookapp.selectSendAppTextEmail(); // ?
       await servicebookapp.selectPatientType(jsonData.addEditAppointments[index].rea_patient_type);
@@ -190,7 +190,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       } else {
         console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
       }
-      //await page.pause();
+    
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(7000);
       await addeditpatientappointment.selectConsultant();
@@ -201,7 +201,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addeditpatientappointment.clickOnSaveButton();
 
       await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
-      await page.pause()
+     
       //Communication Consent      
       //  await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')
       await scheduleserviceapp.clickOnAppScheduleStatus();
@@ -261,7 +261,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
 
 
       await servicebookapp.clickOnNextButton();
-      //await page.pause()
+     
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
       );
@@ -287,7 +287,6 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
 
 
-      await page.pause()
       //Communication Consent     
       await servicebookapp.clikcOnRadioAllNo();
       await servicebookapp.clickOnRadioAllYes();
@@ -316,7 +315,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
       }
 
-      await page.pause()
+    
       // Edit Patient App.
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(2000);

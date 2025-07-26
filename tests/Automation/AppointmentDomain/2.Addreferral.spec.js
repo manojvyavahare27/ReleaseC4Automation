@@ -86,6 +86,7 @@ test.describe("Appointment Domain Db COmparison", () => {
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
+    await page.pause()
     await patientsearch.clickOnSearchPatientLink();  
     await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await page.waitForTimeout(1500);
