@@ -78,7 +78,7 @@ class SetHPDairy{
     }
     async enterRepeatScheduleEndDate()
     {
-        await this.RepeatScheduleEndDate.type("28/07/2025")
+        await this.RepeatScheduleEndDate.type("28/08/2025")
     }
     async closeRepeatSchedulePopupPage()
     {
