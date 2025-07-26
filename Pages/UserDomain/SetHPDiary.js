@@ -37,7 +37,7 @@ class SetHPDairy{
         this.btnRepeatSchedule=page.locator("xpath=//div[contains(text(),'Repeat Schedule')]")
         this.closeRepeatSchedulePopup=page.getByTestId('CancelIcon').locator('path')
         //this.RepeatScheduleEndDate=page.getByTestId('CommonCellmaPopup').getByPlaceholder('dd/mm/yyyy')
-          this.RepeatScheduleEndDate=page.locator("xpath=//div[@class='MuiFormControl-root MuiTextField-root css-qvcbpi']//input[@id='End Date']")
+          this.RepeatScheduleEndDate=page.locator("xpath=//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedEnd mui-uk3hqu']//input[@data-testid='End Date']")
         this.btnSaveRepeatSchedule=page.getByTestId('CommonCellmaPopup').getByTestId('Save')
         this.deleteHPSchedule=page.getByRole('row', { name: '03/07/2023 03/07/2023 Monday Monday Start Time - 01:09 End Time - 10:50 - - delete edit' }).getByRole('button', { name: 'delete' })
                                      //getByRole('row', { name: '09/06/2023 09/06/2023 Friday Friday Start Time - 01:09 End Time - 10:50 - - delete edit' }).getByRole('button', { name: 'delete' })
