@@ -57,7 +57,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await loginpage.enter_Password(jsonData.loginDetails[1].password);
      await page.waitForTimeout(1500);
      await loginpage.clickOnLogin();        
-     await page.pause() 
+     
      await homepage.clickOnSideIconPatient()
      await patientsearch.enterGivenName(jsonData.patDetails[index].pat_firstname)
      await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname)     
@@ -91,7 +91,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1000);
      await letterorSummeries.clickOnSendforApprovalButton()    
      await page.waitForTimeout(1000);     
-     await page.pause()
+    
      await letterorSummeries.clickOnOkButton()
      await page.waitForTimeout(2000)
      await expect(page.getByText("Letter added to patient successfully")).toHaveText("Letter added to patient successfully");

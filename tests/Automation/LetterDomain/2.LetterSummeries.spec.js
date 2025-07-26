@@ -62,12 +62,12 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1500);
      await loginpage.clickOnLogin();
      //await expect(page.getByText("Login success")).toHaveText("Login success");
-    await page.pause()
+    
      await homepage.clickOnSideIconPatient()
      await patientsearch.enterGivenName(jsonData.patDetails[index].pat_firstname)
      await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname)    
      await patientsearch.clickOnSearchPatButton()
-     await page.pause()
+    
      await patientsearch.clickOnSearchPatientLink() 
      await patientsearch.ClickOnYesConfirmLegitimateRelationship()    
      
