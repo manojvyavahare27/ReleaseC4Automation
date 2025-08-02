@@ -289,6 +289,7 @@ test.describe('New Patient', () => {
       await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);
       await addpip.selectPIPIdentifierType(jsonData.pip[index].pip_identifier_type)
 
+      await page.pause()
       // await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString())
       if (await addpip.dropdownPIPIdentifierType.isVisible()) {
         await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString());
