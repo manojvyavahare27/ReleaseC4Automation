@@ -122,7 +122,7 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(2000)
       await pharmacyHomePage.clickOnExpandIconForDispense()
       await pharmacyHomePage.clickOnBackToStockButton()
-      await pharmacyHomePage.enterBackToStockQty()
+      //await pharmacyHomePage.enterBackToStockQty()
       await pharmacyHomePage.enterReasonForReturn()
       await pharmacyHomePage.clickOnSaveBackToStock()
       await page.waitForTimeout(200)

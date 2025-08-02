@@ -83,7 +83,7 @@ class ClinicalExtraDetails {
     this.addToOrderSets = page.locator("xpath=//label[@aria-label='Add to Order Set']//input[@class='PrivateSwitchBase-input css-1m9pwf3']");
     this.save = page.locator("xpath=//button[@aria-label='Save']");
     this.saveCheckList = page.locator("xpath=//button[@aria-label='saveChecklist']");
-    this.saveExtraDetails = page.locator("xpath=//button[@aria-label='saveCategoryExtraDetails']");
+    this.saveExtraDetails = page.locator("xpath=//button[@data-testid='saveAndCreatePrescription']");
     this.delete = page.locator("xpath=//button[@data-testid='Delete']");
     this.deleteCertificate = page.locator("xpath=//button[@aria-label='Delete']");
     this.cancelDelete = page.locator("xpath=//button[@data-testid='Cancel']");

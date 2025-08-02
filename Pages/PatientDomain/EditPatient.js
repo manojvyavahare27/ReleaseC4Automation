@@ -35,8 +35,8 @@ class EditPatient
         
        //this.linkView
         //All Links under Links on Edit Patient page
-        this.link_Links=page.getByTestId('Links')
-        this.link_Death=page.getByRole('heading', { name: 'Death' }).first()
+        this.link_Links=page.locator("xpath=//button[@data-testid='links']")
+        this.link_Death=page.locator("xpath=//li[@data-testid='deathLink']")
         this.link_Appointments=page.getByRole('heading', { name: 'Appointments' })
         this.link_Consent=page.getByRole('heading', { name: 'Consent' })
         this.link_Details=page.getByRole('heading', { name: 'Details' })

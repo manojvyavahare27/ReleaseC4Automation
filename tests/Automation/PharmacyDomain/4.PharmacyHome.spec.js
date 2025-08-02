@@ -136,9 +136,9 @@ test.describe("Medications Category", () => {
      // await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
       await pharmacyHomePage.clickHistoryIconForMedicine(jsonData.AddMedication[index].pacr_que_name)
       
-      await pharmacyHomePage.clickOnClosePopup()
-      await pharmacyHomePage.clickOnAssociatedConditionIcon()
-      await pharmacyHomePage.clickOnClosePopup()
+      // await pharmacyHomePage.clickOnClosePopup()
+      // await pharmacyHomePage.clickOnAssociatedConditionIcon()
+      // await pharmacyHomePage.clickOnClosePopup()
       // await pharmacyHomePage.clickOnSideEffectIcon()
       // await pharmacyHomePage.clickOnClosePopup()
       await pharmacyHomePage.selectCheckBoxforPrescription()

@@ -54,7 +54,7 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
     this.buttobBackToStock=page.locator("xpath=//button[@data-testid='Back to Stock']")
     this.backtoStockQuantity=page.locator("xpath=//input[@aria-label='quantity_1805']")
     this.txtareaReasonForReturn=page.locator("xpath=//textarea[@id='reasonForReturn']")
-    this.buttonSaveBackToStock=page.locator("xpath=//button[@data-testid='Save']")
+    this.buttonSaveBackToStock=page.locator("xpath=//button[@data-testid='saveBacKToStock']")
 
     //
     this.expandMedicationIcon=page.locator('svg[data-testid="ExpandCircleDownOutlinedIcon"]');

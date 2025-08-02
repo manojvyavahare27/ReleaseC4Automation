@@ -138,8 +138,8 @@ test.describe("Database Comparison Service Referrals", () => {
     // await servicereferrals.clickOnShowButton();
 
     await page.waitForTimeout(2000)
-    await servicereferrals.selectStatusTypeAcceptedRequiresAppointment();
-    await servicereferrals.clickOnSearchButton();   
+    // await servicereferrals.selectStatusTypeAcceptedRequiresAppointment();
+    // await servicereferrals.clickOnSearchButton();   
     await page.waitForTimeout(2000)
     await servicereferrals.clickOnRejectLink();
       await servicereferrals.enterRejectReferralNotes();

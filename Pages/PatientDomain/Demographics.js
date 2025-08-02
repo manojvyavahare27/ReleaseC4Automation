@@ -7,11 +7,11 @@ class Demographics{
         this.Btn_SaveConsentForphotographcs=page.getByTestId('Save')
 
         //Links
-        this.link_Links=page.getByTestId('Links')
-        this.link_Details=page.getByRole('heading', { name: 'Details' })
-        this.link_PatientId=page.getByRole('heading', { name: 'Patient Id' })
+       this.link_Links=page.locator("xpath=//button[@data-testid='links']")
+        this.link_Details=page.locator("xpath=//li[@data-testid='detailsLink']")
+        this.link_PatientId=page.locator("xpath=//li[@data-testid='patientIdLink']")
         this.link_PIP=page.getByRole('heading', { name: 'Patient Interested Parties' })
-        this.link_QAndA=page.getByRole('heading', { name: 'Patient Question' })
+        this.link_QAndA=page.locator("xpath=//li[@data-testid='patientQuestionLink']")
         this.link_Summary=page.getByTestId('Summary').getByRole('heading', { name: 'Summary' })
         this.link_WorkList=page.getByRole('heading', { name: 'Worklist' })
         this.link_TestPatient=page.getByRole('heading', { name: 'Test' })

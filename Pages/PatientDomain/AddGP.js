@@ -13,15 +13,15 @@ class AddGP
         this.txtbox_GPCode=page.getByTestId('GP Code')
         this.txtbox_GPPracticeCode=page.getByTestId('Practice Code')
         this.txtbox_GPGMCCode=page.getByTestId('GMC Code')
-        this.btnShowGP=page.getByText('Show')
-        this.dropdown_UnknownPostcode=page.locator("xpath=//div[@aria-labelledby='mui-component-select-unknownNoFixedAbodeorOverseasVisitor']")
+       this.btnShowGP=page.locator("xpath=//input[@name='show']")
+        this.dropdown_UnknownPostcode=page.locator("xpath=//div[@data-testid='Unknown, No Fixed Abode, or Overseas Visitor']")
         //GP Contact Details
-        this.txtbox_GPPhone=page.getByTestId('GP Phone')
-        this.txtbox_GPFax=page.getByTestId('Fax')
-        this.txtbox_GPWorkPhone=page.getByTestId('Work Phone')
-        this.txtbox_GPMobile=page.getByTestId('Mobile')
-        this.txtbox_GPEmail=page.getByTestId('Email')
-        this.btnSaveGP=page.getByTestId('Save')
+        this.txtbox_GPPhone=page.locator("xpath=//input[@data-testid='GP Phone']")
+        this.txtbox_GPFax=page.locator("xpath=//input[@data-testid='Fax']")
+        this.txtbox_GPWorkPhone=page.locator("xpath=//input[@data-testid='Work Phone']")
+        this.txtbox_GPMobile=page.locator("xpath=//input[@data-testid='Mobile']")
+        this.txtbox_GPEmail=page.locator("xpath=//input[@data-testid='Email']")
+        this.btnSaveGP=page.locator("xpath=//button[@data-testid='Save']")
 
         //Gp Address Details
         this.txtPostcodeSearch=page.locator("xpath=//input[@name='postcodeSearch']")

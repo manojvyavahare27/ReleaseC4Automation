@@ -19,7 +19,7 @@ class ReturnItemsPopup {
     }
 
     async enterAmountToReturn(sttra_quantity) {
-        await this.amountToReturn.type(sttra_quantity);
+        await this.amountToReturn.fill(sttra_quantity);
     }
 
     async enterAdditionalNotes(sttra_additional_notes) {

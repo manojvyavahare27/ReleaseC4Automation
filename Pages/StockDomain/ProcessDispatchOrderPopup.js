@@ -4,7 +4,7 @@ class ProcessDispatchOrderPopup
     {
         this.page=page
          this.closeIcon=page.locator("xpath=//button[@aria-label='cancelIcon']")
-         this.createDispatchOrderButton=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-spacing-xs-3 mui-1ckp3ow']//button[@data-testid='Create Dispatch Order'][1]")
+         this.createDispatchOrderButton=page.locator("xpath=//button[@data-testid='createDispatchOrderPopup']")
     }
     async clickOncloseIcon()
     {
