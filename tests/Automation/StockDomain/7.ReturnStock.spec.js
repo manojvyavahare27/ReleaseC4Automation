@@ -75,7 +75,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await loginpage.clickOnLogin();
        // await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnSideIconStock()
-        await page.pause()
+       
         await stockallLoc.clickOnShowHiddenLocationButton()     
         await stockallLoc.clickOnCardioLocation()
         await page.waitForTimeout(1000)
@@ -119,7 +119,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
-        await page.pause()
+        
         //await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnSideIconStock()
         await page.waitForTimeout(3000)

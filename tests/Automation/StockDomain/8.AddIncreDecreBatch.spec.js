@@ -96,7 +96,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await expect(page.getByText('Quantity Change Type required')).toHaveText('Quantity Change Type required')
    await expect(page.getByText('Batch Quantity Change required')).toHaveText('Batch Quantity Change required')
    
-   await page.pause()
+   
    //Increment
     await addBatch.selectQuantityChangeType('Increment')
     await addBatch.enterBatchQuantityChange()
