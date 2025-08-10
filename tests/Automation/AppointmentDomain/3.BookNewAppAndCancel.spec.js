@@ -119,7 +119,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(5000);
      const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
      console.log(addReferralText)
-    await page.pause()
+   
      if(addReferralText)
      {       
      // await page.pause()
@@ -154,7 +154,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           // await page.getByRole('button', { name: 'Add Appointments' }).click()
           await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date)
           await page.waitForTimeout(2000);
-          await page.pause()
+         
           await servicebookapp.selectDropdownSpecility(jsonData.bookNewAppointments[index].rea_special)
           await servicebookapp.selectDropdownClinicType(jsonData.bookNewAppointments[index].rea_clinic_type)
           await servicebookapp.selectDropdownClinicLocation(jsonData.bookNewAppointments[index].rea_location)
@@ -175,13 +175,13 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
           await servicebookapp.selectSendAppTextEmail()
           await servicebookapp.selectPatientType(jsonData.bookNewAppointments[index].rea_patient_type)
-         await page.pause()
+         
           await servicebookapp.selectReasonForAppdelay(jsonData.bookNewAppointments[index].rea_reason_for_delay)
           await servicebookapp.enterTriage(jsonData.bookNewAppointments[index].rea_triage.toString())
           await servicebookapp.enterNotes(jsonData.bookNewAppointments[index].rea_notes)
           await servicebookapp.clickOnNextButton()
           await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
-          await page.pause()
+          
 
            await page.waitForTimeout(2000)
           //Communication Consent
@@ -192,7 +192,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
            await page.waitForTimeout(1000)
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-          await page.pause()
+          
 
           // 3rd July code
           await scheduleserviceapp.clickOnLinksMenu()
@@ -254,7 +254,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await scheduleserviceapp.clickOnChangeButton()
      await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')     
      
-     await page.pause()
+    
   var sqlQuery ="select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref +"' order by pat_id desc limit 1";
    console.log(sqlQuery);
    var sqlFilePath = "SQLResults/AppointmentDomain/patientData.json";
@@ -318,7 +318,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           
           //Select Morning Slots
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
-          await page.pause()
+         
           await servicebookapp.clickOnNextButton()
           await servicebookapp.selectAppDetailsAppointmentType(jsonData.bookNewAppointments[index].reaType)    
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
@@ -335,7 +335,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
          
-          await page.pause()
+         
           var sqlQuery =
           "select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref + "' order by pat_id desc limit 1";
         console.log(sqlQuery);

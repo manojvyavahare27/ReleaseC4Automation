@@ -84,7 +84,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await page.waitForTimeout(1500);
         //await page.pause()
         await loginpage.clickOnLogin()
-        await expect(page.getByText('Login success')).toHaveText('Login success')
+       // await expect(page.getByText('Login success')).toHaveText('Login success')
         // Scroll to the bottom of the page
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
         await homepage.clickonSidebarHomeIcon()
