@@ -377,7 +377,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
 
 
     //Change status to Reschedule Appointment
-    await page.pause()
+    //await page.pause()
     await scheduleserviceapp.clickOnAppScheduleStatus()
     await scheduleserviceapp.clickOnReScheduleAppButton()
     await scheduleserviceapp.selectDropdownReasonForRescheduling()
