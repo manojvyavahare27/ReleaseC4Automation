@@ -9452,3 +9452,8 @@
 {"level":"info","message":"Username enter successfully","timestamp":"2025-08-02T13:21:40.506Z"}
 {"level":"info","message":"Password enter successfully","timestamp":"2025-08-02T13:21:41.779Z"}
 {"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-08-02T13:21:41.887Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-08-03T05:05:46.107Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-08-03T05:06:04.520Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-08-03T05:06:08.883Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-08-03T05:06:09.021Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-08-03T05:06:09.471Z"}

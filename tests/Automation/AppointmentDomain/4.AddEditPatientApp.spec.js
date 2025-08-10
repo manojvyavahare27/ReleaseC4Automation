@@ -114,7 +114,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await page.waitForTimeout(4000);
     await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(3000);
-    ///await page.pause()
+    await page.pause()
     const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
 
     if (addReferralText) {
@@ -232,58 +232,30 @@ test.describe("Database Comparison Add Edit Patient", () => {
       }
     } else {
       //await page.pause()
-      await servicebookapp.SelectDate(
-        jsonData.addEditAppointments[index].rea_date.toString()
-      );
-      await servicebookapp.selectDropdownSpecility(
-        jsonData.addEditAppointments[index].rea_special
-      );
-      await servicebookapp.selectDropdownClinicType(
-        jsonData.addEditAppointments[index].rea_clinic_type
-      );
+      await servicebookapp.SelectDate(jsonData.addEditAppointments[index].rea_date.toString());
+      await page.waitForTimeout(1000)
+      await servicebookapp.selectDropdownSpecility(jsonData.addEditAppointments[index].rea_special);
+      await servicebookapp.selectDropdownClinicType(jsonData.addEditAppointments[index].rea_clinic_type);
       //await page.pause();
-      await servicebookapp.selectDropdownClinicLocation(
-        jsonData.addEditAppointments[index].rea_location
-      );
-      await servicebookapp.selectTeam(
-        jsonData.addEditAppointments[index].rea_region_eli_text
-      );
+      await servicebookapp.selectDropdownClinicLocation(jsonData.addEditAppointments[index].rea_location);
+      await servicebookapp.selectTeam(jsonData.addEditAppointments[index].rea_region_eli_text);
       await servicebookapp.ClickonSearchHPButton();
-      await servicebookapp.clickOnHPnameLink(
-        jsonData.addEditAppointments[index].rea_hp_name_link
-      );
+      await servicebookapp.clickOnHPnameLink(jsonData.addEditAppointments[index].rea_hp_name_link);
       await servicebookapp.clickOnShowCalendarbtn();
       //await servicebookapp.clickOnHPnameLink(serviceappdetails.HPNameLink)
 
-      await servicebookapp.clickOnMorningSlotstoAddApp(
-        jsonData.addEditAppointments[index].convertedTime
-      );
-
-
+      await servicebookapp.clickOnMorningSlotstoAddApp(jsonData.addEditAppointments[index].convertedTime);
       await servicebookapp.clickOnNextButton();
-     
-      await servicebookapp.selectAppDetailsAppointmentType(
-        jsonData.addEditAppointments[index].reaType
-      );
+       await servicebookapp.selectAppDetailsAppointmentType(jsonData.addEditAppointments[index].reaType);
       // await servicebookapp.selectAppDetailsZone()
 
-      await servicebookapp.selectAppDetailsAppReason(
-        jsonData.addEditAppointments[index].rea_review_reason
-      );
+      await servicebookapp.selectAppDetailsAppReason(jsonData.addEditAppointments[index].rea_review_reason);
       await servicebookapp.selectSendAppTextEmail();
-      await servicebookapp.selectPatientType(
-        jsonData.addEditAppointments[index].rea_patient_type
-      );
+      await servicebookapp.selectPatientType(jsonData.addEditAppointments[index].rea_patient_type);
       //await servicebookapp.selectFreeAppointment()
-      await servicebookapp.selectReasonForAppdelay(
-        jsonData.addEditAppointments[index].rea_reason_for_delay
-      );
-      await servicebookapp.enterTriage(
-        jsonData.addEditAppointments[index].rea_triage.toString()
-      );
-      await servicebookapp.enterNotes(
-        jsonData.addEditAppointments[index].rea_notes
-      );
+      await servicebookapp.selectReasonForAppdelay(jsonData.addEditAppointments[index].rea_reason_for_delay);
+      await servicebookapp.enterTriage(jsonData.addEditAppointments[index].rea_triage.toString());
+      await servicebookapp.enterNotes(jsonData.addEditAppointments[index].rea_notes);
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
 
 

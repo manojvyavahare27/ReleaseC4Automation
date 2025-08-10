@@ -119,7 +119,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(5000);
      const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
      console.log(addReferralText)
-    
+    await page.pause()
      if(addReferralText)
      {       
      // await page.pause()
@@ -154,6 +154,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           // await page.getByRole('button', { name: 'Add Appointments' }).click()
           await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date)
           await page.waitForTimeout(2000);
+          await page.pause()
           await servicebookapp.selectDropdownSpecility(jsonData.bookNewAppointments[index].rea_special)
           await servicebookapp.selectDropdownClinicType(jsonData.bookNewAppointments[index].rea_clinic_type)
           await servicebookapp.selectDropdownClinicLocation(jsonData.bookNewAppointments[index].rea_location)
@@ -246,8 +247,8 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await scheduleserviceapp.clickonRefresh()
           await scheduleserviceapp.closePopUpWindow()     
          
-     await scheduleserviceapp.ClickonAppTypeLink()
-     await scheduleserviceapp.clickOnCloseAppTypePopup()
+    //  await scheduleserviceapp.ClickonAppTypeLink()
+    //  await scheduleserviceapp.clickOnCloseAppTypePopup()
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.selectAppTypeDropdown()
      await scheduleserviceapp.clickOnChangeButton()

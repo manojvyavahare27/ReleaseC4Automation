@@ -181,7 +181,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await servicebookapp.clickOnNextButton()
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
-        // await page.pause()
+         await page.pause()
         //Communication Consent
         await servicebookapp.selectCommConsentNo()
         await servicebookapp.clikcOnRadioAllNo()
