@@ -79,7 +79,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
  
-
+    //await page.pause()
    //Add New Medication
    await stockItemsFliters.enterItemName(jsonData.EditStockItem[0].stock_name)
    await stockItemsFliters.clickSearchButton()
