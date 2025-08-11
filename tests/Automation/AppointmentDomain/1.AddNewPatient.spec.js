@@ -104,7 +104,7 @@ test.describe('New Patient', () => {
       logger.info("Family Name entered successfully");
       await patientsearch.selectSex(data.pat_sex);
 
-      await page.pause()
+     
 
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
@@ -116,7 +116,7 @@ test.describe('New Patient', () => {
       await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
       await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
 
-      await page.pause()
+     
       await patientduplicatecheck.selectUniqueIdentification();
       //await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId)
       //await patientduplicatecheck.enterUniqueIdentificationId(jsonData.patientIdentifier[index].pid_value1.toString());
@@ -176,7 +176,9 @@ test.describe('New Patient', () => {
      
       await addpatient.enterDisablityNotes(jsonData.addPatient[index].pat_disability_note);
       await addpatient.selectLanguage(jsonData.addPatient[index].pat_language);      
-      await addpatient.enterHospitalRef(data.pat_hospital_ref);
+
+   //   await page.pause()
+  await addpatient.enterHospitalRef(data.pat_hospital_ref);      
       
 
       await addpatient.selectPatientType(jsonData.addPatient[index].pat_type);
@@ -425,6 +427,7 @@ await page.waitForTimeout(200)
   await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
 
       await page.waitForTimeout(2000);
+      
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
 

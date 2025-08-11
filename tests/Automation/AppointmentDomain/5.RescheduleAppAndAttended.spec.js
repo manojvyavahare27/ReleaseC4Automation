@@ -82,7 +82,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await page.waitForTimeout(1500);
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
         await page.waitForTimeout(1500);
-        //await page.pause()
+        await page.pause()
         await loginpage.clickOnLogin()
        // await expect(page.getByText('Login success')).toHaveText('Login success')
         // Scroll to the bottom of the page
