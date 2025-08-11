@@ -74,12 +74,14 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await loginpage.enter_Password(jsonData.loginDetails[0].password);       
         await loginpage.clickOnLogin()
         //await expect(page.getByText('Login success')).toHaveText('Login success')
+        await page.pause()
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnSidebarAppointmentIcon()     
         await patientsearch.clickonBackButton()
         await homepage.clickOnSidebarAppointmentIcon()
+        
         await serviceapp.clickOnProvisionalAppLink()
-        await page.waitForLoadState('networkidle');
+      //  await page.waitForLoadState('networkidle');
         await provisionalapp.clickOnSearchBtn()
         await provisionalapp.clickOnAllLinks()
         await provisionalapp.clickOnProvisionalApp()

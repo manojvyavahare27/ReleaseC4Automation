@@ -1,25 +1,9 @@
 [
   {
-    "patlet_id": 420,
-    "patlet_est_id": 4,
-    "patlet_cli_id": 85,
-    "patlet_sgr_id": 280346,
-    "patlet_ref_id": 68607,
-    "patlet_pat_id": 88289,
-    "patlet_lettmpl_id": 62,
+    "patlet_id": 443,
+    "patletd_patient_location": null,
     "patlet_name": "AutomationLetter",
     "patlet_type": "Referral Letter",
-    "patlet_status": "authorised",
-    "patlet_json": "{\"letterData\":{\"letterName\":\"AutomationLetter\",\"letterType\":\"Referral Letter\",\"letterLocation\":12765,\"recipient\":{\"id\":\"1\",\"label\":\"GP\",\"recipient\":\"GP\"},\"showLettersInPatient\":false,\"pageSize\":{\"id\":4,\"label\":\"A4\",\"name\":\"a4\",\"width\":\"21\",\"height\":\"29.7\"},\"letterMargin\":{\"id\":1,\"label\":\"Normal\",\"name\":\"normal\"},\"top\":2.54,\"bottom\":2.54,\"left\":2.54,\"right\":2.54,\"assessmentCreate\":true},\"letterForm\":[{\"id\":\"1752426104990\",\"label\":\"Letter Header\",\"isEditing\":false,\"objectType\":\"letterHeader\",\"properties\":{\"size\":12,\"headerTop\":\"\",\"headerHeight\":\"2.3\",\"requiredPage\":\"\",\"justifyContent\":\"space-between\",\"letterHeaderLayout\":\"Logo and Date\"},\"componentData\":[{\"id\":\"letterHeaderLogo\",\"label\":\"Logo\",\"objectType\":\"imageBox\",\"properties\":{\"size\":10,\"width\":50,\"height\":50,\"justifyContent\":\"flex-start\"}},{\"id\":\"letterHeaderDate\",\"value\":\"-\",\"adcCode\":\"TodaysDate\",\"adcName\":\"Today's Date\",\"tagType\":\"typography\",\"objectType\":\"tag\",\"properties\":{\"font\":\"'Times New Roman', serif\",\"size\":\"\",\"fontSize\":\"12\",\"alignItem\":\"start\",\"fontStyle\":\"\",\"fontWeight\":\"\",\"lineHeight\":\"\",\"lineSpacing\":\"1.0\",\"paddingLeft\":\"3px\",\"paddingRight\":\"0px\",\"justifyContent\":\"flex-start\",\"textDecoration\":\"\"}}]},{\"id\":\"1752426113165\",\"type\":\"textContainer\",\"label\":\"Text Container\",\"isEditing\":false,\"objectType\":\"textContainer\",\"properties\":{\"size\":12,\"width\":\"100\",\"height\":100},\"componentData\":[{\"id\":\"1752426120186\",\"adcCode\":\"PatientTitle\",\"adcName\":\"Patient Title\",\"tagType\":\"typography\",\"isEditing\":false,\"objectType\":\"tag\",\"properties\":{\"font\":\"'Times New Roman', serif\",\"size\":\"\",\"fontSize\":\"12\",\"alignItem\":\"start\",\"fontStyle\":\"\",\"fontWeight\":\"\",\"lineHeight\":\"\",\"lineSpacing\":\"1.0\",\"paddingLeft\":\"3px\",\"paddingRight\":\"0px\",\"justifyContent\":\"flex-start\",\"textDecoration\":\"\"},\"value\":\"Mr\"},{\"id\":\"1752426123557\",\"adcCode\":\"PatientFirstname\",\"adcName\":\"Patient Given Name\",\"tagType\":\"typography\",\"isEditing\":false,\"objectType\":\"tag\",\"properties\":{\"font\":\"'Times New Roman', serif\",\"size\":\"\",\"fontSize\":\"12\",\"alignItem\":\"start\",\"fontStyle\":\"\",\"fontWeight\":\"\",\"lineHeight\":\"\",\"lineSpacing\":\"1.0\",\"paddingLeft\":\"3px\",\"paddingRight\":\"0px\",\"justifyContent\":\"flex-start\",\"textDecoration\":\"\"},\"value\":\"Letter\"},{\"id\":\"1752426125972\",\"adcCode\":\"PatientSurname\",\"adcName\":\"Patient Family Name\",\"tagType\":\"typography\",\"isEditing\":false,\"objectType\":\"tag\",\"properties\":{\"font\":\"'Times New Roman', serif\",\"size\":\"\",\"fontSize\":\"12\",\"alignItem\":\"start\",\"fontStyle\":\"\",\"fontWeight\":\"\",\"lineHeight\":\"\",\"lineSpacing\":\"1.0\",\"paddingLeft\":\"3px\",\"paddingRight\":\"0px\",\"justifyContent\":\"flex-start\",\"textDecoration\":\"\"},\"value\":\"Riomed\"}]},{\"id\":\"1752426137661\",\"type\":\"letterFooter\",\"label\":\"Letter Footer\",\"isEditing\":false,\"objectType\":\"letterFooter\",\"properties\":{\"size\":12,\"footerBottom\":\"\",\"footerHeight\":2,\"requiredPage\":\"\",\"justifyContent\":\"flex-end\",\"letterHeaderLayout\":\"Page number\"},\"componentData\":[{\"id\":\"letterFooterText\",\"type\":\"textbox\",\"label\":\"Footer\",\"isEditing\":false,\"objectType\":\"textbox\",\"properties\":{\"font\":\"'Times New Roman', serif\",\"size\":12,\"fontSize\":\"12\",\"alignItem\":\"start\",\"fontStyle\":\"\",\"alignItems\":\"center\",\"fontWeight\":\"\",\"lineHeight\":\"\",\"lineSpacing\":\"1.0\",\"paddingLeft\":\"3px\",\"footerBottom\":\"\",\"footerHeight\":2,\"paddingRight\":\"0px\",\"requiredPage\":\"\",\"justifyContent\":\"center\",\"textDecoration\":\"\",\"letterHeaderLayout\":\"Page number\"}}]}]}",
-    "patlet_sent": null,
-    "patlet_sent_by": null,
-    "patlet_letter_date": "13/07/2025",
-    "patlet_imported": null,
-    "patlet_egp_id": null,
-    "patlet_record_status": "wrong",
-    "patlet_created": "13/07/2025",
-    "patlet_created_by": "letter.auth",
-    "patlet_deleted": "13/07/2025",
-    "patlet_deleted_by": "letter.auth"
+    "patlet_status": "pendingApproval"
   }
 ]
