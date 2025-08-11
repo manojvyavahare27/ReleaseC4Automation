@@ -81,6 +81,25 @@ async openUrl()
         }
         else throw new Error("No Password Element Present")
     }
+
+    async  assertLoginMessage(page) {
+    // Wait until one of the messages appears
+    await page.waitForSelector(
+        'text=Login success, text=Login successful. Any previously active session has been automatically signed out',
+        { timeout: 200 }
+    );
+
+    if (await page.getByText("Login success").isVisible()) {
+        await expect(page.getByText("Login success")).toHaveText("Login success");
+    } else if (await page.getByText("Login successful. Any previously active session has been automatically signed out").isVisible()) {
+        await expect(
+            page.getByText("Login successful. Any previously active session has been automatically signed out")
+        ).toHaveText("Login successful. Any previously active session has been automatically signed out");
+    } else {
+        throw new Error("Expected login message not found.");
+    }
+}
+
     async clickOnLogin()
     {
         await this.loginButton.click()
