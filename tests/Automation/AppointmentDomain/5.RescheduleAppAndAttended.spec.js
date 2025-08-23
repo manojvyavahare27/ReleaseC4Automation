@@ -82,7 +82,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await page.waitForTimeout(1500);
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
         await page.waitForTimeout(1500);
-        await page.pause()
+        //await page.pause()
         await loginpage.clickOnLogin()
        // await expect(page.getByText('Login success')).toHaveText('Login success')
         // Scroll to the bottom of the page
@@ -181,7 +181,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await servicebookapp.clickOnNextButton()
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
-         await page.pause()
+         //await page.pause()
         //Communication Consent
         await servicebookapp.selectCommConsentNo()
         await servicebookapp.clikcOnRadioAllNo()
@@ -234,7 +234,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
     }
     else{         
 
-        await page.pause()
+       // await page.pause()
         await servicebookapp.SelectDate(jsonData.rescheduleAppointments[index].rea_date)
         await servicebookapp.selectDropdownSpecility(jsonData.rescheduleAppointments[index].rea_special)
         await servicebookapp.selectDropdownClinicType(jsonData.rescheduleAppointments[index].rea_clinic_type)
@@ -283,7 +283,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.clickOnRadioAllYes()
         await servicebookapp.clickOnCommuConsentSaveButton()
         await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-        await page.pause()
+      //  await page.pause()
 
         var sqlQuery =
         "select * from patients where pat_hospital_ref= '" +
@@ -388,7 +388,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
 
 
     //Rescheduled New Appointment.
-    await page.pause()
+    //await page.pause()
         await servicebookapp.RescheduleSelectDate(jsonData.rescheduleAppointments[index].rea_date)
         await servicebookapp.selectDropdownSpecility(jsonData.rescheduleAppointments[index].rea_special)
         await servicebookapp.selectDropdownClinicType(jsonData.rescheduleAppointments[index].rea_clinic_type)

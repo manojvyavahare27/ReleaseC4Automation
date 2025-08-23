@@ -88,7 +88,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 
     
     //await loginpage.assertLoginMessage(page)
-await page.pause()
+//await page.pause()
     await page.waitForTimeout(1000);
     await homepage.clickonSidebarHomeIcon()
     await homepage.clickOnAppointmentIcon()

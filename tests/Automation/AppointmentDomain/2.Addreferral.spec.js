@@ -86,7 +86,7 @@ test.describe("Appointment Domain Db COmparison", () => {
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
-    await page.pause()
+    //await page.pause()
     await patientsearch.clickOnSearchPatientLink();  
     await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await page.waitForTimeout(1500);
@@ -107,7 +107,7 @@ test.describe("Appointment Domain Db COmparison", () => {
     await addreferral.selectModeOfreferral(jsonData.AddReferral[index].ref_referral_mode.toString());
     await addreferral.selectService(jsonData.AddReferral[index].cli_name.toString());
    await addreferral.selectClinicType(jsonData.AddReferral[index].ref_clinic_type.toString());
-    await page.pause()
+   // await page.pause()
     await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location);
    await addreferral.selectTeam(jsonData.AddReferral[index].ref_region_eli_text.toString());
     await addreferral.selectPatientcare();
