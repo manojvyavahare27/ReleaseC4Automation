@@ -84,9 +84,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await stockItemsFliters.clickSearchButton()
    await page.waitForTimeout(1000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
-   
-
-   await stockallLoc.clickOnAddBatchLink()
+      await stockallLoc.clickOnAddBatchLink()
    await page.waitForTimeout(500)
    await addFormulary.clickOnClosePopup()
    await page.waitForTimeout(500)
