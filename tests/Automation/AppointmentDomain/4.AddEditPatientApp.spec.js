@@ -114,7 +114,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await page.waitForTimeout(4000);
     await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(3000);
-    await page.pause()
+    //await page.pause()
     const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
 
     if (addReferralText) {
