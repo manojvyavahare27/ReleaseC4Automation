@@ -249,7 +249,7 @@ await fileInput.setInputFiles(targetFilePath);
     
         await adduserwizard.clickOnAddLink()
         await page.waitForTimeout(2000)   
-      //  await page.pause() 
+        await page.pause() 
         await adduserwizard.addUserGroup() 
         await adduserwizard.addHpDeaultRole()  
         
