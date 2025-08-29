@@ -103,7 +103,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await patientsearch.clickOnSearchButton()
         await page.waitForTimeout(2500)
 
-        await page.pause()
+      
         await patientsearch.clickOnSearchPatientLink()
         await page.waitForTimeout(2500)
          await patientsearch.ClickOnYesConfirmLegitimateRelationship()

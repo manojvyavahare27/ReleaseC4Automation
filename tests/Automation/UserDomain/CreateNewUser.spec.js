@@ -249,7 +249,7 @@ await fileInput.setInputFiles(targetFilePath);
     
         await adduserwizard.clickOnAddLink()
         await page.waitForTimeout(2000)   
-        await page.pause() 
+        
         await adduserwizard.addUserGroup(page) 
         await adduserwizard.addHpDeaultRole()  
         
@@ -290,7 +290,7 @@ await fileInput.setInputFiles(targetFilePath);
     
         //await this.page.locator('div').filter({ hasText: 'Is User Going On DiaryYesNo' }).getByRole('button', { name: 'Yes' }).click()
         
-          await page.pause() 
+         // await page.pause() 
         await adduserwizard.clickOnNext()
                
         await page.waitForTimeout(2000)
