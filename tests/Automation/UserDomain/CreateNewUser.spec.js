@@ -250,7 +250,7 @@ await fileInput.setInputFiles(targetFilePath);
         await adduserwizard.clickOnAddLink()
         await page.waitForTimeout(2000)   
         await page.pause() 
-        await adduserwizard.addUserGroup() 
+        await adduserwizard.addUserGroup(page) 
         await adduserwizard.addHpDeaultRole()  
         
         //User HP Details

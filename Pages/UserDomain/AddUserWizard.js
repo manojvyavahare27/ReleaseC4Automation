@@ -151,12 +151,19 @@ class AddUserWizard {
     async clickOnAddLink() {
         await this.link_UserGroupAdd.click()
     }
-    async addUserGroup() {
+    async addUserGroup(page) {
         await this.page.getByRole('combobox').click()
-        await this.page.getByRole('option', { name: 'Lab Authorizer', exact: true }).getByRole('checkbox').check()
-        //await this.page.getByRole('option', { name: 'Admin', exact: true }).getByRole('checkbox').check()
-        await this.page.locator('#menu- > .MuiBackdrop-root').click()
-        await this.page.getByTestId('CommonCellmaPopup').getByTestId('Add').click()
+        await this.page.getByRole('option', { name: 'Lab Authorizer', exact: true }).getByRole('checkbox').check()       
+
+        
+        // const dropdownIcon = page.locator("//div[@data-testid='Group']//svg[@data-testid='ArrowDropDownIcon']");
+        // await dropdownIcon.click(); 
+        await page.keyboard.press('Escape');
+        //await this.page.locator('#menu- > .MuiBackdrop-root').click();
+        await this.page.getByTestId('CommonCellmaPopup').getByTestId('Add').click();
+
+          //await page.locator('#menu- > .MuiBackdrop-root').click();
+        //await this.page.getByTestId('CommonCellmaPopup').getByTestId('Add').click()
     }
 
     async addHpDeaultRole()
