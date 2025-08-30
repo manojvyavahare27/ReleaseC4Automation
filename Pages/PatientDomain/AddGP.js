@@ -44,7 +44,7 @@ class AddGP
         this.btnNextonSearchGP=page.getByTestId('Next')
    
         //Search GP
-        this.txtbox_SearchGP=page.getByRole('textbox', { name: 'Search' })
+        this.txtbox_SearchGP=page.locator("xpath=//input[@data-testid='Search']")
 
     }
     async enterGpSearch()
