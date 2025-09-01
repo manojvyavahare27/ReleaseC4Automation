@@ -171,6 +171,7 @@ test.describe("Medications Category", () => {
       //await pharmacyHomePage.clickOnSaveButton()
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
       await page.waitForTimeout(1000)
+      await page.pause()
       await pharmacyHomePage.clickOnPartiallyProducedLink()
       await pharmacyHomePage.clickOnExpandIconForDispense()
       await page.waitForTimeout(1000)

@@ -9515,3 +9515,8 @@
 {"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-01T11:25:13.219Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-01T11:25:29.132Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-01T11:25:29.710Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-01T11:53:30.435Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-01T11:53:31.794Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-01T11:53:31.961Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-01T11:53:47.561Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-01T11:53:48.154Z"}

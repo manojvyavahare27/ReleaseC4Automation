@@ -50,7 +50,7 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
     this.buttonSaveDetails=page.locator("xpath=//button[@id=':r46a:']//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row css-1n5khr6'][normalize-space()='Save']")
     this.expandMedicationForDispense=page.locator("xpath=//button[@aria-label='expandRowIconParacetamol 125mg suppositories']")
     this.txtboxDispenseQty=page.locator("xpath=//label[@id='Dispense Quantity']")
-    this.butttonDispense=page.locator("xpath=//button[@data-testid='Dispensed']")
+    this.butttonDispense=page.locator("xpath=//button[@data-testid='Dispense']")
     this.buttobBackToStock=page.locator("xpath=//button[@data-testid='Back to Stock']")
     this.backtoStockQuantity=page.locator("xpath=//input[@aria-label='quantity_1805']")
     this.txtareaReasonForReturn=page.locator("xpath=//textarea[@id='reasonForReturn']")
