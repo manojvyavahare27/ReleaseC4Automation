@@ -9510,3 +9510,8 @@
 {"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-08-31T18:45:24.258Z"}
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-08-31T18:45:24.567Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-08-31T18:45:25.594Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-01T11:25:11.750Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-01T11:25:13.078Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-01T11:25:13.219Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-01T11:25:29.132Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-01T11:25:29.710Z"}
