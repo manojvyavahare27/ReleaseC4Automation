@@ -82,7 +82,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
     await page.waitForTimeout(1500);
     await loginpage.enter_Password(jsonData.loginDetails[0].password);
     await page.waitForTimeout(1500);
-    await page.pause()
+   // await page.pause()
     await loginpage.clickOnLogin();
     //await expect(page.getByText("Login success")).toHaveText("Login success");
 
@@ -116,7 +116,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
     await patientsearch.clickOnSearchPatButton()
     //await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
     await patientsearch.clickOnSearchPatientLink()
-    await page.pause()
+   // await page.pause()
     await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await page.waitForTimeout(5000);
     await confirmexisting.clickOnConfirmExistingDetails()
@@ -154,7 +154,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       //await expect(page.getByText('Referral added successfully')).toHaveText('Referral added successfully')
       await addreferral.clickOnBackButton()
       await page.waitForTimeout(2000);
-       await page.pause()
+      // await page.pause()
       // await page.getByRole('button', { name: 'Add Appointments' }).click()
       await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date)
       await page.waitForTimeout(2000);
@@ -303,7 +303,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 
     }
     else {
-       await page.pause()
+       //await page.pause()
       await page.waitForTimeout(2000);
       await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date.toString())
       await page.waitForTimeout(2000);

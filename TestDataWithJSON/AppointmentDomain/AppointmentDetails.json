@@ -282,8 +282,8 @@
   "bookNewAppointments": [
     {
       "rea_date": "01/09/2025",
-      "rea_time": "06:30:00",
-      "convertedTime": "06:30 AM",
+      "rea_time": "06:15:00",
+      "convertedTime": "06:15 AM",
       "rea_status": "scheduled",
       "rea_notes": "AddTesting Notes",
       "rea_duration": 15,
@@ -298,7 +298,7 @@
       "rea_reason_for_delay": "Appointment offered within 48 hours - declined by patient",
       "rea_region_eli_text": "HP Region1",
       "rea_patient_type": "Regular",
-      "rea_end_time": "06:45:00",
+      "rea_end_time": "06:30:00",
       "rea_special": "All Specialties",
       "rea_hp_name_link": "Mr Manoj Automation"
     }

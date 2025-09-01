@@ -167,6 +167,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.enterTriage(jsonData.addEditAppointments[index].rea_triage.toString());
       await servicebookapp.enterNotes(jsonData.addEditAppointments[index].rea_notes);
       // await servicebookapp.clickOnNextButton()
+      await page.pause()
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
       await servicebookapp.clickOnCommuConsentSaveButton();
 
