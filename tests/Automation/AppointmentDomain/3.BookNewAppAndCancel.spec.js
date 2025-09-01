@@ -154,6 +154,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       //await expect(page.getByText('Referral added successfully')).toHaveText('Referral added successfully')
       await addreferral.clickOnBackButton()
       await page.waitForTimeout(2000);
+       await page.pause()
       // await page.getByRole('button', { name: 'Add Appointments' }).click()
       await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date)
       await page.waitForTimeout(2000);
