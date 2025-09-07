@@ -15,22 +15,22 @@
   ],
   "addListItem": [
     {
-      "eli_text": "ListItemP",
+      "eli_text": "ListItemt",
       "eli_numeric_value": "1",
-      "eli_text_other_lang": "ListItemP",
-      "eli_code": "ADLILC.8849",
+      "eli_text_other_lang": "ListItemt",
+      "eli_code": "ADLILC.8852",
       "eli_code_type": "local",
       "eli_code_text": "Rio15"
     }
   ],
   "createUser": [
     {
-      "use_increment": 19,
-      "use_username": "Test.19User",
+      "use_increment": 23,
+      "use_username": "Test.23User",
       "use_firstname": "Auto",
       "use_password": "Manoj@2024",
       "use_surname": "Riomedtest",
-      "use_email": "thayne.sampson19@riomed.com",
+      "use_email": "thayne.sampson23@riomed.com",
       "use_expires": "30/06/2035",
       "use_title": "Mr",
       "use_profession": "Doctor",
@@ -114,7 +114,8 @@
       "hpd_saturday": 1,
       "hpd_sunday": 1,
       "hpd_occuring": "month",
-      "hpd_week_of_month": 2
+      "hpd_week_of_month": 2,
+      "RepeatScheduleEndDate": "30/09/2025"
     }
   ],
   "setHpLeave": [

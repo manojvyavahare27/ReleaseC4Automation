@@ -20,7 +20,7 @@
     "use_title": "Mr",
     "use_profession": "Doctor",
     "use_show_summary_default": 0,
-    "use_password_last_modified": "10/08/2025",
+    "use_password_last_modified": "07/09/2025",
     "use_reason": null,
     "use_login_attempts": "0",
     "use_big_button": null,
@@ -58,7 +58,7 @@
     "use_gender": null,
     "use_jwt_token": null,
     "use_show_hp_diary": 1,
-    "use_cellma4_password": "$2a$10$mJcz7ImBK/YO/4/tZ3o8oeeF7TF/sdOyNLLGx1su/DMWNFWL5Hgy6",
+    "use_cellma4_password": "$2a$10$S7LfBXQATocxj.YQ3A45EOE5BCyol3XcOLxBBXX2iygCQTPbQG3Ue",
     "use_logon_unique_key_created": null,
     "use_can_view_private_appt_reason": null
   }
