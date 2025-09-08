@@ -1,7 +1,7 @@
 [
   {
-    "egp_id": 432,
-    "egp_add_id": 238741,
+    "egp_id": 435,
+    "egp_add_id": 238755,
     "egp_est_id": 4,
     "egp_title": "Mr",
     "egp_initials": "R",
@@ -16,7 +16,7 @@
     "egp_imported_method": null,
     "egp_imported_timestamp": "08/09/2025",
     "egp_imported": null,
-    "egp_imported_by": "release.pharma",
+    "egp_imported_by": "release.manoj",
     "egp_gmc_code": "GPGMC0001",
     "egp_fullname": "R Priya Kolhe"
   }
