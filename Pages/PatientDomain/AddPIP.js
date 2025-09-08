@@ -19,8 +19,7 @@ class AddPIP
 		
         this.dropdownPIPFamilyAwareOfIllness=page.locator("xpath=//div[@id='addPipFamilyAwareOfIllness']")
         this.dropdownPIPIdentifierType=page.locator("xpath=//div[@id='addPipIdentifierType']")
-        this.txtboxPIPIdentifier=page.locator("xpath=//input[@name='identifierNumber']")
-		
+        this.txtboxPIPIdentifier=page.locator("xpath=//input[@name='identifierNumber']")		
          this.txtbox_PIPEnternalProf=page.locator("xpath=//div[@data-testid='externalProfessional']")
         this.txtbox_PIPProfessionalTitle=page.locator("xpath=//input[@data-testid='Professional Title']")
         this.dropdown_PIPReceivePatientLetter=page.locator("xpath=//div[@id='addPipReceivePatientLetter']")
