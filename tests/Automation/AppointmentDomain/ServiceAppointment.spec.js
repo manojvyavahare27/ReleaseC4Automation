@@ -82,8 +82,8 @@ test.describe("Database Comparison Service Appointment", () => {
         await page.waitForTimeout(1500);
         await loginpage.clickOnLogin()
         //await expect(page.getByText('Login success')).toHaveText('Login success')   
-        await homepage.clickonSidebarHomeIcon()
-        
+       // await homepage.clickonSidebarHomeIcon()
+        await page.pause()
         await homepage.clickOnSidebarAppointmentIcon()       
         await serviceapp.clickOnSeachButton()
         await serviceapp.enterStartDate(jsonData.serviceAppointments[index].serviceStartDate)
