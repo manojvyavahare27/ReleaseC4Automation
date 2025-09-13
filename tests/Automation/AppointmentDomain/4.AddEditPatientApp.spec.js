@@ -290,7 +290,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
       }
 
-    await page.pause()
+    //await page.pause()
       // Edit Patient App.
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(2000);
@@ -300,7 +300,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       //await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
       //Cancel Appointment
       await page.waitForTimeout(5000);
-      await page.getByTestId('Ok').click()
+      //await page.getByTestId('Ok').click()
       await scheduleserviceapp.clickOnAppScheduleStatus();
       await scheduleserviceapp.clickOnCancelButton();
       await scheduleserviceapp.selectAppCancellationReason(
