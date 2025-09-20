@@ -95,6 +95,7 @@ test.describe("Appointment Domain Db COmparison", () => {
     await page.waitForTimeout(1500);   
     await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(1500);
+   
     // await addreferral.enterReceiveReferrldate(jsonData.AddReferral[index].rtt_referral_received_date.toString());
     // await addreferral.enterApproveReferralDate(jsonData.AddReferral[index].rtt_referral_approved_date.toString());
     await addreferral.enterDateOfReferral(jsonData.AddReferral[index].ref_referral_date.toString());
