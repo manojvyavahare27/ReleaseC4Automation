@@ -100,7 +100,7 @@ test.describe("Database Comparison Add New Referral", () => {
    
     await page.waitForTimeout(500) 
    await addBatch.clickSave()
-   await page.waitForTimeout(2000) 
+  
    //await addFormulary.clickOnAddFormularyButton()
    await expect(page.getByText('Batch added successfully')).toHaveText('Batch added successfully')
    //await addFormulary.clickOnClosePopup()
