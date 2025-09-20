@@ -34,8 +34,7 @@ let jsonData;
 
 test.describe("Database Comparison Add List Item", () => {
   test("Extract User Details", async ({ }) => {
-    const excelFilePath =
-      process.env.EXCEL_FILE_PATH || "./ExcelFiles/UserDomain.xlsx";
+    const excelFilePath = process.env.EXCEL_FILE_PATH || "./ExcelFiles/UserDomain.xlsx";
     const jsonFilePath = "./TestDataWithJSON/UserDomain/UserDetails.json";
     const conversionSuccess = await convertExcelToJson(excelFilePath,jsonFilePath);
 
@@ -100,6 +99,7 @@ test.describe("Database Comparison Add List Item", () => {
     await addtolistitem.clickOnFilterButton();
     await addtolistitem.clickOnAddListItemsButton();
 
+
     //AddToList
 
     await addtolistitem.selectDropdownFromService();
@@ -115,9 +115,8 @@ test.describe("Database Comparison Add List Item", () => {
     //await addtolistitem.enterHextColor(addlistitem.HexColor)
 
     await addtolistitem.clickOnSavelistItemButton();
-    await expect(page.getByText("List item added successfully")).toHaveText(
-      "List item added successfully"
-    );
+    await expect(page.getByText("List item added successfully")).toHaveText("List item added successfully");
+
 
     var sqlQuery ="select * from establishment_list_items where eli_text = '" +
       jsonData.addListItem[index].eli_text +"' and eli_app_id = 111 order by eli_id desc limit 1";
