@@ -94,7 +94,7 @@ test.describe("Medications Category", () => {
       logger.info("Password enter successfully");
       await loginpage.clickOnLogin();      
       logger.info("Clicked on Login button successfully");
-      await page.pause()
+      //
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()
       //await pharmacyLoc.clickOnCardioLocation()
@@ -126,7 +126,7 @@ test.describe("Medications Category", () => {
       await patientsearch.clickOnSearchPatientLink();
         await patientsearch.ClickOnYesConfirmLegitimateRelationship()
       await page.waitForTimeout(2000);
-      await page.pause()
+      //await page.pause()
       await pharmacyHomePage.fillPrescriptionType('General');
       await pharmacyHomePage.fillPrescriptionCode('123');
       await pharmacyHomePage.fillNotes('add for testing');
@@ -171,7 +171,7 @@ test.describe("Medications Category", () => {
       //await pharmacyHomePage.clickOnSaveButton()
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
       await page.waitForTimeout(1000)
-      await page.pause()
+      //await page.pause()
       await pharmacyHomePage.clickOnPartiallyProducedLink()
       await pharmacyHomePage.clickOnExpandIconForDispense()
       await page.waitForTimeout(1000)

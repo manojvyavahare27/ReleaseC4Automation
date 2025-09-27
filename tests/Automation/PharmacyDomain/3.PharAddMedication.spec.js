@@ -91,7 +91,7 @@ test.describe("Medications Category", () => {
       await loginpage.clickOnLogin();  
       
       logger.info("Clicked on Login button successfully");
-     await page.pause()
+     //await page.pause()
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()
       //await pharmacyLoc.clickOnCardioLocation()
@@ -113,7 +113,7 @@ test.describe("Medications Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
-await page.pause()
+      //await page.pause()
       await patientsearch.ClickOnYesConfirmLegitimateRelationship()
       await page.waitForTimeout(2000);
       //await confirmexisting.clickOnConfirmExistingDetails();

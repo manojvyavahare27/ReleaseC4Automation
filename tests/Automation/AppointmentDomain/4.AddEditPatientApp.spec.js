@@ -199,12 +199,12 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addeditpatientappointment.clickOnRescheduleDate(jsonData.addEditAppointments[index].rea_edited_date);
       await addeditpatientappointment.enterRescheduleTime(jsonData.addEditAppointments[index].rea_edited_time);
       await addeditpatientappointment.selectResonforReviewAppointment(jsonData.addEditAppointments[index].rea_review_reason);
-      await page.pause()
+      //await page.pause()
       await addeditpatientappointment.clickOnSaveButton();
 
       await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
      
-      await page.pause()
+      //await page.pause()
       //Communication Consent      
       //  await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')
       await scheduleserviceapp.clickOnAppScheduleStatus();

@@ -97,7 +97,7 @@ test.describe("Medications Category", () => {
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()          
      await page.waitForTimeout(2000)
-     await page.pause()
+    // await page.pause()
       await pharmacyHomePage.enterPatientGivenName(jsonData.addPatient[index].pat_firstname.toString())
       await pharmacyHomePage.enterPatientFamilyName(jsonData.addPatient[index].pat_surname.toString())
 

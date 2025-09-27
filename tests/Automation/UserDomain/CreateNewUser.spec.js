@@ -272,7 +272,7 @@ await fileInput.setInputFiles(targetFilePath);
         await adduserwizard.enterConstCode(jsonData.createEstProfessional[index].esp_consultant_code)
         await adduserwizard.enterFollowupValidity(jsonData.createEstProfessional[index].esp_follow_up_consultation_validity.toString())    
         await adduserwizard.selectGenericHP()
-       await page.pause()
+      // await page.pause()
         await adduserwizard.selectTeams(jsonData.createEstProfessional[index].esp_region_eli_text)
         await adduserwizard.enterNPINumber(jsonData.createEstProfessional[index].esp_npi_number.toString())   
         await adduserwizard.selectApptEmail()
