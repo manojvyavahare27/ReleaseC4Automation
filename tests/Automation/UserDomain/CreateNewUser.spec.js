@@ -505,7 +505,8 @@ await fileInput.setInputFiles(targetFilePath);
       );
     }
 
-     // await menu.clickOnLogout();
+      await page.waitForTimeout(1000)
+         await menu.clickOnLogout();
         
     });
 });

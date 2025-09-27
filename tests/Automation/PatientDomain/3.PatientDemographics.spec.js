@@ -393,7 +393,8 @@ test.describe("Patient Domain Db Comparison", () => {
           );
         }
 
-        // await menu.clickOnLogout();
+          await page.waitForTimeout(1000)
+         await menu.clickOnLogout();
 
         //await page.pause()
 

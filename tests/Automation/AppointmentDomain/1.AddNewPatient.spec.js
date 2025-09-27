@@ -432,8 +432,8 @@ await page.waitForTimeout(200)
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
 
-      //await menu.clickOnMenubtn();
-      // await menu.clickOnLogout();
+      await page.waitForTimeout(1000)
+      await menu.clickOnLogout(page);
 
       //////// Patient Detail comparison/////////
       var sqlQuery = "select * from patients where pat_hospital_ref= '" + data.pat_hospital_ref +

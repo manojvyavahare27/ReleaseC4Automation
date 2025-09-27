@@ -237,6 +237,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         );
       } ``
 
+      await page.waitForTimeout(1000)
       await menu.clickOnLogout(page);
         
     });

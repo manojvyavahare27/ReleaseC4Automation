@@ -309,6 +309,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await scheduleserviceapp.clickOnSaveCancelledAppButton();
       await expect(page.getByText("Patient appointment cancelled successfully")).toHaveText("Patient appointment cancelled successfully");
 
+      await page.waitForTimeout(1000)
+      await menu.clickOnLogout(page);
       sqlQuery = "select * from referral_appointments where rea_id = " + reaId;
       console.log(sqlQuery);
       results = await executeQuery(sqlQuery, sqlFilePath);

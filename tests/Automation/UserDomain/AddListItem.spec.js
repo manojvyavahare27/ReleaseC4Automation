@@ -117,7 +117,8 @@ test.describe("Database Comparison Add List Item", () => {
     await addtolistitem.clickOnSavelistItemButton();
     await expect(page.getByText("List item added successfully")).toHaveText("List item added successfully");
 
-
+ await page.waitForTimeout(1000)
+ await menu.clickOnLogout();
     var sqlQuery ="select * from establishment_list_items where eli_text = '" +
       jsonData.addListItem[index].eli_text +"' and eli_app_id = 111 order by eli_id desc limit 1";
     console.log(sqlQuery);

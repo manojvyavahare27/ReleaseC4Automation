@@ -147,6 +147,8 @@ test.describe("Appointment Domain Db COmparison", () => {
     await confirmexisting.clickOnSaveChangeDetails();
     await expect(page.getByText("Patient details changed successfully")).toHaveText("Patient details changed successfully");
 
+    await page.waitForTimeout(1000)
+      await menu.clickOnLogout(page);
     ////////// Patient Referral comparison/////////
     var sqlQuery ="select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref + "' order by pat_id desc limit 1";
       console.log("Sql result of referral:"+sqlQuery);    

@@ -527,6 +527,8 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         
         //await page.pause()
 
+        await page.waitForTimeout(1000)
+      await menu.clickOnLogout(page);
         sqlQuery = "select * from referral_appointments where rea_id = " + reaId2;
         console.log(sqlQuery);
         sqlFilePath = "SQLResults/AppointmentDomain/rescheduleApp.json";
