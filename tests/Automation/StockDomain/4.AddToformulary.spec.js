@@ -82,13 +82,14 @@ test.describe("Database Comparison Add New Referral", () => {
    await stockItemsFliters.clickSearchButton()
    await page.waitForTimeout(1000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
-   await page.pause()
+ 
 
    await stockallLoc.clickOnAddFormularyLink()
    await page.waitForTimeout(2000)
    await addFormulary.clickOnClosePopup()
    await page.waitForTimeout(2000)
    await stockallLoc.clickOnAddFormularyLink()
+   
    await addFormulary.clickOnAddFormularyButton()
    //await expect(page.getByText('Item added to the formulary')).toHaveText('Item added to the formulary')
    await addFormulary.clickOnClosePopup()
