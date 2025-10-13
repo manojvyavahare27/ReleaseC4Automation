@@ -36,7 +36,6 @@ class AddPIP
         this.chkbox_GeneralPublicity=page.getByRole('checkbox', { name: 'For use on the Automation Est website and general publicity' })
         this.btnSavePIP=page.getByTestId('Save')
 
-
     }
     async ClickOnSavePIP()
     {

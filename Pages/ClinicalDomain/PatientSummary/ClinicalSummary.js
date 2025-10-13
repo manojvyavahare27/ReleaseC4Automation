@@ -70,8 +70,185 @@ class ClinicalSummary {
         
 
 
+       //Master Price List
+        this.financeIcon= page.locator("xpath=//div[@data-testid='moduleDrawerFinance' and @aria-label='moduleDrawerFinance']")
+        this.allCategoryDropdown= page.locator("xpath=//input[@id='allCategory']")
+        this.searchMasterPriceBtn=page.locator("xpath=//div[contains(text(),'Search')]")
+        this.addMasterPriceBtn= page.locator('//button[@aria-label="Add" and .//div[normalize-space(.)="Add"]]')
+        this.editBedPriceIcon= page.locator('//tr[td[normalize-space(text())="Special Bed"]]//button[@aria-label="editIcon"]')
+        this.itemNameMasterPrice= page.locator('//input[@id="itemName"]')
+        this.masterPrice= page.locator("//input[@id='Master Price (₹)']")
+        this.addBtnForMasterPrice= page.locator("//div[contains(text(),'Add')]")
+        this.backButton = page.locator('//button[@aria-label="Back Button"]')
+        this.deleteButton = page.locator("//div[contains(text(),'Delete')]")
+        this.deleteOk = page.locator("//div[contains(text(),'Ok')]")
+        this.deleteCancel = page.locator("//div[contains(text(),'Cancel')]")
+        this.item2Typecode= page.locator("//input[@id='itemCode2Type']")
+        this.itemCode2= page.locator("//input[@data-testid='Item Code 2']")
+        this.saveMasterPrice= page.locator("//div[contains(text(),'Save')]")
+        this.variablePriceLink= page.locator("//a[text()='Variable Price' and @data-testid='Variable Price']")
+        this.masterPriceDrawer= page.locator("//span[normalize-space()='Master Price List']")
+        this.masterPriceLink= page.locator("//div[@data-testid='masterPriceList']//h1[text()='Master Price List']")   
+        //this.variableType= page.locator("//label[normalize-space(text())='Variable Type']")
+        this.variableType= page.locator("//input[@id='Variable Type']")
+        this.customerTypeCheckbox= page.locator ("//li[@role='option' and @data-value='Customer type']")
+       // this.customerTypeCheckbox= page.locator("//li[@role='option' and @data-value='Customer type']//input[@type='checkbox']")
+        this.customerTypeDrp1= page.locator("input#customerType0[name='customerType[0].type']")
+        this.customerTypeDrp2= page.locator("input#customerType1[name='customerType[1].type']")
+        this.addCustomerType= page.locator("//button[@aria-label='addcustomerType0']")
+        this.deleteCustomerType2= page.locator("//button[@aria-label='deletecustomerType1']")
+        this.rateForCustomerType1= page.locator("//input[@id='ratecustomerType0']")
+        this.saveVariablePrice= page.locator("//button[@aria-label='saveVariablePrice' and @data-testid='Save']")
+        this.expandSpecialBed= page.locator("//td[normalize-space(text())='Special Bed']/ancestor::tr//button[contains(@aria-label, 'expandRowIcon')]")
+        this.expandCustomerType= page.locator("//td[normalize-space()='Special Bed']/ancestor::tr/following-sibling::tr//button[@data-testid='customerType']")
+        this.searchFieldMasterPrice= page.locator("//input[@id='searchItem']")
 
      }
+
+     //Master price list
+    
+  async clickFinanceIcon() {
+    await this.financeIcon.click();
+  }
+  async clickmasterPriceDrawer() {
+    await this.masterPriceDrawer.click();
+  }
+
+  async clickmasterPriceLink() {
+    await this.masterPriceLink.click();
+  }
+
+  async clickSaveMasterPrice() {
+    await this.saveMasterPrice.click();
+  }
+
+
+  async selectAllCategory(category) {
+    // await this.allCategoryDropdown.click();
+    // await this.page.keyboard.type(category);
+    // await this.page.keyboard.press('Enter');
+    await selectFromDropdown(this.page, this.allCategoryDropdown,'Bed Type')
+  }
+
+  async clickSearchMasterPrice() {
+    await this.searchMasterPriceBtn.click();
+  }
+
+  async clickAddMasterPrice() {
+    await this.addMasterPriceBtn.click();
+  }
+
+  async clickEditBedPrice() {
+    await this.editBedPriceIcon.click();
+  }
+
+  async enterItemName(name) {
+    await this.itemNameMasterPrice.fill(name);
+  }
+
+  async enterSearchFieldMasterPrice(name) {
+    await this.searchFieldMasterPrice.fill(name);
+  }
+  
+
+  async enterMasterPrice(price) {
+    await this.masterPrice.fill(price);
+  }
+
+  async enterItemCode2(code2) {
+    await this.itemCode2.fill(code2);
+  }
+
+  async clickAddButton() {
+    await this.addBtnForMasterPrice.click();
+  }
+
+  async clickBackButton() {
+    await this.backButton.click();
+  }
+
+  async clickDeleteButton() {
+    await this.deleteButton.click();
+  }
+
+  async confirmDelete() {
+    await this.deleteOk.click();
+  }
+
+  async cancelDelete() {
+    await this.deleteCancel.click();
+  }
+
+  async selectandMasterPriceItem(MasterPriceItem) {
+        
+        this.itemName=MasterPriceItem;
+        console.log("Item Name is:"+this.itemName);
+        
+        //await page.pause()
+        await selectFromSearchResults(this.page, this.itemNameMasterPrice, MasterPriceItem);  
+   
+    }
+
+    async selectCode2Type(codeType) {
+   
+    await selectFromDropdown(this.page, this.item2Typecode,codeType)
+  }
+
+
+  //Variable price- Mater price
+
+
+async clickVariablePriceLink() {
+  await this.variablePriceLink.click();
+}
+
+async clickVariableType() {
+       await this.variableType.click();
+
+}
+
+
+//   async selectCustomerTypeCheckbox() {
+//    await this.customerTypeCheckbox.check()
+  
+// }
+async selectCustomerTypeCheckbox() {
+  const isChecked = await this.customerTypeCheckbox.isChecked();
+
+  if (!isChecked) {
+    await this.customerTypeCheckbox.click(); // Click wrapper/label instead
+  }
+}
+
+async selectCustomerType(category) {
+
+    await selectFromDropdown(this.page, this.customerTypeDrp1,'Regular')
+  }
+
+  
+async enterRateForCustomerType1(rate) {
+    await this.rateForCustomerType1.fill(rate);
+  }
+async clickAddCustomerType() {
+  await this.addCustomerType.click();
+}
+
+async clickDeleteCustomerType2() {
+  await this.deleteCustomerType2.click();
+}
+
+
+async clickSaveVariablePrice() {
+  await this.saveVariablePrice.click();
+}
+
+async clickExpandSpecialBed() {
+  await this.expandSpecialBed.click();
+}
+
+async clickExpandCustomerType() {
+  await this.expandCustomerType.click();
+}
 
     ///////////////////////////////BUTTON CLICKS///////////////////////////////////////////////
     /*This method is no longer used as we are clicking it in selectandaddClinicalItem*/
