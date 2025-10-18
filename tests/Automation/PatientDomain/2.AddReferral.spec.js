@@ -89,7 +89,7 @@ test.describe("Patient Domain Db COmparison", () => {
     await patientsearch.clickOnSearchPatientLink();  
     await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await page.waitForTimeout(1500);
-    await page.pause()
+   
     await confirmexisting.selectRelationship(jsonData.pip[index].pip_relationship);
     await page.waitForTimeout(1500);   
     await confirmexisting.clickOnConfirmExistingDetails();

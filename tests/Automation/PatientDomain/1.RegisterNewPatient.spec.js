@@ -179,7 +179,7 @@ test.describe('New Patient', () => {
       
 
       await addpatient.selectPatientType(jsonData.addPatient[index].pat_type);
-      await page.pause()
+      
       await addpatient.selectPrisoner(jsonData.addPatient[index].pat_prisoner_yes);
       await addpatient.selectBloodType(jsonData.addPatient[index].pat_blood_group);
       await addpatient.selectRestrictedRegistration();
@@ -201,7 +201,7 @@ test.describe('New Patient', () => {
       await page.getByTestId('Add/View Notes').first().click();
       await addaddress.clickOnSaveButtonOnPopup();
       //Permanent Address
-      await page.pause()
+      
       await addaddress.enterPermISOCountryCode(jsonData.permanentAddress[index].add_iso_country_code.toString());
       await addaddress.enterPermICAOCode(jsonData.permanentAddress[index].add_icao_country_code.toString());
       await addaddress.enterPremPhone(jsonData.permanentAddress[index].add_phone.toString());
