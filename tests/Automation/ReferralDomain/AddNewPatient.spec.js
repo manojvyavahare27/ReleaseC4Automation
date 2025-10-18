@@ -313,10 +313,9 @@ test.describe("Database Comparison Add Edit Patient", () => {
       // await addaddress.enterCountryonPopup(
       //   jsonData.permanentAddress[index].add_address6.toString()
       // );
-      await page.locator('#mui-component-select-country').click();
-       await page.getByRole('option', { name: 'Algeria' }).click();
-       
-       await page.getByTestId('Add/View Notes').first().click();
+     await page.locator("xpath=//input[@id='countryPermanentAddress']").click();
+      await page.getByRole('option', { name: 'Algeria' }).click();
+      await page.getByTestId('Add/View Notes').first().click();
        
        //await addaddress.clickOnPermAddressAddViewBnt.click()
       await addaddress.clickOnSaveButtonOnPopup();

@@ -197,7 +197,7 @@ test.describe('New Patient', () => {
       await addaddress.enterDestrict(jsonData.permanentAddress[index].add_address2);
       await addaddress.enterCounty(jsonData.permanentAddress[index].add_address4);
       await addaddress.enterPostCode(jsonData.permanentAddress[index].add_address5.toString());     
-      await page.locator('#mui-component-select-country').click();
+      await page.locator("xpath=//input[@id='countryPermanentAddress']").click();
       await page.getByRole('option', { name: 'Algeria' }).click();
       await page.getByTestId('Add/View Notes').first().click();
       await addaddress.clickOnSaveButtonOnPopup();
