@@ -14,7 +14,8 @@ class AddGP
         this.txtbox_GPPracticeCode=page.getByTestId('Practice Code')
         this.txtbox_GPGMCCode=page.getByTestId('GMC Code')
        this.btnShowGP=page.locator("xpath=//input[@name='show']")
-        this.dropdown_UnknownPostcode=page.locator("xpath=//div[@data-testid='Unknown, No Fixed Abode, or Overseas Visitor']")
+       // this.dropdown_UnknownPostcode=page.locator("xpath=//div[@data-testid='Unknown, No Fixed Abode, or Overseas Visitor']")
+        this.dropdown_UnknownPostcode=page.locator("xpath=//input[@id='unknownNoFixedAbodeorOverseasVisitor']")
         //GP Contact Details
         this.txtbox_GPPhone=page.locator("xpath=//input[@data-testid='GP Phone']")
         this.txtbox_GPFax=page.locator("xpath=//input[@data-testid='Fax']")
@@ -44,7 +45,8 @@ class AddGP
         this.btnNextonSearchGP=page.getByTestId('Next')
    
         //Search GP
-        this.txtbox_SearchGP=page.locator("xpath=//input[@data-testid='Search']")
+        //this.txtbox_SearchGP=page.locator("xpath=//input[@data-testid='Search']")
+        this.txtbox_SearchGP=page.locator("xpath=//input[@id='localGpTable']")
 
     }
     async enterGpSearch()

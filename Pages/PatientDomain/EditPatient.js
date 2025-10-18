@@ -35,8 +35,10 @@ class EditPatient
         
        //this.linkView
         //All Links under Links on Edit Patient page
-        this.link_Links=page.locator("xpath=//button[@data-testid='links']")
-        this.link_Death=page.locator("xpath=//li[@data-testid='deathLink']")
+        // this.link_Links=page.locator("xpath=//button[@data-testid='links']")
+        // this.link_Death=page.locator("xpath=//li[@data-testid='deathLink']")
+        this.link_Links=page.getByTestId('links')
+        this.link_Death=page.getByRole('heading', { name: 'Death' }).first()
         this.link_Appointments=page.getByRole('heading', { name: 'Appointments' })
         this.link_Consent=page.getByRole('heading', { name: 'Consent' })
         this.link_Details=page.getByRole('heading', { name: 'Details' })
@@ -60,13 +62,16 @@ class EditPatient
         this.dropdown_CurrentlyPregnant=page.getByTestId('Currently Pregnant').getByRole('button', { name: '​' })
         this.txtbox_CountyOfBirth=page.getByTestId('County Of Birth')
         this.dropdown_Sex=page.getByTestId('Sex').getByRole('button', { name: '​' })
-        this.dropdown_Ethnicity=page.locator("xpath=//div[@id='mui-component-select-patEthnicityText']")
-        this.dropdown_Religion=page.locator("xpath=//div[@id='mui-component-select-patReligion']")
-        this.dropdown_SexualOrientation=page.locator("xpath=//div[@id='mui-component-select-patSexualOrientationEliId']")
+        //this.dropdown_Ethnicity=page.locator("xpath=//div[@id='mui-component-select-patEthnicityText']")
+        this.dropdown_Ethnicity=page.locator("xpath=//input[@id='ethnicity']")
+        //this.dropdown_Religion=page.locator("xpath=//div[@id='mui-component-select-patReligion']")
+        this.dropdown_Religion=page.locator("xpath=//input[@id='religion']")
+        //this.dropdown_SexualOrientation=page.locator("xpath=//div[@id='mui-component-select-patSexualOrientationEliId']")
+        this.dropdown_SexualOrientation=page.locator("xpath= //input[@id='sexualOrientation']")
         this.dropdown_CurrentlyPregnant=page.getByTestId('Currently Pregnant').getByRole('button', { name: '​' })
         this.dropdown_PrimaryDisablity=page.getByTestId('Primary Disability').getByRole('button', { name: '​' })
-        this.dropdown_Prisoner=page.locator("xpath=//div[@aria-labelledby='mui-component-select-patPrisoner']")
-
+        //this.dropdown_Prisoner=page.locator("xpath=//div[@aria-labelledby='mui-component-select-patPrisoner']")
+         this.dropdown_Prisoner=page.locator("xpath=//input[@id='prisoner']")
         //Edit Patient Add PIP
         this.btn_AddInterestedParties=page.getByTestId('Add Interested Party')
 

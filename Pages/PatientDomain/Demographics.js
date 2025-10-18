@@ -7,15 +7,25 @@ class Demographics{
         this.Btn_SaveConsentForphotographcs=page.getByTestId('Save')
 
         //Links
-       this.link_Links=page.locator("xpath=//button[@data-testid='links']")
-        this.link_Details=page.locator("xpath=//li[@data-testid='detailsLink']")
-        this.link_PatientId=page.locator("xpath=//li[@data-testid='patientIdLink']")
+      // this.link_Links=page.locator("xpath=//button[@data-testid='links']")
+       // this.link_Details=page.locator("xpath=//li[@data-testid='detailsLink']")
+       // this.link_PatientId=page.locator("xpath=//li[@data-testid='patientIdLink']")
+       // this.link_PIP=page.getByRole('heading', { name: 'Patient Interested Parties' })
+       // this.link_QAndA=page.locator("xpath=//li[@data-testid='patientQuestionLink']")
+        //this.link_Summary=page.getByTestId('Summary').getByRole('heading', { name: 'Summary' })
+       // this.link_WorkList=page.getByRole('heading', { name: 'Worklist' })
+       // this.link_TestPatient=page.getByRole('heading', { name: 'Test' })
+       
+        this.link_Links=page.getByTestId('links')
+        this.link_Details=page.getByRole('heading', { name: 'Details' })
+        this.link_PatientId=page.getByRole('heading', { name: 'Patient Id' })
         this.link_PIP=page.getByRole('heading', { name: 'Patient Interested Parties' })
-        this.link_QAndA=page.locator("xpath=//li[@data-testid='patientQuestionLink']")
+        this.link_QAndA=page.getByRole('heading', { name: 'Patient Question' })
         this.link_Summary=page.getByTestId('Summary').getByRole('heading', { name: 'Summary' })
         this.link_WorkList=page.getByRole('heading', { name: 'Worklist' })
         this.link_TestPatient=page.getByRole('heading', { name: 'Test' })
-        this.dropdown_TestPatient=page.locator("xpath=//div[@data-testid='Test Patient']")
+       // this.dropdown_TestPatient=page.locator("xpath=//div[@data-testid='Test Patient']")
+        this.dropdown_TestPatient=page.locator("xpath=//input[@id='testPatient']")
 
         this.btn_ClosePopups=page.getByTestId('CancelIcon')
 

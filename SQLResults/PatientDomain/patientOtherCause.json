@@ -1,15 +1,15 @@
 [
   {
-    "pod_id": 7131,
+    "pod_id": 7143,
     "pod_est_id": 4,
-    "pod_pat_id": 93402,
+    "pod_pat_id": 95425,
     "pod_cause_of_death_type_eli_id": 13126,
     "pod_cause_of_death_type_eli_text": "Cancer",
     "pod_cause": "Pulmonary candidosis",
     "pod_cause_code": "1F23.31",
     "pod_cause_code_type": null,
     "pod_created_by": "release.manoj",
-    "pod_created": "08/09/2025",
+    "pod_created": "18/10/2025",
     "pod_deleted_by": null,
     "pod_deleted": null,
     "pod_record_status": "approved"

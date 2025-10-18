@@ -114,7 +114,7 @@ test.describe('New Patient', () => {
       await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
       await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
 
-      // await page.pause()
+     
       await patientduplicatecheck.selectUniqueIdentification();
       //await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId)
       //await patientduplicatecheck.enterUniqueIdentificationId(jsonData.patientIdentifier[index].pid_value1.toString());
@@ -171,6 +171,7 @@ test.describe('New Patient', () => {
       await addpatient.selectCountryOfBirth(jsonData.addPatient[index].pat_country_of_birth);
       await addpatient.selectNationality(jsonData.addPatient[index].pat_nationality);
       await addpatient.selectRegDisable(jsonData.addPatient[index].pat_registered_disabled_yes);
+      await addpatient.selectInterpreterType(jsonData.addPatient[index].pat_registered_disabled_yes);
      
       await addpatient.enterDisablityNotes(jsonData.addPatient[index].pat_disability_note);
       await addpatient.selectLanguage(jsonData.addPatient[index].pat_language);      
@@ -178,6 +179,7 @@ test.describe('New Patient', () => {
       
 
       await addpatient.selectPatientType(jsonData.addPatient[index].pat_type);
+      await page.pause()
       await addpatient.selectPrisoner(jsonData.addPatient[index].pat_prisoner_yes);
       await addpatient.selectBloodType(jsonData.addPatient[index].pat_blood_group);
       await addpatient.selectRestrictedRegistration();
@@ -194,11 +196,12 @@ test.describe('New Patient', () => {
       await addaddress.enterDestrict(jsonData.permanentAddress[index].add_address2);
       await addaddress.enterCounty(jsonData.permanentAddress[index].add_address4);
       await addaddress.enterPostCode(jsonData.permanentAddress[index].add_address5.toString());     
-      await page.locator('#mui-component-select-country').click();
+      await page.locator("xpath=//input[@id='countryPermanentAddress']").click();
       await page.getByRole('option', { name: 'Algeria' }).click();
       await page.getByTestId('Add/View Notes').first().click();
       await addaddress.clickOnSaveButtonOnPopup();
       //Permanent Address
+      await page.pause()
       await addaddress.enterPermISOCountryCode(jsonData.permanentAddress[index].add_iso_country_code.toString());
       await addaddress.enterPermICAOCode(jsonData.permanentAddress[index].add_icao_country_code.toString());
       await addaddress.enterPremPhone(jsonData.permanentAddress[index].add_phone.toString());
