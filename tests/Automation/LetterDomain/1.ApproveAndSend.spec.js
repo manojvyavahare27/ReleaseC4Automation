@@ -124,11 +124,11 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 
      //await letterorSummeries.expandsLetter()
      await page.getByLabel('expandRowIconundefined').click()
-     await letterorSummeries.clickOnWordFormatIcon()
+    // await letterorSummeries.clickOnWordFormatIcon()
     
-     // await letterorSummeries.clickOnPdfIcon()
+      await letterorSummeries.clickOnPdfIcon()
      // await letterorSummeries.clickOnclosePopup()
-     await letterorSummeries.clickOnHtmlIcon()
+    // await letterorSummeries.clickOnHtmlIcon()
      //await letterorSummeries.clickOnclosePopup()
 
 
