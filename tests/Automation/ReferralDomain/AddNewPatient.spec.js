@@ -417,7 +417,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       ).toHaveText("Patient address added successfully");
      /// await page.pause()
       //Add PIP
-      await page.pause()
+      //await page.pause()
       await addpip.selectPIPTitle(jsonData.pip[index].pip_title);
       await addpip.enterPIPFamilyName(jsonData.pip[index].pip_surname);
       await addpip.enterPIPGivenName(jsonData.pip[index].pip_firstname);
