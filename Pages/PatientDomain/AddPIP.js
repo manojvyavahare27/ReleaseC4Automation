@@ -3,11 +3,11 @@ class AddPIP
     constructor(page)
     {
         this.page=page
-         this.dropdown_PIPTitle=page.locator("xpath=//div[@id='addPipTitle']")
+         this.dropdown_PIPTitle=page.locator("xpath=//input[@id='addPipTitle']")
         this.txtbox_PIPFamilyName=page.locator("xpath=//input[@id='addPipFamilyName']")
         this.txtbox_PIPGivenName=page.locator("xpath=//input[@id='addPipGivenName']")
         this.txtbox_PIPMiddleName=page.locator("xpath=//input[@id='addPipMiddleNamePip']")
-        this.calender_PIPBornDate=page.locator("xpath=//input[@data-testid='Born']")
+        this.calender_PIPBornDate=page.locator("xpath=//input[@id='addPipBorn']")
        // this.dropdown_PIPEthnicity=page.locator("xpath=//div[@id='addPipEthnicity']")
         this.dropdown_PIPEthnicity=page.locator("xpath=//input[@id='addPipEthnicity']")
         //this.dropdown_PIPEthnicity=page.locator("xpath=//input[@id='addPipTitle']")
