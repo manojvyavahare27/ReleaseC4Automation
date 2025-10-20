@@ -51,7 +51,21 @@ class Homepage{
         this.MenuDDCellmaUserVersion=page.getByText('Cellma User Version')
         this.CloseCellmaVersionPopup=page.getByTestId('CancelIcon')
         this.MenuDDLogout=page.getByText('Logout')
+
+        this.drawerHeader=page.locator("xpath=//div[@data-testid='DrawerHeader']")
+        this.addAppLink=page.locator("xpath=//h1[text()='Add Appointments']")
     }
+
+
+     async clickOnDrawerHeader()
+    {
+        await this.drawerHeader.click()
+    }
+    async clickOnAddappLink()
+    {
+        await this.addAppLink.click()
+    }
+    
     //PharmacyHomepage
 
     async clickOnContactHistoryCategory()
@@ -153,6 +167,7 @@ class Homepage{
     {
        await this.sideIconReferrals.click()
     }
+
 
     async clickOnSideIconLetters()
     {
