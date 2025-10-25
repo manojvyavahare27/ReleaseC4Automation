@@ -20,7 +20,7 @@ class EditPatient
 
         this.btn_PatientPIPExportList=page.getByTestId('Export List')
         //this.link_ViewPIP=page.getByTestId('View')
-        this.link_ViewPIP=page.page.locator("xpath=//a[@data-testid='View']")
+        this.link_ViewPIP=page.locator("xpath=//a[@data-testid='View']")
         this.txtbox_SearchGP=page.getByTestId('Search')
         this.btn_ClosePIPAddPopup=page.getByTestId('CancelIcon')
         this.btn_ClosePIPAddressPopup=page.getByTestId('CancelIcon')
