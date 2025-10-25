@@ -5,10 +5,14 @@ class ViewPIP
         this.page=page
         //this.linkViewPIP=page.getByTestId('View')
        // this.linkViewPIP=page.getByRole('cell', { name: 'View' }).getByTestId('View')
-        this.linkViewPIP=page.getByRole('gridcell', { name: 'View' }).getByTestId('View')
+        // this.linkViewPIP=page.getByRole('gridcell', { name: 'View' }).getByTestId('View')
+        // this.btnCloseViewPopup=page.getByTestId('CancelIcon')
+        // this.btnNextOnViewPIP=page.getByTestId('Next')
+        // this.txtboxSearchPIP=page.getByTestId('Search')
+        this.linkViewPIP=page.locator("xpath=//a[@data-testid='View']")
         this.btnCloseViewPopup=page.getByTestId('CancelIcon')
-        this.btnNextOnViewPIP=page.getByTestId('Next')
-        this.txtboxSearchPIP=page.getByTestId('Search')
+        this.btnNextOnViewPIP=page.locator("xpath=//button[@data-testid='Next']")
+        this.txtboxSearchPIP=page.locator("xpath=//button[@data-testid='Search']")
     }
     async EnterPIPInSearch(name)
     {
