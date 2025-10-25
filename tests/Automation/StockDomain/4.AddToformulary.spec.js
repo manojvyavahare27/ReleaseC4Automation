@@ -65,7 +65,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(2000);   
 
    // Stock items filters
-   //await page.pause()
+   await page.pause()
    await stockItemsFliters.selectLocation('Default Pharmacy')
    await stockItemsFliters.selectCategory(jsonData.EditStockItem[0].stock_category)
    await stockItemsFliters.selectFilter('All Stock')
@@ -82,7 +82,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await stockItemsFliters.clickSearchButton()
    await page.waitForTimeout(1000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
- 
+ await page.pause()
 
    await stockallLoc.clickOnAddFormularyLink()
    await page.waitForTimeout(2000)

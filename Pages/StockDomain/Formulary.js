@@ -1,7 +1,8 @@
 class Formulary {
     constructor(page) {
         this.page = page;
-        this.AddFormulary=page.locator("xpath=//button[@data-testid='Add']")
+       // this.AddFormulary=page.locator("xpath=//button[@data-testid='Add']")
+       this.AddFormulary=page.locator("xpath=//button[@aria-label='addStockFormulary']")
         this.closePopup=page.locator("xpath=//button[@aria-label='cancelIcon']")
     }
 
