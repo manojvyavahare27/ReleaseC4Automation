@@ -116,24 +116,24 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await letterorSummeries.enterEndDate(jsonData.letterSummries[index].patletd_end_date)
       await page.waitForTimeout(1000);
      await letterorSummeries.enterStatus(jsonData.letterSummries[index].patlet_status)
-    // await page.pause()
+     await page.pause()
      await letterorSummeries.clickSearchButton()
       await page.waitForTimeout(1000);
 
      //await letterorSummeries.expandsLetter()
      await page.getByLabel('expandRowIconundefined').click()
    //  await letterorSummeries.clickOnWordFormatIcon()
-    
+    await page.pause()
       await letterorSummeries.clickOnPdfIcon()
       await letterorSummeries.clickOnclosePopup()
      //await letterorSummeries.clickOnHtmlIcon()
      //await letterorSummeries.clickOnclosePopup()
     // await letterorSummeries.clickOnEditHistoryIcon()
-     await page.waitForTimeout(1000)
-      await letterorSummeries.clickOnclosePopup()
-      await page.waitForTimeout(1000)
-      await letterorSummeries.clickOnSendEmailButton()
-        await page.getByRole('button', { name: 'cancelIcon' }).click()
+    //  await page.waitForTimeout(1000)
+    //   await letterorSummeries.clickOnclosePopup()
+    //   await page.waitForTimeout(1000)
+    //   await letterorSummeries.clickOnSendEmailButton()
+    //     await page.getByRole('button', { name: 'cancelIcon' }).click()
       await letterorSummeries.clickOnDeleteRecordLink()
       await letterorSummeries.clickOnOkButton()      
       await expect(page.getByText("Letter deleted successfully")).toHaveText("Letter deleted successfully");
