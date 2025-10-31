@@ -58,7 +58,7 @@ class PatientSearch
 
         //Custom setting for Appointment Module Patient search
         this.link_CustomizableViewAppPatSearch=page.locator("xpath=//li[normalize-space(text())='Customisable View']")
-        this.btn_ResetToDefaultView=page.locator("xpath=//li[normalize-space(text())='Default View']")
+        this.btn_ResetToDefaultView=page.locator("xpath=//button[@data-testid='Reset to Default View']")
 
 
         //Pageing
