@@ -89,7 +89,7 @@ class AddReferral{
     async selectPatientcare()
     {
         await this.dropdownpatientcare.click()
-        await this.page.getByRole('option', { name: 'Out Patient' }).click()
+        await this.page.getByRole('option', { name: 'In Patient' }).click()
     }
     
     

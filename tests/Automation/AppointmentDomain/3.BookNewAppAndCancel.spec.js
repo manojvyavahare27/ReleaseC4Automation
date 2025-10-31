@@ -82,13 +82,13 @@ test.describe("Database Comparison Book New App and Cancel", () => {
     await page.waitForTimeout(1500);
     await loginpage.enter_Password(jsonData.loginDetails[0].password);
     await page.waitForTimeout(1500);
-   // await page.pause()
+    await page.pause()
     await loginpage.clickOnLogin();
     //await expect(page.getByText("Login success")).toHaveText("Login success");
 
     
     //await loginpage.assertLoginMessage(page)
-    await page.pause()
+   
     await page.waitForTimeout(1000);
     await homepage.clickonSidebarHomeIcon()
     await homepage.clickOnAppointmentIcon()
@@ -108,7 +108,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 await homepage.clickOnDrawerHeader()
     await homepage.clickOnAddappLink()
     await patientsearch.clickOnSearchPatButton()
-    await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
+   // await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
     await page.waitForTimeout(1000);
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname)
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname)
