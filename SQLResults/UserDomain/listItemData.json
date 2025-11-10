@@ -1,11 +1,11 @@
 [
   {
-    "eli_id": 17089,
+    "eli_id": 17115,
     "eli_cli_id": 85,
     "eli_app_id": 111,
     "eli_est_id": 4,
     "eli_cod_id": null,
-    "eli_text": "SuratG",
+    "eli_text": "SuratR",
     "eli_show": 1,
     "eli_clinic_type_eli_id": null,
     "eli_identifier_type": null,
@@ -14,9 +14,9 @@
     "eli_hex_colour": null,
     "eli_show_for_patientweb": null,
     "eli_bank_isdefault": null,
-    "eli_text_other_lang": "SuratG",
+    "eli_text_other_lang": "SuratR",
     "eli_created_by": "release.manoj",
-    "eli_created": "27/09/2025",
+    "eli_created": "31/10/2025",
     "eli_deleted_by": null,
     "eli_deleted": null,
     "eli_decimal_value": null,
@@ -25,9 +25,10 @@
     "eli_linked": null,
     "eli_device_subcategory": null,
     "eli_show_request_device_link": null,
-    "eli_code": "ADLILC.18089",
+    "eli_code": "ADLILC.18115",
     "eli_code_type": "local",
     "eli_code_text": "Rio15",
+    "eli_default": null,
     "eli_imported_method": null
   }
 ]

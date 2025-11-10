@@ -1,8 +1,8 @@
 [
   {
-    "hcd_id": 10845,
-    "hcd_esp_id": 6579,
-    "hcd_hpd_id": 8294,
+    "hcd_id": 10921,
+    "hcd_esp_id": 6635,
+    "hcd_hpd_id": 8368,
     "hcd_est_id": 4,
     "hcd_cli_id": 85,
     "hcd_start_date": "02/06/2025",
@@ -17,7 +17,7 @@
     "hcd_friday": 1,
     "hcd_saturday": 1,
     "hcd_sunday": 1,
-    "hcd_created": "07/09/2025",
+    "hcd_created": "31/10/2025",
     "hcd_created_by": "release.manoj",
     "hcd_updated": null,
     "hcd_updated_by": null,

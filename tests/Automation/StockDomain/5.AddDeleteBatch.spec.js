@@ -98,6 +98,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await addBatch.enterExpiryDate(jsonData.AddBatch[0].stbat_expiry_date)
    await addBatch.enterRetailPrice(jsonData.AddBatch[0].stbat_retail_price)
    
+   await page.pause()
     await page.waitForTimeout(500) 
    await addBatch.clickSave()
   
