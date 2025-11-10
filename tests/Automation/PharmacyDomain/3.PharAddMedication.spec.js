@@ -140,7 +140,7 @@ test.describe("Medications Category", () => {
       await Medications.clickOnPinContactItemsMenu();
       await Medications.selectCategoryFromList("Medications");
       await page.waitForTimeout(2000)
-     // await page.pause()
+      await page.pause()
        ////////REVIEW EXISTING ITEM AND DELETE/////
 
        
@@ -213,7 +213,7 @@ test.describe("Medications Category", () => {
       await MedicationsExtraDetails.clickOPrivateRecord()  
       await MedicationsExtraDetails.selectEndoserment(jsonData.AddMedication[index].paprd_endorsement) 
       await MedicationsExtraDetails.enterPriceCheckQuantity(jsonData.AddMedication[index].meded_value_Price_check_quantity)  
-      await MedicationsExtraDetails.enterClinicalItemNotes(jsonData.AddMedication[index].medi_notes) 
+     // await MedicationsExtraDetails.enterClinicalItemNotes(jsonData.AddMedication[index].medi_notes) 
             
       await page.waitForTimeout(1000);  
       await MedicationsExtraDetails.clickOnSaveExtraDetails();      
