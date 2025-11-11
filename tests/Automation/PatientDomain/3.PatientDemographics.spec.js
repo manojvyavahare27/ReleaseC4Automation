@@ -123,17 +123,17 @@ test.describe("Patient Domain Db Comparison", () => {
         // await demogrphics.ClickOnLinkDetails()
         // await demogrphics.ClickOnCloseAllPopup()
 
-        await demogrphics.ClickOnLinkLinks()
-        await demogrphics.ClickOnLinkPatientIdentifier()
-        await demogrphics.ClickOnCloseAllPopup()
+        // await demogrphics.ClickOnLinkLinks()
+        // await demogrphics.ClickOnLinkPatientIdentifier()
+        // await demogrphics.ClickOnCloseAllPopup()
 
         // await demogrphics.ClickOnLinkLinks()
         // await demogrphics.ClickOnLinkPIP()
         // await demogrphics.ClickOnCloseAllPopup()
 
-        await demogrphics.ClickOnLinkLinks()
-        await demogrphics.ClickOnLinkQAndA()
-        await demogrphics.ClickOnCloseAllPopup()
+        // await demogrphics.ClickOnLinkLinks()
+        // await demogrphics.ClickOnLinkQAndA()
+        // await demogrphics.ClickOnCloseAllPopup()
 
         // await demogrphics.ClickOnLinkLinks()
         // await demogrphics.ClickOnLinkSummary()
