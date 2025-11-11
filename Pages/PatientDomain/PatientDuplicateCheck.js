@@ -31,7 +31,7 @@ class PatientDuplicateCheck
     {
         //await this.dropdown_unique_Identification.selectOption(page.getByRole('option', { name: 'Passport ID' }).click())
         await this.dropdown_unique_Identification.click()
-        await this.page.getByRole('option', { name: 'Aadhar Card' }).click()        
+        await this.page.getByRole('option', { name: 'PAN Card' }).click()        
     }
 
     async enterUniqueIdentificationId(pid_value1)
