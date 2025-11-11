@@ -384,7 +384,7 @@ await homepage.clickOnDrawerHeader()
       await scheduleserviceapp.clickOnCancelButton()
       await scheduleserviceapp.selectAppCancellationReason(jsonData.bookNewAppointments[index].rea_cancelled_reason)
       await scheduleserviceapp.clickOnSaveCancelledAppButton()
-      await page.waitForTimeout(2000)
+      //await page.waitForTimeout(2000)
       await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')
 
       await page.waitForTimeout(1000)
