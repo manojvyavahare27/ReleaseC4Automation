@@ -117,7 +117,7 @@ test.describe('New Patient', () => {
      
       await patientduplicatecheck.selectUniqueIdentification();
       //await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId)
-      //await patientduplicatecheck.enterUniqueIdentificationId(jsonData.patientIdentifier[index].pid_value1.toString());
+      await patientduplicatecheck.enterUniqueIdentificationId(jsonData.patientIdentifier[index].pid_value1.toString());
       await patientduplicatecheck.selectPhotoIdentification();
       await patientduplicatecheck.enterPhotoIdentification(jsonData.patientIdentifier[index].pid_value2.toString());
       await patientduplicatecheck.selectIssuingCountry(jsonData.patientIdentifier[index].pat_country);

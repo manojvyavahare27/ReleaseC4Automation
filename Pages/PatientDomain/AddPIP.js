@@ -44,7 +44,7 @@ class AddPIP
         this.txtbox_PIPNotes=page.getByLabel('Notes', { exact: true })
 
         this.chkbox_AssistingInPartner=page.getByRole('checkbox', { name: 'Assisting in partner\'s care and treatments' })
-        this.chkbox_HelpingPatients=page.getByRole('checkbox', { name: 'Helping patients and their families understanding the implant process' })
+        this.chkbox_HelpingPatients=page.getByRole('checkbox', { name: 'Helping patients and their families understanding the process' })
         this.chkbox_BeingPhotographed=page.getByRole('checkbox', { name: 'Being photographed or videoed for on-going training and teaching purposes' })
         this.chkbox_GeneralPublicity=page.getByRole('checkbox', { name: 'For use on the Automation Est website and general publicity' })
         this.btnSavePIP=page.getByTestId('Save')

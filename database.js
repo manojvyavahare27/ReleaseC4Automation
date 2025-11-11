@@ -10,13 +10,25 @@ const dbConfig = {
     // database: "cellma4_api",
     // connectionLimit: 10
 
-    host: "10.0.0.16",
-    user: "cellma4_api_user",
+    // host: "10.0.0.16",
+    // user: "cellma4_api_user",
+    // password: "Welcome@123",
+    // port:3314,
+    // //database: "cellma4_api",
+    // database: "cellma4_pre_release",
+    // connectionLimit: 10,
+
+
+    // Release server
+    host: "10.0.0.90",
+    user: "cellma4_api_user_90",
     password: "Welcome@123",
     port:3314,
     //database: "cellma4_api",
-    database: "cellma4_pre_release",
+    database: "cellma4_api_13nov22",
     connectionLimit: 10
+
+
 };
 
 const connection = mysql.createConnection(dbConfig);
