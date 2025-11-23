@@ -12,6 +12,7 @@ import PatientSearch from "../../../Pages/PatientDomain/PatientSearch";
 import ConfirmExisting from "../../../Pages/PatientDomain/ConfirmExisting";
 import PatientSideBar from "../../../Pages/PatientDomain/PatientSideBar";
 import lettersOrSummaries from "../../../Pages/LetterDomain/lettersOrSummaries"
+import PatientSummary from "../../../Pages/ClinicalDomain/PatientSummary/PatientSummary";
 
 //import Pool from 'mysql/lib/Pool';
 
@@ -49,6 +50,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      const confirmexisting=new ConfirmExisting(page)
      const patientsidebar=new PatientSideBar(page)
      const letterorSummeries=new lettersOrSummaries(page)   
+     const patientSummary=new PatientSummary(page)
      const index = 0;
      await page.goto(environment.Test);
      await page.waitForTimeout(1500);
@@ -67,7 +69,8 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       await page.waitForTimeout(1000); 
      await confirmexisting.clickOnConfirmExistingDetails()
      await page.waitForTimeout(1000);
-     await patientsidebar.clickOnLettersCategory()   
+     await patientSummary.clickOnViewIcon()
+      await patientSummary.clickOnLetterLink() 
      // await letterorSummeries.selectLetterLocation(jsonData.letterSendApproved[index].patletd_patient_location)
      // await page.waitForTimeout(1000);
      // await letterorSummeries.selectLetterName(jsonData.letterSendApproved[index].patlet_name)

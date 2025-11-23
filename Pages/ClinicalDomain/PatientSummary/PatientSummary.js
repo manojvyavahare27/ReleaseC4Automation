@@ -34,9 +34,12 @@ class PatientSummary
         this.topIconMyArea=page.locator("xpath=//div[contains(text(),'My Area')]")
         this.topIconCategories=page.locator("xpath=//div[contains(text(),'Categories')]")
         this.topIconModules=page.locator("xpath=//div[contains(text(),'Modules')]")
-        this.topIconView=page.locator("xpath=//div[contains(text(),'View')]")
+        this.topIconView=page.locator("xpath=//button[@data-testid='View']")
         this.topIconAddTo=page.locator("xpath=//div[contains(text(),'Add To')]")
         this.topIconPrint=page.locator("xpath=//div[contains(text(),'Print')]")
+
+        //all list from top dropdown.
+        this.linkLetter=page.locator("xpath=//li[@data-testid='letters']")
 
         //Setting Button for customizable view
         this.buttonSetting=page.locator("xpath=//button[@aria-label='settingButton']//*[name()='svg']")
@@ -44,6 +47,18 @@ class PatientSummary
         
         
 
+    }
+
+    
+
+    //Top icon methods
+    async clickOnViewIcon()
+    {
+        await this.topIconView.click()
+    }
+    async clickOnLetterLink()
+    {
+        await this.linkLetter.click()
     }
     async clickOniconExaminationsCategory()
     {
