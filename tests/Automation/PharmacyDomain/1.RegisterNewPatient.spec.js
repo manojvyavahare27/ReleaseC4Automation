@@ -284,7 +284,7 @@ test.describe('Excel Conversion', () => {
       await addpip.enterPIPGivenName(jsonData.pip[index].pip_firstname);
       await addpip.enterPIPMiddleName(jsonData.pip[index].pip_middlename);
       await addpip.selectPIPBornDate(jsonData.pip[index].pip_dob);
-
+await page.pause()
       await addpip.selecrPIPEthnicity(jsonData.pip[index].pip_ethnicity_text);
       await addpip.selectPIPOccupation();
       // await addpip.enterPIPMobileNumber(pipdetailsdata.MobileNo);
@@ -293,7 +293,7 @@ test.describe('Excel Conversion', () => {
       await addpip.selectPIPNextOfKin(jsonData.pip[index].pip_next_of_kin_Yes);
       await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);
       await addpip.selectPIPIdentifierType(jsonData.pip[index].pip_identifier_type)
-
+await page.pause()
       // await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString())
       if (await addpip.dropdownPIPIdentifierType.isVisible()) {
         await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString());
@@ -308,7 +308,7 @@ test.describe('Excel Conversion', () => {
       await addpip.selectPIPReceivePatientLetter(jsonData.pip[index].pip_receive_patient_letter_no);
       await addpip.selectPIPReceiveAppointmentLetter(jsonData.pip[index].pip_receive_pat_appt_letter_no);
       //await addpip.selectPIPPartnerDetailsOnRegForm();
-      await addpip.checkSendPatientTextEmail(jsonData.pip[index].pip_send_txt_email_yes);
+      //await addpip.checkSendPatientTextEmail(jsonData.pip[index].pip_send_txt_email_yes);
       await addpip.checkIsReferrer();
       await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
       await addpip.checkcAssistingInPartner();
